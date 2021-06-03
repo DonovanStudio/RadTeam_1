@@ -15,9 +15,9 @@
                 },
                 {
                     "name": "Strafe",
-                    "type": "Button",
+                    "type": "Value",
                     "id": "640137ab-b9f1-4d02-bac9-5f883c74c950",
-                    "expectedControlType": "Button",
+                    "expectedControlType": "Axis",
                     "processors": "",
                     "interactions": ""
                 },
