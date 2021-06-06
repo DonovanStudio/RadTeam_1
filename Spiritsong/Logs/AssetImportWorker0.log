@@ -15,11 +15,11 @@ G:/Rad Studio 2021/RadTeam_1/Spiritsong
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-52321
+49464
 Successfully changed project path to: G:/Rad Studio 2021/RadTeam_1/Spiritsong
 G:/Rad Studio 2021/RadTeam_1/Spiritsong
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 32.08 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 37.14 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.3.10f1 (297d780c91bc)
 [Subsystems] Discovering subsystems at path D:/2020.3.10f1/Editor/Data/Resources/UnitySubsystems
@@ -35,227 +35,147 @@ Initialize mono
 Mono path[0] = 'D:/2020.3.10f1/Editor/Data/Managed'
 Mono path[1] = 'D:/2020.3.10f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'D:/2020.3.10f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56940
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56640
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: D:/2020.3.10f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.001455 seconds.
+Registered in 0.001293 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 29.22 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 33.62 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.246 seconds
+- Completed reload, in  1.720 seconds
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.008934 seconds.
+Registered in 0.009024 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 28.12 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 54.13 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.163 seconds
+- Completed reload, in  1.444 seconds
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.08 seconds
-Refreshing native plugins compatible for Editor in 0.34 ms, found 2 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
+Refreshing native plugins compatible for Editor in 0.37 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1419 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 65.5 MB.
-System memory in use after: 65.6 MB.
+Unloading 1784 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 78.7 MB.
+System memory in use after: 78.8 MB.
 
-Unloading 28 unused Assets to reduce memory usage. Loaded Objects now: 1843.
-Total: 2.099000 ms (FindLiveObjects: 0.176300 ms CreateObjectMapping: 0.051700 ms MarkObjects: 1.789200 ms  DeleteObjects: 0.080300 ms)
-
-========================================================================
-Received Import Request.
-  path: Assets/YarnSpinner/Editor/YarnSpinner.Unity.Editor.asmdef
-  artifactKey: Guid(3a299c53e4c683b4eb4a04c9ad9e648f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/YarnSpinner/Editor/YarnSpinner.Unity.Editor.asmdef using Guid(3a299c53e4c683b4eb4a04c9ad9e648f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a841bd25f4896e5b12ba68cb48e5e5dd') in 0.072167 seconds
-  Import took 0.074423 seconds .
+Unloading 30 unused Assets to reduce memory usage. Loaded Objects now: 2211.
+Total: 2.523100 ms (FindLiveObjects: 0.406600 ms CreateObjectMapping: 0.158000 ms MarkObjects: 1.866000 ms  DeleteObjects: 0.091700 ms)
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000274 seconds.
-  path: Assets/YarnSpinner
-  artifactKey: Guid(ecd386d17f7784c71ab089701dd0a465) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/YarnSpinner using Guid(ecd386d17f7784c71ab089701dd0a465) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5ffebd1ca941b5672804178abf584ecd') in 0.011345 seconds
-  Import took 0.013917 seconds .
+  path: Assets/Scenes
+  artifactKey: Guid(6e7e3b08ee520614a94b837490090b7f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes using Guid(6e7e3b08ee520614a94b837490090b7f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2f90d3da78582a41f250bcc6b61445a3') in 0.018514 seconds
+  Import took 0.021904 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000330 seconds.
-  path: Assets/YarnSpinner/Editor
-  artifactKey: Guid(c3b025f9df1834d5e91c6873ece463b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/YarnSpinner/Editor using Guid(c3b025f9df1834d5e91c6873ece463b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c47b2d749c8dac6e150ece1692cd4c5e') in 0.008707 seconds
-  Import took 0.011955 seconds .
+  Time since last request: 0.000303 seconds.
+  path: Assets/Scenes/SampleScene.unity
+  artifactKey: Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/SampleScene.unity using Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dcc088d1731b590f9572c6f2bab98c6a') in 0.016346 seconds
+  Import took 0.020700 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.005850 seconds.
-  path: Assets/YarnSpinner/Editor
-  artifactKey: Guid(c3b025f9df1834d5e91c6873ece463b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/YarnSpinner/Editor using Guid(c3b025f9df1834d5e91c6873ece463b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c47b2d749c8dac6e150ece1692cd4c5e') in 0.002346 seconds
-  Import took 0.005233 seconds .
+  Time since last request: 10.230770 seconds.
+  path: Assets/Scenes/NarrativeImplementation.unity
+  artifactKey: Guid(3d0072de15f766f45b4f5a38f04cc577) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/NarrativeImplementation.unity using Guid(3d0072de15f766f45b4f5a38f04cc577) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b99ec1c71ecf9cde4ee9115acdf14361') in 0.007032 seconds
+  Import took 0.010041 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 1.575180 seconds.
-  path: Assets/YarnSpinner/Runtime/YarnSpinner.Unity.asmdef
-  artifactKey: Guid(34aa492b82754644eac2f903cd496268) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/YarnSpinner/Runtime/YarnSpinner.Unity.asmdef using Guid(34aa492b82754644eac2f903cd496268) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b53b1e11b5f4d1aad29fa1133cc8b6cd') in 0.006716 seconds
-  Import took 0.009171 seconds .
+  Time since last request: 58.072544 seconds.
+  path: Assets/Scenes/YarnImplementation.unity
+  artifactKey: Guid(3d0072de15f766f45b4f5a38f04cc577) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/YarnImplementation.unity using Guid(3d0072de15f766f45b4f5a38f04cc577) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2e6041bd56a81ba7c34018991f7b67f6') in 0.008291 seconds
+  Import took 0.011634 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.932907 seconds.
-  path: Assets/YarnSpinner/Samples/YarnSpinner.Unity.Example.asmdef
-  artifactKey: Guid(db8e58604c4fb46bb8eda3c6a3913a63) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/YarnSpinner/Samples/YarnSpinner.Unity.Example.asmdef using Guid(db8e58604c4fb46bb8eda3c6a3913a63) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0b78c6c3b75ce31295a02e18d2d9eaf6') in 0.006325 seconds
-  Import took 0.008684 seconds .
+  Time since last request: 323.917085 seconds.
+  path: Assets/YarnSpinner/Tests/Runtime/DialogueRunnerTest.yarn
+  artifactKey: Guid(40a60c3c28a91d34bbf2088bb0d2824a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/YarnSpinner/Tests/Runtime/DialogueRunnerTest.yarn using Guid(40a60c3c28a91d34bbf2088bb0d2824a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c1839c465f145f0bda90743ca017aea0') in 0.058493 seconds
+  Import took 0.064203 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 2.318811 seconds.
-  path: Assets/YarnSpinner/Tests/Editor/YarnSpinnerEditorTests.asmdef
-  artifactKey: Guid(7ac06ab5f152f5044b042bb90157b8d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/YarnSpinner/Tests/Editor/YarnSpinnerEditorTests.asmdef using Guid(7ac06ab5f152f5044b042bb90157b8d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '447a0d31978a36dfedebab17af14a8f4') in 0.006065 seconds
-  Import took 0.008311 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.009086 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.35 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.143 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.38 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1407 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 65.2 MB.
-System memory in use after: 65.3 MB.
-
-Unloading 29 unused Assets to reduce memory usage. Loaded Objects now: 1840.
-Total: 2.012500 ms (FindLiveObjects: 0.132000 ms CreateObjectMapping: 0.041700 ms MarkObjects: 1.811100 ms  DeleteObjects: 0.026800 ms)
+  Time since last request: 3.555199 seconds.
+  path: Assets/YarnSpinner/Tests/Runtime/DialogueRunnerMockUI.cs
+  artifactKey: Guid(08d3afe52b9f5eb47a531ff469982b33) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/YarnSpinner/Tests/Runtime/DialogueRunnerMockUI.cs using Guid(08d3afe52b9f5eb47a531ff469982b33) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b0281cdc260c9a0915a94f3da8e4bad5') in 0.010152 seconds
+  Import took 0.012910 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 27.377971 seconds.
-  path: Assets/YarnSpinner/Editor/YarnTranslationDrawer.cs
-  artifactKey: Guid(6c5f5240cd0697045ba174ad1c67b916) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/YarnSpinner/Editor/YarnTranslationDrawer.cs using Guid(6c5f5240cd0697045ba174ad1c67b916) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6d2680ad5357cc9231263d6d938d1006') in 0.026272 seconds
-  Import took 0.028751 seconds .
+  Time since last request: 0.002788 seconds.
+  path: Assets/YarnSpinner/Tests/Runtime/DialogueRunnerMockUI.cs
+  artifactKey: Guid(08d3afe52b9f5eb47a531ff469982b33) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/YarnSpinner/Tests/Runtime/DialogueRunnerMockUI.cs using Guid(08d3afe52b9f5eb47a531ff469982b33) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b0281cdc260c9a0915a94f3da8e4bad5') in 0.001865 seconds
+  Import took 0.004931 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.115686 seconds.
-  path: Assets/YarnSpinner/Editor/YarnTranslationDrawer.cs
-  artifactKey: Guid(6c5f5240cd0697045ba174ad1c67b916) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/YarnSpinner/Editor/YarnTranslationDrawer.cs using Guid(6c5f5240cd0697045ba174ad1c67b916) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6d2680ad5357cc9231263d6d938d1006') in 0.002537 seconds
-  Import took 0.004804 seconds .
+  Time since last request: 1.273135 seconds.
+  path: Assets/YarnSpinner/Runtime/DialogueRunner.cs
+  artifactKey: Guid(4bec29c0a230741bdac901dba8da47ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/YarnSpinner/Runtime/DialogueRunner.cs using Guid(4bec29c0a230741bdac901dba8da47ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '15821bdc1ee4e9c7bacac47174e26c98') in 0.006976 seconds
+  Import took 0.009884 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.319337 seconds.
-  path: Assets/YarnSpinner/Editor/YarnSpinnerTests.cs
-  artifactKey: Guid(94bf39264b6f54b568c206015ec58730) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/YarnSpinner/Editor/YarnSpinnerTests.cs using Guid(94bf39264b6f54b568c206015ec58730) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '255b1705103b2f6dce39b1d342f3eaf5') in 0.006426 seconds
-  Import took 0.008873 seconds .
+  Time since last request: 0.003709 seconds.
+  path: Assets/YarnSpinner/Runtime/DialogueRunner.cs
+  artifactKey: Guid(4bec29c0a230741bdac901dba8da47ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/YarnSpinner/Runtime/DialogueRunner.cs using Guid(4bec29c0a230741bdac901dba8da47ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '15821bdc1ee4e9c7bacac47174e26c98') in 0.002018 seconds
+  Import took 0.004766 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 1.159236 seconds.
-  path: Assets/YarnSpinner/Editor/YarnSpinnerEditorWindow.cs
-  artifactKey: Guid(c33704ffe872549c2b5218ec0b09e8d4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/YarnSpinner/Editor/YarnSpinnerEditorWindow.cs using Guid(c33704ffe872549c2b5218ec0b09e8d4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b8067abb3765294569959cd754b2cdca') in 0.007768 seconds
-  Import took 0.010172 seconds .
+  Time since last request: 1.044050 seconds.
+  path: Assets/YarnSpinner/Tests/Runtime/DialogueRunnerTests.cs
+  artifactKey: Guid(272ccc3abe1b87a418a536f1520fc58a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/YarnSpinner/Tests/Runtime/DialogueRunnerTests.cs using Guid(272ccc3abe1b87a418a536f1520fc58a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '53e20761e21ab28c49b93e5b6b97c3eb') in 0.007366 seconds
+  Import took 0.010481 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 1.237190 seconds.
-  path: Assets/YarnSpinner/Editor/YarnImporterEditor.cs
-  artifactKey: Guid(86e7a1afcf36f2847b546e40c89ce697) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/YarnSpinner/Editor/YarnImporterEditor.cs using Guid(86e7a1afcf36f2847b546e40c89ce697) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ed6f88efb2a4aa05ba81e53022fdac40') in 0.006649 seconds
-  Import took 0.009168 seconds .
+  Time since last request: 1.106235 seconds.
+  path: Assets/YarnSpinner/Runtime/DialogueUI.cs
+  artifactKey: Guid(04317fce65da54f4997a5c4465b4e93c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/YarnSpinner/Runtime/DialogueUI.cs using Guid(04317fce65da54f4997a5c4465b4e93c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eeac84555dd645467f11bbdcca2e1ef1') in 0.007055 seconds
+  Import took 0.009740 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.512378 seconds.
-  path: Assets/YarnSpinner/Editor/YarnProgramEditor.cs
-  artifactKey: Guid(76b0f75fe69847346ad55b49ea4197ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/YarnSpinner/Editor/YarnProgramEditor.cs using Guid(76b0f75fe69847346ad55b49ea4197ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e6db904c7f44be5ade91bdbaf2443651') in 0.008381 seconds
-  Import took 0.011113 seconds .
+  Time since last request: 0.950031 seconds.
+  path: Assets/YarnSpinner/Tests/Runtime/DialogueUITests.cs
+  artifactKey: Guid(b3773a4e636d9fe4dbdf44cadab0decc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/YarnSpinner/Tests/Runtime/DialogueUITests.cs using Guid(b3773a4e636d9fe4dbdf44cadab0decc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd5927e08d6b90d81af27146991a4fafd') in 0.006770 seconds
+  Import took 0.009810 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 1.116678 seconds.
-  path: Assets/YarnSpinner/Editor/YarnEditorUtility.cs
-  artifactKey: Guid(9d9a462ef0480497085e70c75081cf1b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/YarnSpinner/Editor/YarnEditorUtility.cs using Guid(9d9a462ef0480497085e70c75081cf1b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ba85f34d99900885344378214fd228fd') in 0.007254 seconds
-  Import took 0.009863 seconds .
+  Time since last request: 14.040340 seconds.
+  path: Assets
+  artifactKey: Guid(00000000000000001000000000000000) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets using Guid(00000000000000001000000000000000) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '42d402b061de3733987d63b9cc3b64de') in 0.007491 seconds
+  Import took 0.010721 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.547392 seconds.
-  path: Assets/YarnSpinner/Editor/YarnImporter.cs
-  artifactKey: Guid(94073015eacc34c1d8fc6786e43d60ca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/YarnSpinner/Editor/YarnImporter.cs using Guid(94073015eacc34c1d8fc6786e43d60ca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5fcc71039a72b94c8db085c165d30b90') in 0.006291 seconds
-  Import took 0.008844 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 4.825286 seconds.
-  path: Assets/YarnSpinner/Runtime/Prefabs/Dialogue.prefab
-  artifactKey: Guid(4ec3df5875e7347beb6176b545b8fb39) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/YarnSpinner/Runtime/Prefabs/Dialogue.prefab using Guid(4ec3df5875e7347beb6176b545b8fb39) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '89e39028592c94178fc3a951c5957571') in 0.102195 seconds
-  Import took 0.117231 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.011224 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.38 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.113 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.43 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1482 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 67.2 MB.
-System memory in use after: 67.3 MB.
-
-Unloading 24 unused Assets to reduce memory usage. Loaded Objects now: 1920.
-Total: 2.688800 ms (FindLiveObjects: 0.267800 ms CreateObjectMapping: 0.143800 ms MarkObjects: 2.206800 ms  DeleteObjects: 0.068900 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 60.332463 seconds.
-  path: Assets/Plugins
-  artifactKey: Guid(adea3266083efb14ba3c3622ac718958) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Plugins using Guid(adea3266083efb14ba3c3622ac718958) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '26b4b07233e390c27afe77e9ba9d6ab3') in 0.010205 seconds
-  Import took 0.012951 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000648 seconds.
-  path: Assets/Plugins
-  artifactKey: Guid(adea3266083efb14ba3c3622ac718958) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Plugins using Guid(adea3266083efb14ba3c3622ac718958) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '26b4b07233e390c27afe77e9ba9d6ab3') in 0.002768 seconds
-  Import took 0.005436 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 4.471794 seconds.
-  path: Assets/Plugins/Febucci
-  artifactKey: Guid(4803d8e68968d544c8b449e7b7bb69c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Plugins/Febucci using Guid(4803d8e68968d544c8b449e7b7bb69c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cd661a97e2503702cd5699487ae6d7d1') in 0.008706 seconds
-  Import took 0.011068 seconds .
+  Time since last request: 4.671443 seconds.
+  path: Assets/Dialogue
+  artifactKey: Guid(c27d8a795815a8b40a15f678c6895a0b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Dialogue using Guid(c27d8a795815a8b40a15f678c6895a0b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '46511dda102272c18e33a4cc2b2deeba') in 0.007365 seconds
+  Import took 0.011186 seconds .
 
 AssetImportWorkerClient::OnTransportError - code=2 error=End of file
