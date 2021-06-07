@@ -5,22 +5,27 @@ using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
+    // Exposed variables
     public float moveSpeed = 1.0f;
-    public float jumpForce = 1.0f;
+    public float jumpHeight = 1.0f;
+    public float gravity = -1.0f;
 
-    // Movement Input Values
-    private float playerMoveInput;
-    private float playerStrafeInput;
+    // Character Controller
+    private CharacterController controller;
+    private Vector3 playerVelocity;
+    private Vector3 playerMoveInput;
     private bool shouldJump = false;
 
+    // Ability Flags
+    private bool jumpUnlocked = false;
+
     private Transform tramsform;
-    private Rigidbody rigidbody;
 
     // Start is called before the first frame update
     void Start()
     {
         tramsform = this.transform;
-        rigidbody = this.GetComponent<Rigidbody>();
+        controller = GetComponent<CharacterController>();
     }
 
     // Update is called once per frame
@@ -31,30 +36,51 @@ public class PlayerController : MonoBehaviour
 
     private void HandleMovement()
     {
-        // Position based movement
-        tramsform.position += Vector3.forward * playerMoveInput * moveSpeed;
-        transform.position += Vector3.right * playerStrafeInput * moveSpeed;
+        if(controller.isGrounded)
+        {
+            playerVelocity.y = 0.0f;
+        }
 
-        if (shouldJump)
+        playerVelocity.x = playerMoveInput.x * moveSpeed;
+        playerVelocity.z = playerMoveInput.z * moveSpeed;
+
+        playerVelocity = transform.TransformDirection(playerVelocity);
+
+        if (jumpUnlocked && shouldJump && controller.isGrounded)
         {
             Debug.Log("Jump");
-            rigidbody.AddForce(Vector3.up * jumpForce);
-            shouldJump = false;
+            playerVelocity.y += jumpHeight;
         }
+
+        shouldJump = false;
+        playerVelocity.y += gravity * Time.deltaTime;
+        controller.Move(playerVelocity * Time.deltaTime);
     }
 
     public void OnMove(InputValue value)
     {
-        playerMoveInput = value.Get<float>();
+        Debug.Log("Play forward and back sound");
+        playerMoveInput.z = value.Get<float>();
     }
 
     public void OnStrafe(InputValue value)
     {
-        playerStrafeInput = value.Get<float>();
+        Debug.Log("Play left/right sound");
+        playerMoveInput.x = value.Get<float>();
     }
 
     public void OnJump()
     {
+        Debug.Log("Play jump sound");
         shouldJump = true;
+    }
+
+    // unlock abilities when collecting(colliding with) instruments
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.gameObject.tag == "Jump")
+        {
+            jumpUnlocked = true;
+        }
     }
 }
