@@ -5,6 +5,7 @@ using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
+    // Exposed variables
     public float moveSpeed = 1.0f;
     public float jumpHeight = 1.0f;
     public float gravity = -1.0f;
@@ -13,8 +14,10 @@ public class PlayerController : MonoBehaviour
     private CharacterController controller;
     private Vector3 playerVelocity;
     private Vector3 playerMoveInput;
-
     private bool shouldJump = false;
+
+    // Ability Flags
+    private bool jumpUnlocked = false;
 
     private Transform tramsform;
 
@@ -43,7 +46,7 @@ public class PlayerController : MonoBehaviour
 
         playerVelocity = transform.TransformDirection(playerVelocity);
 
-        if (shouldJump && controller.isGrounded)
+        if (jumpUnlocked && shouldJump && controller.isGrounded)
         {
             Debug.Log("Jump");
             playerVelocity.y += jumpHeight;
@@ -56,16 +59,28 @@ public class PlayerController : MonoBehaviour
 
     public void OnMove(InputValue value)
     {
+        Debug.Log("Play forward and back sound");
         playerMoveInput.z = value.Get<float>();
     }
 
     public void OnStrafe(InputValue value)
     {
+        Debug.Log("Play left/right sound");
         playerMoveInput.x = value.Get<float>();
     }
 
     public void OnJump()
     {
+        Debug.Log("Play jump sound");
         shouldJump = true;
+    }
+
+    // unlock abilities when collecting(colliding with) instruments
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.gameObject.tag == "Jump")
+        {
+            jumpUnlocked = true;
+        }
     }
 }
