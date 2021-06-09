@@ -9,17 +9,26 @@ public class PlayerController : MonoBehaviour
     public float moveSpeed = 1.0f;
     public float jumpHeight = 1.0f;
     public float gravity = -1.0f;
+    public float rotationDivider = 5.0f;
+    public float minCameraAngle = -170f;
+    public float maxCameraAngle = 170f;
 
     // Character Controller
     private CharacterController controller;
     private Vector3 playerVelocity;
     private Vector3 playerMoveInput;
     private bool shouldJump = false;
+    private float rotDividerRecip;
 
     // Ability Flags
     private bool jumpUnlocked = false;
 
     private Transform tramsform;
+
+    private void Awake()
+    {
+        rotDividerRecip = 1 / rotationDivider;
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -73,6 +82,20 @@ public class PlayerController : MonoBehaviour
     {
         Debug.Log("Play jump sound");
         shouldJump = true;
+    }
+
+    public void OnLook(InputValue value)
+    {
+        Vector3 deltaRotation = new Vector3(0, value.Get<Vector2>().x, 0);
+        deltaRotation *= rotDividerRecip;
+        tramsform.Rotate(deltaRotation);
+
+        Vector3 cameraRotation = Camera.main.transform.rotation.eulerAngles;
+        cameraRotation.x -= value.Get<Vector2>().y * rotDividerRecip;
+        cameraRotation.x = (cameraRotation.x + 180f) % 360f;
+        cameraRotation.x = Mathf.Clamp(cameraRotation.x, (minCameraAngle + 180), (maxCameraAngle + 180));
+        cameraRotation.x -= 180f;
+        Camera.main.transform.rotation = Quaternion.Euler(cameraRotation);
     }
 
     // unlock abilities when collecting(colliding with) instruments

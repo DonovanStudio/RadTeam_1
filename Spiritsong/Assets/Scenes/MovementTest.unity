@@ -426,6 +426,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3458958930398685896, guid: 9c417b9855c4e9c48bc97921fd3045ca, type: 3}
+      propertyPath: maxCameraAngle
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 3458958930398685896, guid: 9c417b9855c4e9c48bc97921fd3045ca, type: 3}
+      propertyPath: minCameraAngle
+      value: -45
+      objectReference: {fileID: 0}
+    - target: {fileID: 3458958930398685896, guid: 9c417b9855c4e9c48bc97921fd3045ca, type: 3}
+      propertyPath: rotationDivider
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 3458958930398685898, guid: 9c417b9855c4e9c48bc97921fd3045ca, type: 3}
       propertyPath: m_RootOrder
       value: 2
