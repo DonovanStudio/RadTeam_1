@@ -163,6 +163,9 @@ MonoBehaviour:
   moveSpeed: 10
   jumpHeight: 6
   gravity: -10
+  rotationDivider: 5
+  minCameraAngle: -170
+  maxCameraAngle: 170
 --- !u!1 &3458958931869799192
 GameObject:
   m_ObjectHideFlags: 0

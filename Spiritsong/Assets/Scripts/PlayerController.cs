@@ -12,6 +12,7 @@ public class PlayerController : MonoBehaviour
     public float rotationDivider = 5.0f;
     public float minCameraAngle = -170f;
     public float maxCameraAngle = 170f;
+    public float bobRadius = 1.0f;
 
     // Character Controller
     private CharacterController controller;
