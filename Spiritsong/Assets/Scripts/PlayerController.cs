@@ -5,6 +5,7 @@ using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
+    // Exposed variables
     public float moveSpeed = 1.0f;
     public float jumpHeight = 1.0f;
     public float gravity = -1.0f;
@@ -13,14 +14,17 @@ public class PlayerController : MonoBehaviour
     public float maxCameraAngle = 170f;
     public float bobRadius = 1.0f;
 
-    // Movement Input Values
-    private float playerMoveInput;
-    private float playerStrafeInput;
+    // Character Controller
+    private CharacterController controller;
+    private Vector3 playerVelocity;
+    private Vector3 playerMoveInput;
     private bool shouldJump = false;
     private float rotDividerRecip;
 
+    // Ability Flags
+    private bool jumpUnlocked = false;
+
     private Transform tramsform;
-    private Rigidbody rigidbody;
 
     private void Awake()
     {
@@ -31,7 +35,7 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         tramsform = this.transform;
-        rigidbody = this.GetComponent<Rigidbody>();
+        controller = GetComponent<CharacterController>();
     }
 
     // Update is called once per frame
@@ -42,30 +46,42 @@ public class PlayerController : MonoBehaviour
 
     private void HandleMovement()
     {
-        // Position based movement
-        tramsform.position += Vector3.forward * playerMoveInput * moveSpeed;
-        transform.position += Vector3.right * playerStrafeInput * moveSpeed;
+        if(controller.isGrounded)
+        {
+            playerVelocity.y = 0.0f;
+        }
 
-        if (shouldJump)
+        playerVelocity.x = playerMoveInput.x * moveSpeed;
+        playerVelocity.z = playerMoveInput.z * moveSpeed;
+
+        playerVelocity = transform.TransformDirection(playerVelocity);
+
+        if (jumpUnlocked && shouldJump && controller.isGrounded)
         {
             Debug.Log("Jump");
-            rigidbody.AddForce(Vector3.up * jumpForce);
-            shouldJump = false;
+            playerVelocity.y += jumpHeight;
         }
+
+        shouldJump = false;
+        playerVelocity.y += gravity * Time.deltaTime;
+        controller.Move(playerVelocity * Time.deltaTime);
     }
 
     public void OnMove(InputValue value)
     {
-        playerMoveInput = value.Get<float>();
+        Debug.Log("Play forward and back sound");
+        playerMoveInput.z = value.Get<float>();
     }
 
     public void OnStrafe(InputValue value)
     {
-        playerStrafeInput = value.Get<float>();
+        Debug.Log("Play left/right sound");
+        playerMoveInput.x = value.Get<float>();
     }
 
     public void OnJump()
     {
+        Debug.Log("Play jump sound");
         shouldJump = true;
     }
 
@@ -92,3 +108,33 @@ public class PlayerController : MonoBehaviour
         }
     }
 }
+
+    //public float jumpHeight = 1.0f;
+    //public float gravity = -1.0f;
+    //public float rotationDivider = 5.0f;
+    //public float minCameraAngle = -170f;
+    //public float maxCameraAngle = 170f;
+    //public float bobRadius = 1.0f;
+
+    //public void OnLook(InputValue value)
+    //{
+    //    Vector3 deltaRotation = new Vector3(0, value.Get<Vector2>().x, 0);
+    //    deltaRotation *= rotDividerRecip;
+    //    tramsform.Rotate(deltaRotation);
+
+    //    Vector3 cameraRotation = Camera.main.transform.rotation.eulerAngles;
+    //    cameraRotation.x -= value.Get<Vector2>().y * rotDividerRecip;
+    //    cameraRotation.x = (cameraRotation.x + 180f) % 360f;
+    //    cameraRotation.x = Mathf.Clamp(cameraRotation.x, (minCameraAngle + 180), (maxCameraAngle + 180));
+    //    cameraRotation.x -= 180f;
+    //    Camera.main.transform.rotation = Quaternion.Euler(cameraRotation);
+    //}
+
+    //// unlock abilities when collecting(colliding with) instruments
+    //private void OnTriggerEnter(Collider other)
+    //{
+    //    if(other.gameObject.tag == "Jump")
+    //    {
+    //        jumpUnlocked = true;
+    //    }
+    //}
