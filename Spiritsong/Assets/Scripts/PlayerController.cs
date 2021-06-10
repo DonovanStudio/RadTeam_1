@@ -7,24 +7,25 @@ public class PlayerController : MonoBehaviour
 {
     // Exposed variables
     public float moveSpeed = 1.0f;
+    public float dashSpeed = 1.0f;
     public float jumpHeight = 1.0f;
     public float gravity = -1.0f;
     public float rotationDivider = 5.0f;
     public float minCameraAngle = -170f;
     public float maxCameraAngle = 170f;
-    public float bobRadius = 1.0f;
+    public float dashTime = 1.0f;
 
     // Character Controller
     private CharacterController controller;
     private Vector3 playerVelocity;
     private Vector3 playerMoveInput;
     private bool shouldJump = false;
+    private bool shouldDash = true;
     private float rotDividerRecip;
 
     // Ability Flags
     private bool jumpUnlocked = false;
-
-    private Transform tramsform;
+    private bool dashUnlocked = false;
 
     private void Awake()
     {
@@ -34,7 +35,6 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        tramsform = this.transform;
         controller = GetComponent<CharacterController>();
     }
 
@@ -46,7 +46,7 @@ public class PlayerController : MonoBehaviour
 
     private void HandleMovement()
     {
-        if(controller.isGrounded)
+        if (controller.isGrounded)
         {
             playerVelocity.y = 0.0f;
         }
@@ -56,6 +56,7 @@ public class PlayerController : MonoBehaviour
 
         playerVelocity = transform.TransformDirection(playerVelocity);
 
+        // Jumping
         if (jumpUnlocked && shouldJump && controller.isGrounded)
         {
             Debug.Log("Jump");
@@ -85,11 +86,32 @@ public class PlayerController : MonoBehaviour
         shouldJump = true;
     }
 
+    public void OnDash()
+    {
+        Debug.Log("Play Dash Sound");
+        if (dashUnlocked)
+        {
+            StartCoroutine(TimedDash());
+        }
+    }
+
+    private IEnumerator TimedDash()
+    {
+        float start = Time.time;
+
+        while (Time.time < start + dashTime)
+        {
+            Debug.Log("Looping");
+            transform.Translate(playerVelocity * dashSpeed * Time.deltaTime);
+            yield return null;
+        }
+    }
+
     public void OnLook(InputValue value)
     {
         Vector3 deltaRotation = new Vector3(0, value.Get<Vector2>().x, 0);
         deltaRotation *= rotDividerRecip;
-        tramsform.Rotate(deltaRotation);
+        transform.Rotate(deltaRotation);
 
         Vector3 cameraRotation = Camera.main.transform.rotation.eulerAngles;
         cameraRotation.x -= value.Get<Vector2>().y * rotDividerRecip;
@@ -105,6 +127,10 @@ public class PlayerController : MonoBehaviour
         if(other.gameObject.tag == "Jump")
         {
             jumpUnlocked = true;
+        }
+        if (other.gameObject.tag == "Dash")
+        {
+            dashUnlocked = true;
         }
     }
 }
