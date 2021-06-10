@@ -13,6 +13,7 @@ public class PlayerController : MonoBehaviour
     public float rotationDivider = 5.0f;
     public float minCameraAngle = -170f;
     public float maxCameraAngle = 170f;
+    public float dashTime = 1.0f;
 
     // Character Controller
     private CharacterController controller;
@@ -88,7 +89,22 @@ public class PlayerController : MonoBehaviour
     public void OnDash()
     {
         Debug.Log("Play Dash Sound");
-        shouldDash = true;
+        if (dashUnlocked)
+        {
+            StartCoroutine(TimedDash());
+        }
+    }
+
+    private IEnumerator TimedDash()
+    {
+        float start = Time.time;
+
+        while (Time.time < start + dashTime)
+        {
+            Debug.Log("Looping");
+            transform.Translate(playerVelocity * dashSpeed * Time.deltaTime);
+            yield return null;
+        }
     }
 
     public void OnLook(InputValue value)

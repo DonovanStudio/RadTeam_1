@@ -267,12 +267,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 10
-  dashSpeed: 50
+  dashSpeed: 10
   jumpHeight: 6
   gravity: -10
   rotationDivider: 60
   minCameraAngle: -45
   maxCameraAngle: 30
+  dashTime: 0.25
 --- !u!143 &625823093
 CharacterController:
   m_ObjectHideFlags: 0
