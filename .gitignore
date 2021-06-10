@@ -16,13 +16,6 @@
 [Uu]ser[Ss]ettings/
 [Aa]ssets/AssetStoreTools*
 
-# MemoryCaptures can get excessive in size.
-# They also could contain extremely sensitive data
-/[Mm]emoryCaptures/
-
-# Asset meta data should only be ignored when the corresponding asset is also ignored
-!/[Aa]ssets/**/*.meta
-
 # Visual Studio cache directory
 *.vs/
 
@@ -39,7 +32,6 @@ ExportedObj/
 *.booproj
 *.svd
 *.pdb
-
 # Unity3D generated meta files
 *.pidb.meta
 *.pdb.meta
