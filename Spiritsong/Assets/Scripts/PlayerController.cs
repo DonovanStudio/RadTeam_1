@@ -7,6 +7,7 @@ public class PlayerController : MonoBehaviour
 {
     // Exposed variables
     public float moveSpeed = 1.0f;
+    public float dashSpeed = 1.0f;
     public float jumpHeight = 1.0f;
     public float gravity = -1.0f;
     public float rotationDivider = 5.0f;
@@ -18,6 +19,7 @@ public class PlayerController : MonoBehaviour
     private Vector3 playerVelocity;
     private Vector3 playerMoveInput;
     private bool shouldJump = false;
+    private bool shouldDash = true;
     private float rotDividerRecip;
 
     // Ability Flags
@@ -83,6 +85,12 @@ public class PlayerController : MonoBehaviour
         shouldJump = true;
     }
 
+    public void OnDash()
+    {
+        Debug.Log("Play Dash Sound");
+        shouldDash = true;
+    }
+
     public void OnLook(InputValue value)
     {
         Vector3 deltaRotation = new Vector3(0, value.Get<Vector2>().x, 0);
@@ -103,6 +111,10 @@ public class PlayerController : MonoBehaviour
         if(other.gameObject.tag == "Jump")
         {
             jumpUnlocked = true;
+        }
+        if (other.gameObject.tag == "Dash")
+        {
+            dashUnlocked = true;
         }
     }
 }
