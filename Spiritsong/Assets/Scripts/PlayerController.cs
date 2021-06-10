@@ -12,7 +12,6 @@ public class PlayerController : MonoBehaviour
     public float rotationDivider = 5.0f;
     public float minCameraAngle = -170f;
     public float maxCameraAngle = 170f;
-    public float bobRadius = 1.0f;
 
     // Character Controller
     private CharacterController controller;
@@ -23,8 +22,7 @@ public class PlayerController : MonoBehaviour
 
     // Ability Flags
     private bool jumpUnlocked = false;
-
-    private Transform tramsform;
+    private bool dashUnlocked = false;
 
     private void Awake()
     {
@@ -34,7 +32,6 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        tramsform = this.transform;
         controller = GetComponent<CharacterController>();
     }
 
@@ -46,7 +43,7 @@ public class PlayerController : MonoBehaviour
 
     private void HandleMovement()
     {
-        if(controller.isGrounded)
+        if (controller.isGrounded)
         {
             playerVelocity.y = 0.0f;
         }
@@ -56,6 +53,7 @@ public class PlayerController : MonoBehaviour
 
         playerVelocity = transform.TransformDirection(playerVelocity);
 
+        // Jumping
         if (jumpUnlocked && shouldJump && controller.isGrounded)
         {
             Debug.Log("Jump");
@@ -89,7 +87,7 @@ public class PlayerController : MonoBehaviour
     {
         Vector3 deltaRotation = new Vector3(0, value.Get<Vector2>().x, 0);
         deltaRotation *= rotDividerRecip;
-        tramsform.Rotate(deltaRotation);
+        transform.Rotate(deltaRotation);
 
         Vector3 cameraRotation = Camera.main.transform.rotation.eulerAngles;
         cameraRotation.x -= value.Get<Vector2>().y * rotDividerRecip;
