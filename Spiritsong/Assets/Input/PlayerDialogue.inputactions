@@ -1,0 +1,44 @@
+{
+    "name": "PlayerDialogue",
+    "maps": [
+        {
+            "name": "Dialogue",
+            "id": "107ad794-49a4-4355-bdcb-00576664a0cf",
+            "actions": [
+                {
+                    "name": "Skip",
+                    "type": "Button",
+                    "id": "0af217e1-e478-4b4f-9333-0092c131fcbe",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "b35fdc65-6e55-463a-a658-6a4812179c8b",
+                    "path": "<Keyboard>/enter",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Skip",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "6ad7371a-6a74-4396-aa98-bd3b1c31a6f0",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Skip",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
