@@ -1,13 +1,31 @@
 title: Start
 tags: 
 colorID: 0
-position: -972,-2134
+position: -1265,-2137
 ---
+<<set $name to "Jill">>
+My name is Jill!
 This is a test YarnSpinner dialogue file.
 The next input should take you here.
 Choose from choices A or B.
 -> This is choice A.
--> No way, I'm in for choice B!
+    <<set $name to "Jam">>
+    Jam chooses choice A.
+-> I want choice B!
+    <<set $name to "Jam">>
+    Jam chooses choice B.
+<<set $name to "Jill">>
 Both options should wind back up here.
+And we're done!
+===
+title: Start1
+tags: 
+colorID: 0
+position: -860,-2122
+---
+This is a test YarnSpinner dialogue file.
+The next input should take you here.
+I'm a dummy and I forgot we need to set up options.
+And that's going to take a while, so this is what we get.
 And we're done!
 ===
