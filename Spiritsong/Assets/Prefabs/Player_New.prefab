@@ -115,7 +115,6 @@ GameObject:
   - component: {fileID: 5927434746275458993}
   - component: {fileID: 5927434746275458998}
   - component: {fileID: 5927434746275458999}
-  - component: {fileID: 5927434746275458995}
   m_Layer: 0
   m_Name: PlayerObject
   m_TagString: Player
@@ -196,25 +195,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
-  m_Radius: 0.5000001
+  m_Radius: 0.5
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
---- !u!114 &5927434746275458995
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5927434746275458996}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c6cde350f30dc704ea9a5dacf8cd7c55, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  parent: {fileID: 5927434745717845718}
-  amplitude: 0.25
-  frequency: 1
 --- !u!1 &5927434747211535970
 GameObject:
   m_ObjectHideFlags: 0
@@ -241,7 +225,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5927434747211535970}
   m_LocalRotation: {x: 0.15346684, y: -0, z: -0, w: 0.9881539}
-  m_LocalPosition: {x: 0, y: 4.52, z: -5.99}
+  m_LocalPosition: {x: 0, y: 4.59, z: -6.22}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5927434745717845714}
