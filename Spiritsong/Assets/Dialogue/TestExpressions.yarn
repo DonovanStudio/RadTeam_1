@@ -1,0 +1,14 @@
+title: Start
+tags: 
+colorID: 0
+position: -2467,-2527
+---
+<<set $name to "Conductor">>Hello! I am CONDUCTOR!
+This script tests the Yarn Commands to ensure they work.
+<<turnR Player>>This turns the player to the right.
+<<turnL Player>>And this turns them back to the left.
+<<turnR Piano>>This turns the piano man.
+<<turnL Piano>><<turnR Player>>And this turns us both!
+<<hop Player>>And now I'm hopping!
+<<hop Piano>>And piano man's hopping!
+===
