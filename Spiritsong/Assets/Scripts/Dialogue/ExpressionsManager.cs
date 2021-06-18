@@ -9,7 +9,6 @@ public class ExpressionsManager : MonoBehaviour
     /* Attached this script to an image of a character on the UI. */
 
     public Sprite[] characterSprites; // 0 = Neutral, 1 = Happy, 2 = Angry, 3 = Sad, etc. (add more as we come up with them)
-    public AnimationClip[] animationClips;
     Animator anim;
     Image currentExpression;
 
