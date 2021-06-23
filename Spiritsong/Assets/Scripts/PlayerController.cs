@@ -86,7 +86,7 @@ public class PlayerController : MonoBehaviour
         if (jumpUnlocked)
         {
             Debug.Log("Play jump sound");
-            AudioManager.instance.PlayJumpSound();
+            //AudioManager.instance.PlayJumpSound();
             shouldJump = true;
         }
     }
@@ -96,7 +96,7 @@ public class PlayerController : MonoBehaviour
         if (dashUnlocked)
         {
             Debug.Log("Play Dash Sound");
-            AudioManager.instance.PlayDashSound();
+            //AudioManager.instance.PlayDashSound();
             StartCoroutine(TimedDash());
         }
     }
