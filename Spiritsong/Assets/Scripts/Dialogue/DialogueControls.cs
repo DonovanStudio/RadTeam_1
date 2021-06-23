@@ -4,15 +4,19 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using Yarn.Unity;
 using TMPro;
+using UnityEngine.UI;
 
 public class DialogueControls : MonoBehaviour
 {
     DialogueUI dialogueUI;
     DialogueRunner dialogueRunner;
     InMemoryVariableStorage variableStorage;
+    SelectStartNode selectStart;
+    GameObject dialogueCanvas;
+    GraphicRaycaster graphicRaycaster;
     public TextMeshProUGUI nameLabel;
     string speakerName;
-    bool dialogueStart;
+    public bool dialogueStart;
 
     [Header("Camera Animations")]
     public Animator cameraAnimator;
@@ -23,6 +27,11 @@ public class DialogueControls : MonoBehaviour
         dialogueRunner = FindObjectOfType<DialogueRunner>();
         dialogueUI = FindObjectOfType<DialogueUI>();
         variableStorage = FindObjectOfType<InMemoryVariableStorage>();
+        selectStart = FindObjectOfType<SelectStartNode>();
+
+        dialogueCanvas = GameObject.Find("Dialogue Canvas");
+        graphicRaycaster = dialogueCanvas.GetComponent<GraphicRaycaster>();
+        graphicRaycaster.enabled = false;
 
         // Getting variables from Yarn Spinner. //
         speakerName = variableStorage.GetValue("$name").AsString;
@@ -51,18 +60,29 @@ public class DialogueControls : MonoBehaviour
         }
     }
 
+    public void Mouse(InputAction.CallbackContext context)
+    {
+        if (context.started && selectStart.canSpeak)
+        {
+            graphicRaycaster.enabled = true;
+            MoveToConversation();
+        }
+    }
+
     // Move the camera forwards when conversation starts.
     public void MoveToConversation()
     {
         cameraAnimator.SetBool("Camera Move", true);
         StartCoroutine(WaitToStartDialogue());
         StartCoroutine(DarkenScreen());
+        dialogueStart = true;
     }
 
     // Move the camera back when dialogue complete-- set in Dialogue Runner.
     public void MoveToHub()
     {
         cameraAnimator.SetBool("Camera Move", false);
+        dialogueStart = false;
     }
 
 
