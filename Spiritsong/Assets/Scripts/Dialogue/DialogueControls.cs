@@ -108,5 +108,6 @@ public class DialogueControls : MonoBehaviour
     public void UndarkenScreen()
     {
         panelOpacity.SetBool("Dialogue Start", false);
+        graphicRaycaster.enabled = false;
     }
 }
