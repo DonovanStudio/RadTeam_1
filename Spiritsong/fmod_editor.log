@@ -3,11 +3,11 @@
 [LOG] SystemI::init                            : Initialize version=20109 (115889), maxchannels=256, flags=0x00020000
 [LOG] SystemI::setOutputInternal               : Setting output to 'FMOD Core Audio Output'
 [LOG] OutputCoreAudio::init                    : Output running 2 channels at 44100Hz sample rate.
-[LOG] OutputCoreAudio::init                    : Maximum hardware read size: 1024 samples, Software buffer size: 512 samples, Number of software buffers: 4.
+[LOG] OutputCoreAudio::init                    : Maximum hardware read size: 512 samples, Software buffer size: 512 samples, Number of software buffers: 4.
 [LOG] SystemI::init                            : Output requires a sample rate of 44100Hz, resampling will occur.
 [LOG] Thread::initThread                       : Init FMOD stream thread. Affinity: 0x8000000000000003, Priority: 0xFFFF7FFB, Stack Size: 98304, Semaphore: No, Sleep Time: 10, Looping: Yes.
 [LOG] Thread::initThread                       : Init FMOD mixer thread. Affinity: 0x8000000000000001, Priority: 0xFFFF7FFA, Stack Size: 81920, Semaphore: Yes, Sleep Time: 0, Looping: Yes.
-[LOG] AsyncManager::init                       : manager 0x7f9929cd7008 isAsync 0 updatePeriod 0.02
+[LOG] AsyncManager::init                       : manager 0x7fb88d099e08 isAsync 0 updatePeriod 0.02
 [LOG] AsyncManager::init                       : done
 [LOG] PlaybackSystem::init                     : 
 [LOG] Thread::initThread                       : Init FMOD Studio sample load thread. Affinity: 0x8000000000000003, Priority: 0xFFFF7FFD, Stack Size: 98304, Semaphore: No, Sleep Time: 1, Looping: No.
@@ -16,18 +16,20 @@
 [LOG] Manager::init                            : done.
 [LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
 [LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
-[LOG] SoundI::release                          : Spiritsong_Mus_LTL2_V1_0622 (0x7f9910ade578)
-[LOG] SoundI::release                          :     Spiritsong_Mus_LTL2_V1_0622 (0x7f992b0c7c88)
-[LOG] SoundI::release                          :     Spiritsong_Mus_LTL2_V1_0622 (0x7f992b0ae568)
-[LOG] SoundI::release                          : Spiritsong_Mus_LTL1_V1_0622 (0x7f9910ae1708)
-[LOG] SoundI::release                          :     Spiritsong_Mus_LTL1_V1_0622 (0x7f992b0e3608)
-[LOG] SoundI::release                          :     Spiritsong_Mus_LTL1_V1_0622 (0x7f992b0f2788)
-[LOG] SoundI::release                          : Spiritsong_Mus_LTL2_V1_0622 (0x7f9910a43e88)
-[LOG] SoundI::release                          :     Spiritsong_Mus_LTL2_V1_0622 (0x7f992b0ee2a8)
-[LOG] SoundI::release                          :     Spiritsong_Mus_LTL2_V1_0622 (0x7f992b0ef1d8)
-[LOG] SoundI::release                          : Spiritsong_Mus_LTL1_V1_0622 (0x7f9910aba798)
-[LOG] SoundI::release                          :     Spiritsong_Mus_LTL1_V1_0622 (0x7f992b0efa18)
-[LOG] SoundI::release                          :     Spiritsong_Mus_LTL1_V1_0622 (0x7f992b0cc6f8)
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] SoundI::release                          : Spiritsong_Mus_LTL2_V1_0622 (0x7fb88a942c48)
+[LOG] SoundI::release                          :     Spiritsong_Mus_LTL2_V1_0622 (0x7fb88ef4cd88)
+[LOG] SoundI::release                          :     Spiritsong_Mus_LTL2_V1_0622 (0x7fb88ef1cb88)
+[LOG] SoundI::release                          : Spiritsong_Mus_LTL1_V1_0622 (0x7fb890b79f38)
+[LOG] SoundI::release                          :     Spiritsong_Mus_LTL1_V1_0622 (0x7fb88c021c08)
+[LOG] SoundI::release                          :     Spiritsong_Mus_LTL1_V1_0622 (0x7fb88c021e68)
+[LOG] SoundI::release                          : Spiritsong_Mus_LTL2_V1_0622 (0x7fb890bfad58)
+[LOG] SoundI::release                          :     Spiritsong_Mus_LTL2_V1_0622 (0x7fb88c020f88)
+[LOG] SoundI::release                          :     Spiritsong_Mus_LTL2_V1_0622 (0x7fb88c021368)
+[LOG] SoundI::release                          : Spiritsong_Mus_LTL1_V1_0622 (0x7fb890b42fe8)
+[LOG] SoundI::release                          :     Spiritsong_Mus_LTL1_V1_0622 (0x7fb88c020818)
+[LOG] SoundI::release                          :     Spiritsong_Mus_LTL1_V1_0622 (0x7fb88c0a9368)
 [LOG] Thread::callback                         : FMOD Studio update thread finished.
 [LOG] Thread::callback                         : FMOD Studio bank load thread finished.
 [LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
