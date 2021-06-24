@@ -50,26 +50,41 @@ public class PhysicsPlayerController : MonoBehaviour
 
     private void HandleMovement()
     {
+        // Reset jump sound parameter
+        if (isGrounded)
+        {
+            
+        }
+
         //Do a dash
         if (dashUnlocked && shouldDash)
         {
             moveMe(direction * dashSpeed);
             shouldDash = false;
         }
+
         // Jumping
         RaycastHit hit;
         isGrounded = Physics.SphereCast(transform.position, floorSensitivity, Vector3.forward, out hit, 1000, 3);
-        Debug.Log("Can jump is " + isGrounded);
+        //Debug.Log("Can jump is " + isGrounded);
         if (jumpUnlocked && shouldJump && isGrounded)
         {
             rb.AddForce(jumpHeight * Vector3.up);
-            Debug.Log("Jump");
+            AudioManager.instance.SetJumpParameter(1.5f);
+            StartCoroutine(JumpSoundReset());
+            //Debug.Log("Jump");
         }
 
         shouldJump = false;
 
         //walking
         moveMe(direction);
+    }
+
+    private IEnumerator JumpSoundReset()
+    {
+        yield return new WaitForSeconds(1.5f);
+        AudioManager.instance.SetJumpParameter(0f);
     }
 
     public void OnMove(InputValue value)
@@ -83,17 +98,17 @@ public class PhysicsPlayerController : MonoBehaviour
         Vector3 angleFacing = -Vector3.Cross(transform.up, Vector3.up);
         rb.AddForce(direction * moveSpeed * angleFacing);
         Debug.DrawRay(transform.position, angleFacing, Color.red, 10f);
-        Debug.Log("Play forward and back sound");
+        //Debug.Log("Play forward and back sound");
     }
 
     public void OnStrafe(InputValue value)
     {
-        Debug.Log("Play left/right sound");
+        //Debug.Log("Play left/right sound");
     }
 
     public void OnJump()
     {
-        Debug.Log("Play jump sound");
+        //Debug.Log("Play jump sound");
         shouldJump = true;
     }
 
@@ -117,7 +132,7 @@ public class PhysicsPlayerController : MonoBehaviour
     public void OnLook(InputValue value)
     {
         rb.rotation = Quaternion.Euler(rb.rotation.eulerAngles + new Vector3(0f, rotationSpeed * value.Get<Vector2>().x, 0f));
-        Debug.Log("Looking");
+        //Debug.Log("Looking");
     }
 
     // unlock abilities when collecting(colliding with) instruments

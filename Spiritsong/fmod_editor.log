@@ -16,3 +16,39 @@
 [LOG] Manager::init                            : done.
 [LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
 [LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000022FE929D828
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000022FE929D828
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000022FE929D828
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000022FE929D828
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000022FE929D828
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000022FE929D828
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000022FE929D828
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000022FE929D828
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000022FE929D828
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000022FE929D828
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000022FE929D828
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000022FE929D828
+[LOG] SoundI::release                          : Spiritsong_Mus_LTL2_V1_0622 (0000022FE929D678)
+[LOG] SoundI::release                          :     Spiritsong_Mus_LTL2_V1_0622 (0000022FBCCC5A98)
+[LOG] SoundI::release                          :     Spiritsong_Mus_LTL2_V1_0622 (0000022FE929D828)
+[LOG] SoundI::release                          : Spiritsong_Mus_LTL1_V1_0622 (0000022FE92A2928)
+[LOG] SoundI::release                          :     Spiritsong_Mus_LTL1_V1_0622 (0000022FBCCC7B18)
+[LOG] SoundI::release                          :     Spiritsong_Mus_LTL1_V1_0622 (0000022FE929C088)
+[LOG] SoundI::release                          : Spiritsong_Mus_LTL2_V1_0622 (0000022FE929F9E8)
+[LOG] SoundI::release                          :     Spiritsong_Mus_LTL2_V1_0622 (0000022FBCCC58F8)
+[LOG] SoundI::release                          :     Spiritsong_Mus_LTL2_V1_0622 (0000022FE92A1F08)
+[LOG] SoundI::release                          : Spiritsong_Mus_LTL1_V1_0622 (0000022FE92A2AD8)
+[LOG] SoundI::release                          :     Spiritsong_Mus_LTL1_V1_0622 (0000022FBCCC7638)
+[LOG] SoundI::release                          :     Spiritsong_Mus_LTL1_V1_0622 (0000022FE92A2418)
+[LOG] Thread::callback                         : FMOD Studio update thread finished.
+[LOG] Thread::callback                         : FMOD Studio bank load thread finished.
+[LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
+[LOG] Thread::callback                         : FMOD Studio sample load thread finished.
+[LOG] LiveUpdate::release                      : 
+[LOG] LiveUpdate::reset                        : Reset connection (reason Disconnected)
+[LOG] Thread::callback                         : FMOD stream thread finished.
+[LOG] Thread::callback                         : FMOD mixer thread finished.
+[LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
+[LOG] SystemI::close                           : Closed.
