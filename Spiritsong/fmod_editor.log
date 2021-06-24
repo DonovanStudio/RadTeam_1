@@ -7,7 +7,7 @@
 [LOG] OutputWASAPI::init                       : Output buffer size: 4096 samples, latency: 0.00ms, period: 10.00ms, DSP buffer: 1024 * 4
 [LOG] Thread::initThread                       : Init FMOD stream thread. Affinity: 0x8000000000000003, Priority: 0xFFFF7FFB, Stack Size: 98304, Semaphore: No, Sleep Time: 10, Looping: Yes.
 [LOG] Thread::initThread                       : Init FMOD mixer thread. Affinity: 0x8000000000000001, Priority: 0xFFFF7FFA, Stack Size: 81920, Semaphore: No, Sleep Time: 0, Looping: Yes.
-[LOG] AsyncManager::init                       : manager 0000022F385AF988 isAsync 0 updatePeriod 0.02
+[LOG] AsyncManager::init                       : manager 0000022F385B5178 isAsync 0 updatePeriod 0.02
 [LOG] AsyncManager::init                       : done
 [LOG] PlaybackSystem::init                     : 
 [LOG] Thread::initThread                       : Init FMOD Studio sample load thread. Affinity: 0x8000000000000003, Priority: 0xFFFF7FFD, Stack Size: 98304, Semaphore: No, Sleep Time: 1, Looping: No.
@@ -16,32 +16,45 @@
 [LOG] Manager::init                            : done.
 [LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
 [LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
-[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
-[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000022FE929D828
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000022FE929D828
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000022FE929D828
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000022FE929D828
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000022FE929D828
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000022FE929D828
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000022FE929D828
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000022FE929D828
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000022FE929D828
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000022FE929D828
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000022FE929D828
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000022FE929D828
-[LOG] SoundI::release                          : Spiritsong_Mus_LTL2_V1_0622 (0000022FE929D678)
-[LOG] SoundI::release                          :     Spiritsong_Mus_LTL2_V1_0622 (0000022FBCCC5A98)
-[LOG] SoundI::release                          :     Spiritsong_Mus_LTL2_V1_0622 (0000022FE929D828)
-[LOG] SoundI::release                          : Spiritsong_Mus_LTL1_V1_0622 (0000022FE92A2928)
-[LOG] SoundI::release                          :     Spiritsong_Mus_LTL1_V1_0622 (0000022FBCCC7B18)
-[LOG] SoundI::release                          :     Spiritsong_Mus_LTL1_V1_0622 (0000022FE929C088)
-[LOG] SoundI::release                          : Spiritsong_Mus_LTL2_V1_0622 (0000022FE929F9E8)
-[LOG] SoundI::release                          :     Spiritsong_Mus_LTL2_V1_0622 (0000022FBCCC58F8)
-[LOG] SoundI::release                          :     Spiritsong_Mus_LTL2_V1_0622 (0000022FE92A1F08)
-[LOG] SoundI::release                          : Spiritsong_Mus_LTL1_V1_0622 (0000022FE92A2AD8)
-[LOG] SoundI::release                          :     Spiritsong_Mus_LTL1_V1_0622 (0000022FBCCC7638)
-[LOG] SoundI::release                          :     Spiritsong_Mus_LTL1_V1_0622 (0000022FE92A2418)
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000022FEFA30C28
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000022FEFA30C28
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000022FEFA30C28
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000022FEFA30C28
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000022FEFA30C28
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000022FEFA30C28
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000022FEFA30C28
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000022FEFA30C28
+[LOG] SoundI::release                          : Spiritsong_Mus_LTL2_V1_0622 (0000022FEFA30208)
+[LOG] SoundI::release                          :     Spiritsong_Mus_LTL2_V1_0622 (0000022F3434C728)
+[LOG] SoundI::release                          :     Spiritsong_Mus_LTL2_V1_0622 (0000022FEFA32218)
+[LOG] SoundI::release                          : Spiritsong_Mus_LTL1_V1_0622 (0000022FEFA348E8)
+[LOG] SoundI::release                          :     Spiritsong_Mus_LTL1_V1_0622 (0000022F3434A1C8)
+[LOG] SoundI::release                          :     Spiritsong_Mus_LTL1_V1_0622 (0000022FEFA308C8)
+[LOG] SystemI::createSound                     : filename = FMOD Banks/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 0000022FEFA30F88 : node = 0000022FC1F54200
+[LOG] SystemI::createSound                     : add node to async list : head = 0000022F2FEA2168.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000022FEFA30F88
+[LOG] SystemI::createSoundInternal             :     Create name='FMOD Banks/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 6393696
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 6816
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000022FC1F54310
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Spiritsong_Mus_TT_0623', format=5, channels=2, frequency=48000, lengthbytes=2756608, lengthpcm=11125090, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.634583.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000022FEFA30F88
+[LOG] SoundI::release                          : Spiritsong_Mus_TT_0623 (0000022FEFA30F88)
+[LOG] SoundI::release                          :     Spiritsong_Mus_TT_0623 (0000022F3434B888)
+[LOG] SoundI::release                          :     Spiritsong_Mus_TT_0623 (0000022FEFA35668)
+[LOG] SoundI::release                          : Spiritsong_Mus_LTL2_V1_0622 (0000022FEFA34738)
+[LOG] SoundI::release                          :     Spiritsong_Mus_LTL2_V1_0622 (0000022F3434A508)
+[LOG] SoundI::release                          :     Spiritsong_Mus_LTL2_V1_0622 (0000022FEFA30C28)
+[LOG] SoundI::release                          : Spiritsong_Mus_LTL1_V1_0622 (0000022FEFA35818)
+[LOG] SoundI::release                          :     Spiritsong_Mus_LTL1_V1_0622 (0000022F3434C248)
+[LOG] SoundI::release                          :     Spiritsong_Mus_LTL1_V1_0622 (0000022FEFA339B8)
 [LOG] Thread::callback                         : FMOD Studio update thread finished.
 [LOG] Thread::callback                         : FMOD Studio bank load thread finished.
 [LOG] Profile::disconnectAll                   : Profiler disconnecting all clients

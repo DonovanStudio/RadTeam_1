@@ -22,9 +22,9 @@ public class TEMP_StartButton : MonoBehaviour
         SceneManager.LoadScene("MovementWithSound");
     }
 
-    public void LoadOptionsScene()
+    public void LoadControlsScene()
     {
-        SceneManager.LoadScene("OptionsScene");
+        SceneManager.LoadScene("ControlsScene");
     }
 
     public void QuitGame()

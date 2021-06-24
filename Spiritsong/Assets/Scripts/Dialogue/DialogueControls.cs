@@ -5,6 +5,7 @@ using UnityEngine.InputSystem;
 using Yarn.Unity;
 using TMPro;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class DialogueControls : MonoBehaviour
 {
@@ -109,5 +110,10 @@ public class DialogueControls : MonoBehaviour
     {
         panelOpacity.SetBool("Dialogue Start", false);
         graphicRaycaster.enabled = false;
+    }
+
+    public void OnCloseHub()
+    {
+        SceneManager.LoadScene("MovementWithSound");
     }
 }

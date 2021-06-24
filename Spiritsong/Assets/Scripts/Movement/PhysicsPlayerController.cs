@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class PhysicsPlayerController : MonoBehaviour
 {
@@ -135,6 +136,11 @@ public class PhysicsPlayerController : MonoBehaviour
         //Debug.Log("Looking");
     }
 
+    public void OnOpenHub()
+    {
+        SceneManager.LoadScene("YarnImplementation");
+    }
+
     // unlock abilities when collecting(colliding with) instruments
     private void OnTriggerEnter(Collider other)
     {
@@ -145,6 +151,10 @@ public class PhysicsPlayerController : MonoBehaviour
         if (other.gameObject.tag == "Dash")
         {
             dashUnlocked = true;
+        }
+        if (other.gameObject.tag == "End")
+        {
+            SceneManager.LoadScene("EndScene");
         }
     }
 
