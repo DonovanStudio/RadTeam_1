@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class TEMP_StartButton : MonoBehaviour
+public class TEMP_BackBtn : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
@@ -17,18 +17,8 @@ public class TEMP_StartButton : MonoBehaviour
         
     }
 
-    public void LoadGameScene()
+    public void LoadMainMenu()
     {
-        SceneManager.LoadScene("MovementWithSound");
-    }
-
-    public void LoadOptionsScene()
-    {
-        SceneManager.LoadScene("OptionsScene");
-    }
-
-    public void QuitGame()
-    {
-        Application.Quit();
+        SceneManager.LoadScene("MainMenu");
     }
 }
