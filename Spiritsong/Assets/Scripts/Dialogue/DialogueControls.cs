@@ -36,6 +36,8 @@ public class DialogueControls : MonoBehaviour
 
         // Getting variables from Yarn Spinner. //
         speakerName = variableStorage.GetValue("$name").AsString;
+
+        Cursor.lockState = CursorLockMode.Confined;
     }
 
     void Update()
