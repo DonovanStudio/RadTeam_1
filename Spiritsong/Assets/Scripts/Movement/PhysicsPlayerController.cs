@@ -9,7 +9,7 @@ public class PhysicsPlayerController : MonoBehaviour
     [SerializeField] float moveSpeed = 1.0f;
     [SerializeField] float dashSpeed = 1.0f;
     [SerializeField] float jumpHeight = 1.0f;
-    [SerializeField] float dashTime = 1.0f;
+    //[SerializeField] float dashTime = 1.0f;
     [SerializeField] float rotationSpeed = 1f;
     [SerializeField] float floorSensitivity = 1f;
     
@@ -51,7 +51,7 @@ public class PhysicsPlayerController : MonoBehaviour
     private void HandleMovement()
     {
         //Do a dash
-        if (shouldDash)
+        if (dashUnlocked && shouldDash)
         {
             moveMe(direction * dashSpeed);
             shouldDash = false;

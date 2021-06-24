@@ -21,7 +21,7 @@ public class PlayerController : MonoBehaviour
     private Vector3 playerVelocity;
     private Vector3 playerMoveInput;
     private bool shouldJump = false;
-    private bool shouldDash = true;
+    //private bool shouldDash = true;
     private float rotDividerRecip;
 
     // Ability Flags

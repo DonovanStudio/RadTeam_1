@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641258, b: 0.574817, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -4858,58 +4858,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 42759830, guid: 7392ac9998530ce438f6c59a40708412, type: 3}
-      propertyPath: dashSpeed
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 42759830, guid: 7392ac9998530ce438f6c59a40708412, type: 3}
-      propertyPath: moveSpeed
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 42759830, guid: 7392ac9998530ce438f6c59a40708412, type: 3}
-      propertyPath: jumpHeight
-      value: 333
-      objectReference: {fileID: 0}
-    - target: {fileID: 42759830, guid: 7392ac9998530ce438f6c59a40708412, type: 3}
-      propertyPath: floorSensitivity
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1022856208280501201, guid: 7392ac9998530ce438f6c59a40708412, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.48528
-      objectReference: {fileID: 0}
-    - target: {fileID: 1022856208280501201, guid: 7392ac9998530ce438f6c59a40708412, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.48528
-      objectReference: {fileID: 0}
-    - target: {fileID: 1022856208280501201, guid: 7392ac9998530ce438f6c59a40708412, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.48528
-      objectReference: {fileID: 0}
-    - target: {fileID: 1022856208280501201, guid: 7392ac9998530ce438f6c59a40708412, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.13
-      objectReference: {fileID: 0}
-    - target: {fileID: 1022856208280501201, guid: 7392ac9998530ce438f6c59a40708412, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.03
-      objectReference: {fileID: 0}
-    - target: {fileID: 1022856208280501201, guid: 7392ac9998530ce438f6c59a40708412, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0.01
-      objectReference: {fileID: 0}
-    - target: {fileID: 3090640386756045444, guid: 7392ac9998530ce438f6c59a40708412, type: 3}
-      propertyPath: m_TagString
-      value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 3325786979696673858, guid: 7392ac9998530ce438f6c59a40708412, type: 3}
-      propertyPath: m_AngularDrag
-      value: 2.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 3325786979696673858, guid: 7392ac9998530ce438f6c59a40708412, type: 3}
-      propertyPath: m_Constraints
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5556429425773783548, guid: 7392ac9998530ce438f6c59a40708412, type: 3}
       propertyPath: m_RootOrder
       value: 11
@@ -4954,29 +4902,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90
       objectReference: {fileID: 0}
-    - target: {fileID: 6183262113396508439, guid: 7392ac9998530ce438f6c59a40708412, type: 3}
-      propertyPath: m_Direction
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6799919306511421629, guid: 7392ac9998530ce438f6c59a40708412, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 7310356326811006998, guid: 7392ac9998530ce438f6c59a40708412, type: 3}
       propertyPath: m_Name
       value: PhysicsPlayer
-      objectReference: {fileID: 0}
-    - target: {fileID: 7310356326811006998, guid: 7392ac9998530ce438f6c59a40708412, type: 3}
-      propertyPath: m_TagString
-      value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 7466617602344082443, guid: 7392ac9998530ce438f6c59a40708412, type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
-    - target: {fileID: 7777557295940579951, guid: 7392ac9998530ce438f6c59a40708412, type: 3}
-      propertyPath: m_Enabled
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7392ac9998530ce438f6c59a40708412, type: 3}
