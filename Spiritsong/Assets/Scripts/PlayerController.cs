@@ -25,6 +25,7 @@ public class PlayerController : MonoBehaviour
     private float rotDividerRecip;
 
     // Ability Flags
+   
     private bool jumpUnlocked = false;
     private bool dashUnlocked = false;
 
@@ -143,6 +144,10 @@ public class PlayerController : MonoBehaviour
         if (other.gameObject.tag == "End")
         {
             SceneManager.LoadScene("EndScene");
+        }
+        if (other.gameObject.tag == "Ground")
+        {
+           
         }
     }
 }
