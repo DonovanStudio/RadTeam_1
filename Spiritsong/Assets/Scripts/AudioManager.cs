@@ -39,47 +39,47 @@ public class AudioManager : MonoBehaviour
         jumpLayer.volume = 0.1f;
     }
 
-    public void PlayJumpSound()
-    {
-        jumpLayer.volume = 1;
-        StartCoroutine("StopJumpSound");
-    }
+    //public void PlayJumpSound()
+    //{
+        //jumpLayer.volume = 1;
+        //StartCoroutine("StopJumpSound");
+    //}
 
-    private IEnumerator StopJumpSound()
-    {
-        yield return new WaitForSeconds(jumpDuration);
-        jumpLayer.volume = 0.1f;
-    }
+    //private IEnumerator StopJumpSound()
+    //{
+       // yield return new WaitForSeconds(jumpDuration);
+        //jumpLayer.volume = 0.1f;
+    //}
 
-    public void DashUnlocked()
+   public void DashUnlocked()
     {
         dashLayer.volume = 0.1f;
     }
 
-    public void PlayDashSound()
-    {
-        dashLayer.volume = 1;
-        StartCoroutine("StopDashSound");
-    }
+    //public void PlayDashSound()
+    //{
+        //dashLayer.volume = 1;
+        //StartCoroutine("StopDashSound");
+    //}
 
-    private IEnumerator StopDashSound()
-    {
-        yield return new WaitForSeconds(dashDuration);
-        dashLayer.volume = 0.1f;
-    }
+    //private IEnumerator StopDashSound()
+    //{
+        //yield return new WaitForSeconds(dashDuration);
+        //dashLayer.volume = 0.1f;
+    //}
 
-    public void PauseAllMovementSounds()
-    {
-        baseLayer.Pause();
-        jumpLayer.Pause();
-        dashLayer.Pause();
-    }
+    //public void PauseAllMovementSounds()
+    //{
+        //baseLayer.Pause();
+        //jumpLayer.Pause();
+        //dashLayer.Pause();
+    //}
 
-    public void ResumeMovementSounds()
-    {
-        baseLayer.Play();
-        jumpLayer.Play();
-        dashLayer.Play();
-    }
+    //public void ResumeMovementSounds()
+    //{
+        //baseLayer.Play();
+        //jumpLayer.Play();
+        //dashLayer.Play();
+    //}
 
 }

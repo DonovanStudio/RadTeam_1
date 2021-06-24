@@ -1,2 +1,24 @@
 fileFormatVersion: 2
 guid: c3359a6460c17c74fbe2280404d517d0
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Alegreya SC
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: f22c2c12892775546a1592c00ba5bc8f, type: 3}
+  - {fileID: 12800000, guid: 1001df21170b5704081e6dc8caa657a4, type: 3}
+  - {fileID: 12800000, guid: 1041e136c590041429bf8da979c475e1, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
