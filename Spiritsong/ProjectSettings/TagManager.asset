@@ -7,11 +7,12 @@ TagManager:
   - Jump
   - Dash
   - End
+  - floor
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Floor
   - Water
   - UI
   - 

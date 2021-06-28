@@ -14,6 +14,8 @@ public class AudioManager : MonoBehaviour
     private AudioSource jumpLayer;
     private AudioSource dashLayer;
 
+    private float jumpParameter = 0f;
+
     public static AudioManager instance;
 
     // Start is called before the first frame update
@@ -81,5 +83,15 @@ public class AudioManager : MonoBehaviour
         //jumpLayer.Play();
         //dashLayer.Play();
     //}
+
+    public float GetJumpParameter()
+    {
+        return jumpParameter;
+    }
+
+    public void SetJumpParameter(float value)
+    {
+        jumpParameter = value;
+    }
 
 }

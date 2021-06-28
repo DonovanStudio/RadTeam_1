@@ -12,6 +12,7 @@ public class LevelThemeAdaptive : MonoBehaviour
     [SerializeField]
     [Range(0f, 1.5f)]
     private float time;
+
     void Start()
     {
         instance = FMODUnity.RuntimeManager.CreateInstance(fmodEvent);
@@ -23,6 +24,6 @@ public class LevelThemeAdaptive : MonoBehaviour
     void Update()
     {
         instance.setParameterByName("Time", time);
-        
+        time = AudioManager.instance.GetJumpParameter();
     }
 }

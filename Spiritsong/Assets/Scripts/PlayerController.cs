@@ -21,10 +21,11 @@ public class PlayerController : MonoBehaviour
     private Vector3 playerVelocity;
     private Vector3 playerMoveInput;
     private bool shouldJump = false;
-    private bool shouldDash = true;
+    //private bool shouldDash = true;
     private float rotDividerRecip;
 
     // Ability Flags
+   
     private bool jumpUnlocked = false;
     private bool dashUnlocked = false;
 
@@ -143,6 +144,10 @@ public class PlayerController : MonoBehaviour
         if (other.gameObject.tag == "End")
         {
             SceneManager.LoadScene("EndScene");
+        }
+        if (other.gameObject.tag == "Ground")
+        {
+           
         }
     }
 }

@@ -11,6 +11,6 @@ public class CounterRotation : MonoBehaviour
         Vector3 parentRotation = transform.parent.rotation.eulerAngles;
 
         // Changed to zero Quaternion to maintain axes
-        transform.rotation = Quaternion.Euler(0, 0, 0);
+        transform.rotation = Quaternion.Euler(0, transform.rotation.eulerAngles.y, 0);
     }
 }

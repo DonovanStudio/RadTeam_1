@@ -1,7 +1,7 @@
 title: Start
 tags: 
 colorID: 0
-position: -1265,-2137
+position: -1889,-2408
 ---
 <<set $name to "Jill">>
 My name is Jill!
@@ -21,11 +21,49 @@ And we're done!
 title: Start1
 tags: 
 colorID: 0
-position: -860,-2122
+position: -1598,-2388
 ---
 This is a test YarnSpinner dialogue file.
 The next input should take you here.
 I'm a dummy and I forgot we need to set up options.
 And that's going to take a while, so this is what we get.
 And we're done!
+===
+title: PianoTestNode
+tags: 
+colorID: 0
+position: -1716,-2069
+---
+<<turnR Player>><<set $name to "Conductor">>This starts the piano dialogue.
+<<set $name to "Piano">>What ho, good lad! I see you've finally awoken!
+Hmm? Where are the others? Dare I say I'm not too sure... 
+Quite easy to lose track of time when the sun never sets.
+Days blur... Eons pass... Time waits for none...
+Ah, but now that you're here we can finally look for them.
+<<hop Piano>>Ho ho ho!
+Forgotten how to fly? No worries, lad. 
+I can show you once more, like old times!
+===
+title: FluteTestNode
+tags: 
+colorID: 0
+position: -1443,-2001
+---
+<<turnR Player>><<set $name to "Conductor">>This starts the flute dialogue.
+<<set $name to "Flute">>Oh! Hi there! You finally found me!
+And after making me wait all this time, too...
+<<hop Flute>>That's pretty rude of you to do, y'know!
+Oh, no need to apologize! I'm just joking around.
+Did you like the surprise, though?
+-> The puzzle?
+    <<hop Flute>>Yup!
+-> What surprise?
+    <<hop Flute>>The puzzle, silly!
+===
+title: ViolinTestNode
+tags: 
+colorID: 0
+position: -1162,-2157
+---
+<<turnR Player>><<set $name to "Conductor">>This starts the violin dialogue.
 ===

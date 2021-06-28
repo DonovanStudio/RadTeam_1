@@ -10,23 +10,23 @@ public class AirPump_EditorOnly : MonoBehaviour
     [SerializeField] float[] gustSizes = { 5f, 15f };
     [SerializeField] bool gustAutoTurnOff = true;
     //Storing myself
-    Rigidbody rigidbody;
+    Rigidbody rigidbody1;
 
     private void Awake()
     {
-        rigidbody = gameObject.GetComponent<Rigidbody>();
+        rigidbody1 = gameObject.GetComponent<Rigidbody>();
     }
     // Update is called once per frame
     void FixedUpdate()
     {
         if (smallGust)
         {
-            rigidbody.AddForce(gustSizes[0] * Vector3.left);
+            rigidbody1.AddForce(gustSizes[0] * Vector3.left);
             turnOffGust(smallGust);
         }
         if (largeGust)
         {
-            rigidbody.AddForce(gustSizes[1] * Vector3.left);
+            rigidbody1.AddForce(gustSizes[1] * Vector3.left);
             turnOffGust(largeGust);
         }
     }
