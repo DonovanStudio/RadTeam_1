@@ -21,10 +21,11 @@ public class PlayerController : MonoBehaviour
     private Vector3 playerVelocity;
     private Vector3 playerMoveInput;
     private bool shouldJump = false;
-    private bool shouldDash = true;
+    //private bool shouldDash = true;
     private float rotDividerRecip;
 
     // Ability Flags
+   
     private bool jumpUnlocked = false;
     private bool dashUnlocked = false;
 
@@ -86,7 +87,7 @@ public class PlayerController : MonoBehaviour
         if (jumpUnlocked)
         {
             Debug.Log("Play jump sound");
-            AudioManager.instance.PlayJumpSound();
+            //AudioManager.instance.PlayJumpSound();
             shouldJump = true;
         }
     }
@@ -96,7 +97,7 @@ public class PlayerController : MonoBehaviour
         if (dashUnlocked)
         {
             Debug.Log("Play Dash Sound");
-            AudioManager.instance.PlayDashSound();
+            //AudioManager.instance.PlayDashSound();
             StartCoroutine(TimedDash());
         }
     }
@@ -143,6 +144,10 @@ public class PlayerController : MonoBehaviour
         if (other.gameObject.tag == "End")
         {
             SceneManager.LoadScene("EndScene");
+        }
+        if (other.gameObject.tag == "Ground")
+        {
+           
         }
     }
 }

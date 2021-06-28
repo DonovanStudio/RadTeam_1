@@ -2,19 +2,21 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class PhysicsPlayerController : MonoBehaviour
 {
     // Exposed variables
-    public float moveSpeed = 1.0f;
-    public float dashSpeed = 1.0f;
-    public float jumpHeight = 1.0f;
-    public float dashTime = 1.0f;
-    public float rotationSpeed = 1f;
-
+    [SerializeField] float moveSpeed = 1.0f;
+    [SerializeField] float dashSpeed = 1.0f;
+    [SerializeField] float jumpHeight = 1.0f;
+    //[SerializeField] float dashTime = 1.0f;
+    [SerializeField] float rotationSpeed = 1f;
+    [SerializeField] float floorSensitivity = 1f;
+    
     // Ability Use Check
     private bool shouldJump = false;
-    private bool shouldDash = true;
+    private bool shouldDash = false;
     
     // Ability Flags
     private bool jumpUnlocked = false;
@@ -23,6 +25,7 @@ public class PhysicsPlayerController : MonoBehaviour
     // Rigidbody
     private Rigidbody rb;
     private bool isGrounded = false;
+    float direction = 0;
 
     private void Awake()
     {
@@ -33,6 +36,7 @@ public class PhysicsPlayerController : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
     // Update is called once per frame
@@ -48,57 +52,94 @@ public class PhysicsPlayerController : MonoBehaviour
 
     private void HandleMovement()
     {
+        // Reset jump sound parameter
+        if (isGrounded)
+        {
+            
+        }
+
+        //Do a dash
+        if (dashUnlocked && shouldDash)
+        {
+            moveMe(direction * dashSpeed);
+            shouldDash = false;
+        }
+
         // Jumping
+        RaycastHit hit;
+        isGrounded = Physics.SphereCast(transform.position, floorSensitivity, Vector3.forward, out hit, 1000, 3);
+        //Debug.Log("Can jump is " + isGrounded);
         if (jumpUnlocked && shouldJump && isGrounded)
         {
-            Debug.Log("Jump");
+            rb.AddForce(jumpHeight * Vector3.up);
+            AudioManager.instance.SetJumpParameter(1.5f);
+            StartCoroutine(JumpSoundReset());
+            //Debug.Log("Jump");
         }
 
         shouldJump = false;
+
+        //walking
+        moveMe(direction);
+    }
+
+    private IEnumerator JumpSoundReset()
+    {
+        yield return new WaitForSeconds(1.5f);
+        AudioManager.instance.SetJumpParameter(0f);
     }
 
     public void OnMove(InputValue value)
     {
-        rb.AddForce(moveSpeed * Vector3.forward);
-        Debug.Log("Play forward and back sound");
+        //getting the value of the input (-1 or 1)
+        //backwards because the camera is on wrong
+        direction = -value.Get<float>();
+    }
+    private void moveMe(float direction)
+    {
+        Vector3 angleFacing = -Vector3.Cross(transform.up, Vector3.up);
+        rb.AddForce(direction * moveSpeed * angleFacing);
+        Debug.DrawRay(transform.position, angleFacing, Color.red, 10f);
+        //Debug.Log("Play forward and back sound");
     }
 
     public void OnStrafe(InputValue value)
     {
-        Debug.Log("Play left/right sound");
+        //Debug.Log("Play left/right sound");
     }
 
     public void OnJump()
     {
-        Debug.Log("Play jump sound");
+        //Debug.Log("Play jump sound");
         shouldJump = true;
     }
 
     public void OnDash()
     {
-        Debug.Log("Play Dash Sound");
-        if (dashUnlocked)
-        {
-            StartCoroutine(TimedDash());
-        }
+        shouldDash = true;
     }
 
-    private IEnumerator TimedDash()
-    {
-        float start = Time.time;
+    //private IEnumerator TimedDash()
+    //{
+    //    float start = Time.time;
 
-        while (Time.time < start + dashTime)
-        {
-            Debug.Log("Looping");
-            //transform.Translate(playerVelocity * dashSpeed * Time.deltaTime);
-            yield return null;
-        }
-    }
+    //    while (Time.time < start + dashTime)
+    //    {
+    //        Debug.Log("Looping");
+    //        //transform.Translate(playerVelocity * dashSpeed * Time.deltaTime);
+    //        yield return null;
+    //    }
+    //}
 
     public void OnLook(InputValue value)
     {
         rb.rotation = Quaternion.Euler(rb.rotation.eulerAngles + new Vector3(0f, rotationSpeed * value.Get<Vector2>().x, 0f));
-        Debug.Log("Looking");
+        //Debug.Log("Looking");
+    }
+
+    public void OnOpenHub()
+    {
+        SceneManager.LoadScene("YarnImplementation");
     }
 
     // unlock abilities when collecting(colliding with) instruments
@@ -112,21 +153,25 @@ public class PhysicsPlayerController : MonoBehaviour
         {
             dashUnlocked = true;
         }
-    }
-
-    private void OnCollisionEnter(Collision collision)
-    {
-        if (collision.gameObject.tag == "Ground")
+        if (other.gameObject.tag == "End")
         {
-            isGrounded = true;
+            SceneManager.LoadScene("EndScene");
         }
     }
 
-    private void OnCollisionExit(Collision collision)
-    {
-        if (collision.gameObject.tag == "Ground")
-        {
-            isGrounded = false;
-        }
-    }
+    //private void OnCollisionEnter(Collision collision)
+    //{
+    //    if (collision.gameObject.tag == "Ground")
+    //    {
+    //        isGrounded = true;
+    //    }
+    //}
+
+    //private void OnCollisionExit(Collision collision)
+    //{
+    //    if (collision.gameObject.tag == "Ground")
+    //    {
+    //        isGrounded = false;
+    //    }
+    //}
 }

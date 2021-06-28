@@ -14,6 +14,8 @@ public class AudioManager : MonoBehaviour
     private AudioSource jumpLayer;
     private AudioSource dashLayer;
 
+    private float jumpParameter = 0f;
+
     public static AudioManager instance;
 
     // Start is called before the first frame update
@@ -39,47 +41,57 @@ public class AudioManager : MonoBehaviour
         jumpLayer.volume = 0.1f;
     }
 
-    public void PlayJumpSound()
-    {
-        jumpLayer.volume = 1;
-        StartCoroutine("StopJumpSound");
-    }
+    //public void PlayJumpSound()
+    //{
+        //jumpLayer.volume = 1;
+        //StartCoroutine("StopJumpSound");
+    //}
 
-    private IEnumerator StopJumpSound()
-    {
-        yield return new WaitForSeconds(jumpDuration);
-        jumpLayer.volume = 0.1f;
-    }
+    //private IEnumerator StopJumpSound()
+    //{
+       // yield return new WaitForSeconds(jumpDuration);
+        //jumpLayer.volume = 0.1f;
+    //}
 
-    public void DashUnlocked()
+   public void DashUnlocked()
     {
         dashLayer.volume = 0.1f;
     }
 
-    public void PlayDashSound()
+    //public void PlayDashSound()
+    //{
+        //dashLayer.volume = 1;
+        //StartCoroutine("StopDashSound");
+    //}
+
+    //private IEnumerator StopDashSound()
+    //{
+        //yield return new WaitForSeconds(dashDuration);
+        //dashLayer.volume = 0.1f;
+    //}
+
+    //public void PauseAllMovementSounds()
+    //{
+        //baseLayer.Pause();
+        //jumpLayer.Pause();
+        //dashLayer.Pause();
+    //}
+
+    //public void ResumeMovementSounds()
+    //{
+        //baseLayer.Play();
+        //jumpLayer.Play();
+        //dashLayer.Play();
+    //}
+
+    public float GetJumpParameter()
     {
-        dashLayer.volume = 1;
-        StartCoroutine("StopDashSound");
+        return jumpParameter;
     }
 
-    private IEnumerator StopDashSound()
+    public void SetJumpParameter(float value)
     {
-        yield return new WaitForSeconds(dashDuration);
-        dashLayer.volume = 0.1f;
-    }
-
-    public void PauseAllMovementSounds()
-    {
-        baseLayer.Pause();
-        jumpLayer.Pause();
-        dashLayer.Pause();
-    }
-
-    public void ResumeMovementSounds()
-    {
-        baseLayer.Play();
-        jumpLayer.Play();
-        dashLayer.Play();
+        jumpParameter = value;
     }
 
 }
