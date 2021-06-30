@@ -27,6 +27,10 @@ public class PhysicsPlayerController : MonoBehaviour
     private bool isGrounded = false;
     float direction = 0;
 
+    // Audio
+    public GameObject backgroundMusic;
+    FMOD.Studio.Bus MasterBus;
+
     private void Awake()
     {
         
@@ -37,6 +41,7 @@ public class PhysicsPlayerController : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         Cursor.lockState = CursorLockMode.Locked;
+        MasterBus = FMODUnity.RuntimeManager.GetBus("Master:/");
     }
 
     // Update is called once per frame
@@ -156,6 +161,9 @@ public class PhysicsPlayerController : MonoBehaviour
         if (other.gameObject.tag == "End")
         {
             SceneManager.LoadScene("EndScene");
+            Destroy(backgroundMusic);
+            MasterBus.stopAllEvents(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+
         }
     }
 
