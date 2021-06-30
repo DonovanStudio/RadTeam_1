@@ -1,0 +1,48 @@
+title: ViolinMeet
+tags: 
+colorID: 0
+position: -1282,-204
+---
+<<set $name to "VIOLIN">><<hop Violin>><<NPCTag NameTags>>
+Whoa, you're really zoomin'!
+Got some serious wheels on that thing, huh? Heheh!
+-> I don't have wheels...
+    It's...it's a figure of--bah, never mind.
+-> Heck yeah!
+Hey...wait a second...is that--?
+Oh, no no NO!
+Is that that stinkin' old geezer, <wave>PIANO</wave>?!
+I thought something was fishy about you!
+-> PIANO is nice!
+    <<hop Player>>
+    Maybe to you, but a stringer never forgets...
+-> What about him?
+    <<hop Violin>>
+    Stubborn old fool he is! Bah!
+Nice to see he's branching out onto my turf.
+After a couple hundred years, you'd think he 'n the flighty brat'd figure out boundaries...
+<<set $name to "Conductor">><<PCTag NameTags>>
+Do you live here?
+<<set $name to "VIOLIN">><<turnR Violin>><<Small DialogueText>><<NPCTag NameTags>>
+No!
+I mean--
+<<turnL Violin>><<Reset DialogueText>>Yeah, I do!
+Well...it's not <wave>home</wave> but it's where I've been stayin', yeah.
+<<set $name to "Conductor">><<PCTag NameTags>>
+Where do you live?
+<<set $name to "VIOLIN">><<NPCTag NameTags>>
+Well, I actually used to live in that rundown old thing.
+But I see it's taken now.
+<<set $name to "Conductor">><<PCTag NameTags>>
+You can come with us!
+<<set $name to "VIOLIN">><<NPCTag NameTags>>
+What?! Why would I want to do that?
+-> It could be fun!
+    No way! Well...hmm.
+-> You seem lost...
+    <<hop Violin>>I-I'm not lost! I'm just...uh...
+<<turnR Violin>><<Small DialogueText>>I guess going along would beat waiting around here...
+<<turnL Violin>><<Reset DialogueText>>Y-you know what? Fine! Yeah, I'll come along!
+Clearly you're gonna need <wave>someone</wave> who knows a thing or two about anything.
+Here, I'll even show you how to get around-- better than PIANO could!
+===

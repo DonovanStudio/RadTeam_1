@@ -64,7 +64,7 @@ public class SelectCharacter : MonoBehaviour, IPointerEnterHandler, IPointerExit
         }
         else if (name is "Violin Actor")
         {
-            dialogueRunner.startNode = "ViolinTestNode";
+            dialogueRunner.startNode = "ViolinMeet";
             canvasSprites[0].SetActive(false);
             canvasSprites[1].SetActive(true);
             canvasSprites[2].SetActive(false);

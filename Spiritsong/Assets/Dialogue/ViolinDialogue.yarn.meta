@@ -1,0 +1,39 @@
+fileFormatVersion: 2
+guid: 43628726bc30e3f4eac3f927b35e0e7b
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 94073015eacc34c1d8fc6786e43d60ca, type: 3}
+  baseLanguageID: 
+  stringIDs:
+  - ViolinDialogue-ViolinMeet-0
+  - ViolinDialogue-ViolinMeet-1
+  - ViolinDialogue-ViolinMeet-2
+  - ViolinDialogue-ViolinMeet-3
+  - ViolinDialogue-ViolinMeet-4
+  - ViolinDialogue-ViolinMeet-5
+  - ViolinDialogue-ViolinMeet-6
+  - ViolinDialogue-ViolinMeet-7
+  - ViolinDialogue-ViolinMeet-8
+  - ViolinDialogue-ViolinMeet-9
+  - ViolinDialogue-ViolinMeet-10
+  - ViolinDialogue-ViolinMeet-11
+  - ViolinDialogue-ViolinMeet-12
+  - ViolinDialogue-ViolinMeet-13
+  - ViolinDialogue-ViolinMeet-14
+  - ViolinDialogue-ViolinMeet-15
+  - ViolinDialogue-ViolinMeet-16
+  - ViolinDialogue-ViolinMeet-17
+  - ViolinDialogue-ViolinMeet-18
+  - ViolinDialogue-ViolinMeet-19
+  - ViolinDialogue-ViolinMeet-20
+  - ViolinDialogue-ViolinMeet-21
+  compilationStatus: 1
+  isSuccesfullyCompiled: 1
+  compilationErrorMessage: 
+  baseLanguage: {instanceID: 0}
+  localizations: []

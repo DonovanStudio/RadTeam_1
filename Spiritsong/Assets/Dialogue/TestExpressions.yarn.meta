@@ -14,8 +14,12 @@ ScriptedImporter:
   - TestExpressions-Start-1
   - TestExpressions-Start-2
   - TestExpressions-Start-3
+  - TestExpressions-Start-4
+  - TestExpressions-Start-5
+  - TestExpressions-Start-6
+  - TestExpressions-Start-7
   compilationStatus: 1
   isSuccesfullyCompiled: 1
   compilationErrorMessage: 
-  baseLanguage: {instanceID: 0}
+  baseLanguage: {fileID: 7128917941130120860, guid: 9143f9f9e6db68643a065862f4a89038, type: 3}
   localizations: []
