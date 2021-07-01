@@ -41,7 +41,7 @@ public class PhysicsPlayerController : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         Cursor.lockState = CursorLockMode.Locked;
-        MasterBus = FMODUnity.RuntimeManager.GetBus("Master:/");
+        MasterBus = FMODUnity.RuntimeManager.GetBus("Bus:/");
     }
 
     // Update is called once per frame
@@ -160,10 +160,9 @@ public class PhysicsPlayerController : MonoBehaviour
         }
         if (other.gameObject.tag == "End")
         {
-            SceneManager.LoadScene("EndScene");
             Destroy(backgroundMusic);
             MasterBus.stopAllEvents(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
-
+            SceneManager.LoadScene("EndScene");
         }
     }
 
