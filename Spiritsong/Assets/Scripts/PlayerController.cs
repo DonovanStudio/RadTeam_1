@@ -51,7 +51,10 @@ public class PlayerController : MonoBehaviour
         if (controller.isGrounded)
         {
             playerVelocity.y = 0.0f;
+            // Turn off jump music
+            AudioManager.instance.SetJumpParameter(0f);
         }
+
 
         playerVelocity.x = playerMoveInput.x * moveSpeed;
         playerVelocity.z = playerMoveInput.z * moveSpeed;
@@ -64,7 +67,8 @@ public class PlayerController : MonoBehaviour
             Debug.Log("Jump");
             playerVelocity.y += jumpHeight;
             AudioManager.instance.SetJumpParameter(1.5f);
-            StartCoroutine(JumpSoundReset());
+            //AudioManager.instance.SetJumpParameter(1.5f);
+            //StartCoroutine(JumpSoundReset());
         }
 
         shouldJump = false;
@@ -72,21 +76,21 @@ public class PlayerController : MonoBehaviour
         controller.Move(playerVelocity * Time.deltaTime);
     }
 
-    private IEnumerator JumpSoundReset()
-    {
-        yield return new WaitForSeconds(1.5f);
-        AudioManager.instance.SetJumpParameter(0f);
-    }
+    //private IEnumerator JumpSoundReset()
+    //{
+    //    yield return new WaitForSeconds(1.5f);
+    //    AudioManager.instance.SetJumpParameter(0f);
+    //}
 
     public void OnMove(InputValue value)
     {
-        Debug.Log("Play forward and back sound");
+        //Debug.Log("Play forward and back sound");
         playerMoveInput.z = value.Get<float>();
     }
 
     public void OnStrafe(InputValue value)
     {
-        Debug.Log("Play left/right sound");
+        //Debug.Log("Play left/right sound");
         playerMoveInput.x = value.Get<float>();
     }
 
@@ -94,7 +98,7 @@ public class PlayerController : MonoBehaviour
     {
         if (jumpUnlocked)
         {
-            Debug.Log("Play jump sound");
+            //Debug.Log("Play jump sound");
             //AudioManager.instance.PlayJumpSound();
             shouldJump = true;
         }
@@ -104,7 +108,7 @@ public class PlayerController : MonoBehaviour
     {
         if (dashUnlocked)
         {
-            Debug.Log("Play Dash Sound");
+            //Debug.Log("Play Dash Sound");
             //AudioManager.instance.PlayDashSound();
             StartCoroutine(TimedDash());
         }
@@ -116,7 +120,7 @@ public class PlayerController : MonoBehaviour
 
         while (Time.time < start + dashTime)
         {
-            Debug.Log("Looping");
+            //Debug.Log("Looping");
             transform.Translate(playerVelocity * dashSpeed * Time.deltaTime);
             yield return null;
         }
