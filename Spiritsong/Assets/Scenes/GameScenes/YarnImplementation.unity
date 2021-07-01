@@ -1566,6 +1566,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canSpeak: 0
+  pianoParent: {fileID: 1861422221}
+  violinParent: {fileID: 225057416}
+  fluteParent: {fileID: 2076725897}
 --- !u!1 &881124229
 GameObject:
   m_ObjectHideFlags: 0
@@ -4222,6 +4225,8 @@ MonoBehaviour:
   yarnScripts:
   - {fileID: 2480198943629176163, guid: 74a908dd7df582844bd01b1bda58f5b3, type: 3}
   - {fileID: 2480198943629176163, guid: 43628726bc30e3f4eac3f927b35e0e7b, type: 3}
+  - {fileID: 2480198943629176163, guid: 42f1014ffd2ef7541a4bd55cc0082096, type: 3}
+  - {fileID: 2480198943629176163, guid: 27f8a6daef11d7842aea29834dd5f406, type: 3}
   textLanguage: 
   variableStorage: {fileID: 1998025440}
   dialogueUI: {fileID: 1998025441}

@@ -1,0 +1,37 @@
+fileFormatVersion: 2
+guid: 27f8a6daef11d7842aea29834dd5f406
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 94073015eacc34c1d8fc6786e43d60ca, type: 3}
+  baseLanguageID: en-CA
+  stringIDs:
+  - PianoDialogue-PianoMeet-0
+  - PianoDialogue-PianoMeet-1
+  - PianoDialogue-PianoMeet-2
+  - PianoDialogue-PianoMeet-3
+  - PianoDialogue-PianoMeet-4
+  - PianoDialogue-PianoMeet-5
+  - PianoDialogue-PianoMeet-6
+  - PianoDialogue-PianoMeet-7
+  - PianoDialogue-PianoMeet-8
+  - PianoDialogue-PianoMeet-9
+  - PianoDialogue-PianoMeet-10
+  - PianoDialogue-PianoMeet-11
+  - PianoDialogue-PianoMeet-12
+  - PianoDialogue-PianoMeet-13
+  - PianoDialogue-PianoMeet-14
+  - PianoDialogue-PianoMeet-15
+  - PianoDialogue-PianoMeet-16
+  - PianoDialogue-PianoMeet-17
+  - PianoDialogue-PianoMeet-18
+  - PianoDialogue-PianoMeet-19
+  compilationStatus: 1
+  isSuccesfullyCompiled: 1
+  compilationErrorMessage: 
+  baseLanguage: {fileID: 7128917941130120860, guid: 27f8a6daef11d7842aea29834dd5f406, type: 3}
+  localizations: []

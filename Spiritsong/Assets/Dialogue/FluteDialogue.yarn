@@ -19,13 +19,13 @@ Did you like the surprise though?
 -> What surprise?
     <<hop Flute>>
     The puzzle, silly!
-Though it was supposd to be more of a prank...
+Though it was supposed to be more of a prank...
 Hmm. Maybe I should them more obviously prank-like, then.
 So! How did you get this bad boy back in action?
--> Well, Piano was here when I woke up...
+-> I met Piano!
     <<hop Flute>>
     Huh?!
--> And I found Violin a few ways back...
+-> Violin was here!
     <<hop Flute>>
     What?!
 So I see Flute and Piano are here as well...
@@ -34,16 +34,18 @@ I've moved on for good.
 -> For good?
     <<hop Flute>>
     Yup! I don't need those dummies!
-    Constantly bickering about who's the better one to lead the orchestra, who's the best--
--> What do they keep arguing about?
+    Constantly bickering!
+    About who's the better one to lead the orchestra, who's the best--
+-> Arguing? About what?
     <<hop Flute>>
-    Oh, dumb stuff like who's the better instrument or the right one to lead the orchestra.
+    Oh, dumb stuff like who's the better instrument.
+    Or the who's right one to lead the orchestra.
     I don't need them anymore!
-Anyways, it's super clear that the flute is the superior instrument!
+It's super clear that the flute is the superior instrument!
 <<set $name to "Conductor">><<PCTag NameTags>>
 ...
 <<set $name to "FLUTE">><<NPCTag NameTags>>
-I didn't stoop to their level! I haven't started bickering yet!
+I didn't stoop to their level! I never started bickered!
 In fact...
 You need help finding the others, right?
 Leave it to me! I can show you a nifty trick that the others don't even know about!

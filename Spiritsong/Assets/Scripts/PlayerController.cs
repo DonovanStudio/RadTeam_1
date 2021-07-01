@@ -63,11 +63,19 @@ public class PlayerController : MonoBehaviour
         {
             Debug.Log("Jump");
             playerVelocity.y += jumpHeight;
+            AudioManager.instance.SetJumpParameter(1.5f);
+            StartCoroutine(JumpSoundReset());
         }
 
         shouldJump = false;
         playerVelocity.y += gravity * Time.deltaTime;
         controller.Move(playerVelocity * Time.deltaTime);
+    }
+
+    private IEnumerator JumpSoundReset()
+    {
+        yield return new WaitForSeconds(1.5f);
+        AudioManager.instance.SetJumpParameter(0f);
     }
 
     public void OnMove(InputValue value)
