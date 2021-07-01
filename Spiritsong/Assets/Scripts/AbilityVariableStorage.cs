@@ -8,9 +8,25 @@ public class AbilityVariableStorage : MonoBehaviour
     public bool jumpMechanic;
     public bool dashMechanic;
 
+    private static AbilityVariableStorage instance;
+
     // Start is called before the first frame update
     void Awake()
     {
         DontDestroyOnLoad(this.gameObject);
+
+        if (instance == null)
+        {
+            instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
+
+    private void Start()
+    {
+        walkMechanic = true;
     }
 }

@@ -41,9 +41,20 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         controller = GetComponent<CharacterController>();
-
+        Cursor.lockState = CursorLockMode.Locked;
         abilityVar = FindObjectOfType<AbilityVariableStorage>();
-        abilityVar.walkMechanic = true;
+
+        if (GameManager.instance.gameStarted)
+        {
+            transform.position = GameManager.instance.GetPosition();
+            transform.rotation = GameManager.instance.GetRotation();
+            jumpUnlocked = GameManager.instance.GetJump();
+            dashUnlocked = GameManager.instance.GetDash();
+        }
+        else
+        {
+            GameManager.instance.gameStarted = true;
+        }
     }
 
     // Update is called once per frame
@@ -86,13 +97,13 @@ public class PlayerController : MonoBehaviour
 
     public void OnMove(InputValue value)
     {
-        Debug.Log("Play forward and back sound");
+        //Debug.Log("Play forward and back sound");
         playerMoveInput.z = value.Get<float>();
     }
 
     public void OnStrafe(InputValue value)
     {
-        Debug.Log("Play left/right sound");
+        //Debug.Log("Play left/right sound");
         playerMoveInput.x = value.Get<float>();
     }
 
@@ -100,7 +111,7 @@ public class PlayerController : MonoBehaviour
     {
         if (jumpUnlocked)
         {
-            Debug.Log("Play jump sound");
+            //Debug.Log("Play jump sound");
             //AudioManager.instance.PlayJumpSound();
             shouldJump = true;
         }
@@ -144,6 +155,7 @@ public class PlayerController : MonoBehaviour
 
     public void OnOpenHub()
     {
+        GameManager.instance.SavePlayerData(transform.position, transform.rotation, jumpUnlocked, dashUnlocked);
         SceneManager.LoadScene("YarnImplementation");
     }
 
