@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-8895981830529997152
+--- !u!114 &-7428039254573352964
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -9,18 +9,22 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Level Theme Main/Time
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Level Theme Main
   m_EditorClassIdentifier: 
-  Name: Time
-  Min: 0
-  Max: 1.5
-  Default: 0
-  ID:
-    data1: 0
-    data2: 0
-  Exists: 1
---- !u!114 &-8041672953158893029
+  Path: event:/Level Theme Main
+  guid: 453c896485dbf447bebe6920429f9911
+  Banks:
+  - {fileID: 6468186088356678267}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: 2110298646486156460}
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 96631
+--- !u!114 &-5063908373893999588
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -69,20 +73,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Violin Friendship Theme
+  m_Name: event:/Title Theme
   m_EditorClassIdentifier: 
-  Path: event:/Violin Friendship Theme
-  guid: 2f38dc8f127a2f43a73ede06b274e5d6
+  Path: event:/Title Theme
+  guid: 0d7126d1ca765040898ca684cfef6a64
   Banks:
-  - {fileID: -8041672953158893029}
+  - {fileID: 6468186088356678267}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
   Parameters: []
   MinDistance: 0
   MaxDistance: 0
-  Length: 64398
---- !u!114 &-6238443551760034911
+  Length: 231772
+--- !u!114 &-4589768035637679269
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -193,12 +197,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Level Theme Main
+  m_Name: event:/Violin Friendship Theme
   m_EditorClassIdentifier: 
-  Path: event:/Level Theme Main
-  guid: 453c896485dbf447bebe6920429f9911
+  Path: event:/Violin Friendship Theme
+  guid: 2f38dc8f127a2f43a73ede06b274e5d6
   Banks:
-  - {fileID: -8041672953158893029}
+  - {fileID: 6468186088356678267}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
@@ -206,7 +210,7 @@ MonoBehaviour:
   - {fileID: 1050993572242742483}
   MinDistance: 0
   MaxDistance: 0
-  Length: 96631
+  Length: 64398
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -220,21 +224,21 @@ MonoBehaviour:
   m_Name: FMODStudioCache
   m_EditorClassIdentifier: 
   EditorBanks:
-  - {fileID: -1662827012330249376}
-  - {fileID: -8041672953158893029}
+  - {fileID: 908208550740837384}
+  - {fileID: 6468186088356678267}
   EditorEvents:
-  - {fileID: 3664859741668912820}
-  - {fileID: -6762311354186477834}
-  - {fileID: -966639896104114898}
-  - {fileID: 819699680826715058}
+  - {fileID: -5063908373893999588}
+  - {fileID: -4589768035637679269}
+  - {fileID: -7428039254573352964}
+  - {fileID: 7668926059101650110}
   EditorParameters: []
   MasterBanks:
-  - {fileID: -8041672953158893029}
+  - {fileID: 6468186088356678267}
   StringsBanks:
   - {fileID: -1662827012330249376}
   stringsBankWriteTime: 637605042545648785
   cacheVersion: 6
---- !u!114 &819699680826715058
+--- !u!114 &863387617892153754
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -316,8 +320,29 @@ MonoBehaviour:
   ID:
     data1: 0
     data2: 0
+  Exists: 0
+--- !u!114 &908208550740837384
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.strings.bank
+  m_EditorClassIdentifier: 
+  Path: FMOD Banks/Master.strings.bank
+  Name: Master.strings
+  StudioPath: bank:/Master.strings
+  lastModified: 637606619250000000
+  LoadResult: 0
+  FileSizes:
+  - Name: 
+    Value: 960
   Exists: 1
---- !u!114 &3005861738915087744
+--- !u!114 &1797270976893729948
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -336,51 +361,8 @@ MonoBehaviour:
   ID:
     data1: 0
     data2: 0
-  Exists: 0
---- !u!114 &3664859741668912820
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Title Theme
-  m_EditorClassIdentifier: 
-  Path: event:/Title Theme
-  guid: 0d7126d1ca765040898ca684cfef6a64
-  Banks:
-  - {fileID: -8041672953158893029}
-  IsStream: 1
-  Is3D: 0
-  IsOneShot: 0
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 231772
---- !u!114 &3996130622269977935
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Title Theme/Title Theme Fadeout
-  m_EditorClassIdentifier: 
-  Name: Title Theme Fadeout
-  Min: 0
-  Max: 1
-  Default: 0
-  ID:
-    data1: 0
-    data2: 0
-  Exists: 0
---- !u!114 &4212359836119301215
+  Exists: 1
+--- !u!114 &2110298646486156460
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -399,28 +381,8 @@ MonoBehaviour:
   ID:
     data1: 0
     data2: 0
-  Exists: 0
---- !u!114 &5109515360372507516
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Level Theme Main/Time
-  m_EditorClassIdentifier: 
-  Name: Time
-  Min: 0
-  Max: 1.5
-  Default: 0
-  ID:
-    data1: 0
-    data2: 0
-  Exists: 0
---- !u!114 &5877009870803087531
+  Exists: 1
+--- !u!114 &6468186088356678267
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -432,14 +394,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
   m_Name: bank:/Master.bank
   m_EditorClassIdentifier: 
-  Path: ../../../../Spiritsong Level Theme V1/Build/Desktop/Master.bank
+  Path: FMOD Banks/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 637600675040000000
+  lastModified: 637606619250000000
   LoadResult: 0
   FileSizes: []
-  Exists: 0
---- !u!114 &6028691901962559818
+  Exists: 1
+--- !u!114 &7668926059101650110
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -448,8 +410,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Level Theme Main/Time
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Piano Friendship Theme
   m_EditorClassIdentifier: 
   Name: Time
   Min: 0

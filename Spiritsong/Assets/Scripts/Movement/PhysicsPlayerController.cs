@@ -30,6 +30,10 @@ public class PhysicsPlayerController : MonoBehaviour
     // Ability Variable Storage
     AbilityVariableStorage abilityVar;
 
+    // Audio
+    public GameObject backgroundMusic;
+    FMOD.Studio.Bus MasterBus;
+
     private void Awake()
     {
         
@@ -43,6 +47,7 @@ public class PhysicsPlayerController : MonoBehaviour
 
         abilityVar = FindObjectOfType<AbilityVariableStorage>();
         abilityVar.walkMechanic = true;
+        MasterBus = FMODUnity.RuntimeManager.GetBus("Bus:/");
     }
 
     // Update is called once per frame
@@ -164,6 +169,8 @@ public class PhysicsPlayerController : MonoBehaviour
         }
         if (other.gameObject.tag == "End")
         {
+            Destroy(backgroundMusic);
+            MasterBus.stopAllEvents(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
             SceneManager.LoadScene("EndScene");
         }
     }
