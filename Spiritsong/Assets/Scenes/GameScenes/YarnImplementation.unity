@@ -1566,6 +1566,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canSpeak: 0
+  pianoParent: {fileID: 1861422221}
+  violinParent: {fileID: 225057416}
+  fluteParent: {fileID: 2076725897}
 --- !u!1 &881124229
 GameObject:
   m_ObjectHideFlags: 0

@@ -8,10 +8,19 @@ using Yarn.Unity;
 public class SelectStartNode : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
     public bool canSpeak;
+    [SerializeField] GameObject pianoParent;
+    [SerializeField] GameObject violinParent;
+    [SerializeField] GameObject fluteParent;
+
+    AbilityVariableStorage abilityVar;
 
     void Start()
     {
         AddPhysicsRaycaster();
+        abilityVar = FindObjectOfType<AbilityVariableStorage>();
+        GetPiano();
+        GetViolin();
+        GetFlute();
     }
 
     void AddPhysicsRaycaster()
@@ -33,5 +42,44 @@ public class SelectStartNode : MonoBehaviour, IPointerEnterHandler, IPointerExit
     public void OnPointerExit(PointerEventData pointerEventData)
     {
         canSpeak = false;
+    }
+
+    void GetPiano()
+    {
+        // If the player can walk (on by default), show the Piano spirit.
+        if (abilityVar.walkMechanic)
+        {
+            pianoParent.SetActive(true);
+        }
+        else if (!abilityVar.walkMechanic)
+        {
+            pianoParent.SetActive(false);
+        }
+    }
+
+    void GetViolin()
+    {
+        // If the player can walk (on by default), show the Piano spirit.
+        if (abilityVar.jumpMechanic)
+        {
+            violinParent.SetActive(true);
+        }
+        else if (!abilityVar.jumpMechanic)
+        {
+            violinParent.SetActive(false);
+        }
+    }
+
+    void GetFlute()
+    {
+        // If the player can dash, show the Flute spirit.
+        if (abilityVar.dashMechanic)
+        {
+            fluteParent.SetActive(true);
+        }
+        else if (!abilityVar.dashMechanic)
+        {
+            fluteParent.SetActive(false);
+        }
     }
 }
