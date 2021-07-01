@@ -32,6 +32,10 @@ public class PlayerController : MonoBehaviour
     // Ability Variable Storage
     AbilityVariableStorage abilityVar;
 
+    // Audio
+    public GameObject backgroundMusic;
+    FMOD.Studio.Bus MasterBus;
+
     private void Awake()
     {
         rotDividerRecip = 1 / rotationDivider;
@@ -43,6 +47,7 @@ public class PlayerController : MonoBehaviour
         controller = GetComponent<CharacterController>();
         Cursor.lockState = CursorLockMode.Locked;
         abilityVar = FindObjectOfType<AbilityVariableStorage>();
+        MasterBus = FMODUnity.RuntimeManager.GetBus("Bus:/");
 
         if (GameManager.instance.gameStarted)
         {
@@ -155,6 +160,8 @@ public class PlayerController : MonoBehaviour
 
     public void OnOpenHub()
     {
+        Destroy(backgroundMusic);
+        MasterBus.stopAllEvents(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
         GameManager.instance.SavePlayerData(transform.position, transform.rotation, jumpUnlocked, dashUnlocked);
         SceneManager.LoadScene("YarnImplementation");
     }
@@ -176,6 +183,8 @@ public class PlayerController : MonoBehaviour
         }
         if (other.gameObject.tag == "End")
         {
+            Destroy(backgroundMusic);
+            MasterBus.stopAllEvents(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
             SceneManager.LoadScene("EndScene");
         }
         if (other.gameObject.tag == "Ground")
