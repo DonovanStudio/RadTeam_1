@@ -139,7 +139,8 @@ public class PlayerController : MonoBehaviour
         while (Time.time < start + dashTime)
         {
             Debug.Log("Looping");
-            transform.Translate(playerVelocity * dashSpeed * Time.deltaTime);
+            //transform.Translate(playerVelocity * dashSpeed * Time.deltaTime);
+            controller.Move(transform.forward * dashSpeed * Time.deltaTime);
             yield return null;
         }
     }
@@ -160,9 +161,9 @@ public class PlayerController : MonoBehaviour
 
     public void OnOpenHub()
     {
+        GameManager.instance.SavePlayerData(transform.position, transform.rotation, jumpUnlocked, dashUnlocked);
         Destroy(backgroundMusic);
         MasterBus.stopAllEvents(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
-        GameManager.instance.SavePlayerData(transform.position, transform.rotation, jumpUnlocked, dashUnlocked);
         SceneManager.LoadScene("YarnImplementation");
     }
 

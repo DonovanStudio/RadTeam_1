@@ -306,10 +306,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 10
-  dashSpeed: 10
+  dashSpeed: 30
   jumpHeight: 6
   gravity: -10
   rotationDivider: 60
   minCameraAngle: -45
   maxCameraAngle: 30
   dashTime: 0.25
+  backgroundMusic: {fileID: 0}
