@@ -57,7 +57,7 @@ public class SelectCharacter : MonoBehaviour, IPointerEnterHandler, IPointerExit
     {
         if (name is "Piano Actor")
         {
-            dialogueRunner.startNode = "PianoTestNode";
+            dialogueRunner.startNode = "PianoMeet";
             canvasSprites[0].SetActive(true);
             canvasSprites[1].SetActive(false);
             canvasSprites[2].SetActive(false);
@@ -71,7 +71,7 @@ public class SelectCharacter : MonoBehaviour, IPointerEnterHandler, IPointerExit
         }
         else if (name is "Flute Actor")
         {
-            dialogueRunner.startNode = "FluteTestNode";
+            dialogueRunner.startNode = "FluteMeet";
             canvasSprites[0].SetActive(false);
             canvasSprites[1].SetActive(false);
             canvasSprites[2].SetActive(true);

@@ -1,7 +1,7 @@
 title: ViolinMeet
 tags: 
 colorID: 0
-position: -1282,-204
+position: -1396,-239
 ---
 <<set $name to "VIOLIN">><<hop Violin>><<NPCTag NameTags>>
 Whoa, you're really zoomin'!
@@ -11,7 +11,7 @@ Got some serious wheels on that thing, huh? Heheh!
 -> Heck yeah!
 Hey...wait a second...is that--?
 Oh, no no NO!
-Is that that stinkin' old geezer, <wave>PIANO</wave>?!
+Is that that stinkin' old geezer, *PIANO*?!
 I thought something was fishy about you!
 -> PIANO is nice!
     <<hop Player>>
@@ -23,11 +23,11 @@ Nice to see he's branching out onto my turf.
 After a couple hundred years, you'd think he 'n the flighty brat'd figure out boundaries...
 <<set $name to "Conductor">><<PCTag NameTags>>
 Do you live here?
-<<set $name to "VIOLIN">><<turnR Violin>><<Small DialogueText>><<NPCTag NameTags>>
+<<set $name to "VIOLIN">><<NPCTag NameTags>>
 No!
-I mean--
+<<turnR Violin>><<Small DialogueText>>I mean--
 <<turnL Violin>><<Reset DialogueText>>Yeah, I do!
-Well...it's not <wave>home</wave> but it's where I've been stayin', yeah.
+Well...it's not *home* but it's where I've been stayin', yeah.
 <<set $name to "Conductor">><<PCTag NameTags>>
 Where do you live?
 <<set $name to "VIOLIN">><<NPCTag NameTags>>
@@ -43,6 +43,8 @@ What?! Why would I want to do that?
     <<hop Violin>>I-I'm not lost! I'm just...uh...
 <<turnR Violin>><<Small DialogueText>>I guess going along would beat waiting around here...
 <<turnL Violin>><<Reset DialogueText>>Y-you know what? Fine! Yeah, I'll come along!
-Clearly you're gonna need <wave>someone</wave> who knows a thing or two about anything.
+Clearly you're gonna need *someone* who knows a thing or two about anything.
 Here, I'll even show you how to get around-- better than PIANO could!
+Bet you didn't know that you could press SPACE to jump.
+Try it out!
 ===
