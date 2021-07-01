@@ -6956,7 +6956,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8842717896358508161, guid: 4ea19b6f4c694b5468d90950f0b78548, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 4ea19b6f4c694b5468d90950f0b78548, type: 3}
 --- !u!1 &160819035
 GameObject:
@@ -76588,7 +76589,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: FluteSpirit
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4603663629368794236, guid: 2dc8ffb15027ae341b6f5ac94baf88b6, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 2dc8ffb15027ae341b6f5ac94baf88b6, type: 3}
 --- !u!1001 &1820450428
 PrefabInstance:
