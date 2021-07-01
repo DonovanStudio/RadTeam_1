@@ -29,6 +29,9 @@ public class PlayerController : MonoBehaviour
     private bool jumpUnlocked = false;
     private bool dashUnlocked = false;
 
+    // Ability Variable Storage
+    AbilityVariableStorage abilityVar;
+
     private void Awake()
     {
         rotDividerRecip = 1 / rotationDivider;
@@ -38,6 +41,9 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         controller = GetComponent<CharacterController>();
+
+        abilityVar = FindObjectOfType<AbilityVariableStorage>();
+        abilityVar.walkMechanic = true;
     }
 
     // Update is called once per frame
@@ -136,17 +142,24 @@ public class PlayerController : MonoBehaviour
         Camera.main.transform.rotation = Quaternion.Euler(cameraRotation);
     }
 
+    public void OnOpenHub()
+    {
+        SceneManager.LoadScene("YarnImplementation");
+    }
+
     // unlock abilities when collecting(colliding with) instruments
     private void OnTriggerEnter(Collider other)
     {
         if(other.gameObject.tag == "Jump")
         {
             jumpUnlocked = true;
+            abilityVar.jumpMechanic = true;
             AudioManager.instance.JumpUnlocked();
         }
         if (other.gameObject.tag == "Dash")
         {
             dashUnlocked = true;
+            abilityVar.dashMechanic = true;
             AudioManager.instance.DashUnlocked();
         }
         if (other.gameObject.tag == "End")

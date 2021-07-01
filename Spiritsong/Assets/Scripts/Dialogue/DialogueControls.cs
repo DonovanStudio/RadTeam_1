@@ -117,6 +117,6 @@ public class DialogueControls : MonoBehaviour
 
     public void OnCloseHub()
     {
-        SceneManager.LoadScene("MovementWithSound");
+        SceneManager.LoadScene("Level Design Scene");
     }
 }
