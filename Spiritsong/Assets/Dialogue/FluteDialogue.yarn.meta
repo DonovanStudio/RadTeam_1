@@ -1,0 +1,57 @@
+fileFormatVersion: 2
+guid: 42f1014ffd2ef7541a4bd55cc0082096
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 94073015eacc34c1d8fc6786e43d60ca, type: 3}
+  baseLanguageID: en-CA
+  stringIDs:
+  - FluteDialogue-FluteMeet-0
+  - FluteDialogue-FluteMeet-1
+  - FluteDialogue-FluteMeet-2
+  - FluteDialogue-FluteMeet-3
+  - FluteDialogue-FluteMeet-4
+  - FluteDialogue-FluteMeet-5
+  - FluteDialogue-FluteMeet-6
+  - FluteDialogue-FluteMeet-7
+  - FluteDialogue-FluteMeet-8
+  - FluteDialogue-FluteMeet-9
+  - FluteDialogue-FluteMeet-10
+  - FluteDialogue-FluteMeet-11
+  - FluteDialogue-FluteMeet-12
+  - FluteDialogue-FluteMeet-13
+  - FluteDialogue-FluteMeet-14
+  - FluteDialogue-FluteMeet-15
+  - FluteDialogue-FluteMeet-16
+  - FluteDialogue-FluteMeet-17
+  - FluteDialogue-FluteMeet-18
+  - FluteDialogue-FluteMeet-19
+  - FluteDialogue-FluteMeet-20
+  - FluteDialogue-FluteMeet-21
+  - FluteDialogue-FluteMeet-22
+  - FluteDialogue-FluteMeet-23
+  - FluteDialogue-FluteMeet-24
+  - FluteDialogue-FluteMeet-25
+  - FluteDialogue-FluteMeet-26
+  - FluteDialogue-FluteMeet-27
+  - FluteDialogue-FluteMeet-28
+  - FluteDialogue-FluteMeet-29
+  - FluteDialogue-FluteMeet-30
+  - FluteDialogue-FluteMeet-31
+  - FluteDialogue-FluteMeet-32
+  - FluteDialogue-FluteMeet-33
+  - FluteDialogue-FluteMeet-34
+  - FluteDialogue-FluteMeet-35
+  - FluteDialogue-FluteMeet-36
+  - FluteDialogue-FluteMeet-37
+  - FluteDialogue-FluteMeet-38
+  - FluteDialogue-FluteMeet-39
+  compilationStatus: 1
+  isSuccesfullyCompiled: 1
+  compilationErrorMessage: 
+  baseLanguage: {fileID: 7128917941130120860, guid: 42f1014ffd2ef7541a4bd55cc0082096, type: 3}
+  localizations: []

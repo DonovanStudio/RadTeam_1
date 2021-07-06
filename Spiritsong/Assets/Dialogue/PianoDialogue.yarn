@@ -1,0 +1,34 @@
+title: PianoMeet
+tags: 
+colorID: 0
+position: -1282,-204
+---
+<<set $name to "PIANO">><<hop Piano>><<NPCTag NameTags>>
+What ho, good lad! I see you've finally awoken!
+Now that you're up, we can finally go find the others.
+-> The others?
+    <<hop Piano>>
+    Yes, other spirits like us that are scattered across this realm.
+    Though I hesitate to say that I've seen you before...
+-> Now that I'm up?
+    <<hop Piano>>
+    Yes, I've been waiting for you.
+    The other spirits have since left this pavilion for their own reasons...
+But, no matter.
+It's nothing you need to worry yourself with at the moment.
+As for finding our friends, our combined powers should be enough.
+We shall use this pavilion as our vehicle!
+<<set $name to "Conductor">><<PCTag NameTags>>
+Vehicle how?
+<<set $name to "PIANO">><<NPCTag NameTags>>
+A vehicle to find our friends, of course!
+... And an actual vehicle. 
+<<turnR Piano>>
+We shall pilot this pavilion henceforth and uh,
+do as the youth say, "get the band back together."
+<<set $name to "Conductor">><<PCTag NameTags>>
+But I'm not sure how...
+<<set $name to "PIANO">><<turnL Piano>><<NPCTag NameTags>>
+No worries, lad. Let this old knight show you some of his tricks.
+Utilize the letters WASD to move around this realm of ours.
+===

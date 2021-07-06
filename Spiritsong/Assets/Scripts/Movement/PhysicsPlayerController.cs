@@ -27,6 +27,13 @@ public class PhysicsPlayerController : MonoBehaviour
     private bool isGrounded = false;
     float direction = 0;
 
+    // Ability Variable Storage
+    AbilityVariableStorage abilityVar;
+
+    // Audio
+    public GameObject backgroundMusic;
+    FMOD.Studio.Bus MasterBus;
+
     private void Awake()
     {
         
@@ -37,6 +44,10 @@ public class PhysicsPlayerController : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         Cursor.lockState = CursorLockMode.Locked;
+
+        abilityVar = FindObjectOfType<AbilityVariableStorage>();
+        abilityVar.walkMechanic = true;
+        MasterBus = FMODUnity.RuntimeManager.GetBus("Bus:/");
     }
 
     // Update is called once per frame
@@ -148,13 +159,18 @@ public class PhysicsPlayerController : MonoBehaviour
         if (other.gameObject.tag == "Jump")
         {
             jumpUnlocked = true;
+            abilityVar.jumpMechanic = true;
+        
         }
         if (other.gameObject.tag == "Dash")
         {
             dashUnlocked = true;
+            abilityVar.dashMechanic = true;
         }
         if (other.gameObject.tag == "End")
         {
+            Destroy(backgroundMusic);
+            MasterBus.stopAllEvents(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
             SceneManager.LoadScene("EndScene");
         }
     }

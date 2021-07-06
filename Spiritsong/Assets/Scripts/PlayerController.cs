@@ -29,6 +29,13 @@ public class PlayerController : MonoBehaviour
     private bool jumpUnlocked = false;
     private bool dashUnlocked = false;
 
+    // Ability Variable Storage
+    AbilityVariableStorage abilityVar;
+
+    // Audio
+    public GameObject backgroundMusic;
+    FMOD.Studio.Bus MasterBus;
+
     private void Awake()
     {
         rotDividerRecip = 1 / rotationDivider;
@@ -38,6 +45,21 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         controller = GetComponent<CharacterController>();
+        Cursor.lockState = CursorLockMode.Locked;
+        abilityVar = FindObjectOfType<AbilityVariableStorage>();
+        MasterBus = FMODUnity.RuntimeManager.GetBus("Bus:/");
+
+        if (GameManager.instance.gameStarted)
+        {
+            transform.position = GameManager.instance.GetPosition();
+            transform.rotation = GameManager.instance.GetRotation();
+            jumpUnlocked = GameManager.instance.GetJump();
+            dashUnlocked = GameManager.instance.GetDash();
+        }
+        else
+        {
+            GameManager.instance.gameStarted = true;
+        }
     }
 
     // Update is called once per frame
@@ -63,6 +85,8 @@ public class PlayerController : MonoBehaviour
         {
             Debug.Log("Jump");
             playerVelocity.y += jumpHeight;
+            AudioManager.instance.SetJumpParameter(1.5f);
+            StartCoroutine(JumpSoundReset());
         }
 
         shouldJump = false;
@@ -70,15 +94,21 @@ public class PlayerController : MonoBehaviour
         controller.Move(playerVelocity * Time.deltaTime);
     }
 
+    private IEnumerator JumpSoundReset()
+    {
+        yield return new WaitForSeconds(1.5f);
+        AudioManager.instance.SetJumpParameter(0f);
+    }
+
     public void OnMove(InputValue value)
     {
-        Debug.Log("Play forward and back sound");
+        //Debug.Log("Play forward and back sound");
         playerMoveInput.z = value.Get<float>();
     }
 
     public void OnStrafe(InputValue value)
     {
-        Debug.Log("Play left/right sound");
+        //Debug.Log("Play left/right sound");
         playerMoveInput.x = value.Get<float>();
     }
 
@@ -86,7 +116,7 @@ public class PlayerController : MonoBehaviour
     {
         if (jumpUnlocked)
         {
-            Debug.Log("Play jump sound");
+            //Debug.Log("Play jump sound");
             //AudioManager.instance.PlayJumpSound();
             shouldJump = true;
         }
@@ -109,7 +139,8 @@ public class PlayerController : MonoBehaviour
         while (Time.time < start + dashTime)
         {
             Debug.Log("Looping");
-            transform.Translate(playerVelocity * dashSpeed * Time.deltaTime);
+            //transform.Translate(playerVelocity * dashSpeed * Time.deltaTime);
+            controller.Move(transform.forward * dashSpeed * Time.deltaTime);
             yield return null;
         }
     }
@@ -128,21 +159,33 @@ public class PlayerController : MonoBehaviour
         Camera.main.transform.rotation = Quaternion.Euler(cameraRotation);
     }
 
+    public void OnOpenHub()
+    {
+        GameManager.instance.SavePlayerData(transform.position, transform.rotation, jumpUnlocked, dashUnlocked);
+        Destroy(backgroundMusic);
+        MasterBus.stopAllEvents(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+        SceneManager.LoadScene("YarnImplementation");
+    }
+
     // unlock abilities when collecting(colliding with) instruments
     private void OnTriggerEnter(Collider other)
     {
         if(other.gameObject.tag == "Jump")
         {
             jumpUnlocked = true;
+            abilityVar.jumpMechanic = true;
             AudioManager.instance.JumpUnlocked();
         }
         if (other.gameObject.tag == "Dash")
         {
             dashUnlocked = true;
+            abilityVar.dashMechanic = true;
             AudioManager.instance.DashUnlocked();
         }
         if (other.gameObject.tag == "End")
         {
+            Destroy(backgroundMusic);
+            MasterBus.stopAllEvents(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
             SceneManager.LoadScene("EndScene");
         }
         if (other.gameObject.tag == "Ground")

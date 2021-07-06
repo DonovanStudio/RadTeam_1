@@ -4,15 +4,15 @@ using UnityEngine;
 
 public class AudioManager : MonoBehaviour
 {
-    public GameObject layer1;
-    public GameObject layer2;
-    public GameObject layer3;
-    public float jumpDuration = 1.0f;
-    public float dashDuration = 1.0f;
+    //public GameObject layer1;
+    //public GameObject layer2;
+    //public GameObject layer3;
+    //public float jumpDuration = 1.0f;
+    //public float dashDuration = 1.0f;
 
-    private AudioSource baseLayer;
-    private AudioSource jumpLayer;
-    private AudioSource dashLayer;
+    //private AudioSource baseLayer;
+    //private AudioSource jumpLayer;
+    //private AudioSource dashLayer;
 
     private float jumpParameter = 0f;
 
@@ -23,11 +23,11 @@ public class AudioManager : MonoBehaviour
     {
         instance = this;
 
-        baseLayer = layer1.GetComponent<AudioSource>();
-        jumpLayer = layer2.GetComponent<AudioSource>();
-        jumpLayer.volume = 0;
-        dashLayer = layer3.GetComponent<AudioSource>();
-        dashLayer.volume = 0;
+        //baseLayer = layer1.GetComponent<AudioSource>();
+        //jumpLayer = layer2.GetComponent<AudioSource>();
+        //jumpLayer.volume = 0;
+        //dashLayer = layer3.GetComponent<AudioSource>();
+        //dashLayer.volume = 0;
     }
 
     // Update is called once per frame
@@ -38,7 +38,7 @@ public class AudioManager : MonoBehaviour
 
     public void JumpUnlocked()
     {
-        jumpLayer.volume = 0.1f;
+        //jumpLayer.volume = 0.1f;
     }
 
     //public void PlayJumpSound()
@@ -55,7 +55,7 @@ public class AudioManager : MonoBehaviour
 
    public void DashUnlocked()
     {
-        dashLayer.volume = 0.1f;
+        //dashLayer.volume = 0.1f;
     }
 
     //public void PlayDashSound()
