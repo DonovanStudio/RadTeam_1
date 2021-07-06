@@ -13,6 +13,7 @@ public class SelectCharacter : MonoBehaviour, IPointerEnterHandler, IPointerExit
     DialogueRunner dialogueRunner;
     DialogueControls dialogueControls;
     public GameObject[] canvasSprites;
+    AbilityVariableStorage abilityVar;
 
     void Start()
     {
@@ -20,6 +21,7 @@ public class SelectCharacter : MonoBehaviour, IPointerEnterHandler, IPointerExit
         spotlight.SetActive(false);
         dialogueRunner = FindObjectOfType<DialogueRunner>();
         dialogueControls = FindObjectOfType<DialogueControls>();
+        abilityVar = FindObjectOfType<AbilityVariableStorage>();
     }
 
     void AddPhysicsRaycaster()
@@ -55,21 +57,21 @@ public class SelectCharacter : MonoBehaviour, IPointerEnterHandler, IPointerExit
 
     void SetObject()
     {
-        if (name is "Piano Actor")
+        if (name is "Piano Actor" && abilityVar.walkMechanic is true)
         {
             dialogueRunner.startNode = "PianoMeet";
             canvasSprites[0].SetActive(true);
             canvasSprites[1].SetActive(false);
             canvasSprites[2].SetActive(false);
         }
-        else if (name is "Violin Actor")
+        else if (name is "Violin Actor" && abilityVar.jumpMechanic is true)
         {
             dialogueRunner.startNode = "ViolinMeet";
             canvasSprites[0].SetActive(false);
             canvasSprites[1].SetActive(true);
             canvasSprites[2].SetActive(false);
         }
-        else if (name is "Flute Actor")
+        else if (name is "Flute Actor" && abilityVar.dashMechanic is true)
         {
             dialogueRunner.startNode = "FluteMeet";
             canvasSprites[0].SetActive(false);
