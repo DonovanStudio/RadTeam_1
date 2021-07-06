@@ -8,10 +8,13 @@ ScriptedImporter:
   assetBundleName: 
   assetBundleVariant: 
   script: {fileID: 11500000, guid: 94073015eacc34c1d8fc6786e43d60ca, type: 3}
-  baseLanguageID: 
-  stringIDs: []
-  compilationStatus: 0
-  isSuccesfullyCompiled: 0
+  baseLanguageID: en-CA
+  stringIDs:
+  - Hints-Hint1-0
+  - Hints-Hint2-1
+  - Hints-Hint3-2
+  compilationStatus: 1
+  isSuccesfullyCompiled: 1
   compilationErrorMessage: 'Error on line 2 at position 1:
 
     missing TEXT_COMMANDHASHTAG_NEWLINE
@@ -20,5 +23,5 @@ ScriptedImporter:
     __PrivCrochet_colorID: 0
 
     ^^^^^^^^^^^^^^^^^^^^^'
-  baseLanguage: {instanceID: 0}
+  baseLanguage: {fileID: 7128917941130120860, guid: 74750f6ce3be16a46a26fe8167c7b452, type: 3}
   localizations: []

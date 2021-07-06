@@ -1,9 +1,9 @@
 title: ViolinMeet
 tags: 
 colorID: 0
-position: -1396,-239
+position: -1744,-405
 ---
-<<set $name to "VIOLIN">><<hop Violin>><<NPCTag NameTags>>
+<<set $name to "Violin">><<hop Violin>><<NPCTag NameTags>>
 Whoa, you're really zoomin'!
 Got some serious wheels on that thing, huh? Heheh!
 -> I don't have wheels...
@@ -23,19 +23,19 @@ Nice to see he's branching out onto my turf.
 After a couple hundred years, you'd think he 'n the flighty brat'd figure out boundaries...
 <<set $name to "Conductor">><<PCTag NameTags>>
 Do you live here?
-<<set $name to "VIOLIN">><<NPCTag NameTags>>
+<<set $name to "Violin">><<NPCTag NameTags>>
 No!
 <<turnR Violin>><<Small DialogueText>>I mean--
 <<turnL Violin>><<Reset DialogueText>>Yeah, I do!
 Well...it's not *home* but it's where I've been stayin', yeah.
 <<set $name to "Conductor">><<PCTag NameTags>>
 Where do you live?
-<<set $name to "VIOLIN">><<NPCTag NameTags>>
+<<set $name to "Violin">><<NPCTag NameTags>>
 Well, I actually used to live in that rundown old thing.
 But I see it's taken now.
 <<set $name to "Conductor">><<PCTag NameTags>>
 You can come with us!
-<<set $name to "VIOLIN">><<NPCTag NameTags>>
+<<set $name to "Violin">><<NPCTag NameTags>>
 What?! Why would I want to do that?
 -> It could be fun!
     No way! Well...hmm.

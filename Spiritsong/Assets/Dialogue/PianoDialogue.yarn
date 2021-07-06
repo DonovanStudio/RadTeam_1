@@ -1,9 +1,9 @@
 title: PianoMeet
 tags: 
 colorID: 0
-position: -1282,-204
+position: -1502,-327
 ---
-<<set $name to "PIANO">><<hop Piano>><<NPCTag NameTags>>
+<<set $name to "Piano">><<hop Piano>><<NPCTag NameTags>>
 What ho, good lad! I see you've finally awoken!
 Now that you're up, we can finally go find the others.
 -> The others?
@@ -20,7 +20,7 @@ As for finding our friends, our combined powers should be enough.
 We shall use this pavilion as our vehicle!
 <<set $name to "Conductor">><<PCTag NameTags>>
 Vehicle how?
-<<set $name to "PIANO">><<NPCTag NameTags>>
+<<set $name to "Piano">><<NPCTag NameTags>>
 A vehicle to find our friends, of course!
 ... And an actual vehicle. 
 <<turnR Piano>>
@@ -28,7 +28,8 @@ We shall pilot this pavilion henceforth and uh,
 do as the youth say, "get the band back together."
 <<set $name to "Conductor">><<PCTag NameTags>>
 But I'm not sure how...
-<<set $name to "PIANO">><<turnL Piano>><<NPCTag NameTags>>
+<<set $name to "Piano">><<turnL Piano>><<NPCTag NameTags>>
 No worries, lad. Let this old knight show you some of his tricks.
 Utilize the letters WASD to move around this realm of ours.
+You can press H to leave this place, or come back when you so desire.
 ===

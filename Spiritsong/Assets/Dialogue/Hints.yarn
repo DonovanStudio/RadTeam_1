@@ -3,19 +3,19 @@ tags: Crochet_tags:
 colorID: 0
 position: -50,-289
 ---
-<<set $name to "PIANO">>This displays the first hint text.
+<<set $name to "Piano">><<NPCTag NameTags>>This displays the first hint text.
 ===
 title: Hint2
 tags: Crochet_tags: 
 colorID: 0
 position: 232,-293
 ---
-<<set $name to "VIOLIN">>This displays the first second text.
+<<set $name to "Violin">><<NPCTag NameTags>>This displays the second hint text.
 ===
 title: Hint3
 tags: Crochet_tags: 
 colorID: 0
 position: -332,-315
 ---
-<<set $name to "FLUTE">>This displays the third hint text.
+<<set $name to "Flute">><<NPCTag NameTags>>This displays the third hint text.
 ===

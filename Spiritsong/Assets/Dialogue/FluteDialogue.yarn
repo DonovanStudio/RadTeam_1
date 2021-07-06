@@ -1,7 +1,7 @@
 title: FluteMeet
 tags: 
 colorID: 0
-position: -1282,-204
+position: -1584,-304
 ---
 <<set $name to "FLUTE">><<hop Flute>><<NPCTag NameTags>>
 Oh! I see you've finally found me.
@@ -9,7 +9,7 @@ And after making me wait all this time, too.
 That's pretty rude of you to do, y'know!
 <<set $name to "Conductor">><<PCTag NameTags>>
 Oh, sorry...
-<<set $name to "FLUTE">><<NPCTag NameTags>>
+<<set $name to "Flute">><<NPCTag NameTags>>
 Hehe. No need to apologize! I'm just joking around.
 Did you like the surprise though?
 -> The puzzle?
@@ -44,14 +44,14 @@ I've moved on for good.
 It's super clear that the flute is the superior instrument!
 <<set $name to "Conductor">><<PCTag NameTags>>
 ...
-<<set $name to "FLUTE">><<NPCTag NameTags>>
+<<set $name to "Flute">><<NPCTag NameTags>>
 I didn't stoop to their level! I never started bickered!
 In fact...
 You need help finding the others, right?
 Leave it to me! I can show you a nifty trick that the others don't even know about!
 <<set $name to "Conductor">><<PCTag NameTags>>
 ...
-<<set $name to "FLUTE">><<NPCTag NameTags>>
+<<set $name to "Flute">><<NPCTag NameTags>>
 Oh, don't give me that! It won't be another prank.
 Years of pranking others actually helped me perfect this!
 I call it: the Dash.
