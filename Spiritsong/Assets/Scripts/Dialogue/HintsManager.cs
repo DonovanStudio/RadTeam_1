@@ -6,6 +6,7 @@ using Yarn.Unity;
 public class HintsManager : MonoBehaviour
 {
     AbilityVariableStorage abilityVar;
+    [SerializeField] Animator notificationAnimator;
 
     // Start is called before the first frame update
     void Start()
@@ -24,16 +25,22 @@ public class HintsManager : MonoBehaviour
         if (this.gameObject.name == "Hint0Trigger")
         {
             abilityVar.hintsAvailable[0] = true;
+            notificationAnimator.SetBool("HintAvailable", true);
+            StartCoroutine(HideNotifs());
         }
 
         if (this.gameObject.name == "Hint1Trigger")
         {
             abilityVar.hintsAvailable[1] = true;
+            notificationAnimator.SetBool("HintAvailable", true);
+            StartCoroutine(HideNotifs());
         }
 
         if (this.gameObject.name == "Hint2Trigger")
         {
             abilityVar.hintsAvailable[2] = true;
+            notificationAnimator.SetBool("HintAvailable", true);
+            StartCoroutine(HideNotifs());
         }
     }
 
@@ -53,5 +60,12 @@ public class HintsManager : MonoBehaviour
         {
             abilityVar.hintsAvailable[2] = false;
         }
+    }
+
+    IEnumerator HideNotifs()
+    {
+        // suspend execution for 5 seconds
+        yield return new WaitForSeconds(5);
+        notificationAnimator.SetBool("HintAvailable", false);
     }
 }
