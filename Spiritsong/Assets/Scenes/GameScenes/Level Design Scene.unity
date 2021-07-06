@@ -20662,6 +20662,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   notificationAnimator: {fileID: 1860793430}
+  popupSprite: {fileID: 940592344}
+  characterSprites:
+  - {fileID: 21300000, guid: a98958731f0de7f4c82e91d99d6b6bed, type: 3}
+  - {fileID: 21300000, guid: 139512be3da263e4bb475962d2b3c538, type: 3}
+  - {fileID: 21300000, guid: cd3e26ff2031c684c999ba527e377a2f, type: 3}
 --- !u!1001 &454000538
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -41919,6 +41924,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   notificationAnimator: {fileID: 1860793430}
+  popupSprite: {fileID: 940592344}
+  characterSprites:
+  - {fileID: 21300000, guid: a98958731f0de7f4c82e91d99d6b6bed, type: 3}
+  - {fileID: 21300000, guid: 139512be3da263e4bb475962d2b3c538, type: 3}
+  - {fileID: 21300000, guid: cd3e26ff2031c684c999ba527e377a2f, type: 3}
 --- !u!1001 &941501747
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -59809,6 +59819,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   notificationAnimator: {fileID: 1860793430}
+  popupSprite: {fileID: 940592344}
+  characterSprites:
+  - {fileID: 21300000, guid: a98958731f0de7f4c82e91d99d6b6bed, type: 3}
+  - {fileID: 21300000, guid: 139512be3da263e4bb475962d2b3c538, type: 3}
+  - {fileID: 21300000, guid: cd3e26ff2031c684c999ba527e377a2f, type: 3}
 --- !u!1001 &1382166114
 PrefabInstance:
   m_ObjectHideFlags: 0
