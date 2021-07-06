@@ -20437,8 +20437,9 @@ GameObject:
   m_Component:
   - component: {fileID: 451922791}
   - component: {fileID: 451922792}
+  - component: {fileID: 451922793}
   m_Layer: 0
-  m_Name: Hint3Trigger
+  m_Name: Hint2Trigger
   m_TagString: Untagged
   m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -20466,11 +20467,23 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 451922790}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 128.46426, y: 24.150066, z: 141.4106}
   m_Center: {x: -29.954865, y: -6.348795, z: -3.864418}
+--- !u!114 &451922793
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 451922790}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: baa40df8c733d60459e7e988f0f04438, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &454000538
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -41531,8 +41544,9 @@ GameObject:
   m_Component:
   - component: {fileID: 941256289}
   - component: {fileID: 941256290}
+  - component: {fileID: 941256291}
   m_Layer: 0
-  m_Name: Hint2Trigger
+  m_Name: Hint1Trigger
   m_TagString: Untagged
   m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -41565,6 +41579,18 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 44.178947
   m_Center: {x: -19.965248, y: 13.551476, z: -6.642807}
+--- !u!114 &941256291
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 941256288}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: baa40df8c733d60459e7e988f0f04438, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &941501747
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -59287,8 +59313,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1381972654}
   - component: {fileID: 1381972655}
+  - component: {fileID: 1381972656}
   m_Layer: 0
-  m_Name: Hint1Trigger
+  m_Name: Hint0Trigger
   m_TagString: Untagged
   m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -59321,6 +59348,18 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 22.453999
   m_Center: {x: 1.7597046, y: 13.551476, z: -6.642807}
+--- !u!114 &1381972656
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1381972653}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: baa40df8c733d60459e7e988f0f04438, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1382166114
 PrefabInstance:
   m_ObjectHideFlags: 0

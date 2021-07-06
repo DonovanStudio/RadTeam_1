@@ -1,12 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Yarn.Unity;
 
 public class AbilityVariableStorage : MonoBehaviour
 {
     public bool walkMechanic;
     public bool jumpMechanic;
     public bool dashMechanic;
+    public bool[] hintsAvailable;
 
     private static AbilityVariableStorage instance;
 

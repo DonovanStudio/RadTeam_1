@@ -46,3 +46,5 @@ MonoBehaviour:
   walkMechanic: 0
   jumpMechanic: 0
   dashMechanic: 0
+  hintsAvailable: 000000
+  startNode: 
