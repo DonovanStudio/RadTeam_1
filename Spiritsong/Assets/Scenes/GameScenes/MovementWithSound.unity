@@ -474,6 +474,50 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 97300932}
   m_CullTransparentMesh: 1
+--- !u!1 &129053065 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7001875375228662370, guid: 7392ac9998530ce438f6c59a40708412, type: 3}
+  m_PrefabInstance: {fileID: 411021552}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &129053066
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 129053065}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attenuationObject: {fileID: 0}
+  ListenerNumber: -1
+--- !u!114 &129053067
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 129053065}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: End
+  Event: event:/Level Theme Main
+  PlayEvent: 1
+  StopEvent: 2
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params:
+  - Name: Time
+    Value: 0
+  OverrideAttenuation: 0
+  OverrideMinDistance: 0
+  OverrideMaxDistance: 0
 --- !u!1 &138920082 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: f710dbd2cdb3e564f8a41882ac3e990c, type: 3}
@@ -1065,7 +1109,11 @@ PrefabInstance:
     - target: {fileID: 42759830, guid: 7392ac9998530ce438f6c59a40708412, type: 3}
       propertyPath: backgroundMusic
       value: 
-      objectReference: {fileID: 953310759}
+      objectReference: {fileID: 129053065}
+    - target: {fileID: 1196888207393452981, guid: 7392ac9998530ce438f6c59a40708412, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5556429425773783548, guid: 7392ac9998530ce438f6c59a40708412, type: 3}
       propertyPath: m_RootOrder
       value: 12
@@ -1114,7 +1162,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: PhysicsPlayer
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1196888207393452981, guid: 7392ac9998530ce438f6c59a40708412, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 7392ac9998530ce438f6c59a40708412, type: 3}
 --- !u!1001 &448876852
 PrefabInstance:
@@ -2350,7 +2399,6 @@ GameObject:
   - component: {fileID: 930907860}
   - component: {fileID: 930907859}
   - component: {fileID: 930907861}
-  - component: {fileID: 930907862}
   m_Layer: 0
   m_Name: AudioManager
   m_TagString: Untagged
@@ -2403,20 +2451,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fmodEvent: event:/Level Theme Main
   time: 0
---- !u!114 &930907862
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 930907858}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  attenuationObject: {fileID: 0}
-  ListenerNumber: -1
 --- !u!1 &953310759
 GameObject:
   m_ObjectHideFlags: 0
@@ -2427,7 +2461,6 @@ GameObject:
   m_Component:
   - component: {fileID: 953310761}
   - component: {fileID: 953310762}
-  - component: {fileID: 953310760}
   m_Layer: 0
   m_Name: BackgroundMusic
   m_TagString: Untagged
@@ -2435,31 +2468,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &953310760
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 953310759}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CollisionTag: End
-  Event: event:/Level Theme Main
-  PlayEvent: 1
-  StopEvent: 2
-  AllowFadeout: 1
-  TriggerOnce: 0
-  Preload: 0
-  Params:
-  - Name: Time
-    Value: 0
-  OverrideAttenuation: 0
-  OverrideMinDistance: 0
-  OverrideMaxDistance: 0
 --- !u!4 &953310761
 Transform:
   m_ObjectHideFlags: 0
@@ -2481,7 +2489,7 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 953310759}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
