@@ -6086,8 +6086,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: d640c4831a225ad4cb79f2a5a4e646ae, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -20663,6 +20663,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notificationAnimator: {fileID: 1860793430}
   popupSprite: {fileID: 940592344}
+  popupText: {fileID: 1402486622}
   characterSprites:
   - {fileID: 21300000, guid: 7f2035bbb7e1fc84d9611b393eb59af5, type: 3}
   - {fileID: 21300000, guid: 7475036896db49b4f973ce4b25d23bbc, type: 3}
@@ -41925,6 +41926,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notificationAnimator: {fileID: 1860793430}
   popupSprite: {fileID: 940592344}
+  popupText: {fileID: 1402486622}
   characterSprites:
   - {fileID: 21300000, guid: 7f2035bbb7e1fc84d9611b393eb59af5, type: 3}
   - {fileID: 21300000, guid: 7475036896db49b4f973ce4b25d23bbc, type: 3}
@@ -59820,6 +59822,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notificationAnimator: {fileID: 1860793430}
   popupSprite: {fileID: 940592344}
+  popupText: {fileID: 1402486622}
   characterSprites:
   - {fileID: 21300000, guid: 7f2035bbb7e1fc84d9611b393eb59af5, type: 3}
   - {fileID: 21300000, guid: 7475036896db49b4f973ce4b25d23bbc, type: 3}
@@ -60913,7 +60916,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Hey! I might be able to help!
+  m_text: I'm here if you need aid!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 76df9cdbe5c5eb743b8c45c240c2f26f, type: 2}
   m_sharedMaterial: {fileID: -398741145511697909, guid: 76df9cdbe5c5eb743b8c45c240c2f26f, type: 2}
