@@ -7,7 +7,7 @@
 [LOG] SystemI::init                            : Output requires a sample rate of 44100Hz, resampling will occur.
 [LOG] Thread::initThread                       : Init FMOD stream thread. Affinity: 0x8000000000000003, Priority: 0xFFFF7FFB, Stack Size: 98304, Semaphore: No, Sleep Time: 10, Looping: Yes.
 [LOG] Thread::initThread                       : Init FMOD mixer thread. Affinity: 0x8000000000000001, Priority: 0xFFFF7FFA, Stack Size: 81920, Semaphore: Yes, Sleep Time: 0, Looping: Yes.
-[LOG] AsyncManager::init                       : manager 0x7f8cfe312208 isAsync 0 updatePeriod 0.02
+[LOG] AsyncManager::init                       : manager 0x7ffcb170de08 isAsync 0 updatePeriod 0.02
 [LOG] AsyncManager::init                       : done
 [LOG] PlaybackSystem::init                     : 
 [LOG] Thread::initThread                       : Init FMOD Studio sample load thread. Affinity: 0x8000000000000003, Priority: 0xFFFF7FFD, Stack Size: 98304, Semaphore: No, Sleep Time: 1, Looping: No.
@@ -16,53 +16,46 @@
 [LOG] Manager::init                            : done.
 [LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
 [LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0x7f8cfddb40f8
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0x7f8cfddb40f8
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0x7f8cfddb40f8
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0x7f8cfddb40f8
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0x7f8cfddb40f8
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0x7f8cfddb40f8
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0x7f8cfddb40f8
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0x7f8cfddb40f8
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0x7f8cfddb40f8
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0x7f8cfddb40f8
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0x7f8cfddb40f8
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0x7f8cfddb40f8
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0x7f8cfddb40f8
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0x7f8cfddb40f8
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0x7f8cfddb40f8
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0x7f8cfddb40f8
-[LOG] SoundI::release                          : Spiritsong_Mus_LTL2_V1_0622 (0x7f8d08e3e668)
-[LOG] SoundI::release                          :     Spiritsong_Mus_LTL2_V1_0622 (0x7f8cfddb3f68)
-[LOG] SoundI::release                          :     Spiritsong_Mus_LTL2_V1_0622 (0x7f8cfddb40f8)
-[LOG] SoundI::release                          : Spiritsong_Mus_LTL1_V1_0622 (0x7f8d071fecb8)
-[LOG] SoundI::release                          :     Spiritsong_Mus_LTL1_V1_0622 (0x7f8cfddc7f68)
-[LOG] SoundI::release                          :     Spiritsong_Mus_LTL1_V1_0622 (0x7f8cfddc81c8)
-[LOG] SoundI::release                          : Spiritsong_Mus_LTL2_V1_0622 (0x7f8d0712da58)
-[LOG] SoundI::release                          :     Spiritsong_Mus_LTL2_V1_0622 (0x7f8cfdd41c18)
-[LOG] SoundI::release                          :     Spiritsong_Mus_LTL2_V1_0622 (0x7f8cfdd9d008)
-[LOG] SoundI::release                          : Spiritsong_Mus_LTL1_V1_0622 (0x7f8d071f3768)
-[LOG] SoundI::release                          :     Spiritsong_Mus_LTL1_V1_0622 (0x7f8cfdd17518)
-[LOG] SoundI::release                          :     Spiritsong_Mus_LTL1_V1_0622 (0x7f8cfddbc9e8)
-[LOG] SystemI::createSound                     : filename = FMOD Banks/Master.bank : mode 02010082
-[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     : setdata soundi = 0x7f8d07792a48 : node = 0x7f8cff8772f0
-[LOG] SystemI::createSound                     : add node to async list : head = 0x7f8d0712d888.  list count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0x7f8d07792a48
-[LOG] SystemI::createSoundInternal             :     Create name='FMOD Banks/Master.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 6393696
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 6976
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0x7f8cff877400
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Spiritsong_Mus_TT_0623', format=5, channels=2, frequency=48000, lengthbytes=2756608, lengthpcm=11125090, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.634583.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0x7f8d07792a48
-[LOG] SoundI::release                          : Spiritsong_Mus_TT_0623 (0x7f8d07792a48)
-[LOG] SoundI::release                          :     Spiritsong_Mus_TT_0623 (0x7f8d0cade628)
-[LOG] SoundI::release                          :     Spiritsong_Mus_TT_0623 (0x7f8d0b64ebe8)
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] SoundI::release                          : Spiritsong_Mus_TT_0623 (0x7ffcb1cb3048)
+[LOG] SoundI::release                          :     Spiritsong_Mus_TT_0623 (0x7ffcb5a7f6f8)
+[LOG] SoundI::release                          :     Spiritsong_Mus_TT_0623 (0x7ffcb5a7f888)
+[LOG] SoundI::release                          : Spiritsong_SFX_ForestAmbienceBase_0706 (0x7ffcb2162a88)
+[LOG] SoundI::release                          :     Spiritsong_SFX_ForestAmbienceBase_0706 (0x7ffcb5ab7268)
+[LOG] SoundI::release                          :     Spiritsong_SFX_ForestAmbienceBase_0706 (0x7ffcb5a7df88)
+[LOG] SoundI::release                          :  (0x7ffcb0dfd3c8)
+[LOG] SoundI::release                          :     Spiritsong_SFX_Gamelanv1_0706 (0x7ffcb0dfd538)
+[LOG] SoundI::release                          :  (0x7ffcb0dfc3c8)
+[LOG] SoundI::release                          :     Spiritsong_SFX_Gamelanv2_0706 (0x7ffcb0dfc538)
+[LOG] SoundI::release                          :  (0x7ffcb0dffe08)
+[LOG] SoundI::release                          :     Spiritsong_SFX_Gamelanv3_0706 (0x7ffcb0dfef78)
+[LOG] SoundI::release                          :  (0x7ffcb0dfb718)
+[LOG] SoundI::release                          :     Spiritsong_SFX_Gamelanv4_0706 (0x7ffcb0dfb888)
+[LOG] SoundI::release                          :  (0x7ffcb0da3438)
+[LOG] SoundI::release                          :     Spiritsong_SFX_Gamelanv5_0706 (0x7ffcb0da35a8)
+[LOG] SoundI::release                          :  (0x7ffcb0dfe4d8)
+[LOG] SoundI::release                          :     Spiritsong_SFX_WindChimesv1_0706 (0x7ffcb0dfe648)
+[LOG] SoundI::release                          :  (0x7ffcb0d623f8)
+[LOG] SoundI::release                          :     Spiritsong_SFX_WindChimesv2_0706 (0x7ffcb0d62568)
+[LOG] SoundI::release                          :  (0x7ffcb0dfeac8)
+[LOG] SoundI::release                          :     Spiritsong_SFX_WindChimesv3_0706 (0x7ffcb0dfec38)
+[LOG] SoundI::release                          :  (0x7ffcae3fced8)
+[LOG] SoundI::release                          :     Spiritsong_SFX_WindChimesv4_0706 (0x7ffcae3fd048)
+[LOG] SoundI::release                          :  (0x7ffcb0d75998)
+[LOG] SoundI::release                          :     Spiritsong_SFX_FingerCymv1_0706 (0x7ffcb0d75b08)
+[LOG] SoundI::release                          :  (0x7ffcb0dfdee8)
+[LOG] SoundI::release                          :     Spiritsong_SFX_FingerCymv2_0706 (0x7ffcb0dfe058)
+[LOG] SoundI::release                          :  (0x7ffcb0dfd8f8)
+[LOG] SoundI::release                          :     Spiritsong_SFX_FingerCymv3_0706 (0x7ffcb0dfda68)
+[LOG] SoundI::release                          :  (0x7ffcb0df2d78)
+[LOG] SoundI::release                          :     Spiritsong_SFX_FingerCymv4_0706 (0x7ffcb0df2ee8)
+[LOG] SoundI::release                          :  (0x7ffcb0dff818)
+[LOG] SoundI::release                          :     Spiritsong_SFX_FingerCymv5_0706 (0x7ffcb0dff988)
+[LOG] SoundI::release                          :  (0x7ffcae3fc2f8)
+[LOG] SoundI::release                          :     Spiritsong_SFX_FingerCymv6_0706 (0x7ffcae3fc468)
+[LOG] SoundI::release                          :  (0x7ffcae3fc8e8)
+[LOG] SoundI::release                          :     Spiritsong_SFX_FingerCymv7_0706 (0x7ffcae3fca58)
 [LOG] Thread::callback                         : FMOD Studio update thread finished.
 [LOG] Thread::callback                         : FMOD Studio bank load thread finished.
 [LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
