@@ -7,7 +7,7 @@
 [LOG] SystemI::init                            : Output requires a sample rate of 44100Hz, resampling will occur.
 [LOG] Thread::initThread                       : Init FMOD stream thread. Affinity: 0x8000000000000003, Priority: 0xFFFF7FFB, Stack Size: 98304, Semaphore: No, Sleep Time: 10, Looping: Yes.
 [LOG] Thread::initThread                       : Init FMOD mixer thread. Affinity: 0x8000000000000001, Priority: 0xFFFF7FFA, Stack Size: 81920, Semaphore: Yes, Sleep Time: 0, Looping: Yes.
-[LOG] AsyncManager::init                       : manager 0x7ffcb170de08 isAsync 0 updatePeriod 0.02
+[LOG] AsyncManager::init                       : manager 0x7fdc818a0208 isAsync 0 updatePeriod 0.02
 [LOG] AsyncManager::init                       : done
 [LOG] PlaybackSystem::init                     : 
 [LOG] Thread::initThread                       : Init FMOD Studio sample load thread. Affinity: 0x8000000000000003, Priority: 0xFFFF7FFD, Stack Size: 98304, Semaphore: No, Sleep Time: 1, Looping: No.
@@ -16,46 +16,62 @@
 [LOG] Manager::init                            : done.
 [LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
 [LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
-[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
-[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
-[LOG] SoundI::release                          : Spiritsong_Mus_TT_0623 (0x7ffcb1cb3048)
-[LOG] SoundI::release                          :     Spiritsong_Mus_TT_0623 (0x7ffcb5a7f6f8)
-[LOG] SoundI::release                          :     Spiritsong_Mus_TT_0623 (0x7ffcb5a7f888)
-[LOG] SoundI::release                          : Spiritsong_SFX_ForestAmbienceBase_0706 (0x7ffcb2162a88)
-[LOG] SoundI::release                          :     Spiritsong_SFX_ForestAmbienceBase_0706 (0x7ffcb5ab7268)
-[LOG] SoundI::release                          :     Spiritsong_SFX_ForestAmbienceBase_0706 (0x7ffcb5a7df88)
-[LOG] SoundI::release                          :  (0x7ffcb0dfd3c8)
-[LOG] SoundI::release                          :     Spiritsong_SFX_Gamelanv1_0706 (0x7ffcb0dfd538)
-[LOG] SoundI::release                          :  (0x7ffcb0dfc3c8)
-[LOG] SoundI::release                          :     Spiritsong_SFX_Gamelanv2_0706 (0x7ffcb0dfc538)
-[LOG] SoundI::release                          :  (0x7ffcb0dffe08)
-[LOG] SoundI::release                          :     Spiritsong_SFX_Gamelanv3_0706 (0x7ffcb0dfef78)
-[LOG] SoundI::release                          :  (0x7ffcb0dfb718)
-[LOG] SoundI::release                          :     Spiritsong_SFX_Gamelanv4_0706 (0x7ffcb0dfb888)
-[LOG] SoundI::release                          :  (0x7ffcb0da3438)
-[LOG] SoundI::release                          :     Spiritsong_SFX_Gamelanv5_0706 (0x7ffcb0da35a8)
-[LOG] SoundI::release                          :  (0x7ffcb0dfe4d8)
-[LOG] SoundI::release                          :     Spiritsong_SFX_WindChimesv1_0706 (0x7ffcb0dfe648)
-[LOG] SoundI::release                          :  (0x7ffcb0d623f8)
-[LOG] SoundI::release                          :     Spiritsong_SFX_WindChimesv2_0706 (0x7ffcb0d62568)
-[LOG] SoundI::release                          :  (0x7ffcb0dfeac8)
-[LOG] SoundI::release                          :     Spiritsong_SFX_WindChimesv3_0706 (0x7ffcb0dfec38)
-[LOG] SoundI::release                          :  (0x7ffcae3fced8)
-[LOG] SoundI::release                          :     Spiritsong_SFX_WindChimesv4_0706 (0x7ffcae3fd048)
-[LOG] SoundI::release                          :  (0x7ffcb0d75998)
-[LOG] SoundI::release                          :     Spiritsong_SFX_FingerCymv1_0706 (0x7ffcb0d75b08)
-[LOG] SoundI::release                          :  (0x7ffcb0dfdee8)
-[LOG] SoundI::release                          :     Spiritsong_SFX_FingerCymv2_0706 (0x7ffcb0dfe058)
-[LOG] SoundI::release                          :  (0x7ffcb0dfd8f8)
-[LOG] SoundI::release                          :     Spiritsong_SFX_FingerCymv3_0706 (0x7ffcb0dfda68)
-[LOG] SoundI::release                          :  (0x7ffcb0df2d78)
-[LOG] SoundI::release                          :     Spiritsong_SFX_FingerCymv4_0706 (0x7ffcb0df2ee8)
-[LOG] SoundI::release                          :  (0x7ffcb0dff818)
-[LOG] SoundI::release                          :     Spiritsong_SFX_FingerCymv5_0706 (0x7ffcb0dff988)
-[LOG] SoundI::release                          :  (0x7ffcae3fc2f8)
-[LOG] SoundI::release                          :     Spiritsong_SFX_FingerCymv6_0706 (0x7ffcae3fc468)
-[LOG] SoundI::release                          :  (0x7ffcae3fc8e8)
-[LOG] SoundI::release                          :     Spiritsong_SFX_FingerCymv7_0706 (0x7ffcae3fca58)
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 2250656
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 9248
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0x70000ce1f954
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 0x16ca94782
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 0x16ca94839
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 0x16ca94866
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 0x16ca9490a
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0x7fdc8edbcf18
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='Spiritsong_SFX_Menu1_0707', format=5, channels=2, frequency=48000, lengthbytes=20896, lengthpcm=96000, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.029981.
+[LOG] SoundI::release                          :  (0x7fdc8ede63a8)
+[LOG] SoundI::release                          :     Spiritsong_SFX_Gamelanv1_0706 (0x7fdc8ede6f18)
+[LOG] SoundI::release                          :  (0x7fdc8ede5058)
+[LOG] SoundI::release                          :     Spiritsong_SFX_Gamelanv2_0706 (0x7fdc8ede51c8)
+[LOG] SoundI::release                          :  (0x7fdc8e22ab48)
+[LOG] SoundI::release                          :     Spiritsong_SFX_Gamelanv3_0706 (0x7fdc8e22acb8)
+[LOG] SoundI::release                          :  (0x7fdc8ede5648)
+[LOG] SoundI::release                          :     Spiritsong_SFX_Gamelanv4_0706 (0x7fdc8ede49b8)
+[LOG] SoundI::release                          :  (0x7fdc8e2462f8)
+[LOG] SoundI::release                          :     Spiritsong_SFX_Gamelanv5_0706 (0x7fdc8e246468)
+[LOG] SoundI::release                          :  (0x7fdc8edea0a8)
+[LOG] SoundI::release                          :     Spiritsong_SFX_WindChimesv1_0706 (0x7fdc8ede5be8)
+[LOG] SoundI::release                          :  (0x7fdc8e246fd8)
+[LOG] SoundI::release                          :     Spiritsong_SFX_WindChimesv2_0706 (0x7fdc8e247148)
+[LOG] SoundI::release                          :  (0x7fdc8eda24a8)
+[LOG] SoundI::release                          :     Spiritsong_SFX_WindChimesv3_0706 (0x7fdc8eda2618)
+[LOG] SoundI::release                          :  (0x7fdc8e248328)
+[LOG] SoundI::release                          :     Spiritsong_SFX_WindChimesv4_0706 (0x7fdc8e248498)
+[LOG] SoundI::release                          : Spiritsong_SFX_ForestAmbienceBase_0706 (0x7fdc8ee47658)
+[LOG] SoundI::release                          :     Spiritsong_SFX_ForestAmbienceBase_0706 (0x7fdc8d034458)
+[LOG] SoundI::release                          :     Spiritsong_SFX_ForestAmbienceBase_0706 (0x7fdc8d0345e8)
+[LOG] SoundI::release                          : Spiritsong_Mus_TT_0623 (0x7fdc8e2446c8)
+[LOG] SoundI::release                          :     Spiritsong_Mus_TT_0623 (0x7fdc8eaeee58)
+[LOG] SoundI::release                          :     Spiritsong_Mus_TT_0623 (0x7fdc8eaef0b8)
+[LOG] SoundI::release                          :  (0x7fdc8e246968)
+[LOG] SoundI::release                          :     Spiritsong_SFX_FingerCymv1_0706 (0x7fdc8e246ad8)
+[LOG] SoundI::release                          :  (0x7fdc8e2295f8)
+[LOG] SoundI::release                          :     Spiritsong_SFX_FingerCymv2_0706 (0x7fdc8e229768)
+[LOG] SoundI::release                          :  (0x7fdc8e22a298)
+[LOG] SoundI::release                          :     Spiritsong_SFX_FingerCymv3_0706 (0x7fdc8e229178)
+[LOG] SoundI::release                          :  (0x7fdc8e245c88)
+[LOG] SoundI::release                          :     Spiritsong_SFX_FingerCymv4_0706 (0x7fdc8e245df8)
+[LOG] SoundI::release                          :  (0x7fdc8e22a558)
+[LOG] SoundI::release                          :     Spiritsong_SFX_FingerCymv5_0706 (0x7fdc8e22a6c8)
+[LOG] SoundI::release                          :  (0x7fdc8e247648)
+[LOG] SoundI::release                          :     Spiritsong_SFX_FingerCymv6_0706 (0x7fdc8e2477b8)
+[LOG] SoundI::release                          :  (0x7fdc8e247cb8)
+[LOG] SoundI::release                          :     Spiritsong_SFX_FingerCymv7_0706 (0x7fdc8e247e28)
+[LOG] SoundI::release                          :  (0x7fdc8ed9a9b8)
+[LOG] SoundI::release                          :     Spiritsong_SFX_Menu1_0707 (0x7fdc8ed98d08)
 [LOG] Thread::callback                         : FMOD Studio update thread finished.
 [LOG] Thread::callback                         : FMOD Studio bank load thread finished.
 [LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
