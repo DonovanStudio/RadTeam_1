@@ -7,8 +7,8 @@ using UnityEngine.UI;
 public class ExpressionsManager : MonoBehaviour
 {
     /* Attached this script to an image of a character on the UI. */
-
-    public Sprite[] characterSprites; // 0 = Neutral, 1 = Happy, 2 = Angry, 3 = Sad, etc. (add more as we come up with them)
+    [SerializeField] string[] elementsLegend;
+    public Sprite[] characterSprites; // 0 = Neutral, 1 = Happy, 2 = Angry, 3 = Additional Expressions
     Animator anim;
     Image currentExpression;
 
@@ -18,26 +18,26 @@ public class ExpressionsManager : MonoBehaviour
         anim = this.GetComponent<Animator>();
     }
 
-    [YarnCommand("neutral")]
-    public void SetExpressionNeutral()
+    [YarnCommand("expression1")]
+    public void SetExpression1()
     {
         currentExpression.sprite = characterSprites[0];
     }
 
-    [YarnCommand("happy")]
-    public void SetExpressionHappy()
+    [YarnCommand("expression2")]
+    public void SetExpression2()
     {
         currentExpression.sprite = characterSprites[1];
     }
 
-    [YarnCommand("angry")]
-    public void SetExpressionAngry()
+    [YarnCommand("expression3")]
+    public void SetExpression3()
     {
         currentExpression.sprite = characterSprites[2];
     }
 
-    [YarnCommand("sad")]
-    public void SetExpressionSad()
+    [YarnCommand("expression4")]
+    public void SetExpression4()
     {
         currentExpression.sprite = characterSprites[3];
     }
