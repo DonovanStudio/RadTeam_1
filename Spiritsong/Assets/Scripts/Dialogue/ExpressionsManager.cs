@@ -18,25 +18,25 @@ public class ExpressionsManager : MonoBehaviour
         anim = this.GetComponent<Animator>();
     }
 
-    [YarnCommand("expression1")]
+    [YarnCommand("Expression1")]
     public void SetExpression1()
     {
         currentExpression.sprite = characterSprites[0];
     }
 
-    [YarnCommand("expression2")]
+    [YarnCommand("Expression2")]
     public void SetExpression2()
     {
         currentExpression.sprite = characterSprites[1];
     }
 
-    [YarnCommand("expression3")]
+    [YarnCommand("Expression3")]
     public void SetExpression3()
     {
         currentExpression.sprite = characterSprites[2];
     }
 
-    [YarnCommand("expression4")]
+    [YarnCommand("Expression4")]
     public void SetExpression4()
     {
         currentExpression.sprite = characterSprites[3];
