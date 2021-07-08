@@ -15,7 +15,10 @@ public class DialogueControls : MonoBehaviour
     SelectStartNode selectStart;
     GameObject dialogueCanvas;
     GraphicRaycaster graphicRaycaster;
-    public TextMeshProUGUI[] nameLabels;
+    [SerializeField] TextMeshProUGUI[] nameLabels;
+    [SerializeField] Image[] dialogueBoxes; // 0 is player tag, 1 is NPC tag, 2 is textbox
+    [SerializeField] Sprite[] tagSprites;
+    [SerializeField] Sprite[] containerSprites;
     string speakerName;
     public bool dialogueStart;
 
@@ -53,6 +56,28 @@ public class DialogueControls : MonoBehaviour
         // Update name label to new speaker name. //
         nameLabels[0].text = speakerName;
         nameLabels[1].text = speakerName;
+
+        if (speakerName is "Conductor")
+        {
+            dialogueBoxes[0].sprite = tagSprites[0];
+            dialogueBoxes[2].sprite = containerSprites[0];
+            dialogueBoxes[2].type = Image.Type.Sliced;
+        } else if (speakerName is "Piano")
+        {
+            dialogueBoxes[1].sprite = tagSprites[1];
+            dialogueBoxes[2].sprite = containerSprites[1];
+            dialogueBoxes[2].type = Image.Type.Sliced;
+        } else if (speakerName is "Violin")
+        {
+            dialogueBoxes[1].sprite = tagSprites[2];
+            dialogueBoxes[2].sprite = containerSprites[2];
+            dialogueBoxes[2].type = Image.Type.Sliced;
+        } else if (speakerName is "Flute")
+        {
+            dialogueBoxes[1].sprite = tagSprites[3];
+            dialogueBoxes[2].sprite = containerSprites[3];
+            dialogueBoxes[2].type = Image.Type.Sliced;
+        }
     }
 
     // Skip to the next line on input.

@@ -209,8 +209,8 @@ MonoBehaviour:
   - --
   characterSprites:
   - {fileID: 21300000, guid: 139512be3da263e4bb475962d2b3c538, type: 3}
-  - {fileID: 21300000, guid: 139512be3da263e4bb475962d2b3c538, type: 3}
-  - {fileID: 21300000, guid: 139512be3da263e4bb475962d2b3c538, type: 3}
+  - {fileID: 21300000, guid: dde47f46b13be8f4cbe66d1cdda05945, type: 3}
+  - {fileID: 21300000, guid: 682d62f26228fe241bf2c23437f925c5, type: 3}
 --- !u!114 &52968914
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -601,9 +601,9 @@ MonoBehaviour:
   - Smug
   characterSprites:
   - {fileID: 21300000, guid: cd3e26ff2031c684c999ba527e377a2f, type: 3}
-  - {fileID: 21300000, guid: cd3e26ff2031c684c999ba527e377a2f, type: 3}
-  - {fileID: 21300000, guid: cd3e26ff2031c684c999ba527e377a2f, type: 3}
-  - {fileID: 21300000, guid: cd3e26ff2031c684c999ba527e377a2f, type: 3}
+  - {fileID: 21300000, guid: 5b86d3728adb24b44b6337a8372e74d7, type: 3}
+  - {fileID: 21300000, guid: 6b830ecea5f0f46498c96ffcca974192, type: 3}
+  - {fileID: 21300000, guid: 07d95a8feb561f84abd04400e868bfff, type: 3}
 --- !u!114 &283817516
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1331,7 +1331,7 @@ MonoBehaviour:
   characterSprites:
   - {fileID: 21300000, guid: e6893453a9d38f547ac3c8ab368c5b10, type: 3}
   - {fileID: 21300000, guid: e6893453a9d38f547ac3c8ab368c5b10, type: 3}
-  - {fileID: 21300000, guid: e6893453a9d38f547ac3c8ab368c5b10, type: 3}
+  - {fileID: 21300000, guid: 5a7d2aeed03453140a3b3c7f877f515b, type: 3}
 --- !u!114 &714238386
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1501,6 +1501,20 @@ MonoBehaviour:
   nameLabels:
   - {fileID: 1605066820}
   - {fileID: 693113157}
+  dialogueBoxes:
+  - {fileID: 1540365360}
+  - {fileID: 1536759187}
+  - {fileID: 1396972372}
+  tagSprites:
+  - {fileID: 21300000, guid: 5814265e88ee92d42b703747f9c847c3, type: 3}
+  - {fileID: 21300000, guid: 232fef1fba0aa0942a80d80e5f96f803, type: 3}
+  - {fileID: 21300000, guid: bf01f1915d82f864cb390a0f31bdb14e, type: 3}
+  - {fileID: 21300000, guid: 8011e0c7274472544bced24ca4af423f, type: 3}
+  containerSprites:
+  - {fileID: 21300000, guid: e18fcc791127d074e8050f4dd82ea0dc, type: 3}
+  - {fileID: 21300000, guid: 3eb06cf2e25a54a4c8a69d4cf2ebce61, type: 3}
+  - {fileID: 21300000, guid: 7a732e4501e95b146ae619f8b5bcb33a, type: 3}
+  - {fileID: 21300000, guid: 7b65fb7819e3bd7429e71786836d1a45, type: 3}
   dialogueStart: 0
   cameraAnimator: {fileID: 1434027041}
   panelOpacity: {fileID: 1137715597}
@@ -2447,7 +2461,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1296240992
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2685,9 +2699,9 @@ RectTransform:
   m_Father: {fileID: 1296240992}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 325, y: -226.25}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 650, y: 110}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1360051385
@@ -3067,7 +3081,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 6f87a1beaae504f438152fdbec01c2da, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e18fcc791127d074e8050f4dd82ea0dc, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3404,7 +3418,7 @@ GameObject:
   - component: {fileID: 1536759188}
   - component: {fileID: 1536759187}
   m_Layer: 5
-  m_Name: Image
+  m_Name: NPC Tag Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3449,7 +3463,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: d647fe96a445bf945864be2dcd284535, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 8011e0c7274472544bced24ca4af423f, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3479,7 +3493,7 @@ GameObject:
   - component: {fileID: 1540365361}
   - component: {fileID: 1540365360}
   m_Layer: 5
-  m_Name: Image
+  m_Name: Player Tag Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3501,8 +3515,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: -4.485}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 6, y: -2}
-  m_SizeDelta: {x: 320, y: 150}
+  m_AnchoredPosition: {x: -5, y: -2}
+  m_SizeDelta: {x: 350, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1540365360
 MonoBehaviour:
@@ -3524,7 +3538,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: d647fe96a445bf945864be2dcd284535, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5814265e88ee92d42b703747f9c847c3, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4202,9 +4216,9 @@ RectTransform:
   m_Father: {fileID: 1296240992}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 325, y: -73.75}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 650, y: 110}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1925639081
@@ -5028,7 +5042,7 @@ MonoBehaviour:
   - --
   characterSprites:
   - {fileID: 21300000, guid: a98958731f0de7f4c82e91d99d6b6bed, type: 3}
-  - {fileID: 21300000, guid: a98958731f0de7f4c82e91d99d6b6bed, type: 3}
+  - {fileID: 21300000, guid: 9a4d3627107882940afed715716c288e, type: 3}
 --- !u!114 &2047410889
 MonoBehaviour:
   m_ObjectHideFlags: 0

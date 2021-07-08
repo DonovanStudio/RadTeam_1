@@ -1,9 +1,9 @@
 title: FluteMeet
 tags: 
 colorID: 0
-position: -1584,-304
+position: -1825,-401
 ---
-<<set $name to "FLUTE">><<hop Flute>><<NPCTag NameTags>>
+<<set $name to "Flute">><<hop Flute>><<NPCTag NameTags>>
 Oh! I see you've finally found me.
 And after making me wait all this time, too.
 That's pretty rude of you to do, y'know!
