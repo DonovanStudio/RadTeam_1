@@ -1,7 +1,7 @@
 title: ViolinMeet
 tags: 
 colorID: 0
-position: -1743,-404
+position: -3052,-804
 ---
 <<Expression2 Violin>><<set $name to "Violin">><<hop Violin>><<NPCTag NameTags>>
 Whoa, you're really zoomin'!
@@ -48,4 +48,28 @@ Clearly you're gonna need *someone* who knows a thing or two about anything.
 <<Expression2 Violin>>Here, I'll even show you how to get around-- better than Piano could!
 Bet you didn't know that you could press SPACE to jump.
 Try it out!
+===
+title: ViolinRandom1
+tags: 
+colorID: 0
+position: -2649,-765
+---
+<<set $name to "Violin">><<NPCTag NameTags>><<Expression1 Violin>>Hey, what was that?
+-> What was what?
+    That sound. Didn't you hear it?
+-> That was me...
+    <<hop Violin>><<Expression2 Player>>Aha!
+    I thought so!
+Your stomach is growling, isn't it?
+You must be starving after all that adventuring you've been doing.
+<<Expression2 Violin>>Well, it's a good thing you have *me* here.
+Violin'll whip up something nice for you.
+<<Expression1 Violin>><<turnR Violin>>As soon as I can find a kitchen...
+-> That sounds great!
+    <<Expression2 Violin>><<turnL Violin>> I know it does!
+-> You don't have to...
+    <<Expression2 Violin>><<turnL Violin>>Nonsense! Can't travel on an empty stomach!
+<<Expression1 Violin>>And, y'know, after camping out for so long, you pick up a few hobbies.
+<<Expression2 Violin>>	<<hop Violin>>We'll have a big dinner sometime, yeah?
+<<set $name to "Conductor">><<PCTag NameTags>><<Expression2 Player>><<hop Player>>Yeah!
 ===

@@ -1,7 +1,7 @@
 title: PianoMeet
 tags: 
 colorID: 0
-position: -1502,-327
+position: -1989,-566
 ---
 <<set $name to "Piano">><<hop Piano>><<NPCTag NameTags>>
 What ho, good lad! I see you've finally awoken!
@@ -32,4 +32,24 @@ But I'm not sure how...
 No worries, lad. Let this old knight show you some of his tricks.
 Utilize the letters WASD to move around this realm of ours.
 You can press H to leave this place, or come back when you so desire.
+===
+title: PianoRandom1
+tags: 
+colorID: 0
+position: -1647,-478
+---
+<<set $name to "Piano">><<NPCTag NameTags>>	<<Expression1 Piano>>Say, lad. Have you noticed the strange flora and fauna about?
+-> No?
+    <<Expression3 Player>>I suppose that makes sense.
+You woke up to see all this after all!
+-> Yes, I have.
+    Mm, yes.
+<<Expression1 Player>><<hop Piano>>You see, the forest wasn't always like this!
+It was but a coniferous, verdant green wood. But now...
+<<turnR	Piano>>	But now...
+<<turnL	Piano>>	Well, it's strange. It's as if the environment has changed!
+Curious, isn't it?
+I'll admit I don't know much about the on-goings outside my little corner of the valley...
+<<Expression2 Piano>><<Expression2 Player>><<hop Piano>>But all this exploration be an excellent learning experience for us both then!
+<<Expression1 Player>><<Expression1 Piano>>Well, at ease, lad. Best start heading off again!
 ===
