@@ -1,9 +1,9 @@
 title: FluteMeet
 tags: 
 colorID: 0
-position: -1825,-401
+position: -2258,-544
 ---
-<<set $name to "Flute">><<hop Flute>><<NPCTag NameTags>>
+<<set $name to "Flute">><<hop Flute>><<NPCTag NameTags>><<set $fluteMet to true>>
 Oh! I see you've finally found me.
 And after making me wait all this time, too.
 That's pretty rude of you to do, y'know!
@@ -58,4 +58,11 @@ I call it: the Dash.
 Alright, listen closely!
 Press L Shift.
 Aaand that's it! Good luck!
+===
+title: FluteRandom1
+tags: 
+colorID: 0
+position: -1977,-556
+---
+Flute dialogue goes here!
 ===

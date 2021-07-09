@@ -11,7 +11,7 @@ public class DialogueControls : MonoBehaviour
 {
     DialogueUI dialogueUI;
     DialogueRunner dialogueRunner;
-    InMemoryVariableStorage variableStorage;
+    InMemoryVariableStorage varStorage;
     SelectStartNode selectStart;
     GameObject dialogueCanvas;
     GraphicRaycaster graphicRaycaster;
@@ -30,7 +30,7 @@ public class DialogueControls : MonoBehaviour
     {
         dialogueRunner = FindObjectOfType<DialogueRunner>();
         dialogueUI = FindObjectOfType<DialogueUI>();
-        variableStorage = FindObjectOfType<InMemoryVariableStorage>();
+        varStorage = FindObjectOfType<InMemoryVariableStorage>();
         selectStart = FindObjectOfType<SelectStartNode>();
 
         dialogueCanvas = GameObject.Find("Dialogue Canvas");
@@ -38,7 +38,7 @@ public class DialogueControls : MonoBehaviour
         graphicRaycaster.enabled = false;
 
         // Getting variables from Yarn Spinner. //
-        speakerName = variableStorage.GetValue("$name").AsString;
+        speakerName = varStorage.GetValue("$name").AsString;
 
         Cursor.lockState = CursorLockMode.Confined;
     }
@@ -51,7 +51,7 @@ public class DialogueControls : MonoBehaviour
     void SetName()
     {
         // Continue updating the variables from Yarn Spinner. //
-        speakerName = variableStorage.GetValue("$name").AsString;
+        speakerName = varStorage.GetValue("$name").AsString;
 
         // Update name label to new speaker name. //
         nameLabels[0].text = speakerName;

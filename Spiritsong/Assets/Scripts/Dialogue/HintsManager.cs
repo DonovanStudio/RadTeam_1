@@ -7,7 +7,13 @@ using TMPro;
 
 public class HintsManager : MonoBehaviour
 {
-    AbilityVariableStorage abilityVar;
+    // Components needed.
+    ConversationManager convoManager;
+    AbilityVariableStorage abilityStorage;
+    GameObject hint1;
+    GameObject hint2;
+
+    // Set in inspector.
     [SerializeField] Animator notificationAnimator;
     [SerializeField] Image popupSprite;
     [SerializeField] TextMeshProUGUI popupText;
@@ -16,7 +22,26 @@ public class HintsManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        abilityVar = FindObjectOfType<AbilityVariableStorage>();
+        convoManager = FindObjectOfType<ConversationManager>();
+        abilityStorage = FindObjectOfType<AbilityVariableStorage>();
+
+        // Finding the hint objects in the scene.
+        hint1 = GameObject.Find("Hint0Trigger");
+        hint2 = GameObject.Find("Hint1Trigger");
+    }
+
+    private void Update()
+    {
+        // If you have the mechanics, no longer display hints.
+        if (abilityStorage.jumpMechanic)
+        {
+            hint1.SetActive(false);
+        }
+
+        if (abilityStorage.dashMechanic)
+        {
+            hint2.SetActive(false);
+        }
     }
 
     // If the player is in the designated locations, set hints to be available, and play the notification animation.
@@ -24,7 +49,7 @@ public class HintsManager : MonoBehaviour
     {
         if (this.gameObject.name == "Hint0Trigger")
         {
-            abilityVar.hintsAvailable[0] = true;
+            convoManager.pianoHint = true;
             popupSprite.sprite = characterSprites[0];
             popupText.text = "I'm here if you need aid!";
             notificationAnimator.SetBool("HintAvailable", true);
@@ -33,7 +58,7 @@ public class HintsManager : MonoBehaviour
 
         if (this.gameObject.name == "Hint1Trigger")
         {
-            abilityVar.hintsAvailable[1] = true;
+            convoManager.violinHint = true;
             popupSprite.sprite = characterSprites[1];
             popupText.text = "Hey, I got a hint for ya!";
             notificationAnimator.SetBool("HintAvailable", true);
@@ -42,7 +67,7 @@ public class HintsManager : MonoBehaviour
 
         if (this.gameObject.name == "Hint2Trigger")
         {
-            abilityVar.hintsAvailable[2] = true;
+            convoManager.fluteHint = true;
             popupSprite.sprite = characterSprites[2];
             popupText.text = "I might be able to help here!";
             notificationAnimator.SetBool("HintAvailable", true);
@@ -55,17 +80,20 @@ public class HintsManager : MonoBehaviour
     {
         if (this.gameObject.name == "Hint0Trigger")
         {
-            abilityVar.hintsAvailable[0] = false;
+            convoManager.pianoHint = false;
+            notificationAnimator.SetBool("HintAvailable", false);
         }
 
         if (this.gameObject.name == "Hint1Trigger")
         {
-            abilityVar.hintsAvailable[1] = false;
+            convoManager.violinHint = false;
+            notificationAnimator.SetBool("HintAvailable", false);
         }
 
         if (this.gameObject.name == "Hint2Trigger")
         {
-            abilityVar.hintsAvailable[2] = false;
+            convoManager.fluteHint = false;
+            notificationAnimator.SetBool("HintAvailable", false);
         }
     }
 

@@ -1,9 +1,9 @@
 title: ViolinMeet
 tags: 
 colorID: 0
-position: -3052,-804
+position: -3452,-949
 ---
-<<Expression2 Violin>><<set $name to "Violin">><<hop Violin>><<NPCTag NameTags>>
+<<Expression2 Violin>><<set $name to "Violin">><<hop Violin>><<NPCTag NameTags>><<set $violinMet to true>>
 Whoa, you're really zoomin'!
 Got some serious wheels on that thing, huh? Heheh!
 -> I don't have wheels...
@@ -58,11 +58,11 @@ position: -2649,-765
 -> What was what?
     That sound. Didn't you hear it?
 -> That was me...
-    <<hop Violin>><<Expression2 Player>>Aha!
+    <<hop Violin>><<Expression3 Player>>Aha!
     I thought so!
 Your stomach is growling, isn't it?
 You must be starving after all that adventuring you've been doing.
-<<Expression2 Violin>>Well, it's a good thing you have *me* here.
+<<Expression1 Player>><<Expression2 Violin>>Well, it's a good thing you have *me* here.
 Violin'll whip up something nice for you.
 <<Expression1 Violin>><<turnR Violin>>As soon as I can find a kitchen...
 -> That sounds great!

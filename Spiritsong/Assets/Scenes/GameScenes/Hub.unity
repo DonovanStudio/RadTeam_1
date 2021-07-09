@@ -3796,19 +3796,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8384385349288275792, guid: fd16387cd7faf35459ca0eb33f2c434f, type: 3}
       propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8384385349288275793, guid: fd16387cd7faf35459ca0eb33f2c434f, type: 3}
-      propertyPath: dashMechanic
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8384385349288275793, guid: fd16387cd7faf35459ca0eb33f2c434f, type: 3}
-      propertyPath: jumpMechanic
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8384385349288275793, guid: fd16387cd7faf35459ca0eb33f2c434f, type: 3}
       propertyPath: walkMechanic
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8384385349288275794, guid: fd16387cd7faf35459ca0eb33f2c434f, type: 3}
       propertyPath: m_RootOrder
@@ -4447,7 +4439,6 @@ GameObject:
   - component: {fileID: 1998025443}
   - component: {fileID: 1998025442}
   - component: {fileID: 1998025441}
-  - component: {fileID: 1998025440}
   m_Layer: 0
   m_Name: Dialogue Runner
   m_TagString: Untagged
@@ -4455,20 +4446,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1998025440
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1998025439}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 610c541718d694070a21327d1ae62e75, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  defaultVariables: []
-  debugTextView: {fileID: 0}
 --- !u!114 &1998025441
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4639,7 +4616,7 @@ MonoBehaviour:
   - {fileID: 2480198943629176163, guid: 42f1014ffd2ef7541a4bd55cc0082096, type: 3}
   - {fileID: 2480198943629176163, guid: 27f8a6daef11d7842aea29834dd5f406, type: 3}
   textLanguage: 
-  variableStorage: {fileID: 1998025440}
+  variableStorage: {fileID: 0}
   dialogueUI: {fileID: 1998025441}
   startNode: Start
   startAutomatically: 0

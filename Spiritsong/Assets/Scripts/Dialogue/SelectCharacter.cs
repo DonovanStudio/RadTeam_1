@@ -14,6 +14,7 @@ public class SelectCharacter : MonoBehaviour, IPointerEnterHandler, IPointerExit
     DialogueControls dialogueControls;
     public GameObject[] canvasSprites;
     AbilityVariableStorage abilityVar;
+    ConversationManager conversationManager;
 
     void Start()
     {
@@ -22,6 +23,7 @@ public class SelectCharacter : MonoBehaviour, IPointerEnterHandler, IPointerExit
         dialogueRunner = FindObjectOfType<DialogueRunner>();
         dialogueControls = FindObjectOfType<DialogueControls>();
         abilityVar = FindObjectOfType<AbilityVariableStorage>();
+        conversationManager = FindObjectOfType<ConversationManager>();
     }
 
     void AddPhysicsRaycaster()
@@ -56,35 +58,24 @@ public class SelectCharacter : MonoBehaviour, IPointerEnterHandler, IPointerExit
     void SetObject()
     {
         // Set the nodes for the Piano.
-        if (name is "Piano Actor" && abilityVar.walkMechanic && !abilityVar.hintsAvailable[0])
+        if (name is "Piano Actor" && abilityVar.walkMechanic)
         {
-            dialogueRunner.startNode = "PianoMeet";
-            PianoUISprite();
-        } else if (name is "Piano Actor" && abilityVar.walkMechanic && abilityVar.hintsAvailable[0])
-        {
-            dialogueRunner.startNode = "Hint1";
+            conversationManager.PianoConversations();
             PianoUISprite();
         }
 
         // Set the nodes for the Violin.
-        if (name is "Violin Actor" && abilityVar.jumpMechanic && !abilityVar.hintsAvailable[1])
+        if (name is "Violin Actor" && abilityVar.jumpMechanic)
         {
-            dialogueRunner.startNode = "ViolinMeet";
-            ViolinUISprite();
-        } else if (name is "Violin Actor" && abilityVar.jumpMechanic && abilityVar.hintsAvailable[1])
-        {
-            dialogueRunner.startNode = "Hint2";
+            //dialogueRunner.startNode = "ViolinMeet";
+            conversationManager.ViolinConversations();
             ViolinUISprite();
         }
 
         // Set the nodes for the Flute.
-        if (name is "Flute Actor" && abilityVar.dashMechanic && !abilityVar.hintsAvailable[2])
+        if (name is "Flute Actor" && abilityVar.dashMechanic)
         {
-            dialogueRunner.startNode = "FluteMeet";
-            FluteUISprite();
-        } else if (name is "Flute Actor" && abilityVar.dashMechanic && abilityVar.hintsAvailable[2])
-        {
-            dialogueRunner.startNode = "Hint3";
+            conversationManager.FluteConversations();
             FluteUISprite();
         }
 

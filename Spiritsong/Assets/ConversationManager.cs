@@ -1,0 +1,142 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using Yarn.Unity;
+using UnityEngine.SceneManagement;
+
+public class ConversationManager : MonoBehaviour
+{
+    // Variables set in Yarn Script.
+    bool pianoMetVar;
+    bool violinMetVar;
+    bool fluteMetVar;
+
+    // Variables to progress dialogue in Unity scene.
+    [Header("Characters Met")]
+    public bool pianoMet;
+    public bool violinMet;
+    public bool fluteMet;
+    [Header("Hints Available")]
+    public bool pianoHint;
+    public bool violinHint;
+    public bool fluteHint;
+
+    // Component management.
+    AbilityVariableStorage abilityStorage;
+    DialogueRunner dialogueRunner;
+    InMemoryVariableStorage varStorage;
+    Scene scene;
+
+    private void Awake()
+    {
+        abilityStorage = GetComponent<AbilityVariableStorage>();
+        varStorage = GetComponent<InMemoryVariableStorage>();
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        scene = SceneManager.GetActiveScene();
+
+        // If in the hub, then run dialogue runner commands.
+        if (scene.name == "Hub")
+        {
+            dialogueRunner = FindObjectOfType<DialogueRunner>();
+        }
+
+        YarnVariables();
+
+        if (abilityStorage.jumpMechanic)
+        {
+            pianoHint = false;
+        } else if (abilityStorage.dashMechanic)
+        {
+            violinHint = false;
+        }
+    }
+
+    // Capturing variables from Yarn.
+    void YarnVariables()
+    {
+        pianoMetVar = varStorage.GetValue("$pianoMet").AsBool;
+        violinMetVar = varStorage.GetValue("$violinMet").AsBool;
+        fluteMetVar = varStorage.GetValue("$fluteMet").AsBool;
+        VariableUpdater();
+    }
+
+    // Setting the nodes for the Piano.
+    public void PianoConversations()
+    {
+        if (!pianoMet)
+        {
+            dialogueRunner.startNode = "PianoMeet";
+        }
+        
+        if (pianoMet && !pianoHint)
+        {
+            dialogueRunner.startNode = "PianoRandom1";
+        }
+
+        if (pianoMet && pianoHint)
+        {
+            dialogueRunner.startNode = "Hint1";
+        }
+    }
+
+    // Setting the nodes for the Violin.
+    public void ViolinConversations()
+    {
+        if (!violinMet)
+        {
+            dialogueRunner.startNode = "ViolinMeet";
+        }
+
+        if (violinMet && !violinHint)
+        {
+            dialogueRunner.startNode = "ViolinRandom1";
+        }
+
+        if (violinMet && violinHint)
+        {
+            dialogueRunner.startNode = "Hint2";
+        }
+    }
+
+    // Setting the nodes for the Violin.
+    public void FluteConversations()
+    {
+        if (!fluteMet)
+        {
+            dialogueRunner.startNode = "FluteMeet";
+        }
+
+        if (fluteMet && !fluteHint)
+        {
+            dialogueRunner.startNode = "FluteRandom1";
+        }
+
+        if (fluteMet && fluteHint)
+        {
+            dialogueRunner.startNode = "Hint3";
+        }
+    }
+
+    // Updating the variables ONCE after they're captured from Yarn.
+    void VariableUpdater()
+    {
+        if (pianoMetVar)
+        {
+            pianoMet = true;
+        }
+
+        if (violinMetVar)
+        {
+            violinMet = true;
+        }
+
+        if (fluteMetVar)
+        {
+            fluteMet = true;
+        }
+    }
+}

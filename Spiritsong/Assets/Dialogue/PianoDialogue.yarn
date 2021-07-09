@@ -3,7 +3,7 @@ tags:
 colorID: 0
 position: -1989,-566
 ---
-<<set $name to "Piano">><<hop Piano>><<NPCTag NameTags>>
+<<set $pianoMet to true>><<set $name to "Piano">><<hop Piano>><<NPCTag NameTags>>
 What ho, good lad! I see you've finally awoken!
 Now that you're up, we can finally go find the others.
 -> The others?
@@ -36,12 +36,12 @@ You can press H to leave this place, or come back when you so desire.
 title: PianoRandom1
 tags: 
 colorID: 0
-position: -1647,-478
+position: -1708,-563
 ---
 <<set $name to "Piano">><<NPCTag NameTags>>	<<Expression1 Piano>>Say, lad. Have you noticed the strange flora and fauna about?
 -> No?
     <<Expression3 Player>>I suppose that makes sense.
-You woke up to see all this after all!
+    You woke up to see all this after all!
 -> Yes, I have.
     Mm, yes.
 <<Expression1 Player>><<hop Piano>>You see, the forest wasn't always like this!

@@ -10,6 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 8384385349288275794}
   - component: {fileID: 8384385349288275793}
+  - component: {fileID: 1655196679}
+  - component: {fileID: 240526743}
   m_Layer: 0
   m_Name: Ability Variable Storage
   m_TagString: Untagged
@@ -47,4 +49,35 @@ MonoBehaviour:
   jumpMechanic: 0
   dashMechanic: 0
   hintsAvailable: 000000
-  startNode: 
+--- !u!114 &1655196679
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8384385349288275792}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcb03cc1cb4e74b4bb7fa77ea250b423, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pianoMet: 0
+  violinMet: 0
+  fluteMet: 0
+  pianoHint: 0
+  violinHint: 0
+  fluteHint: 0
+--- !u!114 &240526743
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8384385349288275792}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 610c541718d694070a21327d1ae62e75, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  defaultVariables: []
+  debugTextView: {fileID: 0}
