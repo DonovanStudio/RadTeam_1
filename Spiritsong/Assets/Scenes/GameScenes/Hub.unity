@@ -5020,6 +5020,7 @@ MonoBehaviour:
   characterSprites:
   - {fileID: 21300000, guid: a98958731f0de7f4c82e91d99d6b6bed, type: 3}
   - {fileID: 21300000, guid: 9a4d3627107882940afed715716c288e, type: 3}
+  - {fileID: 21300000, guid: a98958731f0de7f4c82e91d99d6b6bed, type: 3}
 --- !u!114 &2047410889
 MonoBehaviour:
   m_ObjectHideFlags: 0

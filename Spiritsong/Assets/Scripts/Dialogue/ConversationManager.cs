@@ -10,8 +10,10 @@ public class ConversationManager : MonoBehaviour
     bool pianoMetVar;
     bool violinMetVar;
     bool fluteMetVar;
+    bool pianoViolinVar;
 
     // Variables to progress dialogue in Unity scene.
+    bool pianoViolin;
     [Header("Characters Met")]
     public bool pianoMet;
     public bool violinMet;
@@ -61,25 +63,35 @@ public class ConversationManager : MonoBehaviour
         pianoMetVar = varStorage.GetValue("$pianoMet").AsBool;
         violinMetVar = varStorage.GetValue("$violinMet").AsBool;
         fluteMetVar = varStorage.GetValue("$fluteMet").AsBool;
+        pianoViolinVar = varStorage.GetValue("$pianoViolin").AsBool;
         VariableUpdater();
     }
 
     // Setting the nodes for the Piano.
     public void PianoConversations()
     {
+        // Initial conversation.
         if (!pianoMet)
         {
             dialogueRunner.startNode = "PianoMeet";
         }
         
-        if (pianoMet && !pianoHint)
+        // Hint dialogue that plays when conditions are met.
+        if (pianoMet && pianoHint)
+        {
+            dialogueRunner.startNode = "Hint1";
+        }
+
+        // Dialogue from Piano. Plays when hints are not active, and should return to this after the dialogue about Violin has played.
+        if (pianoMet && !pianoHint || pianoViolin)
         {
             dialogueRunner.startNode = "PianoRandom1";
         }
 
-        if (pianoMet && pianoHint)
+        // Dialogue from Piano about Violin. Only plays once, when the Piano AND Violin are met, hints are not active, and it has not played.
+        if (pianoMet && violinMet && !pianoHint && !pianoViolin)
         {
-            dialogueRunner.startNode = "Hint1";
+            dialogueRunner.startNode = "PianoRandom2";
         }
     }
 
@@ -127,6 +139,11 @@ public class ConversationManager : MonoBehaviour
         if (pianoMetVar)
         {
             pianoMet = true;
+        }
+
+        if (pianoViolinVar)
+        {
+            pianoViolin = true;
         }
 
         if (violinMetVar)

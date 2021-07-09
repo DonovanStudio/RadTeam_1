@@ -1,7 +1,7 @@
 title: PianoMeet
 tags: 
 colorID: 0
-position: -1989,-566
+position: -2480,-806
 ---
 <<set $pianoMet to true>><<set $name to "Piano">><<hop Piano>><<NPCTag NameTags>>
 What ho, good lad! I see you've finally awoken!
@@ -36,7 +36,7 @@ You can press H to leave this place, or come back when you so desire.
 title: PianoRandom1
 tags: 
 colorID: 0
-position: -1708,-563
+position: -2182,-757
 ---
 <<set $name to "Piano">><<NPCTag NameTags>>	<<Expression1 Piano>>Say, lad. Have you noticed the strange flora and fauna about?
 -> No?
@@ -52,4 +52,28 @@ Curious, isn't it?
 I'll admit I don't know much about the on-goings outside my little corner of the valley...
 <<Expression2 Piano>><<Expression2 Player>><<hop Piano>>But all this exploration be an excellent learning experience for us both then!
 <<Expression1 Player>><<Expression1 Piano>>Well, at ease, lad. Best start heading off again!
+===
+title: PianoRandom2
+tags: 
+colorID: 0
+position: -1904,-756
+---
+<<set $pianoViolin to true>><<set $name to "Piano">><<NPCTag NameTags>>Egads...is that...*Violin*?
+<<Expression2 Piano>><<hop Piano>>By jove, I...it's been ages since I last saw him!
+Perhaps I should go strike up a conversation!
+What do you think?
+-> Go for it!
+    <<Expression2 Piano>>Yes...yes, I think I shall!
+    <<Expression1 Piano>>Though...
+-> Uh...
+    <<Expression3 Player>>Oh? Why the long face, lad?
+<<Expression3 Piano>><<turnR Piano>>*sigh* Indeed, the last time I saw Violin, we did not part on good terms.
+<<Expression1 Piano>><<turnL Piano>>But things have changed, and for the better!
+<<Expression3 Piano>><<turnR Piano>>But maybe I should give him his space...hm...
+*mumble mumble*
+-> Give him space?
+-> Go when you're ready!
+<<Expression1 Piano>><<turnL Piano>>I see. That does sound wise indeed.
+<<Expression2 Piano>>Yes, I will bide my time until an appropriate opportunity arises!
+<<Expression2 Player>>Thank you, my friend.
 ===
