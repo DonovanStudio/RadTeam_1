@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6192613137876492670}
   - component: {fileID: 7088471490043358939}
   - component: {fileID: 5024812164072102417}
+  - component: {fileID: 8352355054139180749}
   m_Layer: 0
   m_Name: flute_tree
   m_TagString: Untagged
@@ -82,3 +83,16 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &8352355054139180749
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6826124952332925892}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.43626624, y: 0.83226126, z: 0.43963245}
+  m_Center: {x: -0.010249003, y: 0.053408455, z: 0.039870705}
