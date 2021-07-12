@@ -1,50 +1,75 @@
 title: ViolinMeet
 tags: 
 colorID: 0
-position: -1396,-239
+position: -3452,-949
 ---
-<<set $name to "VIOLIN">><<hop Violin>><<NPCTag NameTags>>
+<<Expression2 Violin>><<set $name to "Violin">><<hop Violin>><<NPCTag NameTags>><<set $violinMet to true>>
 Whoa, you're really zoomin'!
 Got some serious wheels on that thing, huh? Heheh!
 -> I don't have wheels...
-    It's...it's a figure of--bah, never mind.
+    <<Expression1 Violin>>It's...it's a figure of--bah, never mind.
 -> Heck yeah!
-Hey...wait a second...is that--?
-Oh, no no NO!
-Is that that stinkin' old geezer, *PIANO*?!
+<<Expression1 Violin>>Hey...wait a second...is that--?
+<<Expression3 Violin>>Oh, no no NO!
+<<hop Violin>>Is that that stinkin' old geezer, *PIANO*?!
 I thought something was fishy about you!
--> PIANO is nice!
-    <<hop Player>>
-    Maybe to you, but a stringer never forgets...
+-> Piano is nice!
+    <<hop Player>><<Expression3 Player>>
+    <<Expression1 Violin>>Maybe to you, but a stringer never forgets...
 -> What about him?
     <<hop Violin>>
-    Stubborn old fool he is! Bah!
-Nice to see he's branching out onto my turf.
+    <<Expression3 Violin>>Stubborn old fool he is! Bah!
+<<Expression1 Violin>>Nice to see he's branching out onto my turf.
 After a couple hundred years, you'd think he 'n the flighty brat'd figure out boundaries...
 <<set $name to "Conductor">><<PCTag NameTags>>
-Do you live here?
-<<set $name to "VIOLIN">><<NPCTag NameTags>>
-No!
-<<turnR Violin>><<Small DialogueText>>I mean--
-<<turnL Violin>><<Reset DialogueText>>Yeah, I do!
+<<Expression1 Player>>Do you live here?
+<<set $name to "Violin">><<NPCTag NameTags>>
+<<Expression3 Violin>>No!
+<<Expression1 Violin>><<turnR Violin>><<Small DialogueText>>I mean--
+<<turnL Violin>><<Reset DialogueText>>
+Yeah, I do!
 Well...it's not *home* but it's where I've been stayin', yeah.
 <<set $name to "Conductor">><<PCTag NameTags>>
 Where do you live?
-<<set $name to "VIOLIN">><<NPCTag NameTags>>
+<<set $name to "Violin">><<NPCTag NameTags>>
 Well, I actually used to live in that rundown old thing.
 But I see it's taken now.
 <<set $name to "Conductor">><<PCTag NameTags>>
-You can come with us!
-<<set $name to "VIOLIN">><<NPCTag NameTags>>
+<<Expression2 Player>>You can come with us!
+<<set $name to "Violin">><<NPCTag NameTags>>
 What?! Why would I want to do that?
 -> It could be fun!
     No way! Well...hmm.
 -> You seem lost...
-    <<hop Violin>>I-I'm not lost! I'm just...uh...
-<<turnR Violin>><<Small DialogueText>>I guess going along would beat waiting around here...
+    <<Expression3 Player>><<hop Violin>><<Expression3 Violin>>I-I'm not lost! I'm just...uh...
+<<Expression1 Player>><<turnR Violin>><<Small DialogueText>><<Expression1 Violin>>I guess going along would beat waiting around here...
 <<turnL Violin>><<Reset DialogueText>>Y-you know what? Fine! Yeah, I'll come along!
 Clearly you're gonna need *someone* who knows a thing or two about anything.
-Here, I'll even show you how to get around-- better than PIANO could!
+<<Expression2 Violin>>Here, I'll even show you how to get around-- better than Piano could!
 Bet you didn't know that you could press SPACE to jump.
 Try it out!
+===
+title: ViolinRandom1
+tags: 
+colorID: 0
+position: -2649,-765
+---
+<<set $name to "Violin">><<NPCTag NameTags>><<Expression1 Violin>>Hey, what was that?
+-> What was what?
+    That sound. Didn't you hear it?
+-> That was me...
+    <<hop Violin>><<Expression3 Player>>Aha!
+    I thought so!
+Your stomach is growling, isn't it?
+You must be starving after all that adventuring you've been doing.
+<<Expression1 Player>><<Expression2 Violin>>Well, it's a good thing you have *me* here.
+Violin'll whip up something nice for you.
+<<Expression1 Violin>><<turnR Violin>>As soon as I can find a kitchen...
+-> That sounds great!
+    <<Expression2 Violin>><<turnL Violin>> I know it does!
+-> You don't have to...
+    <<Expression2 Violin>><<turnL Violin>>Nonsense! Can't travel on an empty stomach!
+<<Expression1 Violin>>And, y'know, after camping out for so long, you pick up a few hobbies.
+<<Expression2 Violin>>	<<hop Violin>>We'll have a big dinner sometime, yeah?
+<<set $name to "Conductor">><<PCTag NameTags>><<Expression2 Player>><<hop Player>>Yeah!
 ===

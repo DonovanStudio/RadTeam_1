@@ -165,7 +165,7 @@ public class PlayerController : MonoBehaviour
         GameManager.instance.SavePlayerData(transform.position, transform.rotation, jumpUnlocked, dashUnlocked);
         Destroy(backgroundMusic);
         MasterBus.stopAllEvents(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
-        SceneManager.LoadScene("YarnImplementation");
+        SceneManager.LoadScene("Hub");
     }
 
     // unlock abilities when collecting(colliding with) instruments

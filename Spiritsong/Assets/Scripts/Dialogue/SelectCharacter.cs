@@ -13,6 +13,8 @@ public class SelectCharacter : MonoBehaviour, IPointerEnterHandler, IPointerExit
     DialogueRunner dialogueRunner;
     DialogueControls dialogueControls;
     public GameObject[] canvasSprites;
+    AbilityVariableStorage abilityVar;
+    ConversationManager conversationManager;
 
     void Start()
     {
@@ -20,6 +22,8 @@ public class SelectCharacter : MonoBehaviour, IPointerEnterHandler, IPointerExit
         spotlight.SetActive(false);
         dialogueRunner = FindObjectOfType<DialogueRunner>();
         dialogueControls = FindObjectOfType<DialogueControls>();
+        abilityVar = FindObjectOfType<AbilityVariableStorage>();
+        conversationManager = FindObjectOfType<ConversationManager>();
     }
 
     void AddPhysicsRaycaster()
@@ -34,7 +38,6 @@ public class SelectCharacter : MonoBehaviour, IPointerEnterHandler, IPointerExit
     //Detect if the Cursor starts to pass over the GameObject
     public void OnPointerEnter(PointerEventData pointerEventData)
     {
-        //Debug.Log("Cursor Entering " + name + " GameObject");
         spotlight.SetActive(true);
         SetObject();
         canSpeak = true;
@@ -43,7 +46,6 @@ public class SelectCharacter : MonoBehaviour, IPointerEnterHandler, IPointerExit
     //Detect when Cursor leaves the GameObject
     public void OnPointerExit(PointerEventData pointerEventData)
     {
-        //Debug.Log("Cursor Exiting " + name + " GameObject");
         spotlight.SetActive(false);
         canSpeak = false;
 
@@ -55,23 +57,45 @@ public class SelectCharacter : MonoBehaviour, IPointerEnterHandler, IPointerExit
 
     void SetObject()
     {
-        if (name is "Piano Actor")
+        // Set the nodes for the Piano.
+        if (name is "Piano Actor" && abilityVar.walkMechanic)
         {
-            dialogueRunner.startNode = "PianoMeet";
+            conversationManager.PianoConversations();
+            PianoUISprite();
+        }
+
+        // Set the nodes for the Violin.
+        if (name is "Violin Actor" && abilityVar.jumpMechanic)
+        {
+            //dialogueRunner.startNode = "ViolinMeet";
+            conversationManager.ViolinConversations();
+            ViolinUISprite();
+        }
+
+        // Set the nodes for the Flute.
+        if (name is "Flute Actor" && abilityVar.dashMechanic)
+        {
+            conversationManager.FluteConversations();
+            FluteUISprite();
+        }
+
+        // Set the active sprite on the UI. Called in SetObject();
+        void PianoUISprite()
+        {
             canvasSprites[0].SetActive(true);
             canvasSprites[1].SetActive(false);
             canvasSprites[2].SetActive(false);
         }
-        else if (name is "Violin Actor")
+
+        void ViolinUISprite()
         {
-            dialogueRunner.startNode = "ViolinMeet";
             canvasSprites[0].SetActive(false);
             canvasSprites[1].SetActive(true);
             canvasSprites[2].SetActive(false);
         }
-        else if (name is "Flute Actor")
+
+        void FluteUISprite()
         {
-            dialogueRunner.startNode = "FluteMeet";
             canvasSprites[0].SetActive(false);
             canvasSprites[1].SetActive(false);
             canvasSprites[2].SetActive(true);
