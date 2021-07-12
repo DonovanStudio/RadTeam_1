@@ -83,7 +83,7 @@ public class PhysicsPlayerController : MonoBehaviour
         if (jumpUnlocked && shouldJump && isGrounded)
         {
             rb.AddForce(jumpHeight * Vector3.up);
-            AudioManager.instance.SetJumpParameter(1.5f);
+            //AudioManager.instance.SetJumpParameter(1.5f);
             StartCoroutine(JumpSoundReset());
             //Debug.Log("Jump");
         }
@@ -97,7 +97,7 @@ public class PhysicsPlayerController : MonoBehaviour
     private IEnumerator JumpSoundReset()
     {
         yield return new WaitForSeconds(1.5f);
-        AudioManager.instance.SetJumpParameter(0f);
+        //AudioManager.instance.SetJumpParameter(0f);
     }
 
     public void OnMove(InputValue value)
