@@ -1,13 +1,13 @@
 [LOG] System::create                           : Header version = 2.01.09. Current version = 2.01.09.
-[LOG] Manager::init                            : maxchannels = 256 studioflags = 00000006 flags 00000000 extradriverdata 0x0.
+[LOG] Manager::init                            : maxchannels = 256 studioflags = 00000006 flags 00000000 extradriverdata 0000000000000000.
 [LOG] SystemI::init                            : Initialize version=20109 (115889), maxchannels=256, flags=0x00020000
-[LOG] SystemI::setOutputInternal               : Setting output to 'FMOD Core Audio Output'
-[LOG] OutputCoreAudio::init                    : Output running 2 channels at 44100Hz sample rate.
-[LOG] OutputCoreAudio::init                    : Maximum hardware read size: 512 samples, Software buffer size: 512 samples, Number of software buffers: 4.
-[LOG] SystemI::init                            : Output requires a sample rate of 44100Hz, resampling will occur.
+[LOG] SystemI::setOutputInternal               : Setting output to 'FMOD WASAPI Output'
+[LOG] OutputWASAPI::init                       : Mix Format (WAVEFORMATEX): wFormatTag=0xFFFE, nChannels=2, nSamplesPerSec=48000, nAvgBytesPerSec=384000, nBlockAlign=8, wBitsPerSample=32, cbSize=22.
+[LOG] OutputWASAPI::init                       : Mix Format (WAVEFORMATEXTENSIBLE): wValidBitsPerSample=32, dwChannelMask=0x00000003, SubFormat=00000003-0000-0010-8000-00AA00389B71.
+[LOG] OutputWASAPI::init                       : Output buffer size: 4096 samples, latency: 0.00ms, period: 10.00ms, DSP buffer: 1024 * 4
 [LOG] Thread::initThread                       : Init FMOD stream thread. Affinity: 0x8000000000000003, Priority: 0xFFFF7FFB, Stack Size: 98304, Semaphore: No, Sleep Time: 10, Looping: Yes.
-[LOG] Thread::initThread                       : Init FMOD mixer thread. Affinity: 0x8000000000000001, Priority: 0xFFFF7FFA, Stack Size: 81920, Semaphore: Yes, Sleep Time: 0, Looping: Yes.
-[LOG] AsyncManager::init                       : manager 0x7fe1ceb6b808 isAsync 0 updatePeriod 0.02
+[LOG] Thread::initThread                       : Init FMOD mixer thread. Affinity: 0x8000000000000001, Priority: 0xFFFF7FFA, Stack Size: 81920, Semaphore: No, Sleep Time: 0, Looping: Yes.
+[LOG] AsyncManager::init                       : manager 000001DFF9958A28 isAsync 0 updatePeriod 0.02
 [LOG] AsyncManager::init                       : done
 [LOG] PlaybackSystem::init                     : 
 [LOG] Thread::initThread                       : Init FMOD Studio sample load thread. Affinity: 0x8000000000000003, Priority: 0xFFFF7FFD, Stack Size: 98304, Semaphore: No, Sleep Time: 1, Looping: No.
@@ -21,57 +21,171 @@
 [LOG] SystemI::createSoundInternal             : exinfo->length             = 2250656
 [LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 9248
 [LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0x700003f67954
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 00000087D537F5B8
 [LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
 [LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 0x173be7782
-[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 0x173be7839
-[LOG] SystemI::createSoundInternal             : exinfo->userread           = 0x173be7866
-[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 0x173be790a
-[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0x7fe1dbabebc8
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFE90247D70
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFE90247D40
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFE90247E40
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFE90247F00
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000001DFF9B934E8
 [LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
 [LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
 [LOG] SystemI::createSoundInternal             : Sample 0/1: name='Spiritsong_SFX_Menu1_0707', format=5, channels=2, frequency=48000, lengthbytes=20896, lengthpcm=96000, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.029981.
-[LOG] SoundI::release                          :  (0x7fe1dcdf3bd8)
-[LOG] SoundI::release                          :     Spiritsong_SFX_Gamelanv1_0706 (0x7fe1dcdf3d48)
-[LOG] SoundI::release                          :  (0x7fe1dcdf41c8)
-[LOG] SoundI::release                          :     Spiritsong_SFX_Gamelanv2_0706 (0x7fe1dcdf4338)
-[LOG] SoundI::release                          :  (0x7fe1d6512308)
-[LOG] SoundI::release                          :     Spiritsong_SFX_Gamelanv3_0706 (0x7fe1d6512478)
-[LOG] SoundI::release                          :  (0x7fe1dcdf47b8)
-[LOG] SoundI::release                          :     Spiritsong_SFX_Gamelanv4_0706 (0x7fe1dcdf4928)
-[LOG] SoundI::release                          :  (0x7fe1d6519a68)
-[LOG] SoundI::release                          :     Spiritsong_SFX_Gamelanv5_0706 (0x7fe1d6519bd8)
-[LOG] SoundI::release                          :  (0x7fe1d6513658)
-[LOG] SoundI::release                          :     Spiritsong_SFX_WindChimesv1_0706 (0x7fe1d65137c8)
-[LOG] SoundI::release                          :  (0x7fe1d651a648)
-[LOG] SoundI::release                          :     Spiritsong_SFX_WindChimesv2_0706 (0x7fe1d651a7b8)
-[LOG] SoundI::release                          :  (0x7fe1dcdf35e8)
-[LOG] SoundI::release                          :     Spiritsong_SFX_WindChimesv3_0706 (0x7fe1dcdf3758)
-[LOG] SoundI::release                          :  (0x7fe1d651b818)
-[LOG] SoundI::release                          :     Spiritsong_SFX_WindChimesv4_0706 (0x7fe1d6518848)
-[LOG] SoundI::release                          : Spiritsong_SFX_ForestAmbienceBase_0706 (0x7fe1dae19348)
-[LOG] SoundI::release                          :     Spiritsong_SFX_ForestAmbienceBase_0706 (0x7fe1d7b26af8)
-[LOG] SoundI::release                          :     Spiritsong_SFX_ForestAmbienceBase_0706 (0x7fe1d7b26c88)
-[LOG] SoundI::release                          : Spiritsong_Mus_TT_0623 (0x7fe1d7989138)
-[LOG] SoundI::release                          :     Spiritsong_Mus_TT_0623 (0x7fe1d7b23408)
-[LOG] SoundI::release                          :     Spiritsong_Mus_TT_0623 (0x7fe1d7b23598)
-[LOG] SoundI::release                          :  (0x7fe1d651a058)
-[LOG] SoundI::release                          :     Spiritsong_SFX_FingerCymv1_0706 (0x7fe1d651a1c8)
-[LOG] SoundI::release                          :  (0x7fe1d6512fe8)
-[LOG] SoundI::release                          :     Spiritsong_SFX_FingerCymv2_0706 (0x7fe1d6513158)
-[LOG] SoundI::release                          :  (0x7fe1d6512978)
-[LOG] SoundI::release                          :     Spiritsong_SFX_FingerCymv3_0706 (0x7fe1d6512ae8)
-[LOG] SoundI::release                          :  (0x7fe1d651ecc8)
-[LOG] SoundI::release                          :     Spiritsong_SFX_FingerCymv4_0706 (0x7fe1d65195e8)
-[LOG] SoundI::release                          :  (0x7fe1d6518d48)
-[LOG] SoundI::release                          :     Spiritsong_SFX_FingerCymv5_0706 (0x7fe1d6511e08)
-[LOG] SoundI::release                          :  (0x7fe1d651ac38)
-[LOG] SoundI::release                          :     Spiritsong_SFX_FingerCymv6_0706 (0x7fe1d651ada8)
-[LOG] SoundI::release                          :  (0x7fe1d651b228)
-[LOG] SoundI::release                          :     Spiritsong_SFX_FingerCymv7_0706 (0x7fe1d651b398)
-[LOG] SoundI::release                          :  (0x7fe1d6b2b4a8)
-[LOG] SoundI::release                          :     Spiritsong_SFX_Menu1_0707 (0x7fe1dba86f78)
+[LOG] SoundI::release                          :  (000001DF443EDA78)
+[LOG] SoundI::release                          :     Spiritsong_SFX_Menu1_0707 (000001DF1FB2CF08)
+[LOG] SoundI::release                          :  (000001DF443F2258)
+[LOG] SoundI::release                          :     Spiritsong_SFX_Gamelanv1_0706 (000001DF1FB2CA28)
+[LOG] SoundI::release                          :  (000001DF443EE1A8)
+[LOG] SoundI::release                          :     Spiritsong_SFX_Gamelanv2_0706 (000001DF1FB2D8C8)
+[LOG] SoundI::release                          :  (000001DF443F0B58)
+[LOG] SoundI::release                          :     Spiritsong_SFX_Gamelanv3_0706 (000001DF1FB2B368)
+[LOG] SoundI::release                          :  (000001DF443F0CC8)
+[LOG] SoundI::release                          :     Spiritsong_SFX_Gamelanv4_0706 (000001DF1FB2CD68)
+[LOG] SoundI::release                          :  (000001DFE6D3E4E8)
+[LOG] SoundI::release                          :     Spiritsong_SFX_Gamelanv5_0706 (000001DF1FB29E48)
+[LOG] SoundI::release                          :  (000001DF443F1F78)
+[LOG] SoundI::release                          :     Spiritsong_SFX_WindChimesv1_0706 (000001DF1FB2C888)
+[LOG] SoundI::release                          :  (000001DFE6D3ED88)
+[LOG] SoundI::release                          :     Spiritsong_SFX_WindChimesv2_0706 (000001DF1FB2A188)
+[LOG] SoundI::release                          :  (000001DF443EF738)
+[LOG] SoundI::release                          :     Spiritsong_SFX_WindChimesv3_0706 (000001DF1FB2DC08)
+[LOG] SoundI::release                          :  (000001DF443F1848)
+[LOG] SoundI::release                          :     Spiritsong_SFX_WindChimesv4_0706 (000001DF1FB2AB48)
+[LOG] SoundI::release                          : Spiritsong_SFX_ForestAmbienceBase_0706 (000001DFF9EF3AA8)
+[LOG] SoundI::release                          :     Spiritsong_SFX_ForestAmbienceBase_0706 (000001DF1FB2DDA8)
+[LOG] SoundI::release                          :     Spiritsong_SFX_ForestAmbienceBase_0706 (000001DFF9EF5248)
+[LOG] SoundI::release                          : Spiritsong_Mus_TT_0623 (000001DFF9EF0B68)
+[LOG] SoundI::release                          :     Spiritsong_Mus_TT_0623 (000001DF1FB29CA8)
+[LOG] SoundI::release                          :     Spiritsong_Mus_TT_0623 (000001DFF9EEFF98)
+[LOG] SystemI::createSound                     : filename = FMOD Banks/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 000001DFF9EEF8D8 : node = 000001DFE70D8E50
+[LOG] SystemI::createSound                     : add node to async list : head = 000001DFF9DF1458.  list count = 0
+[LOG] SystemI::createSound                     : filename = FMOD Banks/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 000001DFF9EEE648 : node = 000001DFE70D8450
+[LOG] SystemI::createSound                     : add node to async list : head = 000001DFF9DF1458.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001DFF9EEF8D8
+[LOG] SystemI::createSoundInternal             :     Create name='FMOD Banks/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 6393696
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 6976
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001DFE70D8F60
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSound                     :     filename = FMOD Banks/Master.bank : mode 02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSound                     :     setdata soundi = 000001DFF9EF6EF8 : node = 000001DFE70D8BD0
+[LOG] SystemI::createSound                     :     add node to async list : head = 000001DFF9DF1458.  list count = 1
+[LOG] SystemI::createSound                     :     filename = FMOD Banks/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     :     setdata soundi = 000001DFF9EF2668 : node = 000001DFE70D8810
+[LOG] SystemI::createSound                     :     add node to async list : head = 000001DFF9DF1458.  list count = 2
+[LOG] SystemI::createSound                     :     filename = FMOD Banks/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     :     setdata soundi = 000001DFF9EF49D8 : node = 000001DFE70D8950
+[LOG] SystemI::createSound                     :     add node to async list : head = 000001DFF9DF1458.  list count = 3
+[LOG] SystemI::createSound                     :     filename = FMOD Banks/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     :     setdata soundi = 000001DFF9EF3598 : node = 000001DFE70D8A90
+[LOG] SystemI::createSound                     :     add node to async list : head = 000001DFF9DF1458.  list count = 4
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Spiritsong_Mus_LTL1_V1_0622', format=5, channels=2, frequency=48000, lengthbytes=1050848, lengthpcm=4638316, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.375772.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001DFF9EEF8D8
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001DFF9EEE648
+[LOG] SystemI::createSoundInternal             :     Create name='FMOD Banks/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 6393696
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 6976
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001DFE70D8560
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Spiritsong_Mus_LTL2_V1_0622', format=5, channels=2, frequency=48000, lengthbytes=1237600, lengthpcm=4638316, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.069633.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001DFF9EEE648
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001DFF9EF6EF8
+[LOG] SystemI::createSoundInternal             :     Create name='FMOD Banks/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 6393696
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 6976
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001DFE70D8CE0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Spiritsong_Mus_LTL1_V1_0622', format=5, channels=2, frequency=48000, lengthbytes=1050848, lengthpcm=4638316, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.375772.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001DFF9EF6EF8
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001DFF9EF2668
+[LOG] SystemI::createSoundInternal             :     Create name='FMOD Banks/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 6393696
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 6976
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001DFE70D8920
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Spiritsong_Mus_LTL2_V1_0622', format=5, channels=2, frequency=48000, lengthbytes=1237600, lengthpcm=4638316, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.069633.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001DFF9EF2668
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001DFF9EF49D8
+[LOG] SystemI::createSoundInternal             :     Create name='FMOD Banks/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 6393696
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 6976
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001DFE70D8A60
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Spiritsong_Mus_LTL1_V1_0622', format=5, channels=2, frequency=48000, lengthbytes=1050848, lengthpcm=4638316, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.375772.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001DFF9EF49D8
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001DFF9EF3598
+[LOG] SystemI::createSoundInternal             :     Create name='FMOD Banks/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 6393696
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 6976
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001DFE70D8BA0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Spiritsong_Mus_LTL2_V1_0622', format=5, channels=2, frequency=48000, lengthbytes=1237600, lengthpcm=4638316, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.069633.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001DFF9EF3598
+[LOG] SoundI::release                          : Spiritsong_Mus_LTL2_V1_0622 (000001DFF9EF3598)
+[LOG] SoundI::release                          :     Spiritsong_Mus_LTL2_V1_0622 (000001DF1FB2DC08)
+[LOG] SoundI::release                          :     Spiritsong_Mus_LTL2_V1_0622 (000001DFF9EF5248)
+[LOG] SoundI::release                          : Spiritsong_Mus_LTL1_V1_0622 (000001DFF9EF49D8)
+[LOG] SoundI::release                          :     Spiritsong_Mus_LTL1_V1_0622 (000001DF1FB2D0A8)
+[LOG] SoundI::release                          :     Spiritsong_Mus_LTL1_V1_0622 (000001DFF9EF6838)
+[LOG] SoundI::release                          : Spiritsong_Mus_LTL2_V1_0622 (000001DFF9EF2668)
+[LOG] SoundI::release                          :     Spiritsong_Mus_LTL2_V1_0622 (000001DF1FB2DA68)
+[LOG] SoundI::release                          :     Spiritsong_Mus_LTL2_V1_0622 (000001DFF9EF24B8)
+[LOG] SoundI::release                          : Spiritsong_Mus_LTL1_V1_0622 (000001DFF9EF6EF8)
+[LOG] SoundI::release                          :     Spiritsong_Mus_LTL1_V1_0622 (000001DF1FB2D8C8)
+[LOG] SoundI::release                          :     Spiritsong_Mus_LTL1_V1_0622 (000001DFF9EF2308)
+[LOG] SoundI::release                          : Spiritsong_Mus_LTL2_V1_0622 (000001DFF9EEE648)
+[LOG] SoundI::release                          :     Spiritsong_Mus_LTL2_V1_0622 (000001DF1FB2A668)
+[LOG] SoundI::release                          :     Spiritsong_Mus_LTL2_V1_0622 (000001DFF9EF7408)
+[LOG] SoundI::release                          : Spiritsong_Mus_LTL1_V1_0622 (000001DFF9EEF8D8)
+[LOG] SoundI::release                          :     Spiritsong_Mus_LTL1_V1_0622 (000001DF1FB29B08)
+[LOG] SoundI::release                          :     Spiritsong_Mus_LTL1_V1_0622 (000001DFF9EF70A8)
+[LOG] SoundI::release                          :  (000001DFE6D40038)
+[LOG] SoundI::release                          :     Spiritsong_SFX_FingerCymv1_0706 (000001DF1FB29FE8)
+[LOG] SoundI::release                          :  (000001DF443F1C98)
+[LOG] SoundI::release                          :     Spiritsong_SFX_FingerCymv2_0706 (000001DF1FB2B6A8)
+[LOG] SoundI::release                          :  (000001DF443EEBB8)
+[LOG] SoundI::release                          :     Spiritsong_SFX_FingerCymv3_0706 (000001DF1FB2B508)
+[LOG] SoundI::release                          :  (000001DFE6D3F4B8)
+[LOG] SoundI::release                          :     Spiritsong_SFX_FingerCymv4_0706 (000001DF1FB2B848)
+[LOG] SoundI::release                          :  (000001DF443EDEC8)
+[LOG] SoundI::release                          :     Spiritsong_SFX_FingerCymv5_0706 (000001DF1FB2ACE8)
+[LOG] SoundI::release                          :  (000001DFE6D3F798)
+[LOG] SoundI::release                          :     Spiritsong_SFX_FingerCymv6_0706 (000001DF1FB2A808)
+[LOG] SoundI::release                          :  (000001DFE6D3FBE8)
+[LOG] SoundI::release                          :     Spiritsong_SFX_FingerCymv7_0706 (000001DF1FB2A9A8)
 [LOG] Thread::callback                         : FMOD Studio update thread finished.
 [LOG] Thread::callback                         : FMOD Studio bank load thread finished.
 [LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
