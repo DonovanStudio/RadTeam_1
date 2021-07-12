@@ -15,6 +15,7 @@ public class PlayerController : MonoBehaviour
     public float minCameraAngle = -170f;
     public float maxCameraAngle = 170f;
     public float dashTime = 1.0f;
+    [SerializeField] float lookSensitivity = 1.0f;
 
     // Character Controller
     private CharacterController controller;
@@ -31,6 +32,11 @@ public class PlayerController : MonoBehaviour
 
     // Ability Variable Storage
     AbilityVariableStorage abilityVar;
+
+    //Level References
+    [Header("Level Attributes")]
+    [SerializeField] GameObject violin;
+    private int orbs = 0;
 
     // Audio
     public GameObject backgroundMusic;
@@ -149,7 +155,7 @@ public class PlayerController : MonoBehaviour
     {
         Vector3 deltaRotation = new Vector3(0, value.Get<Vector2>().x, 0);
         deltaRotation *= rotDividerRecip;
-        transform.Rotate(deltaRotation);
+        transform.Rotate(deltaRotation * lookSensitivity);
 
         Vector3 cameraRotation = Camera.main.transform.rotation.eulerAngles;
         cameraRotation.x -= value.Get<Vector2>().y * rotDividerRecip;
@@ -187,6 +193,12 @@ public class PlayerController : MonoBehaviour
             Destroy(backgroundMusic);
             MasterBus.stopAllEvents(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
             SceneManager.LoadScene("EndScene");
+        }
+        if(other.gameObject.tag == "orb")
+        {
+            orbs++;
+            if(orbs >= 3)
+                violin.SetActive(true);
         }
         if (other.gameObject.tag == "Ground")
         {
