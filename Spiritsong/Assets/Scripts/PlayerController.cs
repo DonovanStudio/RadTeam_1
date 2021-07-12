@@ -15,6 +15,10 @@ public class PlayerController : MonoBehaviour
     public float minCameraAngle = -170f;
     public float maxCameraAngle = 170f;
     public float dashTime = 1.0f;
+    public float coyoteTime = .5f;
+    float countdown;
+    [SerializeField] float upwardGravity = -16;
+    [SerializeField] float downwardGravity = -9.81f;
     [SerializeField] float lookSensitivity = 1.0f;
 
     // Character Controller
@@ -22,6 +26,7 @@ public class PlayerController : MonoBehaviour
     private Vector3 playerVelocity;
     private Vector3 playerMoveInput;
     private bool shouldJump = false;
+    bool jumping;
     //private bool shouldDash = true;
     private float rotDividerRecip;
 
@@ -87,14 +92,23 @@ public class PlayerController : MonoBehaviour
         playerVelocity = transform.TransformDirection(playerVelocity);
 
         // Jumping
-        if (jumpUnlocked && shouldJump && controller.isGrounded)
+        bool jumpable = controller.isGrounded || !jumping; //Implement coyote time case here
+        if (jumpUnlocked && shouldJump && jumpable)
         {
             Debug.Log("Jump");
-            playerVelocity.y += jumpHeight;
+            playerVelocity.y = jumpHeight;
+            gravity = upwardGravity;
+            Physics.gravity = Vector3.down * gravity; //upwardGravity should be HIGH
+            jumping = true;
             AudioManager.instance.SetJumpParameter(1.5f);
             StartCoroutine(JumpSoundReset());
         }
-
+        if (jumping && playerVelocity.y <= 0f)
+        { 
+            jumping = false;
+            gravity = downwardGravity;
+            Physics.gravity = Vector3.down * gravity; //Make gravity LOW
+        }
         shouldJump = false;
         playerVelocity.y += gravity * Time.deltaTime;
         controller.Move(playerVelocity * Time.deltaTime);

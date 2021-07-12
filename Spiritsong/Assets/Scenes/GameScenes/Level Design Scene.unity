@@ -86154,7 +86154,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4931185656509918720, guid: 4ea19b6f4c694b5468d90950f0b78548, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4931185656509918724, guid: 4ea19b6f4c694b5468d90950f0b78548, type: 3}
       propertyPath: m_RootOrder
@@ -86170,15 +86170,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4931185656509918724, guid: 4ea19b6f4c694b5468d90950f0b78548, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.1399994
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 4931185656509918724, guid: 4ea19b6f4c694b5468d90950f0b78548, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.75999975
+      value: -0.71
       objectReference: {fileID: 0}
     - target: {fileID: 4931185656509918724, guid: 4ea19b6f4c694b5468d90950f0b78548, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.71354675
+      value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: 4931185656509918724, guid: 4ea19b6f4c694b5468d90950f0b78548, type: 3}
       propertyPath: m_LocalRotation.w
@@ -90708,8 +90708,24 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1011386004}
     - target: {fileID: 3878432700224369504, guid: a027ccf5a0780f94c9a6a02de7478bef, type: 3}
+      propertyPath: jumpHeight
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 3878432700224369504, guid: a027ccf5a0780f94c9a6a02de7478bef, type: 3}
+      propertyPath: upwardGravity
+      value: -40
+      objectReference: {fileID: 0}
+    - target: {fileID: 3878432700224369504, guid: a027ccf5a0780f94c9a6a02de7478bef, type: 3}
+      propertyPath: downwardGravity
+      value: -64
+      objectReference: {fileID: 0}
+    - target: {fileID: 3878432700224369504, guid: a027ccf5a0780f94c9a6a02de7478bef, type: 3}
       propertyPath: lookSensitivity
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3878432700224369505, guid: a027ccf5a0780f94c9a6a02de7478bef, type: 3}
+      propertyPath: m_SkinWidth
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 3878432700224369507, guid: a027ccf5a0780f94c9a6a02de7478bef, type: 3}
       propertyPath: m_RootOrder
