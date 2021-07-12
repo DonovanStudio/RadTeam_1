@@ -27,6 +27,9 @@ public class PhysicsPlayerController : MonoBehaviour
     private bool isGrounded = false;
     float direction = 0;
 
+    // Ability Variable Storage
+    AbilityVariableStorage abilityVar;
+
     // Audio
     public GameObject backgroundMusic;
     FMOD.Studio.Bus MasterBus;
@@ -41,6 +44,9 @@ public class PhysicsPlayerController : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         Cursor.lockState = CursorLockMode.Locked;
+
+        abilityVar = FindObjectOfType<AbilityVariableStorage>();
+        abilityVar.walkMechanic = true;
         MasterBus = FMODUnity.RuntimeManager.GetBus("Bus:/");
     }
 
@@ -77,7 +83,7 @@ public class PhysicsPlayerController : MonoBehaviour
         if (jumpUnlocked && shouldJump && isGrounded)
         {
             rb.AddForce(jumpHeight * Vector3.up);
-            AudioManager.instance.SetJumpParameter(1.5f);
+            //AudioManager.instance.SetJumpParameter(1.5f);
             StartCoroutine(JumpSoundReset());
             //Debug.Log("Jump");
         }
@@ -91,7 +97,7 @@ public class PhysicsPlayerController : MonoBehaviour
     private IEnumerator JumpSoundReset()
     {
         yield return new WaitForSeconds(1.5f);
-        AudioManager.instance.SetJumpParameter(0f);
+        //AudioManager.instance.SetJumpParameter(0f);
     }
 
     public void OnMove(InputValue value)
@@ -153,10 +159,13 @@ public class PhysicsPlayerController : MonoBehaviour
         if (other.gameObject.tag == "Jump")
         {
             jumpUnlocked = true;
+            abilityVar.jumpMechanic = true;
+        
         }
         if (other.gameObject.tag == "Dash")
         {
             dashUnlocked = true;
+            abilityVar.dashMechanic = true;
         }
         if (other.gameObject.tag == "End")
         {

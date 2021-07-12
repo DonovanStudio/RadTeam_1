@@ -4,94 +4,38 @@ using UnityEngine;
 
 public class AudioManager : MonoBehaviour
 {
-    public GameObject layer1;
-    public GameObject layer2;
-    public GameObject layer3;
-    public float jumpDuration = 1.0f;
-    public float dashDuration = 1.0f;
+    //private float jumpParameter = 0f;
 
-    private AudioSource baseLayer;
-    private AudioSource jumpLayer;
-    private AudioSource dashLayer;
+    ////private void OnEnable()
+    ////{
+    ////    PlayerController.StartJump += JumpSoundOn;
+    ////    PlayerController.EndJump += JumpSoundOff;
+    ////}
 
-    private float jumpParameter = 0f;
+    ////private void OnDisable()
+    ////{
+    ////    PlayerController.StartJump -= JumpSoundOn;
+    ////    PlayerController.EndJump -= JumpSoundOff;
+    ////}
 
-    public static AudioManager instance;
+    ////void JumpSoundOn()
+    ////{
+    ////    SetJumpParameter(1.5f);
+    ////}
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        instance = this;
+    ////void JumpSoundOff()
+    ////{
+    ////    SetJumpParameter(0f);
+    ////}
 
-        baseLayer = layer1.GetComponent<AudioSource>();
-        jumpLayer = layer2.GetComponent<AudioSource>();
-        jumpLayer.volume = 0;
-        dashLayer = layer3.GetComponent<AudioSource>();
-        dashLayer.volume = 0;
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-    public void JumpUnlocked()
-    {
-        jumpLayer.volume = 0.1f;
-    }
-
-    //public void PlayJumpSound()
+    //public float GetJumpParameter()
     //{
-        //jumpLayer.volume = 1;
-        //StartCoroutine("StopJumpSound");
+    //    return jumpParameter;
     //}
 
-    //private IEnumerator StopJumpSound()
+    //public void SetJumpParameter(float value)
     //{
-       // yield return new WaitForSeconds(jumpDuration);
-        //jumpLayer.volume = 0.1f;
+    //    jumpParameter = value;
     //}
-
-   public void DashUnlocked()
-    {
-        dashLayer.volume = 0.1f;
-    }
-
-    //public void PlayDashSound()
-    //{
-        //dashLayer.volume = 1;
-        //StartCoroutine("StopDashSound");
-    //}
-
-    //private IEnumerator StopDashSound()
-    //{
-        //yield return new WaitForSeconds(dashDuration);
-        //dashLayer.volume = 0.1f;
-    //}
-
-    //public void PauseAllMovementSounds()
-    //{
-        //baseLayer.Pause();
-        //jumpLayer.Pause();
-        //dashLayer.Pause();
-    //}
-
-    //public void ResumeMovementSounds()
-    //{
-        //baseLayer.Play();
-        //jumpLayer.Play();
-        //dashLayer.Play();
-    //}
-
-    public float GetJumpParameter()
-    {
-        return jumpParameter;
-    }
-
-    public void SetJumpParameter(float value)
-    {
-        jumpParameter = value;
-    }
 
 }

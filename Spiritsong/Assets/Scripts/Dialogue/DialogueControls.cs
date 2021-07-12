@@ -15,7 +15,7 @@ public class DialogueControls : MonoBehaviour
     SelectStartNode selectStart;
     GameObject dialogueCanvas;
     GraphicRaycaster graphicRaycaster;
-    public TextMeshProUGUI nameLabel;
+    public TextMeshProUGUI[] nameLabels;
     string speakerName;
     public bool dialogueStart;
 
@@ -51,7 +51,8 @@ public class DialogueControls : MonoBehaviour
         speakerName = variableStorage.GetValue("$name").AsString;
 
         // Update name label to new speaker name. //
-        nameLabel.text = speakerName;
+        nameLabels[0].text = speakerName;
+        nameLabels[1].text = speakerName;
     }
 
     // Skip to the next line on input.
@@ -116,6 +117,6 @@ public class DialogueControls : MonoBehaviour
 
     public void OnCloseHub()
     {
-        SceneManager.LoadScene("MovementWithSound");
+        SceneManager.LoadScene("Level Design Scene");
     }
 }
