@@ -100,8 +100,8 @@ public class PlayerController : MonoBehaviour
         playerVelocity = transform.TransformDirection(playerVelocity);
 
         // Jumping
-        bool jumpable = controller.isGrounded || !jumping; //Implement coyote time case here
-        if (jumpUnlocked && shouldJump && jumpable)
+        bool jumpable = controller.isGrounded || !jumping; //Implement coyote time case here - this is creating an infinite jump
+        if (jumpUnlocked && shouldJump && controller.isGrounded)
         {
             Debug.Log("Jump");
             if (StartJump != null)
