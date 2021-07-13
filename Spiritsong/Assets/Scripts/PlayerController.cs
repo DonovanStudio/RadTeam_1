@@ -104,6 +104,8 @@ public class PlayerController : MonoBehaviour
         if (jumpUnlocked && shouldJump && jumpable)
         {
             Debug.Log("Jump");
+            if (StartJump != null)
+                StartJump();
             playerVelocity.y = jumpHeight;
             gravity = upwardGravity;
             Physics.gravity = Vector3.down * gravity; //upwardGravity should be HIGH
