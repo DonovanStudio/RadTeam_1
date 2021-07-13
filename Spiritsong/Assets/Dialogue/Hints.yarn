@@ -1,21 +1,32 @@
 title: Hint1
 tags: Crochet_tags: 
 colorID: 0
-position: -50,-289
+position: -148,-325
 ---
-<<set $name to "Piano">><<NPCTag NameTags>>This displays the first hint text.
+<<set $name to "Piano">><<NPCTag NameTags>><<Expression1 Piano>>Ah, there you are, lad!
+Have you seen those shining globules floating about?
+<<hop Piano>>I, too, have noticed their presence. For some time, in fact!
+I believe if you collect them, something may happen.
+<<Expression2 Player>><<Expression2 Piano>><<hop Piano>>Perhaps we should give them a chance!
 ===
 title: Hint2
 tags: Crochet_tags: 
 colorID: 0
-position: 232,-293
+position: 167,-320
 ---
-<<set $name to "Violin">><<NPCTag NameTags>>This displays the second hint text.
+<<set $name to "Violin">><<NPCTag NameTags>><<Expression1 Violin>>Hey, you!
+<<set $name to "Conductor">><<PCTag NameTags>><<Expression3 Player>>Me?
+<<set $name to "Violin">><<NPCTag NameTags>><<hop Violin>>Yeah, you! You see those lights?
+You see how they're kinda like...glowing in a certain order?
+-> Yes?
+-> No?
+<<Expression1 Player>>Well, maybe if you tried copying them, something will happen?
+<<Expression2 Player>><<Expression2 Violin>><<hop Violin>>Let's give it a shot!
 ===
 title: Hint3
 tags: Crochet_tags: 
 colorID: 0
-position: -332,-315
+position: -470,-332
 ---
 <<set $name to "Flute">><<NPCTag NameTags>><<Expression1 Flute>>...
 <<set $name to "Conductor">><<PCTag NameTags>><<Expression1 Player>>...
