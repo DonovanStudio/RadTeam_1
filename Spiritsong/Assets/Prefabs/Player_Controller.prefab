@@ -191,10 +191,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
-  m_Radius: 3.5
-  m_Height: 10
+  m_Radius: 5
+  m_Height: 0.29
   m_Direction: 1
-  m_Center: {x: 0, y: 3, z: 0}
+  m_Center: {x: 0.20099543, y: 3, z: -0.0000000011671943}
 --- !u!114 &3707727309117328772
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -286,13 +286,13 @@ CharacterController:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Height: 2
-  m_Radius: 0.5
+  m_Height: 4.36
+  m_Radius: 2
   m_SlopeLimit: 45
   m_StepOffset: 0.3
-  m_SkinWidth: 0.08
+  m_SkinWidth: 0.2
   m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0, y: 1.48, z: 0}
 --- !u!114 &3878432700224369504
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -310,7 +310,13 @@ MonoBehaviour:
   jumpHeight: 6
   gravity: -10
   rotationDivider: 60
-  minCameraAngle: -45
-  maxCameraAngle: 30
+  minCameraAngle: 15
+  maxCameraAngle: 40
   dashTime: 0.25
+  coyoteTime: 0.5
+  upwardGravity: -16
+  downwardGravity: -9.81
+  lookSensitivity: 1
+  violin: {fileID: 0}
+  orbs: 0
   backgroundMusic: {fileID: 0}
