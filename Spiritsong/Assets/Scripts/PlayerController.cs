@@ -35,6 +35,12 @@ public class PlayerController : MonoBehaviour
     // Audio
     public GameObject backgroundMusic;
     FMOD.Studio.Bus MasterBus;
+    public delegate void JumpAction();
+    public static event JumpAction StartJump;
+    public static event JumpAction EndJump;
+    public delegate void DashAction();
+    public static event DashAction StartDash;
+    public static event DashAction EndDash;
 
     private void Awake()
     {
@@ -73,6 +79,8 @@ public class PlayerController : MonoBehaviour
         if (controller.isGrounded)
         {
             playerVelocity.y = 0.0f;
+            if (EndJump != null)
+                EndJump();
         }
 
         playerVelocity.x = playerMoveInput.x * moveSpeed;
@@ -84,9 +92,9 @@ public class PlayerController : MonoBehaviour
         if (jumpUnlocked && shouldJump && controller.isGrounded)
         {
             Debug.Log("Jump");
+            if (StartJump != null)
+                StartJump();
             playerVelocity.y += jumpHeight;
-            AudioManager.instance.SetJumpParameter(1.5f);
-            StartCoroutine(JumpSoundReset());
         }
 
         shouldJump = false;
@@ -94,21 +102,13 @@ public class PlayerController : MonoBehaviour
         controller.Move(playerVelocity * Time.deltaTime);
     }
 
-    private IEnumerator JumpSoundReset()
-    {
-        yield return new WaitForSeconds(1.5f);
-        AudioManager.instance.SetJumpParameter(0f);
-    }
-
     public void OnMove(InputValue value)
     {
-        //Debug.Log("Play forward and back sound");
         playerMoveInput.z = value.Get<float>();
     }
 
     public void OnStrafe(InputValue value)
     {
-        //Debug.Log("Play left/right sound");
         playerMoveInput.x = value.Get<float>();
     }
 
@@ -116,8 +116,6 @@ public class PlayerController : MonoBehaviour
     {
         if (jumpUnlocked)
         {
-            //Debug.Log("Play jump sound");
-            //AudioManager.instance.PlayJumpSound();
             shouldJump = true;
         }
     }
@@ -127,7 +125,8 @@ public class PlayerController : MonoBehaviour
         if (dashUnlocked)
         {
             Debug.Log("Play Dash Sound");
-            //AudioManager.instance.PlayDashSound();
+            if (StartDash != null)
+                StartDash();
             StartCoroutine(TimedDash());
         }
     }
@@ -139,10 +138,12 @@ public class PlayerController : MonoBehaviour
         while (Time.time < start + dashTime)
         {
             Debug.Log("Looping");
-            //transform.Translate(playerVelocity * dashSpeed * Time.deltaTime);
             controller.Move(transform.forward * dashSpeed * Time.deltaTime);
             yield return null;
         }
+
+        if (EndDash != null)
+            EndDash();
     }
 
     public void OnLook(InputValue value)
@@ -174,23 +175,17 @@ public class PlayerController : MonoBehaviour
         {
             jumpUnlocked = true;
             abilityVar.jumpMechanic = true;
-            AudioManager.instance.JumpUnlocked();
         }
         if (other.gameObject.tag == "Dash")
         {
             dashUnlocked = true;
             abilityVar.dashMechanic = true;
-            AudioManager.instance.DashUnlocked();
         }
         if (other.gameObject.tag == "End")
         {
             Destroy(backgroundMusic);
             MasterBus.stopAllEvents(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
             SceneManager.LoadScene("EndScene");
-        }
-        if (other.gameObject.tag == "Ground")
-        {
-           
         }
     }
 }
