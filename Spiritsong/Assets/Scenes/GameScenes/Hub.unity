@@ -1330,7 +1330,7 @@ MonoBehaviour:
   - --
   characterSprites:
   - {fileID: 21300000, guid: e6893453a9d38f547ac3c8ab368c5b10, type: 3}
-  - {fileID: 21300000, guid: e6893453a9d38f547ac3c8ab368c5b10, type: 3}
+  - {fileID: 21300000, guid: 1ab7a9a551c96a6429bdeea83d38647c, type: 3}
   - {fileID: 21300000, guid: 5a7d2aeed03453140a3b3c7f877f515b, type: 3}
 --- !u!114 &714238386
 MonoBehaviour:
@@ -5020,7 +5020,7 @@ MonoBehaviour:
   characterSprites:
   - {fileID: 21300000, guid: a98958731f0de7f4c82e91d99d6b6bed, type: 3}
   - {fileID: 21300000, guid: 9a4d3627107882940afed715716c288e, type: 3}
-  - {fileID: 21300000, guid: a98958731f0de7f4c82e91d99d6b6bed, type: 3}
+  - {fileID: 21300000, guid: 1c6f43df5ae508c429341d2e838155a6, type: 3}
 --- !u!114 &2047410889
 MonoBehaviour:
   m_ObjectHideFlags: 0
