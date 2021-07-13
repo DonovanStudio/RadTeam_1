@@ -7,7 +7,7 @@
 [LOG] OutputWASAPI::init                       : Output buffer size: 4096 samples, latency: 0.00ms, period: 10.00ms, DSP buffer: 1024 * 4
 [LOG] Thread::initThread                       : Init FMOD stream thread. Affinity: 0x8000000000000003, Priority: 0xFFFF7FFB, Stack Size: 98304, Semaphore: No, Sleep Time: 10, Looping: Yes.
 [LOG] Thread::initThread                       : Init FMOD mixer thread. Affinity: 0x8000000000000001, Priority: 0xFFFF7FFA, Stack Size: 81920, Semaphore: No, Sleep Time: 0, Looping: Yes.
-[LOG] AsyncManager::init                       : manager 000002B5CBE74498 isAsync 0 updatePeriod 0.02
+[LOG] AsyncManager::init                       : manager 000002B521DBBE18 isAsync 0 updatePeriod 0.02
 [LOG] AsyncManager::init                       : done
 [LOG] PlaybackSystem::init                     : 
 [LOG] Thread::initThread                       : Init FMOD Studio sample load thread. Affinity: 0x8000000000000003, Priority: 0xFFFF7FFD, Stack Size: 98304, Semaphore: No, Sleep Time: 1, Looping: No.
@@ -16,3 +16,31 @@
 [LOG] Manager::init                            : done.
 [LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
 [LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] SoundI::release                          : Spiritsong_Mus_LTL2_V1_0622 (000002B5F960B268)
+[LOG] SoundI::release                          :     Spiritsong_Mus_LTL2_V1_0622 (000002B520145C08)
+[LOG] SoundI::release                          :     Spiritsong_Mus_LTL2_V1_0622 (000002B5F960F5E8)
+[LOG] SoundI::release                          : Spiritsong_Mus_LTL1_V1_0622 (000002B5F960ABA8)
+[LOG] SoundI::release                          :     Spiritsong_Mus_LTL1_V1_0622 (000002B520144A28)
+[LOG] SoundI::release                          :     Spiritsong_Mus_LTL1_V1_0622 (000002B5F960E6B8)
+[LOG] SoundI::release                          : Spiritsong_Mus_LTL2_V1_0622 (000002B5F960F438)
+[LOG] SoundI::release                          :     Spiritsong_Mus_LTL2_V1_0622 (000002B520144D68)
+[LOG] SoundI::release                          :     Spiritsong_Mus_LTL2_V1_0622 (000002B5F9610008)
+[LOG] SoundI::release                          : Spiritsong_Mus_LTL1_V1_0622 (000002B5F9610368)
+[LOG] SoundI::release                          :     Spiritsong_Mus_LTL1_V1_0622 (000002B520144208)
+[LOG] SoundI::release                          :     Spiritsong_Mus_LTL1_V1_0622 (000002B5F960DFF8)
+[LOG] SoundI::release                          : Spiritsong_Mus_LTL2_V1_0622 (000002B5F96106C8)
+[LOG] SoundI::release                          :     Spiritsong_Mus_LTL2_V1_0622 (000002B520145248)
+[LOG] SoundI::release                          :     Spiritsong_Mus_LTL2_V1_0622 (000002B5F960FCA8)
+[LOG] SoundI::release                          : Spiritsong_Mus_LTL1_V1_0622 (000002B5F960F288)
+[LOG] SoundI::release                          :     Spiritsong_Mus_LTL1_V1_0622 (000002B520144548)
+[LOG] SoundI::release                          :     Spiritsong_Mus_LTL1_V1_0622 (000002B5F960DE48)
+[LOG] Thread::callback                         : FMOD Studio update thread finished.
+[LOG] Thread::callback                         : FMOD Studio bank load thread finished.
+[LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
+[LOG] Thread::callback                         : FMOD Studio sample load thread finished.
+[LOG] LiveUpdate::release                      : 
+[LOG] LiveUpdate::reset                        : Reset connection (reason Disconnected)
+[LOG] Thread::callback                         : FMOD stream thread finished.
+[LOG] Thread::callback                         : FMOD mixer thread finished.
+[LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
+[LOG] SystemI::close                           : Closed.
