@@ -40,8 +40,8 @@ public class PlayerController : MonoBehaviour
 
     //Level References
     [Header("Level Attributes")]
-    [SerializeField] GameObject violin;
-    private int orbs = 0;
+    public GameObject violin;
+    [HideInInspector] public int orbs = 0;
 
     // Audio
     public GameObject backgroundMusic;
@@ -104,6 +104,8 @@ public class PlayerController : MonoBehaviour
         if (jumpUnlocked && shouldJump && jumpable)
         {
             Debug.Log("Jump");
+            if (StartJump != null)
+                StartJump();
             playerVelocity.y = jumpHeight;
             gravity = upwardGravity;
             Physics.gravity = Vector3.down * gravity; //upwardGravity should be HIGH
@@ -207,13 +209,19 @@ public class PlayerController : MonoBehaviour
         }
         if(other.gameObject.tag == "orb")
         {
-            orbs++;
-            if(orbs >= 3)
-                violin.SetActive(true);
+            CollectOrb(this);
+            Destroy(other.gameObject);
         }
         if (other.gameObject.tag == "Ground")
         {
            
         }
+    }
+
+    public static void CollectOrb(PlayerController player)
+    {
+            player.orbs++;
+            if(player.orbs >= 3)
+                player.violin.SetActive(true);
     }
 }
