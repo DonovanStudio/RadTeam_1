@@ -1,0 +1,32 @@
+title: Hint1
+tags: Crochet_tags: 
+colorID: 0
+position: -50,-289
+---
+<<set $name to "Piano">><<NPCTag NameTags>>This displays the first hint text.
+===
+title: Hint2
+tags: Crochet_tags: 
+colorID: 0
+position: 232,-293
+---
+<<set $name to "Violin">><<NPCTag NameTags>>This displays the second hint text.
+===
+title: Hint3
+tags: Crochet_tags: 
+colorID: 0
+position: -332,-315
+---
+<<set $name to "Flute">><<NPCTag NameTags>><<Expression1 Flute>>...
+<<set $name to "Conductor">><<PCTag NameTags>><<Expression1 Player>>...
+<<set $name to "Flute">><<NPCTag NameTags>>...what?
+<<set $name to "Conductor">><<PCTag NameTags>><<Expression3 Player>>Weren't you going to help?
+<<set $name to "Flute">><<NPCTag NameTags>>Yeah? By helpin' ya move the pavilion?
+<<set $name to "Conductor">><<PCTag NameTags>><<hop Player>>I thought you had a hint.
+<<set $name to "Flute">><<NPCTag NameTags>>Hint?
+<<Expression2 Flute>><<hop Flute>>Oh ho ho ho!
+<<Expression3 Flute>>No.
+<<Expression4 Flute>><<hop Flute>>This one is all skill, sweetie! You don't gotta think too hard on it.
+<<Expression2 Flute>>So, c'mon, lets get this puppy smoovin'!
+<<set $name to "Conductor">><<PCTag NameTags>><<hop Player>>O-okay!
+===

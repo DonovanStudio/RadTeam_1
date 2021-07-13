@@ -19,16 +19,19 @@ public class TEMP_StartButton : MonoBehaviour
 
     public void LoadGameScene()
     {
-        SceneManager.LoadScene("YarnImplementation");
+        FMODUnity.RuntimeManager.PlayOneShot("event:/Menu SFX");
+        SceneManager.LoadScene("Hub");
     }
 
     public void LoadControlsScene()
     {
+        FMODUnity.RuntimeManager.PlayOneShot("event:/Menu SFX");
         SceneManager.LoadScene("ControlsScene");
     }
 
     public void QuitGame()
     {
+        FMODUnity.RuntimeManager.PlayOneShot("event:/Menu SFX");
         Application.Quit();
     }
 }
