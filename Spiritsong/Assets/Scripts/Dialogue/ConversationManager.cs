@@ -23,22 +23,16 @@ public class ConversationManager : MonoBehaviour
     public bool violinHint;
     public bool fluteHint;
 
-    // Audio 
-    public FMOD.Studio.EventInstance pianoMusic;
-    public FMOD.Studio.EventInstance violinMusic;
+    //Audio
+    public bool talkingPiano;
+    public bool talkingViolin;
+    //public bool talkingFlute;
 
     // Component management.
     AbilityVariableStorage abilityStorage;
     DialogueRunner dialogueRunner;
     InMemoryVariableStorage varStorage;
     Scene scene;
-
-    void Start()
-    {
-        pianoMusic = FMODUnity.RuntimeManager.CreateInstance("event:/Piano Friendship Theme");
-        violinMusic = FMODUnity.RuntimeManager.CreateInstance("event:/Violin Friendship Theme");
-        // fluteMusic = FMODUnity.RuntimeManager.CreateInstance("event:/Flute Friendship Theme");
-    }
 
     private void Awake()
     {
@@ -84,24 +78,33 @@ public class ConversationManager : MonoBehaviour
         // Initial conversation.
         if (!pianoMet)
         {
+            talkingViolin = false;
+            talkingPiano = true;
             dialogueRunner.startNode = "PianoMeet";
+            Debug.Log("Talking to Piano");
         }
 
         // Hint dialogue that plays when conditions are met.
         if (pianoMet && pianoHint)
         {
+            talkingViolin = false;
+            talkingPiano = true;
             dialogueRunner.startNode = "Hint1";
         }
 
         // Dialogue from Piano. Plays when hints are not active, and should return to this after the dialogue about Violin has played.
         if (pianoMet && !pianoHint || pianoViolin)
         {
+            talkingViolin = false;
+            talkingPiano = true;
             dialogueRunner.startNode = "PianoRandom1";
         }
 
         // Dialogue from Piano about Violin. Only plays once, when the Piano AND Violin are met, hints are not active, and it has not played.
         if (pianoMet && violinMet && !pianoHint && !pianoViolin)
         {
+            talkingViolin = false;
+            talkingPiano = true;
             dialogueRunner.startNode = "PianoRandom2";
         }
     }
@@ -111,16 +114,22 @@ public class ConversationManager : MonoBehaviour
     {
         if (!violinMet)
         {
+            talkingPiano = false;
+            talkingViolin = true;
             dialogueRunner.startNode = "ViolinMeet";
         }
 
         if (violinMet && !violinHint)
         {
+            talkingPiano = false;
+            talkingViolin = true;
             dialogueRunner.startNode = "ViolinRandom1";
         }
 
         if (violinMet && violinHint)
         {
+            talkingPiano = false;
+            talkingViolin = true;
             dialogueRunner.startNode = "Hint2";
         }
     }
@@ -167,57 +176,7 @@ public class ConversationManager : MonoBehaviour
             fluteMet = true;
         }
     }
-    public void PlayDialogueAudio()
-    {
-        if (!pianoMet)
-        {
-            pianoMusic.start();
-        }
-        else if (pianoMet && pianoHint)
-        {
-            pianoMusic.start();
-        }
-        else if (pianoMet && !pianoHint || pianoViolin)
-        {
-            pianoMusic.start();
-        }
-        else if (pianoMet && violinMet && !pianoHint && !pianoViolin)
-        {
-            pianoMusic.start();
-        }
-        else if (!violinMet)
-        {
-            violinMusic.start();
-        }
-        else if (violinMet && !violinHint)
-        {
-            violinMusic.start();
-        }
-        else if (violinMet && violinHint)
-        {
-            violinMusic.start();
-        }
-        else if (!fluteMet)
-        {
-            // fluteMusic.start();
-        }
-        else if (fluteMet && !fluteHint)
-        {
-            // fluteMusic.start();
-        }
-        else if (fluteMet && fluteHint)
-        {
-            // fluteMusic.start();
-        }
-    }
-    public void StopDialogueAudio()
-    {
-        pianoMusic.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
-        pianoMusic.release();
-        violinMusic.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
-        violinMusic.release();
-
-    }
+   
 
 }
 
