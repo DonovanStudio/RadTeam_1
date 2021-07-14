@@ -23,11 +23,22 @@ public class ConversationManager : MonoBehaviour
     public bool violinHint;
     public bool fluteHint;
 
+    // Audio 
+    public FMOD.Studio.EventInstance pianoMusic;
+    public FMOD.Studio.EventInstance violinMusic;
+
     // Component management.
     AbilityVariableStorage abilityStorage;
     DialogueRunner dialogueRunner;
     InMemoryVariableStorage varStorage;
     Scene scene;
+
+    void Start()
+    {
+        pianoMusic = FMODUnity.RuntimeManager.CreateInstance("event:/Piano Friendship Theme");
+        violinMusic = FMODUnity.RuntimeManager.CreateInstance("event:/Violin Friendship Theme");
+        // fluteMusic = FMODUnity.RuntimeManager.CreateInstance("event:/Flute Friendship Theme");
+    }
 
     private void Awake()
     {
@@ -75,7 +86,7 @@ public class ConversationManager : MonoBehaviour
         {
             dialogueRunner.startNode = "PianoMeet";
         }
-        
+
         // Hint dialogue that plays when conditions are met.
         if (pianoMet && pianoHint)
         {
@@ -156,4 +167,57 @@ public class ConversationManager : MonoBehaviour
             fluteMet = true;
         }
     }
+    public void PlayDialogueAudio()
+    {
+        if (!pianoMet)
+        {
+            pianoMusic.start();
+        }
+        else if (pianoMet && pianoHint)
+        {
+            pianoMusic.start();
+        }
+        else if (pianoMet && !pianoHint || pianoViolin)
+        {
+            pianoMusic.start();
+        }
+        else if (pianoMet && violinMet && !pianoHint && !pianoViolin)
+        {
+            pianoMusic.start();
+        }
+        else if (!violinMet)
+        {
+            violinMusic.start();
+        }
+        else if (violinMet && !violinHint)
+        {
+            violinMusic.start();
+        }
+        else if (violinMet && violinHint)
+        {
+            violinMusic.start();
+        }
+        else if (!fluteMet)
+        {
+            // fluteMusic.start();
+        }
+        else if (fluteMet && !fluteHint)
+        {
+            // fluteMusic.start();
+        }
+        else if (fluteMet && fluteHint)
+        {
+            // fluteMusic.start();
+        }
+    }
+    public void StopDialogueAudio()
+    {
+        pianoMusic.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+        pianoMusic.release();
+        violinMusic.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+        violinMusic.release();
+
+    }
+
 }
+
