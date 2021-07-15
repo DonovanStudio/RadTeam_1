@@ -4,14 +4,14 @@ colorID: 0
 position: -2480,-806
 ---
 <<set $pianoMet to true>><<set $name to "Piano">><<hop Piano>><<NPCTag NameTags>>
-What ho, good lad! I see you've finally awoken!
+<<Expression2 Piano>>What ho, good lad! I see you've finally awoken!
 Now that you're up, we can finally go find the others.
 -> The others?
-    <<hop Piano>>
+    <<hop Piano>><<Expression1 Piano>>
     Yes, other spirits like us that are scattered across this realm.
     Though I hesitate to say that I've seen you before...
 -> Now that I'm up?
-    <<hop Piano>>
+    <<hop Piano>><<Expression1 Piano>>
     Yes, I've been waiting for you.
     The other spirits have since left this pavilion for their own reasons...
 But, no matter.
@@ -22,16 +22,16 @@ We shall use this pavilion as our vehicle!
 Vehicle how?
 <<set $name to "Piano">><<NPCTag NameTags>>
 A vehicle to find our friends, of course!
-... And an actual vehicle. 
+...and an actual vehicle. 
 <<turnR Piano>>
 We shall pilot this pavilion henceforth and uh,
 do as the youth say, "get the band back together."
-<<set $name to "Conductor">><<PCTag NameTags>>
+<<set $name to "Conductor">><<PCTag NameTags>><<Expression3 Player>>
 But I'm not sure how...
 <<set $name to "Piano">><<turnL Piano>><<NPCTag NameTags>>
 No worries, lad. Let this old knight show you some of his tricks.
-Utilize the letters WASD to move around this realm of ours.
-You can press H to leave this place, or come back when you so desire.
+<<Expression1 Player>>Utilize the letters WASD to move around this realm of ours.
+You can press H to leave this place, or come back when you so desire!
 ===
 title: PianoRandom1
 tags: 
