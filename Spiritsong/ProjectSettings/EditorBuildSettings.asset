@@ -15,10 +15,10 @@ EditorBuildSettings:
     path: Assets/Scenes/GameScenes/Hub.unity
     guid: 3d0072de15f766f45b4f5a38f04cc577
   - enabled: 1
-    path: Assets/Scenes/GameScenes/Level Design Scene.unity
-    guid: df761c64efb969b4586dcd019c571376
-  - enabled: 1
     path: Assets/Scenes/GameScenes/EndScene.unity
     guid: adb19d9a687861d4091febb7081faf9e
+  - enabled: 1
+    path: Assets/Scenes/GameScenes/Level Design Scene.unity
+    guid: cff7b9ec51d2b46f4932e1d17cfca308
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 2077338708c16ce4a8f11b3c953bdbd8, type: 2}
