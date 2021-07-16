@@ -137,6 +137,7 @@ public class PlayerController : MonoBehaviour
         if (jumpUnlocked)
         {
             shouldJump = true;
+     
         }
     }
 

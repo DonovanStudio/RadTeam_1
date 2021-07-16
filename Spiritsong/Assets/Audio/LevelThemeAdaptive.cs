@@ -45,6 +45,7 @@ public class LevelThemeAdaptive : MonoBehaviour
     void JumpSoundOn()
     {
         time = 1.5f;
+        FMODUnity.RuntimeManager.PlayOneShot("event:/Jump SFX");
     }
 
     void JumpSoundOff()
