@@ -7,7 +7,7 @@
 [LOG] SystemI::init                            : Output requires a sample rate of 44100Hz, resampling will occur.
 [LOG] Thread::initThread                       : Init FMOD stream thread. Affinity: 0x8000000000000003, Priority: 0xFFFF7FFB, Stack Size: 98304, Semaphore: No, Sleep Time: 10, Looping: Yes.
 [LOG] Thread::initThread                       : Init FMOD mixer thread. Affinity: 0x8000000000000001, Priority: 0xFFFF7FFA, Stack Size: 81920, Semaphore: Yes, Sleep Time: 0, Looping: Yes.
-[LOG] AsyncManager::init                       : manager 0x7fb553a7ea08 isAsync 0 updatePeriod 0.02
+[LOG] AsyncManager::init                       : manager 0x7fb6b97d4c08 isAsync 0 updatePeriod 0.02
 [LOG] AsyncManager::init                       : done
 [LOG] PlaybackSystem::init                     : 
 [LOG] Thread::initThread                       : Init FMOD Studio sample load thread. Affinity: 0x8000000000000003, Priority: 0xFFFF7FFD, Stack Size: 98304, Semaphore: No, Sleep Time: 1, Looping: No.
@@ -16,109 +16,4 @@
 [LOG] Manager::init                            : done.
 [LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
 [LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
-[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0x7fb55c5196f8
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0x7fb55c5196f8
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0x7fb55c5874d8
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0x7fb55c5874d8
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0x7fb55c5196f8
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0x7fb55c5196f8
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0x7fb55c5874d8
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0x7fb55c5874d8
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0x7fb55c5196f8
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0x7fb55c5196f8
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0x7fb55c5874d8
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0x7fb55c5874d8
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0x7fb55c5196f8
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0x7fb55c5196f8
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0x7fb55c5874d8
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0x7fb55c5874d8
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0x7fb55c5196f8
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0x7fb55c5196f8
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0x7fb55c5874d8
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0x7fb55c5874d8
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0x7fb55c5196f8
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0x7fb55c5196f8
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0x7fb55c5874d8
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0x7fb55c5874d8
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0x7fb55c5196f8
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0x7fb55c5196f8
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0x7fb55c5874d8
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0x7fb55c5874d8
-[LOG] SoundI::release                          :  (0x7fb55c509b18)
-[LOG] SoundI::release                          :     Spiritsong_SFX_Puzzle2FluteLoop_0713 (0x7fb55c575c68)
-[LOG] SoundI::release                          :  (0x7fb55e7e3988)
-[LOG] SoundI::release                          :     Spiritsong_SFX_Gamelanv1_0706 (0x7fb55e7ae248)
-[LOG] SoundI::release                          :  (0x7fb55e7a0a78)
-[LOG] SoundI::release                          :     Spiritsong_SFX_Gamelanv2_0706 (0x7fb55e7a0668)
-[LOG] SoundI::release                          :  (0x7fb55e7ecf28)
-[LOG] SoundI::release                          :     Spiritsong_SFX_Gamelanv3_0706 (0x7fb55e7de2b8)
-[LOG] SoundI::release                          :  (0x7fb55e79f0d8)
-[LOG] SoundI::release                          :     Spiritsong_SFX_Gamelanv4_0706 (0x7fb55e79d448)
-[LOG] SoundI::release                          :  (0x7fb55c55a8e8)
-[LOG] SoundI::release                          :     Spiritsong_SFX_Gamelanv5_0706 (0x7fb55c526c18)
-[LOG] SoundI::release                          :  (0x7fb55e7f6538)
-[LOG] SoundI::release                          :     Spiritsong_SFX_WindChimesv1_0706 (0x7fb55e7f0298)
-[LOG] SoundI::release                          :  (0x7fb55c5b1338)
-[LOG] SoundI::release                          :     Spiritsong_SFX_WindChimesv2_0706 (0x7fb55c507758)
-[LOG] SoundI::release                          :  (0x7fb55e7ec018)
-[LOG] SoundI::release                          :     Spiritsong_SFX_WindChimesv3_0706 (0x7fb55e7ae4b8)
-[LOG] SoundI::release                          :  (0x7fb55e2ab878)
-[LOG] SoundI::release                          :     Spiritsong_SFX_WindChimesv4_0706 (0x7fb55c54d668)
-[LOG] SoundI::release                          : Spiritsong_SFX_ForestAmbienceBase_0706 (0x7fb55ee73148)
-[LOG] SoundI::release                          :     Spiritsong_SFX_ForestAmbienceBase_0706 (0x7fb55e836488)
-[LOG] SoundI::release                          :     Spiritsong_SFX_ForestAmbienceBase_0706 (0x7fb55e830608)
-[LOG] SoundI::release                          : Spiritsong_Mus_LTL2_V1_0622 (0x7fb55c56cc28)
-[LOG] SoundI::release                          :     Spiritsong_Mus_LTL2_V1_0622 (0x7fb55c5779b8)
-[LOG] SoundI::release                          :     Spiritsong_Mus_LTL2_V1_0622 (0x7fb55c576598)
-[LOG] SoundI::release                          : Spiritsong_Mus_LTL1_V1_0622 (0x7fb55c5349a8)
-[LOG] SoundI::release                          :     Spiritsong_Mus_LTL1_V1_0622 (0x7fb55e830128)
-[LOG] SoundI::release                          :     Spiritsong_Mus_LTL1_V1_0622 (0x7fb55e8302b8)
-[LOG] SoundI::release                          : Spiritsong_Mus_LTL2_V1_0622 (0x7fb55c507518)
-[LOG] SoundI::release                          :     Spiritsong_Mus_LTL2_V1_0622 (0x7fb55c5ac978)
-[LOG] SoundI::release                          :     Spiritsong_Mus_LTL2_V1_0622 (0x7fb55c5874d8)
-[LOG] SoundI::release                          : Spiritsong_Mus_LTL1_V1_0622 (0x7fb55c5c1938)
-[LOG] SoundI::release                          :     Spiritsong_Mus_LTL1_V1_0622 (0x7fb55c5a1488)
-[LOG] SoundI::release                          :     Spiritsong_Mus_LTL1_V1_0622 (0x7fb55c5c7f88)
-[LOG] SoundI::release                          : Spiritsong_Mus_LTL2_V1_0622 (0x7fb55c5f3bf8)
-[LOG] SoundI::release                          :     Spiritsong_Mus_LTL2_V1_0622 (0x7fb55c586828)
-[LOG] SoundI::release                          :     Spiritsong_Mus_LTL2_V1_0622 (0x7fb55c5196f8)
-[LOG] SoundI::release                          : Spiritsong_Mus_LTL1_V1_0622 (0x7fb55c585c08)
-[LOG] SoundI::release                          :     Spiritsong_Mus_LTL1_V1_0622 (0x7fb55c577ca8)
-[LOG] SoundI::release                          :     Spiritsong_Mus_LTL1_V1_0622 (0x7fb55c50cc18)
-[LOG] SoundI::release                          :  (0x7fb55c572548)
-[LOG] SoundI::release                          :     Spiritsong_SFX_FingerCymv1_0706 (0x7fb55c512968)
-[LOG] SoundI::release                          :  (0x7fb55e7f2ec8)
-[LOG] SoundI::release                          :     Spiritsong_SFX_FingerCymv2_0706 (0x7fb55e7ec2f8)
-[LOG] SoundI::release                          :  (0x7fb55e7effd8)
-[LOG] SoundI::release                          :     Spiritsong_SFX_FingerCymv3_0706 (0x7fb55e7e7858)
-[LOG] SoundI::release                          :  (0x7fb55c535b58)
-[LOG] SoundI::release                          :     Spiritsong_SFX_FingerCymv4_0706 (0x7fb55e243ba8)
-[LOG] SoundI::release                          :  (0x7fb55c508fd8)
-[LOG] SoundI::release                          :     Spiritsong_SFX_FingerCymv5_0706 (0x7fb55c56fc98)
-[LOG] SoundI::release                          :  (0x7fb55c59f158)
-[LOG] SoundI::release                          :     Spiritsong_SFX_FingerCymv6_0706 (0x7fb55c539268)
-[LOG] SoundI::release                          :  (0x7fb55c585a88)
-[LOG] SoundI::release                          :     Spiritsong_SFX_FingerCymv7_0706 (0x7fb55c5488d8)
-[LOG] Thread::callback                         : FMOD Studio update thread finished.
-[LOG] Thread::callback                         : FMOD Studio bank load thread finished.
-[LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
-[LOG] Thread::callback                         : FMOD Studio sample load thread finished.
-[LOG] LiveUpdate::release                      : 
-[LOG] LiveUpdate::reset                        : Reset connection (reason Disconnected)
-[LOG] Thread::callback                         : FMOD stream thread finished.
-[LOG] Thread::callback                         : FMOD mixer thread finished.
-[LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
-[LOG] SystemI::close                           : Closed.
-[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
-[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
-[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
-[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
-[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
-[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
-[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
-[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
-[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
-[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
-[LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
 [LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
