@@ -52,6 +52,7 @@ public class PlayerController : MonoBehaviour
     public delegate void DashAction();
     public static event DashAction StartDash;
     public static event DashAction EndDash;
+    //private FMOD.Studio.EventInstance jumpSFX;
 
     private void Awake()
     {
@@ -65,6 +66,7 @@ public class PlayerController : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
         abilityVar = FindObjectOfType<AbilityVariableStorage>();
         MasterBus = FMODUnity.RuntimeManager.GetBus("Bus:/");
+        //jumpSFX = FMODUnity.RuntimeManager.CreateInstance("event:/Jump SFX");
 
         if (GameManager.instance.gameStarted)
         {
@@ -136,6 +138,8 @@ public class PlayerController : MonoBehaviour
     {
         if (jumpUnlocked)
         {
+            //jumpSFX.start();
+            //FMODUnity.RuntimeManager.PlayOneShot("event:/Jump SFX");
             shouldJump = true;
 
         }
