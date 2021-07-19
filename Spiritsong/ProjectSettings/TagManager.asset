@@ -8,6 +8,7 @@ TagManager:
   - Dash
   - End
   - floor
+  - orb
   layers:
   - Default
   - TransparentFX

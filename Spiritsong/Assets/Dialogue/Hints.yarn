@@ -1,0 +1,43 @@
+title: Hint1
+tags: Crochet_tags: 
+colorID: 0
+position: -148,-325
+---
+<<set $name to "Piano">><<NPCTag NameTags>><<Expression1 Piano>>Ah, there you are, lad!
+Have you seen those shining globules floating about?
+<<hop Piano>>I, too, have noticed their presence. For some time, in fact!
+I believe if you collect them, something may happen.
+<<Expression2 Player>><<Expression2 Piano>><<hop Piano>>Perhaps we should give them a chance!
+===
+title: Hint2
+tags: Crochet_tags: 
+colorID: 0
+position: 167,-320
+---
+<<set $name to "Violin">><<NPCTag NameTags>><<Expression1 Violin>>Hey, you!
+<<set $name to "Conductor">><<PCTag NameTags>><<Expression3 Player>>Me?
+<<set $name to "Violin">><<NPCTag NameTags>><<hop Violin>>Yeah, you! You see those lights?
+You see how they're kinda like...glowing in a certain order?
+-> Yes?
+-> No?
+<<Expression1 Player>>Well, maybe if you tried copying them, something will happen?
+<<Expression2 Player>><<Expression2 Violin>><<hop Violin>>Let's give it a shot!
+===
+title: Hint3
+tags: Crochet_tags: 
+colorID: 0
+position: -470,-332
+---
+<<set $name to "Flute">><<NPCTag NameTags>><<Expression1 Flute>>...
+<<set $name to "Conductor">><<PCTag NameTags>><<Expression1 Player>>...
+<<set $name to "Flute">><<NPCTag NameTags>>...what?
+<<set $name to "Conductor">><<PCTag NameTags>><<Expression3 Player>>Weren't you going to help?
+<<set $name to "Flute">><<NPCTag NameTags>>Yeah? By helpin' ya move the pavilion?
+<<set $name to "Conductor">><<PCTag NameTags>><<hop Player>>I thought you had a hint.
+<<set $name to "Flute">><<NPCTag NameTags>>Hint?
+<<Expression2 Flute>><<hop Flute>>Oh ho ho ho!
+<<Expression3 Flute>>No.
+<<Expression4 Flute>><<hop Flute>>This one is all skill, sweetie! You don't gotta think too hard on it.
+<<Expression2 Flute>>So, c'mon, lets get this puppy smoovin'!
+<<set $name to "Conductor">><<PCTag NameTags>><<hop Player>>O-okay!
+===

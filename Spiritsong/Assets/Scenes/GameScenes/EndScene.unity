@@ -20114,9 +20114,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 430296697}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3d67307455f82ae4ea79422e43bb6890, type: 3}
+  m_Script: {fileID: 11500000, guid: 568387841236a374db8bfb646922336f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  menuPanel: {fileID: 0}
+  controlsPanel: {fileID: 0}
 --- !u!114 &430296699
 MonoBehaviour:
   m_ObjectHideFlags: 0

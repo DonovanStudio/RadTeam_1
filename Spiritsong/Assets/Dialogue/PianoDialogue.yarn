@@ -1,17 +1,17 @@
 title: PianoMeet
 tags: 
 colorID: 0
-position: -1282,-204
+position: -2480,-806
 ---
-<<set $name to "PIANO">><<hop Piano>><<NPCTag NameTags>>
-What ho, good lad! I see you've finally awoken!
+<<set $pianoMet to true>><<set $name to "Piano">><<hop Piano>><<NPCTag NameTags>>
+<<Expression2 Piano>>What ho, good lad! I see you've finally awoken!
 Now that you're up, we can finally go find the others.
 -> The others?
-    <<hop Piano>>
+    <<hop Piano>><<Expression1 Piano>>
     Yes, other spirits like us that are scattered across this realm.
     Though I hesitate to say that I've seen you before...
 -> Now that I'm up?
-    <<hop Piano>>
+    <<hop Piano>><<Expression1 Piano>>
     Yes, I've been waiting for you.
     The other spirits have since left this pavilion for their own reasons...
 But, no matter.
@@ -20,15 +20,60 @@ As for finding our friends, our combined powers should be enough.
 We shall use this pavilion as our vehicle!
 <<set $name to "Conductor">><<PCTag NameTags>>
 Vehicle how?
-<<set $name to "PIANO">><<NPCTag NameTags>>
+<<set $name to "Piano">><<NPCTag NameTags>>
 A vehicle to find our friends, of course!
-... And an actual vehicle. 
+...and an actual vehicle. 
 <<turnR Piano>>
 We shall pilot this pavilion henceforth and uh,
 do as the youth say, "get the band back together."
-<<set $name to "Conductor">><<PCTag NameTags>>
+<<set $name to "Conductor">><<PCTag NameTags>><<Expression3 Player>>
 But I'm not sure how...
-<<set $name to "PIANO">><<turnL Piano>><<NPCTag NameTags>>
+<<set $name to "Piano">><<turnL Piano>><<NPCTag NameTags>>
 No worries, lad. Let this old knight show you some of his tricks.
-Utilize the letters WASD to move around this realm of ours.
+<<Expression1 Player>>Utilize the letters WASD to move around this realm of ours.
+You can press H to leave this place, or come back when you so desire!
+===
+title: PianoRandom1
+tags: 
+colorID: 0
+position: -2182,-757
+---
+<<set $name to "Piano">><<NPCTag NameTags>>	<<Expression1 Piano>>Say, lad. Have you noticed the strange flora and fauna about?
+-> No?
+    <<Expression3 Player>>I suppose that makes sense.
+    You woke up to see all this after all!
+-> Yes, I have.
+    Mm, yes.
+<<Expression1 Player>><<hop Piano>>You see, the forest wasn't always like this!
+It was but a coniferous, verdant green wood. But now...
+<<turnR	Piano>>	But now...
+<<turnL	Piano>>	Well, it's strange. It's as if the environment has changed!
+Curious, isn't it?
+I'll admit I don't know much about the on-goings outside my little corner of the valley...
+<<Expression2 Piano>><<Expression2 Player>><<hop Piano>>But all this exploration be an excellent learning experience for us both then!
+<<Expression1 Player>><<Expression1 Piano>>Well, at ease, lad. Best start heading off again!
+===
+title: PianoRandom2
+tags: 
+colorID: 0
+position: -1904,-756
+---
+<<set $pianoViolin to true>><<set $name to "Piano">><<NPCTag NameTags>>Egads...is that...*Violin*?
+<<Expression2 Piano>><<hop Piano>>By jove, I...it's been ages since I last saw him!
+Perhaps I should go strike up a conversation!
+What do you think?
+-> Go for it!
+    <<Expression2 Piano>>Yes...yes, I think I shall!
+    <<Expression1 Piano>>Though...
+-> Uh...
+    <<Expression3 Player>>Oh? Why the long face, lad?
+<<Expression3 Piano>><<turnR Piano>>*sigh* Indeed, the last time I saw Violin, we did not part on good terms.
+<<Expression1 Piano>><<turnL Piano>>But things have changed, and for the better!
+<<Expression3 Piano>><<turnR Piano>>But maybe I should give him his space...hm...
+*mumble mumble*
+-> Give him space?
+-> Go when you're ready!
+<<Expression1 Piano>><<turnL Piano>>I see. That does sound wise indeed.
+<<Expression2 Piano>>Yes, I will bide my time until an appropriate opportunity arises!
+<<Expression2 Player>>Thank you, my friend.
 ===

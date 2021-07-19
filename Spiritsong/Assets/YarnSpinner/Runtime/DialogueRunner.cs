@@ -27,11 +27,17 @@ SOFTWARE.
 using UnityEngine;
 using UnityEngine.Assertions;
 using UnityEngine.Events;
+//Added Audio Code
+using UnityEngine.EventSystems;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+//End of Audio Code
 using System.Collections;
 using System.Collections.Generic;
 using System.Reflection;
 using CsvHelper;
 using System;
+
 
 namespace Yarn.Unity
 {
@@ -58,7 +64,7 @@ namespace Yarn.Unity
         /// <remarks>
         /// This must be an IETF BCP-47 language code, like "en" or "de".
         /// 
-        /// This value is used to select a string table from the <see cref="YarnProgram.localizations"/>, for each of the <see cref="YarnProgram"/>s in <see cref="yarnScripts"/>.
+        ///  This value is used to select a string table from the <see cref="YarnProgram.localizations"/>, for each of the <see cref="YarnProgram"/>s in <see cref="yarnScripts"/>.
         /// </remarks>
         public string textLanguage;
 
@@ -141,6 +147,13 @@ namespace Yarn.Unity
         /// Yarn code.
         /// </summary>
         public Dialogue Dialogue => dialogue ?? (dialogue = CreateDialogueInstance());
+
+        
+        /* ADDED CODE, DELETE IF IT BREAKS EVERYTHING */
+        void Awake()
+        {
+            variableStorage = FindObjectOfType<InMemoryVariableStorage>();
+        }
 
         /// <summary>
         /// Adds a program, and parses and adds the contents of the
@@ -253,6 +266,8 @@ namespace Yarn.Unity
 
                 // Signal that we're starting up.
                 dialogueUI.DialogueStarted();
+
+                
 
                 Dialogue.SetNode(startNode);
 
@@ -519,7 +534,7 @@ namespace Yarn.Unity
         Dialogue dialogue;
 
         /// Start the dialogue
-        void Start()
+        public void Start()
         {
             Assert.IsNotNull(dialogueUI, "Implementation was not set! Can't run the dialogue!");
             Assert.IsNotNull(variableStorage, "Variable storage was not set! Can't run the dialogue!");
@@ -544,6 +559,7 @@ namespace Yarn.Unity
             if (startAutomatically) {
                 StartDialogue();
             }
+            
         }
 
         Dialogue CreateDialogueInstance()

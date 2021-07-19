@@ -15,22 +15,33 @@ public class PlayerController : MonoBehaviour
     public float minCameraAngle = -170f;
     public float maxCameraAngle = 170f;
     public float dashTime = 1.0f;
+    public float coyoteTime = .5f;
+    float countdown;
+    [SerializeField] float upwardGravity = -16;
+    [SerializeField] float downwardGravity = -9.81f;
+    [SerializeField] float lookSensitivity = 1.0f;
 
     // Character Controller
     private CharacterController controller;
     private Vector3 playerVelocity;
     private Vector3 playerMoveInput;
     private bool shouldJump = false;
+    bool jumping;
     //private bool shouldDash = true;
     private float rotDividerRecip;
 
     // Ability Flags
-   
+
     private bool jumpUnlocked = false;
     private bool dashUnlocked = false;
 
     // Ability Variable Storage
     AbilityVariableStorage abilityVar;
+
+    //Level References
+    [Header("Level Attributes")]
+    public GameObject violin;
+    [HideInInspector] public int orbs = 0;
 
     // Audio
     public GameObject backgroundMusic;
@@ -41,6 +52,7 @@ public class PlayerController : MonoBehaviour
     public delegate void DashAction();
     public static event DashAction StartDash;
     public static event DashAction EndDash;
+    //private FMOD.Studio.EventInstance jumpSFX;
 
     private void Awake()
     {
@@ -54,6 +66,7 @@ public class PlayerController : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
         abilityVar = FindObjectOfType<AbilityVariableStorage>();
         MasterBus = FMODUnity.RuntimeManager.GetBus("Bus:/");
+        //jumpSFX = FMODUnity.RuntimeManager.CreateInstance("event:/Jump SFX");
 
         if (GameManager.instance.gameStarted)
         {
@@ -89,14 +102,23 @@ public class PlayerController : MonoBehaviour
         playerVelocity = transform.TransformDirection(playerVelocity);
 
         // Jumping
+        bool jumpable = controller.isGrounded || !jumping; //Implement coyote time case here - this is creating an infinite jump
         if (jumpUnlocked && shouldJump && controller.isGrounded)
         {
             Debug.Log("Jump");
             if (StartJump != null)
                 StartJump();
-            playerVelocity.y += jumpHeight;
+            playerVelocity.y = jumpHeight;
+            gravity = upwardGravity;
+            Physics.gravity = Vector3.down * gravity; //upwardGravity should be HIGH
+            jumping = true;
         }
-
+        if (jumping && playerVelocity.y <= 0f)
+        {
+            jumping = false;
+            gravity = downwardGravity;
+            Physics.gravity = Vector3.down * gravity; //Make gravity LOW
+        }
         shouldJump = false;
         playerVelocity.y += gravity * Time.deltaTime;
         controller.Move(playerVelocity * Time.deltaTime);
@@ -116,7 +138,10 @@ public class PlayerController : MonoBehaviour
     {
         if (jumpUnlocked)
         {
+            //jumpSFX.start();
+            //FMODUnity.RuntimeManager.PlayOneShot("event:/Jump SFX");
             shouldJump = true;
+
         }
     }
 
@@ -150,7 +175,7 @@ public class PlayerController : MonoBehaviour
     {
         Vector3 deltaRotation = new Vector3(0, value.Get<Vector2>().x, 0);
         deltaRotation *= rotDividerRecip;
-        transform.Rotate(deltaRotation);
+        transform.Rotate(deltaRotation * lookSensitivity);
 
         Vector3 cameraRotation = Camera.main.transform.rotation.eulerAngles;
         cameraRotation.x -= value.Get<Vector2>().y * rotDividerRecip;
@@ -165,27 +190,41 @@ public class PlayerController : MonoBehaviour
         GameManager.instance.SavePlayerData(transform.position, transform.rotation, jumpUnlocked, dashUnlocked);
         Destroy(backgroundMusic);
         MasterBus.stopAllEvents(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
-        SceneManager.LoadScene("YarnImplementation");
+        SceneManager.LoadScene(1);
     }
 
     // unlock abilities when collecting(colliding with) instruments
     private void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.tag == "Jump")
+        if (other.gameObject.tag == "Jump")
         {
             jumpUnlocked = true;
             abilityVar.jumpMechanic = true;
+            //SceneManager.LoadScene(1);
         }
         if (other.gameObject.tag == "Dash")
         {
             dashUnlocked = true;
             abilityVar.dashMechanic = true;
+            //SceneManager.LoadScene(1);
         }
         if (other.gameObject.tag == "End")
         {
             Destroy(backgroundMusic);
             MasterBus.stopAllEvents(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
-            SceneManager.LoadScene("EndScene");
+            SceneManager.LoadScene(3);
         }
+        if (other.gameObject.tag == "orb")
+        {
+            CollectOrb(this);
+            Destroy(other.gameObject);
+        }
+    }
+
+    public static void CollectOrb(PlayerController player)
+    {
+        player.orbs++;
+        if (player.orbs >= 3)
+            player.violin.SetActive(true);
     }
 }

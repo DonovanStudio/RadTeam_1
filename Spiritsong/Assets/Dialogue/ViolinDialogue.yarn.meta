@@ -8,7 +8,7 @@ ScriptedImporter:
   assetBundleName: 
   assetBundleVariant: 
   script: {fileID: 11500000, guid: 94073015eacc34c1d8fc6786e43d60ca, type: 3}
-  baseLanguageID: 
+  baseLanguageID: en-CA
   stringIDs:
   - ViolinDialogue-ViolinMeet-0
   - ViolinDialogue-ViolinMeet-1
@@ -32,8 +32,21 @@ ScriptedImporter:
   - ViolinDialogue-ViolinMeet-19
   - ViolinDialogue-ViolinMeet-20
   - ViolinDialogue-ViolinMeet-21
+  - ViolinDialogue-ViolinMeet-22
+  - ViolinDialogue-ViolinMeet-23
+  - ViolinDialogue-ViolinMeet-24
+  - ViolinDialogue-ViolinMeet-25
+  - ViolinDialogue-ViolinMeet-26
+  - ViolinDialogue-ViolinMeet-27
+  - ViolinDialogue-ViolinMeet-28
+  - ViolinDialogue-ViolinMeet-29
+  - ViolinDialogue-ViolinMeet-30
+  - ViolinDialogue-ViolinMeet-31
+  - ViolinDialogue-ViolinMeet-32
+  - ViolinDialogue-ViolinMeet-33
+  - ViolinDialogue-ViolinMeet-34
   compilationStatus: 1
   isSuccesfullyCompiled: 1
   compilationErrorMessage: 
-  baseLanguage: {instanceID: 0}
+  baseLanguage: {fileID: 7128917941130120860, guid: 43628726bc30e3f4eac3f927b35e0e7b, type: 3}
   localizations: []

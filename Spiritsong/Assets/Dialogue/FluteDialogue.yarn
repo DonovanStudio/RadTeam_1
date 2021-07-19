@@ -1,23 +1,23 @@
 title: FluteMeet
 tags: 
 colorID: 0
-position: -1282,-204
+position: -2258,-544
 ---
-<<set $name to "FLUTE">><<hop Flute>><<NPCTag NameTags>>
+<<set $name to "Flute">><<hop Flute>><<NPCTag NameTags>><<set $fluteMet to true>>
 Oh! I see you've finally found me.
 And after making me wait all this time, too.
-That's pretty rude of you to do, y'know!
-<<set $name to "Conductor">><<PCTag NameTags>>
+<<Expression3 Flute>>That's pretty rude of you to do, y'know!
+<<set $name to "Conductor">><<PCTag NameTags>><<Expression3 Player>>
 Oh, sorry...
-<<set $name to "FLUTE">><<NPCTag NameTags>>
+<<set $name to "Flute">><<NPCTag NameTags>><<Expression4 Flute>>
 Hehe. No need to apologize! I'm just joking around.
-Did you like the surprise though?
+<<Expression1 Flute>>Did you like the surprise though?
 -> The puzzle?
-    <<hop Flute>>
+    <<hop Flute>><<Expression1 Player>>
     Yup!
     I worked really long on that!
 -> What surprise?
-    <<hop Flute>>
+    <<hop Flute>><<Expression1 Player>>
     The puzzle, silly!
 Though it was supposed to be more of a prank...
 Hmm. Maybe I should them more obviously prank-like, then.
@@ -28,8 +28,8 @@ So! How did you get this bad boy back in action?
 -> Violin was here!
     <<hop Flute>>
     What?!
-So I see Flute and Piano are here as well...
-Hmph! If they keep squabbling over the past, count me out!
+So, I see Flute and Piano are here as well...
+<<Expression3 Flute>>Hmph! If they keep squabbling over the past, count me out!
 I've moved on for good.
 -> For good?
     <<hop Flute>>
@@ -41,21 +41,28 @@ I've moved on for good.
     Oh, dumb stuff like who's the better instrument.
     Or the who's right one to lead the orchestra.
     I don't need them anymore!
-It's super clear that the flute is the superior instrument!
+<<Expression4 Flute>>It's super clear that the flute is the superior instrument!
+<<set $name to "Conductor">><<PCTag NameTags>><<Expression3 Player>>
+...
+<<set $name to "Flute">><<NPCTag NameTags>>
+<<Expression3 Flute>>I didn't stoop to their level! I never started bickered!
+<<Expression1 Flute>>In fact...
+<<Expression1 Player>>You need help finding the others, right?
+<<Expression2 Flute>>Leave it to me! I can show you a nifty trick that the others don't even know about!
 <<set $name to "Conductor">><<PCTag NameTags>>
 ...
-<<set $name to "FLUTE">><<NPCTag NameTags>>
-I didn't stoop to their level! I never started bickered!
-In fact...
-You need help finding the others, right?
-Leave it to me! I can show you a nifty trick that the others don't even know about!
-<<set $name to "Conductor">><<PCTag NameTags>>
-...
-<<set $name to "FLUTE">><<NPCTag NameTags>>
+<<set $name to "Flute">><<NPCTag NameTags>><<Expression1 Player>>
 Oh, don't give me that! It won't be another prank.
-Years of pranking others actually helped me perfect this!
+<<Expression1 Player>>Years of pranking others actually helped me perfect this!
 I call it: the Dash.
 Alright, listen closely!
 Press L Shift.
 Aaand that's it! Good luck!
+===
+title: FluteRandom1
+tags: 
+colorID: 0
+position: -1977,-556
+---
+Flute dialogue goes here!
 ===
