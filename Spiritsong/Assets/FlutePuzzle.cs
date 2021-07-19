@@ -5,16 +5,52 @@ using UnityEngine;
 public class FlutePuzzle : MonoBehaviour
 {
     [SerializeField] int[] code;
+    [SerializeField] Vector3 directionLaunched;
+    [SerializeField] float force;
+    [SerializeField] GameObject notes;
+    [SerializeField] bool completeMe;
     int correct;
+    Rigidbody rb;
+    bool completed = false;
+    private void OnDrawGizmos()
+    {
+        Gizmos.DrawLine(transform.position, transform.position + directionLaunched.normalized * force);
+        Gizmos.color = Color.red;
+    }
+    private void Awake()
+    {   
+        rb = gameObject.GetComponent<Rigidbody>();
+    }
+    private void Update()
+    {
+        if (completeMe)
+            PuzzleComplete();
+        completeMe = false;
+    }
+    private void OnCollisionEnter(Collision collision)
+    {   
+        if(completed)
+        {
+            rb.velocity = Vector3.zero;
+            Destroy(gameObject.GetComponent<BoxCollider>());
+            Destroy(rb);
+        }
+    }
     public void ButtonPressed(int num)
     {
         if (num == code[correct])
+        {
             correct++;
-        if (correct == code.Length)
-            PuzzleComplete();
+        }
+            if (correct == code.Length)
+                PuzzleComplete();
+        else correct = 0;
     }
     void PuzzleComplete()
     {
-
+        rb.constraints = RigidbodyConstraints.None;
+        rb.velocity = directionLaunched.normalized * force;
+        Destroy(notes);
+        completed = true;
     }
 }

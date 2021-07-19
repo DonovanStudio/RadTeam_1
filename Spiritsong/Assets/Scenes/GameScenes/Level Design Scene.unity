@@ -4685,6 +4685,7 @@ GameObject:
   - component: {fileID: 186718945}
   - component: {fileID: 186718944}
   - component: {fileID: 186718943}
+  - component: {fileID: 186718947}
   m_Layer: 0
   m_Name: Green Button
   m_TagString: Untagged
@@ -4769,6 +4770,20 @@ Transform:
   m_Father: {fileID: 469785181}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &186718947
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 186718942}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87e88282b085dc44e917d761a060484a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonVal: 2
+  fp: {fileID: 1451485601}
 --- !u!1001 &188377729
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7316,15 +7331,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6385666970668666666, guid: 2dc8ffb15027ae341b6f5ac94baf88b6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 345.76736
+      value: 354.16
       objectReference: {fileID: 0}
     - target: {fileID: 6385666970668666666, guid: 2dc8ffb15027ae341b6f5ac94baf88b6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.06
+      value: 12.01
       objectReference: {fileID: 0}
     - target: {fileID: 6385666970668666666, guid: 2dc8ffb15027ae341b6f5ac94baf88b6, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 165.35825
+      value: 169.42
       objectReference: {fileID: 0}
     - target: {fileID: 6385666970668666666, guid: 2dc8ffb15027ae341b6f5ac94baf88b6, type: 3}
       propertyPath: m_LocalRotation.w
@@ -31263,6 +31278,7 @@ GameObject:
   - component: {fileID: 1184515336}
   - component: {fileID: 1184515335}
   - component: {fileID: 1184515334}
+  - component: {fileID: 1184515337}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -31346,6 +31362,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1184515332}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1184515337
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1184515332}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87e88282b085dc44e917d761a060484a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonVal: 4
+  fp: {fileID: 1451485601}
 --- !u!1001 &1189127158
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -38328,6 +38358,57 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0618c9582c57a6a4c8ce470a5c3f159a, type: 3}
+--- !u!1 &1451485600 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6385666970668666705, guid: 2dc8ffb15027ae341b6f5ac94baf88b6, type: 3}
+  m_PrefabInstance: {fileID: 274148753}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1451485601
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1451485600}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d725ba0e9a0bf84ca55209c954c0ab8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  code: 010000000200000003000000010000000400000001000000
+  directionLaunched: {x: -4.93, y: 7.17, z: -2}
+  force: 6.5
+  notes: {fileID: 1907394815}
+  completeMe: 0
+--- !u!54 &1451485602
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1451485600}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 10
+  m_CollisionDetection: 0
+--- !u!65 &1451485603
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1451485600}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 40.319996, y: 40.319996, z: 0.2}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &1453421685
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -41480,8 +41561,8 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!136 &1585308139
-CapsuleCollider:
+--- !u!64 &1585308139
+MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -41490,10 +41571,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.5000001
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &1585308140
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -42349,6 +42430,7 @@ GameObject:
   - component: {fileID: 1612787849}
   - component: {fileID: 1612787848}
   - component: {fileID: 1612787847}
+  - component: {fileID: 1612787851}
   m_Layer: 0
   m_Name: Tree (535)
   m_TagString: Untagged
@@ -42433,6 +42515,20 @@ Transform:
   m_Father: {fileID: 469785181}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1612787851
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1612787846}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87e88282b085dc44e917d761a060484a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonVal: 3
+  fp: {fileID: 1451485601}
 --- !u!4 &1613899008 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8063456466614147070, guid: 0618c9582c57a6a4c8ce470a5c3f159a, type: 3}
@@ -51408,8 +51504,8 @@ GameObject:
   - component: {fileID: 1907394819}
   - component: {fileID: 1907394818}
   - component: {fileID: 1907394817}
-  - component: {fileID: 1907394816}
   - component: {fileID: 1907394820}
+  - component: {fileID: 1907394816}
   m_Layer: 0
   m_Name: Flute Spirit
   m_TagString: Untagged
@@ -51417,19 +51513,23 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!135 &1907394816
-SphereCollider:
+--- !u!114 &1907394816
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1907394815}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 765b4ff388873b040a476d806f8900ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stingerLength: 0
+  delays: []
+  notes: []
+  particle: {fileID: 2983306482801942966, guid: 084c13c6615596f49bc671a89f7f575b, type: 3}
+  camera: {fileID: 1145629607}
 --- !u!23 &1907394817
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -51437,7 +51537,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1907394815}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -57336,6 +57436,7 @@ GameObject:
   - component: {fileID: 2108772394}
   - component: {fileID: 2108772393}
   - component: {fileID: 2108772392}
+  - component: {fileID: 2108772396}
   m_Layer: 0
   m_Name: Blue Button
   m_TagString: Untagged
@@ -57420,6 +57521,20 @@ Transform:
   m_Father: {fileID: 469785181}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2108772396
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2108772391}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87e88282b085dc44e917d761a060484a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonVal: 1
+  fp: {fileID: 1451485601}
 --- !u!4 &2109174268 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8063456466614147070, guid: 0618c9582c57a6a4c8ce470a5c3f159a, type: 3}
