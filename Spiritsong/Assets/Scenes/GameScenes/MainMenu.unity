@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.4973033, g: 0.7068647, b: 0.70322394, a: 1}
+  m_IndirectSpecularColor: {r: 0.49714166, g: 0.70677805, b: 0.7033698, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -12851,7 +12851,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 430296697}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e6f4536ff5cf87044bb081fa1ace51a1, type: 3}
+  m_Script: {fileID: 11500000, guid: 568387841236a374db8bfb646922336f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   menuPanel: {fileID: 1112867207}
@@ -37500,7 +37500,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 430296698}
-        m_TargetAssemblyTypeName: TEMP_StartButton, Assembly-CSharp
+        m_TargetAssemblyTypeName: CanvasManager, Assembly-CSharp
         m_MethodName: ReturnToMenu
         m_Mode: 1
         m_Arguments:
@@ -45347,7 +45347,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 430296698}
-        m_TargetAssemblyTypeName: TEMP_StartButton, Assembly-CSharp
+        m_TargetAssemblyTypeName: CanvasManager, Assembly-CSharp
         m_MethodName: LoadGameScene
         m_Mode: 1
         m_Arguments:
@@ -49455,7 +49455,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 430296698}
-        m_TargetAssemblyTypeName: TEMP_StartButton, Assembly-CSharp
+        m_TargetAssemblyTypeName: CanvasManager, Assembly-CSharp
         m_MethodName: LoadControlsScene
         m_Mode: 1
         m_Arguments:
@@ -60547,7 +60547,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 430296698}
-        m_TargetAssemblyTypeName: TEMP_StartButton, Assembly-CSharp
+        m_TargetAssemblyTypeName: CanvasManager, Assembly-CSharp
         m_MethodName: QuitGame
         m_Mode: 1
         m_Arguments:

@@ -142,6 +142,6 @@ public class DialogueControls : MonoBehaviour
 
     public void OnCloseHub()
     {
-        SceneManager.LoadScene("Level Design Scene");
+        SceneManager.LoadScene(2);
     }
 }

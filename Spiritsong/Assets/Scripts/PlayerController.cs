@@ -31,7 +31,7 @@ public class PlayerController : MonoBehaviour
     private float rotDividerRecip;
 
     // Ability Flags
-   
+
     private bool jumpUnlocked = false;
     private bool dashUnlocked = false;
 
@@ -112,7 +112,7 @@ public class PlayerController : MonoBehaviour
             jumping = true;
         }
         if (jumping && playerVelocity.y <= 0f)
-        { 
+        {
             jumping = false;
             gravity = downwardGravity;
             Physics.gravity = Vector3.down * gravity; //Make gravity LOW
@@ -137,7 +137,7 @@ public class PlayerController : MonoBehaviour
         if (jumpUnlocked)
         {
             shouldJump = true;
-     
+
         }
     }
 
@@ -186,43 +186,41 @@ public class PlayerController : MonoBehaviour
         GameManager.instance.SavePlayerData(transform.position, transform.rotation, jumpUnlocked, dashUnlocked);
         Destroy(backgroundMusic);
         MasterBus.stopAllEvents(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
-        SceneManager.LoadScene("Hub");
+        SceneManager.LoadScene(1);
     }
 
     // unlock abilities when collecting(colliding with) instruments
     private void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.tag == "Jump")
+        if (other.gameObject.tag == "Jump")
         {
             jumpUnlocked = true;
             abilityVar.jumpMechanic = true;
+            //SceneManager.LoadScene(1);
         }
         if (other.gameObject.tag == "Dash")
         {
             dashUnlocked = true;
             abilityVar.dashMechanic = true;
+            //SceneManager.LoadScene(1);
         }
         if (other.gameObject.tag == "End")
         {
             Destroy(backgroundMusic);
             MasterBus.stopAllEvents(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
-            SceneManager.LoadScene("EndScene");
+            SceneManager.LoadScene(3);
         }
-        if(other.gameObject.tag == "orb")
+        if (other.gameObject.tag == "orb")
         {
             CollectOrb(this);
             Destroy(other.gameObject);
-        }
-        if (other.gameObject.tag == "Ground")
-        {
-           
         }
     }
 
     public static void CollectOrb(PlayerController player)
     {
-            player.orbs++;
-            if(player.orbs >= 3)
-                player.violin.SetActive(true);
+        player.orbs++;
+        if (player.orbs >= 3)
+            player.violin.SetActive(true);
     }
 }

@@ -30,14 +30,14 @@ public class CanvasManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     // Main Menu
     public void LoadGameScene()
     {
         FMODUnity.RuntimeManager.PlayOneShot("event:/Menu SFX");
-        SceneManager.LoadScene("Hub");
+        SceneManager.LoadScene(1);
     }
 
     public void LoadControlsScene()
@@ -49,7 +49,7 @@ public class CanvasManager : MonoBehaviour
 
     public void LoadMainMenu()
     {
-        SceneManager.LoadScene("MainMenu");
+        SceneManager.LoadScene(0);
     }
 
     public void ReturnToMenu()
@@ -77,7 +77,7 @@ public class CanvasManager : MonoBehaviour
     {
         if (SceneManager.GetActiveScene().name == "Hub")
         {
-            SceneManager.LoadScene("Level Design Scene");
+            SceneManager.LoadScene(2);
         }
     }
 }
