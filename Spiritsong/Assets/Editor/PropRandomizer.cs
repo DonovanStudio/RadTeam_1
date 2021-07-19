@@ -33,7 +33,7 @@ public class PropRandomizer : EditorWindow
     {
         foreach (Transform child in parent.transform)
         {
-            child.localScale += RandomVec3(minScaleDelta, maxScaleDelta);
+            child.localScale *= minScaleDelta.x;
             child.rotation = Quaternion.Euler(child.rotation.eulerAngles + RandomVec3(minRotDelta, maxRotDelta));
         }
     }
