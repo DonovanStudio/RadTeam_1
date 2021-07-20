@@ -148,13 +148,6 @@ namespace Yarn.Unity
         /// </summary>
         public Dialogue Dialogue => dialogue ?? (dialogue = CreateDialogueInstance());
 
-        
-        /* ADDED CODE, DELETE IF IT BREAKS EVERYTHING */
-        void Awake()
-        {
-            variableStorage = FindObjectOfType<InMemoryVariableStorage>();
-        }
-
         /// <summary>
         /// Adds a program, and parses and adds the contents of the
         /// program's string table to the DialogueRunner's combined string table.
@@ -560,6 +553,12 @@ namespace Yarn.Unity
                 StartDialogue();
             }
             
+        }
+
+        // ADDED CODE BY SEAMUS //
+        void Awake()
+        {
+            variableStorage = FindObjectOfType<InMemoryVariableStorage>();
         }
 
         Dialogue CreateDialogueInstance()

@@ -81,7 +81,6 @@ public class ConversationManager : MonoBehaviour
             talkingViolin = false;
             talkingPiano = true;
             dialogueRunner.startNode = "PianoMeet";
-            Debug.Log("Talking to Piano");
         }
 
         // Hint dialogue that plays when conditions are met.
