@@ -1,13 +1,13 @@
 [LOG] System::create                           : Header version = 2.01.09. Current version = 2.01.09.
-[LOG] Manager::init                            : maxchannels = 256 studioflags = 00000006 flags 00000000 extradriverdata 0000000000000000.
+[LOG] Manager::init                            : maxchannels = 256 studioflags = 00000006 flags 00000000 extradriverdata 0x0.
 [LOG] SystemI::init                            : Initialize version=20109 (115889), maxchannels=256, flags=0x00020000
-[LOG] SystemI::setOutputInternal               : Setting output to 'FMOD WASAPI Output'
-[LOG] OutputWASAPI::init                       : Mix Format (WAVEFORMATEX): wFormatTag=0xFFFE, nChannels=2, nSamplesPerSec=48000, nAvgBytesPerSec=384000, nBlockAlign=8, wBitsPerSample=32, cbSize=22.
-[LOG] OutputWASAPI::init                       : Mix Format (WAVEFORMATEXTENSIBLE): wValidBitsPerSample=32, dwChannelMask=0x00000003, SubFormat=00000003-0000-0010-8000-00AA00389B71.
-[LOG] OutputWASAPI::init                       : Output buffer size: 4096 samples, latency: 0.00ms, period: 10.00ms, DSP buffer: 1024 * 4
+[LOG] SystemI::setOutputInternal               : Setting output to 'FMOD Core Audio Output'
+[LOG] OutputCoreAudio::init                    : Output running 2 channels at 44100Hz sample rate.
+[LOG] OutputCoreAudio::init                    : Maximum hardware read size: 512 samples, Software buffer size: 512 samples, Number of software buffers: 4.
+[LOG] SystemI::init                            : Output requires a sample rate of 44100Hz, resampling will occur.
 [LOG] Thread::initThread                       : Init FMOD stream thread. Affinity: 0x8000000000000003, Priority: 0xFFFF7FFB, Stack Size: 98304, Semaphore: No, Sleep Time: 10, Looping: Yes.
 [LOG] Thread::initThread                       : Init FMOD mixer thread. Affinity: 0x8000000000000001, Priority: 0xFFFF7FFA, Stack Size: 81920, Semaphore: Yes, Sleep Time: 0, Looping: Yes.
-[LOG] AsyncManager::init                       : manager 0x7fb6b97d4c08 isAsync 0 updatePeriod 0.02
+[LOG] AsyncManager::init                       : manager 0x7fa8857e2c08 isAsync 0 updatePeriod 0.02
 [LOG] AsyncManager::init                       : done
 [LOG] PlaybackSystem::init                     : 
 [LOG] Thread::initThread                       : Init FMOD Studio sample load thread. Affinity: 0x8000000000000003, Priority: 0xFFFF7FFD, Stack Size: 98304, Semaphore: No, Sleep Time: 1, Looping: No.
@@ -17,3 +17,89 @@
 [LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
 [LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
 [LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] SoundI::release                          :  (0x7fa886c30218)
+[LOG] SoundI::release                          :     Spiritsong_MUS_FluteRunGmaj_0718 (0x7fa886c2f5c8)
+[LOG] SoundI::release                          :  (0x7fa886c2d0b8)
+[LOG] SoundI::release                          :     Spiritsong_MUS_FluteRunDmin_0718 (0x7fa886c2d228)
+[LOG] SoundI::release                          :  (0x7fa886c30ff8)
+[LOG] SoundI::release                          :     Spiritsong_MUS_FluteRunAmaj_0718 (0x7fa886c31168)
+[LOG] SoundI::release                          :  (0x7fa886c32878)
+[LOG] SoundI::release                          :     Spiritsong_MUS_FluteRunCmaj_0718 (0x7fa886c329e8)
+[LOG] SoundI::release                          :  (0x7fa886c2e018)
+[LOG] SoundI::release                          :     Spiritsong_MUS_FluteRunGmin2_0718 (0x7fa886c2b888)
+[LOG] SoundI::release                          :  (0x7fa886c2c398)
+[LOG] SoundI::release                          :     Spiritsong_MUS_FluteRunAmin_0718 (0x7fa886c2c508)
+[LOG] SoundI::release                          :  (0x7fa886c30a08)
+[LOG] SoundI::release                          :     Spiritsong_MUS_FluteRunDbmaj_0718 (0x7fa886c30b78)
+[LOG] SoundI::release                          :  (0x7fa886c32b78)
+[LOG] SoundI::release                          :     Spiritsong_MUS_FluteRunDmaj_0718 (0x7fa886c31d98)
+[LOG] SoundI::release                          :  (0x7fa886c2e4c8)
+[LOG] SoundI::release                          :     Spiritsong_MUS_FluteRunEbmaj_0718 (0x7fa886c2e638)
+[LOG] SoundI::release                          :  (0x7fa886c2d868)
+[LOG] SoundI::release                          :     Spiritsong_MUS_FluteRunFmaj_0718 (0x7fa886c2d9d8)
+[LOG] SoundI::release                          :  (0x7fa886c2cac8)
+[LOG] SoundI::release                          :     Spiritsong_MUS_FluteRunBbmaj_0718 (0x7fa886c2cc38)
+[LOG] SoundI::release                          :  (0x7fa886c2fa48)
+[LOG] SoundI::release                          :     Spiritsong_MUS_FluteRunFmaj2_0718 (0x7fa886c2fbb8)
+[LOG] SoundI::release                          :  (0x7fa886c2eab8)
+[LOG] SoundI::release                          :     Spiritsong_MUS_FluteRunFmin_0718 (0x7fa886c2ec28)
+[LOG] SoundI::release                          :  (0x7fa886c2f0a8)
+[LOG] SoundI::release                          :     Spiritsong_MUS_FluteRunGmin_0718 (0x7fa886c2f218)
+[LOG] SoundI::release                          :  (0x7fa886c315e8)
+[LOG] SoundI::release                          :     Spiritsong_MUS_FluteRunG#min_0718 (0x7fa886c31758)
+[LOG] SoundI::release                          :  (0x7fa886c27898)
+[LOG] SoundI::release                          :     Spiritsong_SFX_Puzzle2FluteLoop_0713 (0x7fa886c27a08)
+[LOG] SoundI::release                          :  (0x7fa88430a048)
+[LOG] SoundI::release                          :     Spiritsong_SFX_Gamelanv1_0706 (0x7fa88430a1b8)
+[LOG] SoundI::release                          :  (0x7fa884308be8)
+[LOG] SoundI::release                          :     Spiritsong_SFX_Gamelanv2_0706 (0x7fa884308d58)
+[LOG] SoundI::release                          :  (0x7fa886c25008)
+[LOG] SoundI::release                          :     Spiritsong_SFX_Gamelanv3_0706 (0x7fa886c25178)
+[LOG] SoundI::release                          :  (0x7fa884307c68)
+[LOG] SoundI::release                          :     Spiritsong_SFX_Gamelanv4_0706 (0x7fa884307dd8)
+[LOG] SoundI::release                          :  (0x7fa886c29c48)
+[LOG] SoundI::release                          :     Spiritsong_SFX_Gamelanv5_0706 (0x7fa886c29db8)
+[LOG] SoundI::release                          :  (0x7fa884311158)
+[LOG] SoundI::release                          :     Spiritsong_SFX_WindChimesv1_0706 (0x7fa88430ae68)
+[LOG] SoundI::release                          :  (0x7fa886c2a928)
+[LOG] SoundI::release                          :     Spiritsong_SFX_WindChimesv2_0706 (0x7fa886c2aa98)
+[LOG] SoundI::release                          :  (0x7fa88430b1a8)
+[LOG] SoundI::release                          :     Spiritsong_SFX_WindChimesv3_0706 (0x7fa884309bc8)
+[LOG] SoundI::release                          :  (0x7fa886c28a98)
+[LOG] SoundI::release                          :     Spiritsong_SFX_WindChimesv4_0706 (0x7fa886c28c08)
+[LOG] SoundI::release                          : Spiritsong_SFX_ForestAmbienceBase_0706 (0x7fa883eb0558)
+[LOG] SoundI::release                          :     Spiritsong_SFX_ForestAmbienceBase_0706 (0x7fa8843286a8)
+[LOG] SoundI::release                          :     Spiritsong_SFX_ForestAmbienceBase_0706 (0x7fa8843258e8)
+[LOG] SoundI::release                          : Spiritsong_SFX_PavilionAmbience_0716 (0x7fa88923cfe8)
+[LOG] SoundI::release                          :     Spiritsong_SFX_PavilionAmbience_0716 (0x7fa883eba598)
+[LOG] SoundI::release                          :     Spiritsong_SFX_PavilionAmbience_0716 (0x7fa883eb3da8)
+[LOG] SoundI::release                          : Spiritsong_Mus_LTL2_V1_0622 (0x7fa883e9d4a8)
+[LOG] SoundI::release                          :     Spiritsong_Mus_LTL2_V1_0622 (0x7fa884305ed8)
+[LOG] SoundI::release                          :     Spiritsong_Mus_LTL2_V1_0622 (0x7fa884306068)
+[LOG] SoundI::release                          : Spiritsong_Mus_LTL1_V1_0622 (0x7fa883e9d028)
+[LOG] SoundI::release                          :     Spiritsong_Mus_LTL1_V1_0622 (0x7fa884306ba8)
+[LOG] SoundI::release                          :     Spiritsong_Mus_LTL1_V1_0622 (0x7fa884306d38)
+[LOG] SoundI::release                          :  (0x7fa886c2a2b8)
+[LOG] SoundI::release                          :     Spiritsong_SFX_FingerCymv1_0706 (0x7fa886c2a428)
+[LOG] SoundI::release                          :  (0x7fa88431cae8)
+[LOG] SoundI::release                          :     Spiritsong_SFX_FingerCymv2_0706 (0x7fa884314068)
+[LOG] SoundI::release                          :  (0x7fa87b51dc38)
+[LOG] SoundI::release                          :     Spiritsong_SFX_FingerCymv3_0706 (0x7fa87b51ddd8)
+[LOG] SoundI::release                          :  (0x7fa886c2bd08)
+[LOG] SoundI::release                          :     Spiritsong_SFX_FingerCymv4_0706 (0x7fa886c2be78)
+[LOG] SoundI::release                          :  (0x7fa886c27228)
+[LOG] SoundI::release                          :     Spiritsong_SFX_FingerCymv5_0706 (0x7fa886c27398)
+[LOG] SoundI::release                          :  (0x7fa886c2af98)
+[LOG] SoundI::release                          :     Spiritsong_SFX_FingerCymv6_0706 (0x7fa886c2b108)
+[LOG] SoundI::release                          :  (0x7fa886c2b608)
+[LOG] SoundI::release                          :     Spiritsong_SFX_FingerCymv7_0706 (0x7fa886c28598)
+[LOG] Thread::callback                         : FMOD Studio update thread finished.
+[LOG] Thread::callback                         : FMOD Studio bank load thread finished.
+[LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
+[LOG] Thread::callback                         : FMOD Studio sample load thread finished.
+[LOG] LiveUpdate::release                      : 
+[LOG] LiveUpdate::reset                        : Reset connection (reason Disconnected)
+[LOG] Thread::callback                         : FMOD stream thread finished.
+[LOG] Thread::callback                         : FMOD mixer thread finished.
+[LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
+[LOG] SystemI::close                           : Closed.

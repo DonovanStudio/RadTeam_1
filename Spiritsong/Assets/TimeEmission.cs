@@ -10,17 +10,28 @@ public class TimeEmission : MonoBehaviour
     [SerializeField] GameObject particle;
     [SerializeField] Camera camera;
     float timer;
-    int note; 
+    int note;
+    //Audio
+    [FMODUnity.EventRef]
+    public string selectsound;
+    FMOD.Studio.EventInstance fluteloop;
     // Update is called once per frame
+
+    void Start()
+    {
+        fluteloop = FMODUnity.RuntimeManager.CreateInstance(selectsound);
+    }
     void Update()
     {
         timer += Time.deltaTime;
+        FMODUnity.RuntimeManager.AttachInstanceToGameObject(fluteloop, GetComponent<Transform>(), GetComponent<Rigidbody>());
         if (timer >= stingerLength)
         {
             timer = 0;
             note = 0;
             CreateNote(note);
-            //play stinger here
+            Debug.Log("Playing Puzzle Sound");
+            Playsound();
         }
         if (timer > delays[note])
         {
@@ -35,5 +46,9 @@ public class TimeEmission : MonoBehaviour
         p.GetComponent<BillboardSpirits>().playerCamera = camera;
         p.GetComponent<SpriteRenderer>().sprite = notes[note];
 
+    }
+    void Playsound()
+    {
+        fluteloop.start();
     }
 }

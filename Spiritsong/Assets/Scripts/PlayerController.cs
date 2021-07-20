@@ -198,6 +198,7 @@ public class PlayerController : MonoBehaviour
     {
         if (other.gameObject.tag == "Jump")
         {
+            FMODUnity.RuntimeManager.PlayOneShot("event:/Violin Spirit Pickup");
             jumpUnlocked = true;
             abilityVar.jumpMechanic = true;
             //SceneManager.LoadScene(1);
@@ -217,6 +218,7 @@ public class PlayerController : MonoBehaviour
         if (other.gameObject.tag == "orb")
         {
             CollectOrb(this);
+            FMODUnity.RuntimeManager.PlayOneShot("event:/Small Spirit Pickup");
             Destroy(other.gameObject);
         }
     }

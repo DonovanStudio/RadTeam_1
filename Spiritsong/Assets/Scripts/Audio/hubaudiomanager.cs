@@ -42,6 +42,6 @@ public class hubaudiomanager : MonoBehaviour
     
     void Update()
     {
-        Debug.Log(conversationManager.talkingPiano);
+        //Debug.Log(conversationManager.talkingPiano);
     }
 }
