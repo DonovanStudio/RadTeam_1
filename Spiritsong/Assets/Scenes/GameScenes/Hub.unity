@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 1632664440}
-  m_IndirectSpecularColor: {r: 0.49708593, g: 0.7067691, b: 0.70333314, a: 1}
+  m_IndirectSpecularColor: {r: 0.4973033, g: 0.7068647, b: 0.70322394, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3296,7 +3296,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1485688673
 MonoBehaviour:
@@ -3858,7 +3858,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8384385349288275792, guid: fd16387cd7faf35459ca0eb33f2c434f, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8384385349288275793, guid: fd16387cd7faf35459ca0eb33f2c434f, type: 3}
       propertyPath: walkMechanic
