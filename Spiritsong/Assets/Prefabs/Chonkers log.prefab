@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5901907951028018545}
   - component: {fileID: 7370160127210099412}
   - component: {fileID: 4732411156764550686}
+  - component: {fileID: 424508240904395824}
   m_Layer: 0
   m_Name: Chonkers log
   m_TagString: Untagged
@@ -81,3 +82,17 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &424508240904395824
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6533626500957358027}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 7998806513205308417, guid: d4bb561d9921e33488a4d819e4d77fb8, type: 3}
