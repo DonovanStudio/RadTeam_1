@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.49713546, g: 0.70677096, b: 0.7033746, a: 1}
+  m_IndirectSpecularColor: {r: 0.49708593, g: 0.7067691, b: 0.70333314, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -20507,7 +20507,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fmodEvent: event:/Level Theme Main
-  time: 0
+  jumping: 0
   dashing: 0
 --- !u!114 &829523922
 MonoBehaviour:
@@ -49438,7 +49438,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fmodEvent: event:/Level Theme Main
-  time: 0
+  jumping: 0
   dashing: 0
 --- !u!114 &2126536884
 MonoBehaviour:
@@ -50071,6 +50071,10 @@ PrefabInstance:
       propertyPath: upwardGravity
       value: -40
       objectReference: {fileID: 0}
+    - target: {fileID: 3878432700224369504, guid: a027ccf5a0780f94c9a6a02de7478bef, type: 3}
+      propertyPath: backgroundMusic
+      value: 
+      objectReference: {fileID: 2126536879}
     - target: {fileID: 3878432700224369504, guid: a027ccf5a0780f94c9a6a02de7478bef, type: 3}
       propertyPath: downwardGravity
       value: -50

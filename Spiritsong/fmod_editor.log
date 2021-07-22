@@ -1,13 +1,13 @@
 [LOG] System::create                           : Header version = 2.01.09. Current version = 2.01.09.
-[LOG] Manager::init                            : maxchannels = 256 studioflags = 00000006 flags 00000000 extradriverdata 0000000000000000.
+[LOG] Manager::init                            : maxchannels = 256 studioflags = 00000006 flags 00000000 extradriverdata 0x0.
 [LOG] SystemI::init                            : Initialize version=20109 (115889), maxchannels=256, flags=0x00020000
-[LOG] SystemI::setOutputInternal               : Setting output to 'FMOD WASAPI Output'
-[LOG] OutputWASAPI::init                       : Mix Format (WAVEFORMATEX): wFormatTag=0xFFFE, nChannels=2, nSamplesPerSec=48000, nAvgBytesPerSec=384000, nBlockAlign=8, wBitsPerSample=32, cbSize=22.
-[LOG] OutputWASAPI::init                       : Mix Format (WAVEFORMATEXTENSIBLE): wValidBitsPerSample=32, dwChannelMask=0x00000003, SubFormat=00000003-0000-0010-8000-00AA00389B71.
-[LOG] OutputWASAPI::init                       : Output buffer size: 4096 samples, latency: 0.00ms, period: 10.00ms, DSP buffer: 1024 * 4
+[LOG] SystemI::setOutputInternal               : Setting output to 'FMOD Core Audio Output'
+[LOG] OutputCoreAudio::init                    : Output running 2 channels at 44100Hz sample rate.
+[LOG] OutputCoreAudio::init                    : Maximum hardware read size: 512 samples, Software buffer size: 512 samples, Number of software buffers: 4.
+[LOG] SystemI::init                            : Output requires a sample rate of 44100Hz, resampling will occur.
 [LOG] Thread::initThread                       : Init FMOD stream thread. Affinity: 0x8000000000000003, Priority: 0xFFFF7FFB, Stack Size: 98304, Semaphore: No, Sleep Time: 10, Looping: Yes.
-[LOG] Thread::initThread                       : Init FMOD mixer thread. Affinity: 0x8000000000000001, Priority: 0xFFFF7FFA, Stack Size: 81920, Semaphore: No, Sleep Time: 0, Looping: Yes.
-[LOG] AsyncManager::init                       : manager 000002189CA0F048 isAsync 0 updatePeriod 0.02
+[LOG] Thread::initThread                       : Init FMOD mixer thread. Affinity: 0x8000000000000001, Priority: 0xFFFF7FFA, Stack Size: 81920, Semaphore: Yes, Sleep Time: 0, Looping: Yes.
+[LOG] AsyncManager::init                       : manager 0x7fed7fb93a08 isAsync 0 updatePeriod 0.02
 [LOG] AsyncManager::init                       : done
 [LOG] PlaybackSystem::init                     : 
 [LOG] Thread::initThread                       : Init FMOD Studio sample load thread. Affinity: 0x8000000000000003, Priority: 0xFFFF7FFD, Stack Size: 98304, Semaphore: No, Sleep Time: 1, Looping: No.
@@ -17,9 +17,1137 @@
 [LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
 [LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
 [LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
-[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
-[LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
-[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
-[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
-[LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
-[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 3830496
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 21440
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0x7000019cb954
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 0x1690e6782
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 0x1690e6839
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 0x1690e6866
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 0x1690e690a
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0x7fed86e72468
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='Spiritsong_SFX_Menu1_0707', format=5, channels=2, frequency=48000, lengthbytes=20896, lengthpcm=96000, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.029981.
+[LOG] SystemI::createSound                     : filename = FMOD Banks/Desktop/SFX.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 0x7fed8bafb448 : node = 0x7fed8ba6d3d0
+[LOG] SystemI::createSound                     : add node to async list : head = 0x7fed8eae3658.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0x7fed8bafb448
+[LOG] SystemI::createSoundInternal             :     Create name='FMOD Banks/Desktop/SFX.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 3830496
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 21440
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0x7fed8ba6d4e0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Spiritsong_SFX_ForestAmbienceBase_0706', format=5, channels=2, frequency=48000, lengthbytes=1588736, lengthpcm=5705224, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.043759.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0x7fed8bafb448
+[LOG] SoundI::release                          : Spiritsong_SFX_ForestAmbienceBase_0706 (0x7fed711250d8)
+[LOG] SoundI::release                          :     Spiritsong_SFX_ForestAmbienceBase_0706 (0x7fed87c6a968)
+[LOG] SoundI::release                          :     Spiritsong_SFX_ForestAmbienceBase_0706 (0x7fed87c69848)
+[LOG] SoundI::release                          : Spiritsong_Mus_TT_0623 (0x7fed8eae8b38)
+[LOG] SoundI::release                          :     Spiritsong_Mus_TT_0623 (0x7fed8df2bd28)
+[LOG] SoundI::release                          :     Spiritsong_Mus_TT_0623 (0x7fed8df2beb8)
+[LOG] SystemI::createSound                     : filename = FMOD Banks/Desktop/SFX.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 0x7fed8b8a6188 : node = 0x7fed8b089970
+[LOG] SystemI::createSound                     : add node to async list : head = 0x7fed8eae3658.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0x7fed8b8a6188
+[LOG] SystemI::createSoundInternal             :     Create name='FMOD Banks/Desktop/SFX.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 3830496
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 21440
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0x7fed8b089a80
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Spiritsong_SFX_PavilionAmbience_0716', format=5, channels=2, frequency=48000, lengthbytes=877216, lengthpcm=4632000, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.012804.
+[LOG] SystemI::createSound                     :     filename = FMOD Banks/Desktop/SFX.bank : mode 02010082
+[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0x7fed8b8a6188
+[LOG] SystemI::createSound                     : setdata soundi = 0x7fed8b843e78 : node = 0x7fed8b83a500
+[LOG] SystemI::createSound                     : add node to async list : head = 0x7fed8eae3658.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0x7fed8b843e78
+[LOG] SystemI::createSoundInternal             :     Create name='FMOD Banks/Desktop/SFX.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 3830496
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 21440
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0x7fed8b83a610
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Spiritsong_SFX_ForestAmbienceBase_0706', format=5, channels=2, frequency=48000, lengthbytes=1588736, lengthpcm=5705224, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.043759.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0x7fed8b843e78
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 7742016
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 80256
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0x7000019cb954
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 0x1690e6782
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 0x1690e6839
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 0x1690e6866
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 0x1690e690a
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0x7fed71158578
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='Spiritsong_Mus_VArp14_0722', format=5, channels=2, frequency=48000, lengthbytes=25088, lengthpcm=142663, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.043518.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 7742016
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 80256
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0x7000019cb954
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 0x1690e6782
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 0x1690e6839
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 0x1690e6866
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 0x1690e690a
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0x7fed71158578
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='Spiritsong_Mus_VArp11_0722', format=5, channels=2, frequency=48000, lengthbytes=33792, lengthpcm=142663, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.057556.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 7742016
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 80256
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0x7000019cb954
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 0x1690e6782
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 0x1690e6839
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 0x1690e6866
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 0x1690e690a
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0x7fed71158578
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='Spiritsong_Mus_VArp36_0722', format=5, channels=2, frequency=48000, lengthbytes=34400, lengthpcm=142663, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.075989.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 7742016
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 80256
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0x7000019cb954
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 0x1690e6782
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 0x1690e6839
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 0x1690e6866
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 0x1690e690a
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0x7fed71158578
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='Spiritsong_Mus_VArp39_0722', format=5, channels=2, frequency=48000, lengthbytes=34112, lengthpcm=142663, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.060852.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 7742016
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 80256
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0x7000019cb954
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 0x1690e6782
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 0x1690e6839
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 0x1690e6866
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 0x1690e690a
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0x7fed71158578
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='Spiritsong_MUS_FluteRunCmaj_0718', format=5, channels=2, frequency=48000, lengthbytes=21344, lengthpcm=106997, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.100075.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 7742016
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 80256
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0x7000019cb954
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 0x1690e6782
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 0x1690e6839
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 0x1690e6866
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 0x1690e690a
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0x7fed71158578
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='Spiritsong_Mus_VArp10_0722', format=5, channels=2, frequency=48000, lengthbytes=33536, lengthpcm=142663, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.067841.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 7742016
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 80256
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0x7000019cb954
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 0x1690e6782
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 0x1690e6839
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 0x1690e6866
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 0x1690e690a
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0x7fed71158578
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='Spiritsong_MUS_FluteRunDmaj_0718', format=5, channels=2, frequency=48000, lengthbytes=21472, lengthpcm=106997, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.098656.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 7742016
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 80256
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0x7000019cb954
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 0x1690e6782
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 0x1690e6839
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 0x1690e6866
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 0x1690e690a
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0x7fed71158578
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='Spiritsong_Mus_VArp16_0722', format=5, channels=2, frequency=48000, lengthbytes=33248, lengthpcm=142663, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.068146.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 7742016
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 80256
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0x7000019cb954
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 0x1690e6782
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 0x1690e6839
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 0x1690e6866
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 0x1690e690a
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0x7fed71158578
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='Spiritsong_Mus_VArp30_0722', format=5, channels=2, frequency=48000, lengthbytes=33824, lengthpcm=142663, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.048157.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 7742016
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 80256
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0x7000019cb954
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 0x1690e6782
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 0x1690e6839
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 0x1690e6866
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 0x1690e690a
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0x7fed71158578
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='Spiritsong_Mus_VArp22_0722', format=5, channels=2, frequency=48000, lengthbytes=33888, lengthpcm=142663, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.056976.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 7742016
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 80256
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0x7000019cb954
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 0x1690e6782
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 0x1690e6839
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 0x1690e6866
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 0x1690e690a
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0x7fed71158578
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='Spiritsong_Mus_VArp13_0722', format=5, channels=2, frequency=48000, lengthbytes=25408, lengthpcm=142663, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.049255.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 7742016
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 80256
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0x7000019cb954
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 0x1690e6782
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 0x1690e6839
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 0x1690e6866
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 0x1690e690a
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0x7fed71158578
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='Spiritsong_MUS_FluteRunAmaj_0718', format=5, channels=2, frequency=48000, lengthbytes=20928, lengthpcm=106997, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.074555.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 7742016
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 80256
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0x7000019cb954
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 0x1690e6782
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 0x1690e6839
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 0x1690e6866
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 0x1690e690a
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0x7fed71158578
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='Spiritsong_Mus_VArp32_0722', format=5, channels=2, frequency=48000, lengthbytes=33760, lengthpcm=142663, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.058105.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 7742016
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 80256
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0x7000019cb954
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 0x1690e6782
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 0x1690e6839
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 0x1690e6866
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 0x1690e690a
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0x7fed71158578
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='Spiritsong_Mus_VArp35_0722', format=5, channels=2, frequency=48000, lengthbytes=34208, lengthpcm=142663, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.044556.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 7742016
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 80256
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0x7000019cb954
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 0x1690e6782
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 0x1690e6839
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 0x1690e6866
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 0x1690e690a
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0x7fed71158578
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='Spiritsong_Mus_VArp18_0722', format=5, channels=2, frequency=48000, lengthbytes=33792, lengthpcm=142663, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.057159.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 7742016
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 80256
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0x7000019cb954
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 0x1690e6782
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 0x1690e6839
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 0x1690e6866
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 0x1690e690a
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0x7fed71158578
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='Spiritsong_Mus_VArp21_0722', format=5, channels=2, frequency=48000, lengthbytes=34208, lengthpcm=142663, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.064941.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 7742016
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 80256
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0x7000019cb954
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 0x1690e6782
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 0x1690e6839
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 0x1690e6866
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 0x1690e690a
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0x7fed71158578
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='Spiritsong_MUS_FluteRunG#min_0718', format=5, channels=2, frequency=48000, lengthbytes=21024, lengthpcm=106997, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.065769.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 7742016
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 80256
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0x7000019cb954
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 0x1690e6782
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 0x1690e6839
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 0x1690e6866
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 0x1690e690a
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0x7fed71158578
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='Spiritsong_MUS_FluteRunDbmaj_0718', format=5, channels=2, frequency=48000, lengthbytes=21440, lengthpcm=106997, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.104994.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 7742016
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 80256
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0x7000019cb954
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 0x1690e6782
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 0x1690e6839
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 0x1690e6866
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 0x1690e690a
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0x7fed71158578
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='Spiritsong_MUS_FluteRunGmaj_0718', format=5, channels=2, frequency=48000, lengthbytes=18784, lengthpcm=106997, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.053320.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 7742016
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 80256
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0x7000019cb954
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 0x1690e6782
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 0x1690e6839
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 0x1690e6866
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 0x1690e690a
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0x7fed71158578
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='Spiritsong_Mus_VArp5_0722', format=5, channels=2, frequency=48000, lengthbytes=33056, lengthpcm=142663, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.053223.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 7742016
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 80256
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0x7000019cb954
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 0x1690e6782
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 0x1690e6839
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 0x1690e6866
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 0x1690e690a
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0x7fed71158578
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='Spiritsong_MUS_FluteRunFmaj2_0718', format=5, channels=2, frequency=48000, lengthbytes=21568, lengthpcm=106997, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.079367.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 7742016
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 80256
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0x7000019cb954
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 0x1690e6782
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 0x1690e6839
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 0x1690e6866
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 0x1690e690a
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0x7fed71158578
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='Spiritsong_Mus_VArp33_0722', format=5, channels=2, frequency=48000, lengthbytes=39840, lengthpcm=213995, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.103973.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 7742016
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 80256
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0x7000019cb954
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 0x1690e6782
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 0x1690e6839
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 0x1690e6866
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 0x1690e690a
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0x7fed71158578
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='Spiritsong_Mus_VArp31_0722', format=5, channels=2, frequency=48000, lengthbytes=33920, lengthpcm=142663, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.066162.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 7742016
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 80256
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0x7000019cb954
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 0x1690e6782
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 0x1690e6839
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 0x1690e6866
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 0x1690e690a
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0x7fed71158578
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='Spiritsong_Mus_VArp1_0722', format=5, channels=2, frequency=48000, lengthbytes=33120, lengthpcm=142663, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.051422.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 7742016
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 80256
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0x7000019cb954
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 0x1690e6782
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 0x1690e6839
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 0x1690e6866
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 0x1690e690a
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0x7fed71158578
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='Spiritsong_Mus_VArp28_0722', format=5, channels=2, frequency=48000, lengthbytes=33376, lengthpcm=142663, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.083801.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 7742016
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 80256
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0x7000019cb954
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 0x1690e6782
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 0x1690e6839
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 0x1690e6866
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 0x1690e690a
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0x7fed71158578
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='Spiritsong_Mus_VArp38_0722', format=5, channels=2, frequency=48000, lengthbytes=33888, lengthpcm=142663, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.068390.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 7742016
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 80256
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0x7000019cb954
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 0x1690e6782
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 0x1690e6839
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 0x1690e6866
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 0x1690e690a
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0x7fed71158578
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='Spiritsong_MUS_FluteRunEbmaj_0718', format=5, channels=2, frequency=48000, lengthbytes=21472, lengthpcm=106997, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.101869.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 7742016
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 80256
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0x7000019cb954
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 0x1690e6782
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 0x1690e6839
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 0x1690e6866
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 0x1690e690a
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0x7fed71158578
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='Spiritsong_MUS_FluteRunFmin_0718', format=5, channels=2, frequency=48000, lengthbytes=21344, lengthpcm=106997, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.088702.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 7742016
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 80256
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0x7000019cb954
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 0x1690e6782
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 0x1690e6839
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 0x1690e6866
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 0x1690e690a
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0x7fed71158578
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='Spiritsong_Mus_VArp29_0722', format=5, channels=2, frequency=48000, lengthbytes=40576, lengthpcm=213995, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.066833.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 7742016
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 80256
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0x7000019cb954
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 0x1690e6782
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 0x1690e6839
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 0x1690e6866
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 0x1690e690a
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0x7fed71158578
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='Spiritsong_MUS_FluteRunGmin_0718', format=5, channels=2, frequency=48000, lengthbytes=21504, lengthpcm=106997, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.065471.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 7742016
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 80256
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0x7000019cb954
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 0x1690e6782
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 0x1690e6839
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 0x1690e6866
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 0x1690e690a
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0x7fed71158578
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='Spiritsong_Mus_VArp34_0722', format=5, channels=2, frequency=48000, lengthbytes=33792, lengthpcm=142663, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.058411.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 7742016
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 80256
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0x7000019cb954
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 0x1690e6782
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 0x1690e6839
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 0x1690e6866
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 0x1690e690a
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0x7fed71158578
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='Spiritsong_Mus_VArp20_0722', format=5, channels=2, frequency=48000, lengthbytes=34496, lengthpcm=142663, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.073456.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 7742016
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 80256
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0x7000019cb954
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 0x1690e6782
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 0x1690e6839
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 0x1690e6866
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 0x1690e690a
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0x7fed71158578
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='Spiritsong_Mus_VArp37_0722', format=5, channels=2, frequency=48000, lengthbytes=33728, lengthpcm=142663, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.072723.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 7742016
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 80256
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0x7000019cb954
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 0x1690e6782
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 0x1690e6839
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 0x1690e6866
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 0x1690e690a
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0x7fed71158578
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='Spiritsong_Mus_VArp24_0722', format=5, channels=2, frequency=48000, lengthbytes=33696, lengthpcm=142663, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.053223.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 7742016
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 80256
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0x7000019cb954
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 0x1690e6782
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 0x1690e6839
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 0x1690e6866
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 0x1690e690a
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0x7fed71158578
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='Spiritsong_Mus_VArp12_0722', format=5, channels=2, frequency=48000, lengthbytes=40768, lengthpcm=213995, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.064575.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 7742016
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 80256
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0x7000019cb954
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 0x1690e6782
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 0x1690e6839
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 0x1690e6866
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 0x1690e690a
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0x7fed71158578
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='Spiritsong_MUS_FluteRunAmin_0718', format=5, channels=2, frequency=48000, lengthbytes=20160, lengthpcm=90947, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.059926.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 7742016
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 80256
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0x7000019cb954
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 0x1690e6782
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 0x1690e6839
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 0x1690e6866
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 0x1690e690a
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0x7fed71158578
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='Spiritsong_MUS_FluteRunBbmaj_0718', format=5, channels=2, frequency=48000, lengthbytes=21088, lengthpcm=106997, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.063424.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 7742016
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 80256
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0x7000019cb954
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 0x1690e6782
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 0x1690e6839
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 0x1690e6866
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 0x1690e690a
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0x7fed71158578
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='Spiritsong_Mus_VArp17_0722', format=5, channels=2, frequency=48000, lengthbytes=39808, lengthpcm=213995, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.071198.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 7742016
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 80256
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0x7000019cb954
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 0x1690e6782
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 0x1690e6839
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 0x1690e6866
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 0x1690e690a
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0x7fed71158578
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='Spiritsong_MUS_FluteRunDmin_0718', format=5, channels=2, frequency=48000, lengthbytes=21632, lengthpcm=106997, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.098544.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 7742016
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 80256
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0x7000019cb954
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 0x1690e6782
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 0x1690e6839
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 0x1690e6866
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 0x1690e690a
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0x7fed71158578
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='Spiritsong_Mus_VArp19_0722', format=5, channels=2, frequency=48000, lengthbytes=33632, lengthpcm=142663, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.067596.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 7742016
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 80256
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0x7000019cb954
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 0x1690e6782
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 0x1690e6839
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 0x1690e6866
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 0x1690e690a
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0x7fed71158578
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='Spiritsong_Mus_VArp6_0722', format=5, channels=2, frequency=48000, lengthbytes=33280, lengthpcm=142663, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.069214.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 7742016
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 80256
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0x7000019cb954
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 0x1690e6782
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 0x1690e6839
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 0x1690e6866
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 0x1690e690a
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0x7fed71158578
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='Spiritsong_Mus_VArp25_0722', format=5, channels=2, frequency=48000, lengthbytes=33472, lengthpcm=142663, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.069611.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 7742016
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 80256
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0x7000019cb954
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 0x1690e6782
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 0x1690e6839
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 0x1690e6866
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 0x1690e690a
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0x7fed71158578
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='Spiritsong_Mus_VArp9_0722', format=5, channels=2, frequency=48000, lengthbytes=33472, lengthpcm=131508, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.056458.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 7742016
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 80256
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0x7000019cb954
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 0x1690e6782
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 0x1690e6839
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 0x1690e6866
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 0x1690e690a
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0x7fed71158578
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='Spiritsong_MUS_FluteRunFmaj_0718', format=5, channels=2, frequency=48000, lengthbytes=20576, lengthpcm=106997, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.049389.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 7742016
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 80256
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0x7000019cb954
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 0x1690e6782
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 0x1690e6839
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 0x1690e6866
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 0x1690e690a
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0x7fed71158578
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='Spiritsong_Mus_VArp15_0722', format=5, channels=2, frequency=48000, lengthbytes=33472, lengthpcm=142663, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.064514.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 7742016
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 80256
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0x7000019cb954
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 0x1690e6782
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 0x1690e6839
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 0x1690e6866
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 0x1690e690a
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0x7fed71158578
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='Spiritsong_Mus_VArp8_0722', format=5, channels=2, frequency=48000, lengthbytes=33376, lengthpcm=131508, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.056915.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 7742016
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 80256
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0x7000019cb954
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 0x1690e6782
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 0x1690e6839
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 0x1690e6866
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 0x1690e690a
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0x7fed71158578
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='Spiritsong_Mus_VArp23_0722', format=5, channels=2, frequency=48000, lengthbytes=34624, lengthpcm=142663, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.062225.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 7742016
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 80256
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0x7000019cb954
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 0x1690e6782
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 0x1690e6839
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 0x1690e6866
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 0x1690e690a
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0x7fed71158578
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='Spiritsong_Mus_VArp3_0722', format=5, channels=2, frequency=48000, lengthbytes=33920, lengthpcm=142663, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.070465.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 7742016
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 80256
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0x7000019cb954
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 0x1690e6782
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 0x1690e6839
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 0x1690e6866
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 0x1690e690a
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0x7fed71158578
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='Spiritsong_Mus_VArp27_0722', format=5, channels=2, frequency=48000, lengthbytes=34592, lengthpcm=142663, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.077972.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 7742016
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 80256
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0x7000019cb954
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 0x1690e6782
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 0x1690e6839
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 0x1690e6866
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 0x1690e690a
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0x7fed71158578
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='Spiritsong_Mus_VArp2_0722', format=5, channels=2, frequency=48000, lengthbytes=33184, lengthpcm=142663, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.052582.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 7742016
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 80256
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0x7000019cb954
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 0x1690e6782
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 0x1690e6839
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 0x1690e6866
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 0x1690e690a
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0x7fed71158578
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='Spiritsong_MUS_FluteRunGmin2_0718', format=5, channels=2, frequency=48000, lengthbytes=21664, lengthpcm=106997, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.103816.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 7742016
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 80256
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0x7000019cb954
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 0x1690e6782
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 0x1690e6839
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 0x1690e6866
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 0x1690e690a
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0x7fed71158578
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='Spiritsong_Mus_VArp7_0722', format=5, channels=2, frequency=48000, lengthbytes=33632, lengthpcm=131508, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.064850.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 7742016
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 80256
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0x7000019cb954
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 0x1690e6782
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 0x1690e6839
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 0x1690e6866
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 0x1690e690a
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0x7fed71158578
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='Spiritsong_Mus_VArp26_0722', format=5, channels=2, frequency=48000, lengthbytes=34400, lengthpcm=142663, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.117004.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 7742016
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 80256
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0x7000019cb954
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 0x1690e6782
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 0x1690e6839
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 0x1690e6866
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 0x1690e690a
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0x7fed71158578
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='Spiritsong_Mus_VArp4_0722', format=5, channels=2, frequency=48000, lengthbytes=33728, lengthpcm=142663, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.057098.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 3830496
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 21440
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0x7000019cb954
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 0x1690e6782
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 0x1690e6839
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 0x1690e6866
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 0x1690e690a
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0x7fed71158578
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='Spiritsong_SFX_Puzzle2FluteLoop_0713', format=5, channels=2, frequency=48000, lengthbytes=84384, lengthpcm=394266, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.166423.
+[LOG] SystemI::createSound                     : filename = FMOD Banks/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 0x7fed71158388 : node = 0x7fed71158540
+[LOG] SystemI::createSound                     : add node to async list : head = 0x7fed8eae3658.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0x7fed71158388
+[LOG] SystemI::createSoundInternal             :     Create name='FMOD Banks/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 7742016
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 80256
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0x7fed71158650
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Spiritsong_Mus_LTL1_V1_0622', format=5, channels=2, frequency=48000, lengthbytes=1050848, lengthpcm=4638316, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.375772.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0x7fed71158388
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0x7fed8ea82ee8
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0x7fed8ea82ee8
+[LOG] SoundI::release                          : Spiritsong_SFX_ForestAmbienceBase_0706 (0x7fed8bafb448)
+[LOG] SoundI::release                          :     Spiritsong_SFX_ForestAmbienceBase_0706 (0x7fed8b0070c8)
+[LOG] SoundI::release                          :     Spiritsong_SFX_ForestAmbienceBase_0706 (0x7fed884c1208)
+[LOG] SoundI::release                          :  (0x7fed8cd77198)
+[LOG] SoundI::release                          :     Spiritsong_SFX_Menu1_0707 (0x7fed8cdf5988)
+[LOG] SoundI::release                          :  (0x7fed71120678)
+[LOG] SoundI::release                          :     Spiritsong_SFX_Gamelanv1_0706 (0x7fed711207e8)
+[LOG] SoundI::release                          :  (0x7fed71120c68)
+[LOG] SoundI::release                          :     Spiritsong_SFX_Gamelanv2_0706 (0x7fed71120dd8)
+[LOG] SoundI::release                          :  (0x7fed8da5ae38)
+[LOG] SoundI::release                          :     Spiritsong_SFX_Gamelanv3_0706 (0x7fed8da97e28)
+[LOG] SoundI::release                          :  (0x7fed71121258)
+[LOG] SoundI::release                          :     Spiritsong_SFX_Gamelanv4_0706 (0x7fed711213c8)
+[LOG] SoundI::release                          :  (0x7fed8ea74e18)
+[LOG] SoundI::release                          :     Spiritsong_SFX_Gamelanv5_0706 (0x7fed8ea88138)
+[LOG] SoundI::release                          :  (0x7fed71124d88)
+[LOG] SoundI::release                          :     Spiritsong_SFX_WindChimesv1_0706 (0x7fed71123328)
+[LOG] SoundI::release                          :  (0x7fed8eac5bd8)
+[LOG] SoundI::release                          :     Spiritsong_SFX_WindChimesv2_0706 (0x7fed8eaa42e8)
+[LOG] SoundI::release                          :  (0x7fed711201c8)
+[LOG] SoundI::release                          :     Spiritsong_SFX_WindChimesv3_0706 (0x7fed71120338)
+[LOG] SoundI::release                          :  (0x7fed8ea956a8)
+[LOG] SoundI::release                          :     Spiritsong_SFX_WindChimesv4_0706 (0x7fed8ea9e388)
+[LOG] SoundI::release                          :  (0x7fed8ea62628)
+[LOG] SoundI::release                          :     Spiritsong_SFX_FingerCymv1_0706 (0x7fed8ea62e48)
+[LOG] SoundI::release                          :  (0x7fed71124218)
+[LOG] SoundI::release                          :     Spiritsong_SFX_FingerCymv2_0706 (0x7fed71123ba8)
+[LOG] SoundI::release                          :  (0x7fed8eaa7938)
+[LOG] SoundI::release                          :     Spiritsong_SFX_FingerCymv3_0706 (0x7fed8eaddd68)
+[LOG] SoundI::release                          :  (0x7fed89ee9078)
+[LOG] SoundI::release                          :     Spiritsong_SFX_FingerCymv4_0706 (0x7fed8ea79658)
+[LOG] SoundI::release                          :  (0x7fed8ea85df8)
+[LOG] SoundI::release                          :     Spiritsong_SFX_FingerCymv5_0706 (0x7fed8ea92c28)
+[LOG] SoundI::release                          :  (0x7fed8ea8f228)
+[LOG] SoundI::release                          :     Spiritsong_SFX_FingerCymv6_0706 (0x7fed8da827d8)
+[LOG] SoundI::release                          :  (0x7fed8eae0238)
+[LOG] SoundI::release                          :     Spiritsong_SFX_FingerCymv7_0706 (0x7fed8eaa23b8)
+[LOG] SoundI::release                          :  (0x7fed89cb0ef8)
+[LOG] SoundI::release                          :     Spiritsong_Mus_VArp27_0722 (0x7fed86e25ed8)
+[LOG] SoundI::release                          :  (0x7fed8b7cdfc8)
+[LOG] SoundI::release                          :     Spiritsong_Mus_VArp31_0722 (0x7fed8b761aa8)
+[LOG] SoundI::release                          :  (0x7fed8b73fea8)
+[LOG] SoundI::release                          :     Spiritsong_MUS_FluteRunGmaj_0718 (0x7fed8bb24a88)
+[LOG] SoundI::release                          :  (0x7fed87c9e238)
+[LOG] SoundI::release                          :     Spiritsong_Mus_VArp34_0722 (0x7fed8b73a6d8)
+[LOG] SoundI::release                          :  (0x7fed86e36528)
+[LOG] SoundI::release                          :     Spiritsong_Mus_VArp19_0722 (0x7fed89cfe818)
+[LOG] SoundI::release                          :  (0x7fed7115a1c8)
+[LOG] SoundI::release                          :     Spiritsong_Mus_VArp36_0722 (0x7fed7115a338)
+[LOG] SoundI::release                          :  (0x7fed87c9cee8)
+[LOG] SoundI::release                          :     Spiritsong_MUS_FluteRunDmin_0718 (0x7fed87cc1648)
+[LOG] SoundI::release                          :  (0x7fed7115cf98)
+[LOG] SoundI::release                          :     Spiritsong_Mus_VArp22_0722 (0x7fed7115d108)
+[LOG] SoundI::release                          :  (0x7fed7115def8)
+[LOG] SoundI::release                          :     Spiritsong_MUS_FluteRunAmaj_0718 (0x7fed7115e068)
+[LOG] SoundI::release                          :  (0x7fed7115ac68)
+[LOG] SoundI::release                          :     Spiritsong_MUS_FluteRunCmaj_0718 (0x7fed7115add8)
+[LOG] SoundI::release                          :  (0x7fed71159658)
+[LOG] SoundI::release                          :     Spiritsong_Mus_VArp14_0722 (0x7fed711597c8)
+[LOG] SoundI::release                          :  (0x7fed8bb06c48)
+[LOG] SoundI::release                          :     Spiritsong_Mus_VArp24_0722 (0x7fed87ce8b48)
+[LOG] SoundI::release                          :  (0x7fed89c2bdc8)
+[LOG] SoundI::release                          :     Spiritsong_MUS_FluteRunGmin2_0718 (0x7fed89c26658)
+[LOG] SoundI::release                          :  (0x7fed8bbc4b48)
+[LOG] SoundI::release                          :     Spiritsong_Mus_VArp21_0722 (0x7fed8bb24f78)
+[LOG] SoundI::release                          :  (0x7fed7115ebd8)
+[LOG] SoundI::release                          :     Spiritsong_Mus_VArp35_0722 (0x7fed7115ed48)
+[LOG] SoundI::release                          :  (0x7fed7115a7b8)
+[LOG] SoundI::release                          :     Spiritsong_Mus_VArp39_0722 (0x7fed7115a928)
+[LOG] SoundI::release                          :  (0x7fed87c83738)
+[LOG] SoundI::release                          :     Spiritsong_MUS_FluteRunAmin_0718 (0x7fed87c79d98)
+[LOG] SoundI::release                          :  (0x7fed89c7a608)
+[LOG] SoundI::release                          :     Spiritsong_Mus_VArp2_0722 (0x7fed86e266c8)
+[LOG] SoundI::release                          :  (0x7fed7115c928)
+[LOG] SoundI::release                          :     Spiritsong_Mus_VArp30_0722 (0x7fed7115ca98)
+[LOG] SoundI::release                          :  (0x7fed87c597c8)
+[LOG] SoundI::release                          :     Spiritsong_Mus_VArp17_0722 (0x7fed87c5da68)
+[LOG] SoundI::release                          :  (0x7fed71161a48)
+[LOG] SoundI::release                          :     Spiritsong_Mus_VArp26_0722 (0x7fed71161bb8)
+[LOG] SoundI::release                          :  (0x7fed89c800b8)
+[LOG] SoundI::release                          :     Spiritsong_Mus_VArp3_0722 (0x7fed86e883a8)
+[LOG] SoundI::release                          :  (0x7fed87c92f58)
+[LOG] SoundI::release                          :     Spiritsong_Mus_VArp1_0722 (0x7fed8b7ddab8)
+[LOG] SoundI::release                          :  (0x7fed8bb86fb8)
+[LOG] SoundI::release                          :     Spiritsong_MUS_FluteRunDbmaj_0718 (0x7fed8bba0298)
+[LOG] SoundI::release                          :  (0x7fed7115bac8)
+[LOG] SoundI::release                          :     Spiritsong_MUS_FluteRunDmaj_0718 (0x7fed7115bc38)
+[LOG] SoundI::release                          :  (0x7fed87c1cfd8)
+[LOG] SoundI::release                          :     Spiritsong_MUS_FluteRunEbmaj_0718 (0x7fed8b759b28)
+[LOG] SoundI::release                          :  (0x7fed89c6f8a8)
+[LOG] SoundI::release                          :     Spiritsong_Mus_VArp15_0722 (0x7fed86e25c98)
+[LOG] SoundI::release                          :  (0x7fed87cb3928)
+[LOG] SoundI::release                          :     Spiritsong_Mus_VArp28_0722 (0x7fed8b7b3568)
+[LOG] SoundI::release                          :  (0x7fed8bb577b8)
+[LOG] SoundI::release                          :     Spiritsong_Mus_VArp12_0722 (0x7fed87c2d268)
+[LOG] SoundI::release                          :  (0x7fed86eea268)
+[LOG] SoundI::release                          :     Spiritsong_MUS_FluteRunFmaj_0718 (0x7fed89cbe9f8)
+[LOG] SoundI::release                          :  (0x7fed71162178)
+[LOG] SoundI::release                          :     Spiritsong_Mus_VArp4_0722 (0x7fed711622e8)
+[LOG] SoundI::release                          :  (0x7fed87c0c588)
+[LOG] SoundI::release                          :     Spiritsong_MUS_FluteRunBbmaj_0718 (0x7fed87c3e9b8)
+[LOG] SoundI::release                          :  (0x7fed86e23a58)
+[LOG] SoundI::release                          :     Spiritsong_Mus_VArp6_0722 (0x7fed89c76818)
+[LOG] SoundI::release                          :  (0x7fed87cf96f8)
+[LOG] SoundI::release                          :     Spiritsong_Mus_VArp29_0722 (0x7fed8b7f1fa8)
+[LOG] SoundI::release                          :  (0x7fed89cf4578)
+[LOG] SoundI::release                          :     Spiritsong_Mus_VArp23_0722 (0x7fed86e94bf8)
+[LOG] SoundI::release                          :  (0x7fed87c67088)
+[LOG] SoundI::release                          :     Spiritsong_Mus_VArp20_0722 (0x7fed87c69848)
+[LOG] SoundI::release                          :  (0x7fed8b71e508)
+[LOG] SoundI::release                          :     Spiritsong_MUS_FluteRunFmaj2_0718 (0x7fed88029818)
+[LOG] SoundI::release                          :  (0x7fed87cffba8)
+[LOG] SoundI::release                          :     Spiritsong_MUS_FluteRunFmin_0718 (0x7fed8b7d9298)
+[LOG] SoundI::release                          :  (0x7fed71161318)
+[LOG] SoundI::release                          :     Spiritsong_Mus_VArp7_0722 (0x7fed71161488)
+[LOG] SoundI::release                          :  (0x7fed71159a98)
+[LOG] SoundI::release                          :     Spiritsong_Mus_VArp11_0722 (0x7fed71159c08)
+[LOG] SoundI::release                          :  (0x7fed7115d748)
+[LOG] SoundI::release                          :     Spiritsong_Mus_VArp13_0722 (0x7fed7115d8b8)
+[LOG] SoundI::release                          :  (0x7fed89cd6be8)
+[LOG] SoundI::release                          :     Spiritsong_Mus_VArp8_0722 (0x7fed86ebd3b8)
+[LOG] SoundI::release                          :  (0x7fed7115c1f8)
+[LOG] SoundI::release                          :     Spiritsong_Mus_VArp16_0722 (0x7fed7115c368)
+[LOG] SoundI::release                          :  (0x7fed8b75a838)
+[LOG] SoundI::release                          :     Spiritsong_Mus_VArp33_0722 (0x7fed8b7e3998)
+[LOG] SoundI::release                          :  (0x7fed87c78068)
+[LOG] SoundI::release                          :     Spiritsong_Mus_VArp38_0722 (0x7fed8b7debc8)
+[LOG] SoundI::release                          :  (0x7fed7115b398)
+[LOG] SoundI::release                          :     Spiritsong_Mus_VArp10_0722 (0x7fed7115b508)
+[LOG] SoundI::release                          :  (0x7fed86e0f948)
+[LOG] SoundI::release                          :     Spiritsong_Mus_VArp25_0722 (0x7fed89cfb8b8)
+[LOG] SoundI::release                          :  (0x7fed87ce0be8)
+[LOG] SoundI::release                          :     Spiritsong_MUS_FluteRunGmin_0718 (0x7fed8b7141e8)
+[LOG] SoundI::release                          :  (0x7fed8bb16628)
+[LOG] SoundI::release                          :     Spiritsong_MUS_FluteRunG#min_0718 (0x7fed8bb1f4f8)
+[LOG] SoundI::release                          : Spiritsong_Mus_LTL1_V1_0622 (0x7fed71158388)
+[LOG] SoundI::release                          :     Spiritsong_Mus_LTL1_V1_0622 (0x7fed885864e8)
+[LOG] SoundI::release                          :     Spiritsong_Mus_LTL1_V1_0622 (0x7fed88596ad8)
+[LOG] SoundI::release                          : Spiritsong_SFX_PavilionAmbience_0716 (0x7fed8b8a6188)
+[LOG] SoundI::release                          :     Spiritsong_SFX_PavilionAmbience_0716 (0x7fed8eae8b38)
+[LOG] SoundI::release                          :     Spiritsong_SFX_PavilionAmbience_0716 (0x7fed8ea82ee8)
+[LOG] SoundI::release                          : Spiritsong_SFX_ForestAmbienceBase_0706 (0x7fed8b843e78)
+[LOG] SoundI::release                          :     Spiritsong_SFX_ForestAmbienceBase_0706 (0x7fed71157f08)
+[LOG] SoundI::release                          :     Spiritsong_SFX_ForestAmbienceBase_0706 (0x7fed71158098)
+[LOG] SoundI::release                          :  (0x7fed8b7bcc98)
+[LOG] SoundI::release                          :     Spiritsong_Mus_VArp5_0722 (0x7fed8bbfe508)
+[LOG] SoundI::release                          :  (0x7fed86ee1db8)
+[LOG] SoundI::release                          :     Spiritsong_Mus_VArp9_0722 (0x7fed89cff608)
+[LOG] SoundI::release                          :  (0x7fed8bb20f28)
+[LOG] SoundI::release                          :     Spiritsong_Mus_VArp18_0722 (0x7fed8bb9c808)
+[LOG] SoundI::release                          :  (0x7fed87c927c8)
+[LOG] SoundI::release                          :     Spiritsong_Mus_VArp37_0722 (0x7fed87cf94f8)
+[LOG] SoundI::release                          :  (0x7fed7115e568)
+[LOG] SoundI::release                          :     Spiritsong_Mus_VArp32_0722 (0x7fed7115e6d8)
+[LOG] SoundI::release                          :  (0x7fed71162928)
+[LOG] SoundI::release                          :     Spiritsong_SFX_Puzzle2FluteLoop_0713 (0x7fed71162a98)
+[LOG] Thread::callback                         : FMOD Studio update thread finished.
+[LOG] Thread::callback                         : FMOD Studio bank load thread finished.
+[LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
+[LOG] Thread::callback                         : FMOD Studio sample load thread finished.
+[LOG] LiveUpdate::release                      : 
+[LOG] LiveUpdate::reset                        : Reset connection (reason Disconnected)
+[LOG] Thread::callback                         : FMOD stream thread finished.
+[LOG] Thread::callback                         : FMOD mixer thread finished.
+[LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
+[LOG] SystemI::close                           : Closed.

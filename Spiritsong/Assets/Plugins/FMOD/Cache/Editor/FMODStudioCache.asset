@@ -34,9 +34,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/Puzzle 2 Oneshots/Note 6
   guid: 8419dc5ec1125b42b9cee78d04584f0c
-  Banks:
-  - {fileID: -192120660204535086}
-  - {fileID: -970689915215860897}
+  Banks: []
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -207,8 +205,8 @@ MonoBehaviour:
   Path: FMOD Banks/Desktop/Master.bank
   Name: Desktop/Master
   StudioPath: bank:/Master
-  lastModified: 637625707837395397
-  LoadResult: 0
+  lastModified: 637625773050000000
+  LoadResult: 70
   FileSizes: []
   Exists: 1
 --- !u!114 &-7945239837717649161
@@ -249,15 +247,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/Level Theme Main
   guid: 453c896485dbf447bebe6920429f9911
-  Banks:
-  - {fileID: -3959087904480818360}
-  - {fileID: -8126662629290240622}
+  Banks: []
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
   Parameters:
   - {fileID: 3531590703423995283}
-  - {fileID: -4816238448561628974}
+  - {fileID: 0}
   MinDistance: 0
   MaxDistance: 0
   Length: 96631
@@ -377,9 +373,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/Puzzle 2 Flute Loop
   guid: 60058ad07174254fa47ddff59e88af12
-  Banks:
-  - {fileID: -192120660204535086}
-  - {fileID: -970689915215860897}
+  Banks: []
   IsStream: 0
   Is3D: 0
   IsOneShot: 0
@@ -723,9 +717,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/Flute Friendship Theme
   guid: 3840f8215302bf43b0f4449e498d246c
-  Banks:
-  - {fileID: -3959087904480818360}
-  - {fileID: -8126662629290240622}
+  Banks: []
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
@@ -788,8 +780,8 @@ MonoBehaviour:
   Path: FMOD Banks/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 637625707838025312
-  LoadResult: 0
+  lastModified: 637625773050000000
+  LoadResult: 70
   FileSizes: []
   Exists: 1
 --- !u!114 &-3949808396898752458
@@ -846,14 +838,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/Pavilion Movement
   guid: ad6c7a14c6a4d048a4dcdcb15a900e5c
-  Banks:
-  - {fileID: -192120660204535086}
-  - {fileID: -970689915215860897}
+  Banks: []
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: 517152057317466555}
+  - {fileID: 0}
   MinDistance: 0
   MaxDistance: 0
   Length: 27261
@@ -1080,9 +1070,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/Violin Friendship Theme
   guid: 2f38dc8f127a2f43a73ede06b274e5d6
-  Banks:
-  - {fileID: -3959087904480818360}
-  - {fileID: -8126662629290240622}
+  Banks: []
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
@@ -1130,6 +1118,27 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 1
+--- !u!114 &-2263135969476451434
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Desktop/Master.strings.bank
+  m_EditorClassIdentifier: 
+  Path: FMOD Banks/Desktop/Master.strings.bank
+  Name: Desktop/Master.strings
+  StudioPath: bank:/Master.strings
+  lastModified: 637625773050000000
+  LoadResult: 0
+  FileSizes:
+  - Name: 
+    Value: 1844
+  Exists: 0
 --- !u!114 &-2215450188663910199
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1351,8 +1360,8 @@ MonoBehaviour:
   Path: FMOD Banks/Desktop/SFX.bank
   Name: Desktop/SFX
   StudioPath: bank:/SFX
-  lastModified: 637625675766395287
-  LoadResult: 0
+  lastModified: 637625773050000000
+  LoadResult: 70
   FileSizes: []
   Exists: 1
 --- !u!114 &-817158955190369083
@@ -1389,9 +1398,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/Puzzle 2 Flute Loop 3D
   guid: 05e6d8ed7b9a574b86782d7cacae49c9
-  Banks:
-  - {fileID: -192120660204535086}
-  - {fileID: -970689915215860897}
+  Banks: []
   IsStream: 0
   Is3D: 1
   IsOneShot: 0
@@ -1414,11 +1421,11 @@ MonoBehaviour:
   Path: FMOD Banks/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637625707836907813
+  lastModified: 637625773050000000
   LoadResult: 0
   FileSizes:
   - Name: 
-    Value: 1840
+    Value: 1844
   Exists: 1
 --- !u!114 &-801720010834738146
 MonoBehaviour:
@@ -1535,8 +1542,8 @@ MonoBehaviour:
   Path: FMOD Banks/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 637625675767382647
-  LoadResult: 0
+  lastModified: 637625773050000000
+  LoadResult: 70
   FileSizes: []
   Exists: 1
 --- !u!114 &11400000
@@ -1557,34 +1564,14 @@ MonoBehaviour:
   - {fileID: -8126662629290240622}
   - {fileID: -970689915215860897}
   - {fileID: -809197424690555700}
-  EditorEvents:
-  - {fileID: 4538749127885447965}
-  - {fileID: -2426204604210111781}
-  - {fileID: -7774273693528625601}
-  - {fileID: -8691546136336481981}
-  - {fileID: 7699292908107725466}
-  - {fileID: 1977415901401836637}
-  - {fileID: -817157189206523488}
-  - {fileID: 4294436881188329735}
-  - {fileID: 5499014938443943884}
-  - {fileID: -6686116832855111480}
-  - {fileID: -8977377863828474703}
-  - {fileID: -3018592636835430890}
-  - {fileID: 5676830464531186678}
-  - {fileID: -7945239837717649161}
-  - {fileID: 3621108958355457616}
-  - {fileID: -3687740320281458484}
-  - {fileID: 307857204288354073}
-  - {fileID: 8556518187440272952}
-  - {fileID: -3061670401403809690}
-  - {fileID: -4643215970792408344}
+  EditorEvents: []
   EditorParameters: []
   MasterBanks:
   - {fileID: -3959087904480818360}
   - {fileID: -8126662629290240622}
   StringsBanks:
   - {fileID: -809197424690555700}
-  stringsBankWriteTime: 637625707836907813
+  stringsBankWriteTime: 637625773050000000
   cacheVersion: 6
 --- !u!114 &113580275239326718
 MonoBehaviour:
@@ -2159,7 +2146,7 @@ MonoBehaviour:
   ID:
     data1: 0
     data2: 0
-  Exists: 1
+  Exists: 0
 --- !u!114 &3579703785613606824
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2194,9 +2181,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/Jump SFX
   guid: 00a98afe7a936d4ab6052dbfc62317bb
-  Banks:
-  - {fileID: -192120660204535086}
-  - {fileID: -970689915215860897}
+  Banks: []
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -2298,9 +2283,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/Puzzle 2 Oneshots/Note 3
   guid: 2df2ea4c818a984e9818d4f81c4d0a21
-  Banks:
-  - {fileID: -192120660204535086}
-  - {fileID: -970689915215860897}
+  Banks: []
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -2362,9 +2345,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/Title Theme
   guid: 0d7126d1ca765040898ca684cfef6a64
-  Banks:
-  - {fileID: -3959087904480818360}
-  - {fileID: -8126662629290240622}
+  Banks: []
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
@@ -2446,9 +2427,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/Puzzle 2 Oneshots/Note 5
   guid: 581a63633aab4b418b4be93bf7ecddf2
-  Banks:
-  - {fileID: -192120660204535086}
-  - {fileID: -970689915215860897}
+  Banks: []
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -2938,9 +2917,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/Menu SFX
   guid: 25e6bc3dc146924db85476cbf8e9b659
-  Banks:
-  - {fileID: -192120660204535086}
-  - {fileID: -970689915215860897}
+  Banks: []
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -3082,9 +3059,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/Small Spirit Pickup
   guid: 17d267e12352704cbf19edbc93aff2eb
-  Banks:
-  - {fileID: -3959087904480818360}
-  - {fileID: -8126662629290240622}
+  Banks: []
   IsStream: 0
   Is3D: 0
   IsOneShot: 1

@@ -9,10 +9,7 @@ public class LevelThemeAdaptive : MonoBehaviour
     [FMODUnity.EventRef]
     public string fmodEvent;
 
-    [SerializeField]
-    [Range(0f, 1.5f)]
-    private float time;
-
+    public int jumping;
     public int dashing;
 
     private void OnEnable()
@@ -40,21 +37,21 @@ public class LevelThemeAdaptive : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        instance.setParameterByName("Time", time);
+        instance.setParameterByName("Jumping", jumping);
         //time = AudioManager.instance.GetJumpParameter();
         instance.setParameterByName("Dashing", dashing);
     }
 
     void JumpSoundOn()
     {
-        time = 1.5f;
+        jumping = 1;
         //Debug.Log("Playing Jump SFX");
         FMODUnity.RuntimeManager.PlayOneShot("event:/Jump SFX");
     }
 
     void JumpSoundOff()
     {
-        time = 0f;
+        jumping = 0;
     }
 
     void DashSoundOn()
