@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6979952734918378240}
   - component: {fileID: 5191218100417182282}
   - component: {fileID: 8732289989105327838}
+  - component: {fileID: 293667282387985125}
   m_Layer: 0
   m_Name: default
   m_TagString: Untagged
@@ -81,6 +82,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &293667282387985125
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2192102352030109755}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 4, y: 10.167974, z: 4}
+  m_Center: {x: 0, y: 5.083987, z: 0}
 --- !u!1 &7198479098647079138
 GameObject:
   m_ObjectHideFlags: 0
@@ -90,7 +104,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7542951261560025688}
-  - component: {fileID: 5488278075113307575}
   m_Layer: 0
   m_Name: boken pillar
   m_TagString: Untagged
@@ -113,17 +126,3 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!64 &5488278075113307575
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7198479098647079138}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 0}
