@@ -13,6 +13,8 @@ public class LevelThemeAdaptive : MonoBehaviour
     [Range(0f, 1.5f)]
     private float time;
 
+    public int dashing;
+
     private void OnEnable()
     {
         PlayerController.StartJump += JumpSoundOn;
@@ -40,12 +42,13 @@ public class LevelThemeAdaptive : MonoBehaviour
     {
         instance.setParameterByName("Time", time);
         //time = AudioManager.instance.GetJumpParameter();
+        instance.setParameterByName("Dashing", dashing);
     }
 
     void JumpSoundOn()
     {
         time = 1.5f;
-        Debug.Log("Playing Jump SFX");
+        //Debug.Log("Playing Jump SFX");
         FMODUnity.RuntimeManager.PlayOneShot("event:/Jump SFX");
     }
 
@@ -56,11 +59,11 @@ public class LevelThemeAdaptive : MonoBehaviour
 
     void DashSoundOn()
     {
-
+        dashing = 1;
     }
 
     void DashSoundOff()
     {
-
+        dashing = 0;
     }
 }

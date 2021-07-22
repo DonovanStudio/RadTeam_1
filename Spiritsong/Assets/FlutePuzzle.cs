@@ -9,9 +9,15 @@ public class FlutePuzzle : MonoBehaviour
     [SerializeField] float force;
     [SerializeField] GameObject notes;
     [SerializeField] bool completeMe;
-    int correct;
+    [SerializeField] int correct;
     Rigidbody rb;
     bool completed = false;
+    //Audio
+    public TimeEmission timeEmission;
+    void Start()
+    {
+        timeEmission = GameObject.Find("Flute Audio").GetComponent("TimeEmission") as TimeEmission;
+    }
     private void OnDrawGizmos()
     {
         Gizmos.DrawLine(transform.position, transform.position + directionLaunched.normalized * force);
@@ -38,13 +44,17 @@ public class FlutePuzzle : MonoBehaviour
     }
     public void ButtonPressed(int num)
     {
+        Debug.Log("num: " + num);
         if (num == code[correct])
         {
             correct++;
+            Debug.Log("incremented: " + correct);
         }
-            if (correct == code.Length)
-                PuzzleComplete();
-        else correct = 0;
+        if (correct == code.Length)
+            PuzzleComplete();
+        //else correct = 0;
+        Debug.Log("current: " + correct);
+
     }
     void PuzzleComplete()
     {
@@ -52,5 +62,7 @@ public class FlutePuzzle : MonoBehaviour
         rb.velocity = directionLaunched.normalized * force;
         Destroy(notes);
         completed = true;
+        timeEmission.Stopsound();
+      
     }
 }

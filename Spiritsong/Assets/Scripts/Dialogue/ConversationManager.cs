@@ -26,7 +26,7 @@ public class ConversationManager : MonoBehaviour
     //Audio
     public bool talkingPiano;
     public bool talkingViolin;
-    //public bool talkingFlute;
+    public bool talkingFlute;
 
     // Component management.
     AbilityVariableStorage abilityStorage;
@@ -78,15 +78,16 @@ public class ConversationManager : MonoBehaviour
         // Initial conversation.
         if (!pianoMet)
         {
+            talkingFlute = false;
             talkingViolin = false;
             talkingPiano = true;
             dialogueRunner.startNode = "PianoMeet";
-            Debug.Log("Talking to Piano");
         }
 
         // Hint dialogue that plays when conditions are met.
         if (pianoMet && pianoHint)
         {
+            talkingFlute = false;
             talkingViolin = false;
             talkingPiano = true;
             dialogueRunner.startNode = "Hint1";
@@ -95,6 +96,7 @@ public class ConversationManager : MonoBehaviour
         // Dialogue from Piano. Plays when hints are not active, and should return to this after the dialogue about Violin has played.
         if (pianoMet && !pianoHint || pianoViolin)
         {
+            talkingFlute = false;
             talkingViolin = false;
             talkingPiano = true;
             dialogueRunner.startNode = "PianoRandom1";
@@ -103,6 +105,7 @@ public class ConversationManager : MonoBehaviour
         // Dialogue from Piano about Violin. Only plays once, when the Piano AND Violin are met, hints are not active, and it has not played.
         if (pianoMet && violinMet && !pianoHint && !pianoViolin)
         {
+            talkingFlute = false;
             talkingViolin = false;
             talkingPiano = true;
             dialogueRunner.startNode = "PianoRandom2";
@@ -114,6 +117,7 @@ public class ConversationManager : MonoBehaviour
     {
         if (!violinMet)
         {
+            talkingFlute = false;
             talkingPiano = false;
             talkingViolin = true;
             dialogueRunner.startNode = "ViolinMeet";
@@ -121,6 +125,7 @@ public class ConversationManager : MonoBehaviour
 
         if (violinMet && !violinHint)
         {
+            talkingFlute = false;
             talkingPiano = false;
             talkingViolin = true;
             dialogueRunner.startNode = "ViolinRandom1";
@@ -128,6 +133,7 @@ public class ConversationManager : MonoBehaviour
 
         if (violinMet && violinHint)
         {
+            talkingFlute = false;
             talkingPiano = false;
             talkingViolin = true;
             dialogueRunner.startNode = "Hint2";
@@ -139,16 +145,25 @@ public class ConversationManager : MonoBehaviour
     {
         if (!fluteMet)
         {
+            talkingPiano = false;
+            talkingViolin = false;
+            talkingFlute = true;
             dialogueRunner.startNode = "FluteMeet";
         }
 
         if (fluteMet && !fluteHint)
         {
+            talkingPiano = false;
+            talkingViolin = false;
+            talkingFlute = true;
             dialogueRunner.startNode = "FluteRandom1";
         }
 
         if (fluteMet && fluteHint)
         {
+            talkingPiano = false;
+            talkingViolin = false;
+            talkingFlute = true;
             dialogueRunner.startNode = "Hint3";
         }
     }

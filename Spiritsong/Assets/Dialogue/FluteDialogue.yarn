@@ -64,37 +64,36 @@ tags:
 colorID: 0
 position: -1977,-556
 ---
-<<set $name to "Flute">><<NPCTag NameTags>><<Expression1 Flute>><<turnR Flute>>Hmm... What to do...
+<<set $name to "Flute">><<NPCTag NameTags>><<Expression1 Flute>><<turnR Flute>>Hmm...what to do...
 -> What's on your mind?
-    Pranks…
-    Wait-
+    Pranks...
+    Wait--
 -> What do you need to do?
-    <<hop Flute>><<Expression3 Player>>Aha!
-    Ah!
-<<Expression1 Flute>>><<turnL Flute>>Did you sneak up on me?
+<<hop Flute>><<Expression3 Player>>AHH!
+<<Expression1 Flute>><<turnL Flute>>Did you sneak up on me?
 <<set $name to "Conductor">><<PCTag NameTags>>
 You seemed to be lost in thought...
 <<set $name to "Flute">><<NPCTag NameTags>><<Expression1 Player>><<hop Flute>>
 Ah, sorry. My bad!
-I’m just thinking about what to do now that I’m here with y’all.
+I'm just thinking about what to do now that I'm here with y'all.
 -> What to do?
-Mhm! I’m thinking like, cake mix. A metal boat. 
-Maybe a *reeeaally* large bonfire, y’know?
+    Mhm! I'm thinking like, cake mix. A metal boat. 
+    Maybe a *reeeaally* large bonfire, y'know?
 -> With us?
-Yeah!
-Don’t tell the others, but I may have a fun surprise up my sleeve!
-<<Expression1 Player>><<I don’t know how to do expressions Flute>> 
-That obstacle course? Child’s play. I’ll show you what I’m really made of!
+    Yeah!
+Don't tell the others, but I may have a fun surprise up my sleeve!
+<<Expression1 Player>><<Expression4 Flute>> 
+That obstacle course? Child's play. I'll show you what I'm really made of!
 Actually, do you wanna help me plan this out? 
 Violin and I used to be partners in crime, but…
-Y’know how that’s going.
--> Sure, I don’t mind.
-Awesome! 
-Conductor and Flute, a daring duo! An inseparable pair!
-Stay right here. Lemme get my supplies!
+Y'know how that's going.
+-> Sure, I don't mind.
+    Awesome! 
+    Conductor and Flute, a daring duo! An inseparable pair!
+    Stay right here. Lemme get my supplies!
 -> What if you asked Violin to help you?
-What? No way!
-I mean, I really do miss talking to Violin and Piano, but I don’t want to deal with that bad blood anymore!
-… I do miss hanging with them, though. Maybe I should talk to them…
-But first this prank. I’m pulling it on Piano and Violin, after all!
+    What? No way!
+I mean, I really do miss talking to Violin and Piano, but I don't want to deal with that bad blood anymore!
+I do miss hanging with them, though. Maybe I should talk to them...
+But first this prank. I'm pulling it on Piano and Violin, after all!
 ===

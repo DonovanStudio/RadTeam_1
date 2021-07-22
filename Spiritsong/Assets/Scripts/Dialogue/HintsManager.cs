@@ -47,7 +47,7 @@ public class HintsManager : MonoBehaviour
     // If the player is in the designated locations, set hints to be available, and play the notification animation.
     private void OnTriggerEnter(Collider other)
     {
-        if (this.gameObject.name == "Hint0Trigger")
+        if (this.gameObject.name == "Hint0Trigger" && other.gameObject.tag == "Player")
         {
             convoManager.pianoHint = true;
             popupSprite.sprite = characterSprites[0];
@@ -56,7 +56,7 @@ public class HintsManager : MonoBehaviour
             StartCoroutine(HideNotifs());
         }
 
-        if (this.gameObject.name == "Hint1Trigger")
+        if (this.gameObject.name == "Hint1Trigger" && other.gameObject.tag == "Player")
         {
             convoManager.violinHint = true;
             popupSprite.sprite = characterSprites[1];
@@ -65,7 +65,7 @@ public class HintsManager : MonoBehaviour
             StartCoroutine(HideNotifs());
         }
 
-        if (this.gameObject.name == "Hint2Trigger")
+        if (this.gameObject.name == "Hint2Trigger" && other.gameObject.tag == "Player")
         {
             convoManager.fluteHint = true;
             popupSprite.sprite = characterSprites[2];

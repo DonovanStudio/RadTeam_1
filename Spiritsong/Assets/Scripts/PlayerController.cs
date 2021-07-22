@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 
@@ -54,6 +55,9 @@ public class PlayerController : MonoBehaviour
     public static event DashAction EndDash;
     //private FMOD.Studio.EventInstance jumpSFX;
 
+    // UI
+    [SerializeField] GameObject endPrompt;
+
     private void Awake()
     {
         rotDividerRecip = 1 / rotationDivider;
@@ -105,19 +109,19 @@ public class PlayerController : MonoBehaviour
         bool jumpable = controller.isGrounded || !jumping; //Implement coyote time case here - this is creating an infinite jump
         if (jumpUnlocked && shouldJump && controller.isGrounded)
         {
-            Debug.Log("Jump");
+            //Debug.Log("Jump");
             if (StartJump != null)
                 StartJump();
             playerVelocity.y = jumpHeight;
             gravity = upwardGravity;
-            Physics.gravity = Vector3.down * gravity; //upwardGravity should be HIGH
+            //Physics.gravity = Vector3.down * gravity; //upwardGravity should be HIGH
             jumping = true;
         }
         if (jumping && playerVelocity.y <= 0f)
         {
             jumping = false;
             gravity = downwardGravity;
-            Physics.gravity = Vector3.down * gravity; //Make gravity LOW
+            //Physics.gravity = Vector3.down * gravity; //Make gravity LOW
         }
         shouldJump = false;
         playerVelocity.y += gravity * Time.deltaTime;
@@ -136,10 +140,18 @@ public class PlayerController : MonoBehaviour
 
     public void OnJump()
     {
-        if (jumpUnlocked)
+        Terrain levelTerrain = Terrain.activeTerrain;
+        TerrainData terrainData = levelTerrain.terrainData;
+        float x = (transform.position.x - levelTerrain.transform.position.x) / terrainData.size.x;
+        float z = (transform.position.z - levelTerrain.transform.position.z) / terrainData.size.z;
+        float angle = terrainData.GetSteepness(x, z);
+        
+        if (jumpUnlocked && angle < 45f)
         {
             //jumpSFX.start();
             //FMODUnity.RuntimeManager.PlayOneShot("event:/Jump SFX");
+            
+
             shouldJump = true;
 
         }
@@ -198,6 +210,7 @@ public class PlayerController : MonoBehaviour
     {
         if (other.gameObject.tag == "Jump")
         {
+            FMODUnity.RuntimeManager.PlayOneShot("event:/Violin Spirit Pickup");
             jumpUnlocked = true;
             abilityVar.jumpMechanic = true;
             //SceneManager.LoadScene(1);
@@ -212,11 +225,14 @@ public class PlayerController : MonoBehaviour
         {
             Destroy(backgroundMusic);
             MasterBus.stopAllEvents(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
-            SceneManager.LoadScene(3);
+            endPrompt.SetActive(true);
+            Cursor.lockState = CursorLockMode.Confined;
+            //SceneManager.LoadScene(3);
         }
         if (other.gameObject.tag == "orb")
         {
             CollectOrb(this);
+            FMODUnity.RuntimeManager.PlayOneShot("event:/Small Spirit Pickup");
             Destroy(other.gameObject);
         }
     }
