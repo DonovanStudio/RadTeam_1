@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3450575906428512640}
   - component: {fileID: 5173897306905231652}
   m_Layer: 0
-  m_Name: Flute_Tree
+  m_Name: flute_tree
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -60,8 +60,8 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 6034957751646507721, guid: 776e7bbd1597f29429a52768f3f8150c, type: 3}
-  - {fileID: 8368722655750445499, guid: 776e7bbd1597f29429a52768f3f8150c, type: 3}
+  - {fileID: 2100000, guid: 3e2c5d0446751d44294665dff6c8033e, type: 2}
+  - {fileID: 2100000, guid: d8d59261889b7f74a92b9c98907f6c89, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
