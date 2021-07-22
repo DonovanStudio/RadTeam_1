@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.49708593, g: 0.7067691, b: 0.70333314, a: 1}
+  m_IndirectSpecularColor: {r: 0.49713546, g: 0.70677096, b: 0.7033746, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -23499,6 +23499,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1630428807}
     m_Modifications:
+    - target: {fileID: 3450575906428512640, guid: 84b532f256cb54a4d904f9dfdbec7bdb, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 3e2c5d0446751d44294665dff6c8033e, type: 2}
     - target: {fileID: 3810631261968320597, guid: 84b532f256cb54a4d904f9dfdbec7bdb, type: 3}
       propertyPath: m_Name
       value: Flute_Tree
@@ -33676,6 +33680,7 @@ MonoBehaviour:
   notes: {fileID: 1907394815}
   completeMe: 0
   correct: 0
+  timeEmission: {fileID: 0}
 --- !u!54 &1451485602
 Rigidbody:
   m_ObjectHideFlags: 0
