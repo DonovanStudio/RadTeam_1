@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.4973033, g: 0.7068647, b: 0.70322394, a: 1}
+  m_IndirectSpecularColor: {r: 0.49714166, g: 0.70677805, b: 0.7033698, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -33001,6 +33001,7 @@ MonoBehaviour:
   force: 6.5
   notes: {fileID: 1907394815}
   completeMe: 0
+  correct: 0
 --- !u!54 &1451485602
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -43298,7 +43299,13 @@ MonoBehaviour:
   - 2.694
   - 3.762
   - 4.311
-  notes: []
+  notes:
+  - {fileID: -1205737913937953658, guid: b73d49243c5279b49b221cfecf14288b, type: 3}
+  - {fileID: -5477517316928987816, guid: b73d49243c5279b49b221cfecf14288b, type: 3}
+  - {fileID: -9130404616327957706, guid: b73d49243c5279b49b221cfecf14288b, type: 3}
+  - {fileID: -1205737913937953658, guid: b73d49243c5279b49b221cfecf14288b, type: 3}
+  - {fileID: -16422548864937512, guid: b73d49243c5279b49b221cfecf14288b, type: 3}
+  - {fileID: -1205737913937953658, guid: b73d49243c5279b49b221cfecf14288b, type: 3}
   particle: {fileID: 2983306482801942966, guid: 084c13c6615596f49bc671a89f7f575b, type: 3}
   camera: {fileID: 1145629607}
   selectsound: event:/Puzzle 2 Flute Loop 3D

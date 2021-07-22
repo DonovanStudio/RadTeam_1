@@ -12,10 +12,10 @@ public class HoverOrb : MonoBehaviour
     float time;
     private void OnValidate()
     {
-        startTransform = transform.localPosition;
     }
     private void Awake()
     {
+        startTransform = transform.localPosition;
         time = Random.Range(0, loopTime);
     }
     private void OnDrawGizmos()
