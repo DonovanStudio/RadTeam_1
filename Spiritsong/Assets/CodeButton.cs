@@ -10,7 +10,7 @@ public class CodeButton : MonoBehaviour
     {
         Debug.Log("Playing Puzzle Sound");
         puzzle2Audio();
-        if (other.transform.tag == "player")
+        if (other.transform.tag == "Player")
             fp.ButtonPressed(buttonVal);
             
     }
