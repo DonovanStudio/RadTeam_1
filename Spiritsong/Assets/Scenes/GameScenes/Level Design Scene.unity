@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.4973033, g: 0.7068647, b: 0.70322394, a: 1}
+  m_IndirectSpecularColor: {r: 0.49708593, g: 0.7067691, b: 0.70333314, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -20507,7 +20507,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fmodEvent: event:/Level Theme Main
-  time: 0
+  jumping: 0
+  dashing: 0
 --- !u!114 &829523922
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23498,6 +23499,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1630428807}
     m_Modifications:
+    - target: {fileID: 3450575906428512640, guid: 84b532f256cb54a4d904f9dfdbec7bdb, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 3e2c5d0446751d44294665dff6c8033e, type: 2}
     - target: {fileID: 3810631261968320597, guid: 84b532f256cb54a4d904f9dfdbec7bdb, type: 3}
       propertyPath: m_Name
       value: Flute_Tree
@@ -33675,6 +33680,7 @@ MonoBehaviour:
   notes: {fileID: 1907394815}
   completeMe: 0
   correct: 0
+  timeEmission: {fileID: 0}
 --- !u!54 &1451485602
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -44276,7 +44282,7 @@ GameObject:
   - component: {fileID: 1907394820}
   - component: {fileID: 1907394816}
   m_Layer: 0
-  m_Name: Flute Spirit
+  m_Name: Flute Audio
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -49432,7 +49438,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fmodEvent: event:/Level Theme Main
-  time: 0
+  jumping: 0
+  dashing: 0
 --- !u!114 &2126536884
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -50044,10 +50051,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3878432699467067910, guid: a027ccf5a0780f94c9a6a02de7478bef, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3878432700224369504, guid: a027ccf5a0780f94c9a6a02de7478bef, type: 3}
       propertyPath: violin
       value: 
       objectReference: {fileID: 550047898}
+    - target: {fileID: 3878432700224369504, guid: a027ccf5a0780f94c9a6a02de7478bef, type: 3}
+      propertyPath: endPrompt
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 3878432700224369504, guid: a027ccf5a0780f94c9a6a02de7478bef, type: 3}
       propertyPath: jumpHeight
       value: 15
@@ -50057,12 +50072,20 @@ PrefabInstance:
       value: -40
       objectReference: {fileID: 0}
     - target: {fileID: 3878432700224369504, guid: a027ccf5a0780f94c9a6a02de7478bef, type: 3}
+      propertyPath: backgroundMusic
+      value: 
+      objectReference: {fileID: 2126536879}
+    - target: {fileID: 3878432700224369504, guid: a027ccf5a0780f94c9a6a02de7478bef, type: 3}
       propertyPath: downwardGravity
       value: -50
       objectReference: {fileID: 0}
     - target: {fileID: 3878432700224369504, guid: a027ccf5a0780f94c9a6a02de7478bef, type: 3}
       propertyPath: lookSensitivity
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3878432700224369505, guid: a027ccf5a0780f94c9a6a02de7478bef, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3878432700224369505, guid: a027ccf5a0780f94c9a6a02de7478bef, type: 3}
       propertyPath: m_SkinWidth

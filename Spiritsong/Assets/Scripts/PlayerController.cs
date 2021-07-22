@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 
@@ -53,6 +54,9 @@ public class PlayerController : MonoBehaviour
     public static event DashAction StartDash;
     public static event DashAction EndDash;
     //private FMOD.Studio.EventInstance jumpSFX;
+
+    // UI
+    [SerializeField] GameObject endPrompt;
 
     private void Awake()
     {
@@ -221,7 +225,9 @@ public class PlayerController : MonoBehaviour
         {
             Destroy(backgroundMusic);
             MasterBus.stopAllEvents(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
-            SceneManager.LoadScene(3);
+            endPrompt.SetActive(true);
+            Cursor.lockState = CursorLockMode.Confined;
+            //SceneManager.LoadScene(3);
         }
         if (other.gameObject.tag == "orb")
         {
