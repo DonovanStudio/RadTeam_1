@@ -12,6 +12,12 @@ public class FlutePuzzle : MonoBehaviour
     [SerializeField] int correct;
     Rigidbody rb;
     bool completed = false;
+    //Audio
+    public TimeEmission timeEmission;
+    void Start()
+    {
+        timeEmission = GameObject.Find("Flute Audio").GetComponent("TimeEmission") as TimeEmission;
+    }
     private void OnDrawGizmos()
     {
         Gizmos.DrawLine(transform.position, transform.position + directionLaunched.normalized * force);
@@ -56,5 +62,7 @@ public class FlutePuzzle : MonoBehaviour
         rb.velocity = directionLaunched.normalized * force;
         Destroy(notes);
         completed = true;
+        timeEmission.Stopsound();
+      
     }
 }
