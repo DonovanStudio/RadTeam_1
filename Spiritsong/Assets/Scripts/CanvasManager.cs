@@ -23,6 +23,7 @@ public class CanvasManager : MonoBehaviour
 
         if (SceneManager.GetActiveScene().name == "EndScene")
         {
+            GameManager.instance.ResetGame();
             StartCoroutine(ReturnToMain());
         }
     }
