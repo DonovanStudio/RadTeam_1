@@ -9,7 +9,7 @@ public class FlutePuzzle : MonoBehaviour
     [SerializeField] float force;
     [SerializeField] GameObject notes;
     [SerializeField] bool completeMe;
-    int correct;
+    [SerializeField] int correct;
     Rigidbody rb;
     bool completed = false;
     private void OnDrawGizmos()
@@ -42,8 +42,8 @@ public class FlutePuzzle : MonoBehaviour
         {
             correct++;
         }
-            if (correct == code.Length)
-                PuzzleComplete();
+        if (correct == code.Length)
+            PuzzleComplete();
         else correct = 0;
     }
     void PuzzleComplete()

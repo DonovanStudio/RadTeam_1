@@ -24,9 +24,11 @@ public class TimeEmission : MonoBehaviour
         }
         if (timer > delays[note])
         {
-            if(note < delays.Length)
+            if(note < delays.Length -1)
+            {
                 note++;
-            CreateNote(note);
+                CreateNote(note);
+            }
         }
     }
     void CreateNote(int note)
