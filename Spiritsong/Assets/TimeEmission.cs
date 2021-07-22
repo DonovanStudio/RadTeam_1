@@ -30,7 +30,7 @@ public class TimeEmission : MonoBehaviour
             timer = 0;
             note = 0;
             CreateNote(note);
-            Debug.Log("Playing Puzzle Sound");
+            //Debug.Log("Playing Puzzle Sound");
             Playsound();
         }
         if (timer > delays[note])

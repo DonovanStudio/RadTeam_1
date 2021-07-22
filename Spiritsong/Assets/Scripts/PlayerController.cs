@@ -105,19 +105,19 @@ public class PlayerController : MonoBehaviour
         bool jumpable = controller.isGrounded || !jumping; //Implement coyote time case here - this is creating an infinite jump
         if (jumpUnlocked && shouldJump && controller.isGrounded)
         {
-            Debug.Log("Jump");
+            //Debug.Log("Jump");
             if (StartJump != null)
                 StartJump();
             playerVelocity.y = jumpHeight;
             gravity = upwardGravity;
-            Physics.gravity = Vector3.down * gravity; //upwardGravity should be HIGH
+            //Physics.gravity = Vector3.down * gravity; //upwardGravity should be HIGH
             jumping = true;
         }
         if (jumping && playerVelocity.y <= 0f)
         {
             jumping = false;
             gravity = downwardGravity;
-            Physics.gravity = Vector3.down * gravity; //Make gravity LOW
+            //Physics.gravity = Vector3.down * gravity; //Make gravity LOW
         }
         shouldJump = false;
         playerVelocity.y += gravity * Time.deltaTime;

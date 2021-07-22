@@ -38,13 +38,17 @@ public class FlutePuzzle : MonoBehaviour
     }
     public void ButtonPressed(int num)
     {
+        Debug.Log("num: " + num);
         if (num == code[correct])
         {
             correct++;
+            Debug.Log("incremented: " + correct);
         }
         if (correct == code.Length)
             PuzzleComplete();
-        else correct = 0;
+        //else correct = 0;
+        Debug.Log("current: " + correct);
+
     }
     void PuzzleComplete()
     {
