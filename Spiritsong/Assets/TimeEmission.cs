@@ -53,4 +53,11 @@ public class TimeEmission : MonoBehaviour
     {
         fluteloop.start();
     }
+
+    public void Stopsound()
+    {
+        fluteloop.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+
+
+    }
 }

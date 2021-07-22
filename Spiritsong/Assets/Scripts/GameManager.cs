@@ -58,4 +58,13 @@ public class GameManager : MonoBehaviour
     {
         return playerHasDash;
     }
+
+    public void ResetGame()
+    {
+        playerPositon = Vector3.zero;
+        playerRotation = Quaternion.identity;
+        playerHasJump = false;
+        playerHasDash = false;
+        gameStarted = false;
+    }
 }
