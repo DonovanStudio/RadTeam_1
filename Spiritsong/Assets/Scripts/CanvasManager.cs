@@ -21,11 +21,11 @@ public class CanvasManager : MonoBehaviour
             Cursor.lockState = CursorLockMode.Confined;
         }
 
-        if (SceneManager.GetActiveScene().name == "EndScene")
-        {
-            GameManager.instance.ResetGame();
-            StartCoroutine(ReturnToMain());
-        }
+        //if (SceneManager.GetActiveScene().name == "EndScene")
+        //{
+        //    GameManager.instance.ResetGame();
+        //    StartCoroutine(ReturnToMain());
+        //}
     }
 
     // Update is called once per frame

@@ -15,6 +15,8 @@ public class GameManager : MonoBehaviour
     public bool gameStarted = false;
     public GameObject violinSpirit;
 
+    AbilityVariableStorage abilityVar;
+
     public static GameManager instance;
 
     private void Awake()
@@ -26,7 +28,7 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        abilityVar = FindObjectOfType<AbilityVariableStorage>();
     }
 
     // Update is called once per frame
@@ -103,5 +105,8 @@ public class GameManager : MonoBehaviour
         collectedOrb1 = false;
         collectedOrb2 = false;
         collectedOrb3 = false;
+
+        abilityVar.jumpMechanic = false;
+        abilityVar.dashMechanic = false;
     }
 }

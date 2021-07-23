@@ -165,7 +165,7 @@ public class PlayerController : MonoBehaviour
     {
         if (dashUnlocked)
         {
-            Debug.Log("Play Dash Sound");
+            //Debug.Log("Play Dash Sound");
             if (StartDash != null)
                 StartDash();
             StartCoroutine(TimedDash());
@@ -178,7 +178,7 @@ public class PlayerController : MonoBehaviour
 
         while (Time.time < start + dashTime)
         {
-            Debug.Log("Looping");
+            //Debug.Log("Looping");
             controller.Move(transform.forward * dashSpeed * Time.deltaTime);
             yield return null;
         }
@@ -267,6 +267,7 @@ public class PlayerController : MonoBehaviour
 
     public void GoToEndScene()
     {
+        GameManager.instance.ResetGame();
         Destroy(backgroundMusic);
         MasterBus.stopAllEvents(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
         FMODUnity.RuntimeManager.PlayOneShot("event:/Menu SFX");
