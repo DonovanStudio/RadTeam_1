@@ -60,7 +60,7 @@ public class SelectCharacter : MonoBehaviour, IPointerEnterHandler, IPointerExit
         // Set the nodes for the Piano.
         if (name is "Piano Actor" && abilityVar.walkMechanic)
         {
-            conversationManager.PianoConversations();
+            conversationManager.SetPianoConversations();
             PianoUISprite();
         }
 
@@ -68,14 +68,14 @@ public class SelectCharacter : MonoBehaviour, IPointerEnterHandler, IPointerExit
         if (name is "Violin Actor" && abilityVar.jumpMechanic)
         {
             //dialogueRunner.startNode = "ViolinMeet";
-            conversationManager.ViolinConversations();
+            conversationManager.SetViolinConversations();
             ViolinUISprite();
         }
 
         // Set the nodes for the Flute.
         if (name is "Flute Actor" && abilityVar.dashMechanic)
         {
-            conversationManager.FluteConversations();
+            conversationManager.SetFluteConversations();
             FluteUISprite();
         }
 

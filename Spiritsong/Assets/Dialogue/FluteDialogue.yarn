@@ -1,7 +1,7 @@
 title: FluteMeet
 tags: 
 colorID: 0
-position: -2258,-544
+position: -2525,-674
 ---
 <<set $name to "Flute">><<hop Flute>><<NPCTag NameTags>><<set $fluteMet to true>>
 Oh! I see you've finally found me.
@@ -62,15 +62,16 @@ Aaand that's it! Good luck!
 title: FluteRandom1
 tags: 
 colorID: 0
-position: -1977,-556
+position: -2254,-667
 ---
 <<set $name to "Flute">><<NPCTag NameTags>><<Expression1 Flute>><<turnR Flute>>Hmm...what to do...
 -> What's on your mind?
     Pranks...
     Wait--
--> What do you need to do?
+-> What are you doing?
 <<hop Flute>><<Expression3 Player>>AHH!
-<<Expression1 Flute>><<turnL Flute>>Did you sneak up on me?
+<<set $name to "Conductor">><<PCTag NameTags>>Ah!
+<<turnL Flute>><<Expression1 Flute>>Did you sneak up on me?
 <<set $name to "Conductor">><<PCTag NameTags>>
 You seemed to be lost in thought...
 <<set $name to "Flute">><<NPCTag NameTags>><<Expression1 Player>><<hop Flute>>
@@ -83,17 +84,18 @@ I'm just thinking about what to do now that I'm here with y'all.
     Yeah!
 Don't tell the others, but I may have a fun surprise up my sleeve!
 <<Expression1 Player>><<Expression4 Flute>> 
-That obstacle course? Child's play. I'll show you what I'm really made of!
+That puzzle? Child's play. I'll show you what I'm really made of!
 Actually, do you wanna help me plan this out? 
-Violin and I used to be partners in crime, but…
+Violin and I used to be partners in crime, but...
 Y'know how that's going.
 -> Sure, I don't mind.
     Awesome! 
     Conductor and Flute, a daring duo! An inseparable pair!
     Stay right here. Lemme get my supplies!
--> What if you asked Violin to help you?
+-> What about asking Violin?
     What? No way!
-I mean, I really do miss talking to Violin and Piano, but I don't want to deal with that bad blood anymore!
+I mean, I really do miss talking to Violin and Piano...
+But I don't want to deal with that bad blood anymore!
 I do miss hanging with them, though. Maybe I should talk to them...
-But first this prank. I'm pulling it on Piano and Violin, after all!
+But first: this prank. I'm pulling it on Piano and Violin, after all!
 ===

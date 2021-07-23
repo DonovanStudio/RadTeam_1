@@ -227,7 +227,6 @@ public class PlayerController : MonoBehaviour
             MasterBus.stopAllEvents(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
             endPrompt.SetActive(true);
             Cursor.lockState = CursorLockMode.Confined;
-            //SceneManager.LoadScene(3);
         }
         if (other.gameObject.tag == "orb")
         {
@@ -242,5 +241,15 @@ public class PlayerController : MonoBehaviour
         player.orbs++;
         if (player.orbs >= 3)
             player.violin.SetActive(true);
+    }
+
+    public void CloseEndPrompt()
+    {
+        endPrompt.SetActive(false);
+    }
+
+    public void GoToEndScene()
+    {
+        SceneManager.LoadScene(3);
     }
 }
