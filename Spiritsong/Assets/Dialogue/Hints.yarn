@@ -16,10 +16,12 @@ position: 167,-320
 ---
 <<set $name to "Violin">><<NPCTag NameTags>><<Expression1 Violin>>Hey, you!
 <<set $name to "Conductor">><<PCTag NameTags>><<Expression3 Player>>Me?
-<<set $name to "Violin">><<NPCTag NameTags>><<hop Violin>>Yeah, you! You see those lights?
-You see how they're kinda like...glowing in a certain order?
+<<set $name to "Violin">><<NPCTag NameTags>><<hop Violin>>Yeah, you! You hear those notes?
 -> Yes?
+    Well, you see how they have different colors?
 -> No?
+    Well, you *see* those notes?
+    They all have different colors, right?
 <<Expression1 Player>>Well, maybe if you tried copying them, something will happen?
 <<Expression2 Player>><<Expression2 Violin>><<hop Violin>>Let's give it a shot!
 ===
