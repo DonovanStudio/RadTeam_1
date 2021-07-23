@@ -20,6 +20,10 @@ public class TimeEmission : MonoBehaviour
     void Start()
     {
         fluteloop = FMODUnity.RuntimeManager.CreateInstance(selectsound);
+        if (GameManager.instance.GetDash())
+        {
+            Destroy(gameObject);
+        }
     }
     void Update()
     {

@@ -8,8 +8,12 @@ public class GameManager : MonoBehaviour
     private Quaternion playerRotation = new Quaternion();
     private bool playerHasJump = false;
     private bool playerHasDash = false;
+    private bool collectedOrb1 = false;
+    private bool collectedOrb2 = false;
+    private bool collectedOrb3 = false;
 
     public bool gameStarted = false;
+    public GameObject violinSpirit;
 
     public static GameManager instance;
 
@@ -59,6 +63,36 @@ public class GameManager : MonoBehaviour
         return playerHasDash;
     }
 
+    public bool GetOrb1Status()
+    {
+        return collectedOrb1;
+    }
+
+    public bool GetOrb2Status()
+    {
+        return collectedOrb2;
+    }
+
+    public bool GetOrb3Status()
+    {
+        return collectedOrb3;
+    }
+
+    public void Orb1Collected()
+    {
+        collectedOrb1 = true;
+    }
+
+    public void Orb2Collected()
+    {
+        collectedOrb2 = true;
+    }
+
+    public void Orb3Collected()
+    {
+        collectedOrb3 = true;
+    }
+
     public void ResetGame()
     {
         playerPositon = Vector3.zero;
@@ -66,5 +100,8 @@ public class GameManager : MonoBehaviour
         playerHasJump = false;
         playerHasDash = false;
         gameStarted = false;
+        collectedOrb1 = false;
+        collectedOrb2 = false;
+        collectedOrb3 = false;
     }
 }

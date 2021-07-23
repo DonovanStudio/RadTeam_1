@@ -17,6 +17,19 @@ public class HoverOrb : MonoBehaviour
     {
         startTransform = transform.localPosition;
         time = Random.Range(0, loopTime);
+
+        if (gameObject.name == "small spirit 1" && GameManager.instance.GetOrb1Status())
+        {
+            Destroy(gameObject);
+        }
+        if (gameObject.name == "small spirit 2" && GameManager.instance.GetOrb2Status())
+        {
+            Destroy(gameObject);
+        }
+        if (gameObject.name == "small spirit 3" && GameManager.instance.GetOrb3Status())
+        {
+            Destroy(gameObject);
+        }
     }
     private void OnDrawGizmos()
     {
