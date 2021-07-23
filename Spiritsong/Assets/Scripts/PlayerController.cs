@@ -32,7 +32,6 @@ public class PlayerController : MonoBehaviour
     private float rotDividerRecip;
 
     // Ability Flags
-
     private bool jumpUnlocked = false;
     private bool dashUnlocked = false;
 
@@ -89,6 +88,11 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         HandleMovement();
+
+        if (GameManager.instance.GetOrb1Status() && GameManager.instance.GetOrb2Status() && GameManager.instance.GetOrb3Status() && this.violin !=null)
+        {
+            this.violin.SetActive(true);
+        }
     }
 
     private void HandleMovement()
@@ -230,6 +234,19 @@ public class PlayerController : MonoBehaviour
         }
         if (other.gameObject.tag == "orb")
         {
+            if (other.gameObject.name == "small spirit 1")
+            {
+                GameManager.instance.Orb1Collected();
+            }
+            if (other.gameObject.name == "small spirit 2")
+            {
+                GameManager.instance.Orb2Collected();
+            }
+            if (other.gameObject.name == "small spirit 3")
+            {
+                GameManager.instance.Orb3Collected();
+            }
+
             CollectOrb(this);
             FMODUnity.RuntimeManager.PlayOneShot("event:/Small Spirit Pickup");
             Destroy(other.gameObject);

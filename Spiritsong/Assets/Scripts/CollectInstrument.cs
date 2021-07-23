@@ -13,7 +13,15 @@ public class CollectInstrument : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (gameObject.name == "ViolinSpirit" && GameManager.instance.GetJump())
+        {
+            Destroy(gameObject);
+        }
+
+        if (gameObject.name == "FluteSpirit" && GameManager.instance.GetDash())
+        {
+            Destroy(gameObject);
+        }
     }
 
     private void OnTriggerEnter(Collider other)
