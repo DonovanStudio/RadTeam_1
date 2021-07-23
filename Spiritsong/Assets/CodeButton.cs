@@ -8,7 +8,7 @@ public class CodeButton : MonoBehaviour
     [SerializeField] FlutePuzzle fp;
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("Playing Puzzle Sound");
+        //Debug.Log("Playing Puzzle Sound");
         puzzle2Audio();
         if (other.transform.tag == "Player")
             fp.ButtonPressed(buttonVal);

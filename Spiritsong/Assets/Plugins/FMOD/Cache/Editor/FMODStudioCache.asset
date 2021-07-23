@@ -225,7 +225,7 @@ MonoBehaviour:
   Path: FMOD Banks/Desktop/Master.bank
   Name: Desktop/Master
   StudioPath: bank:/Master
-  lastModified: 637626605820000000
+  lastModified: 637626607709750977
   LoadResult: 0
   FileSizes: []
   Exists: 1
@@ -924,7 +924,7 @@ MonoBehaviour:
   Path: FMOD Banks/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637626605820000000
+  lastModified: 637626607709120985
   LoadResult: 0
   FileSizes:
   - Name: 
@@ -945,6 +945,26 @@ MonoBehaviour:
   Name: Time
   Min: 0
   Max: 1.5
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 0
+--- !u!114 &-5610311840793166904
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Pavilion Movement/Pavilion Movement Fadein
+  m_EditorClassIdentifier: 
+  Name: Pavilion Movement Fadein
+  Min: 0
+  Max: 1
   Default: 0
   ID:
     data1: 0
@@ -971,6 +991,26 @@ MonoBehaviour:
     data2: 0
   Exists: 0
 --- !u!114 &-5519589328204595213
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Level Theme Main/Dashing
+  m_EditorClassIdentifier: 
+  Name: Dashing
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 0
+--- !u!114 &-5396577851460443717
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1276,7 +1316,7 @@ MonoBehaviour:
   Path: FMOD Banks/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 637626605820000000
+  lastModified: 637626607710191439
   LoadResult: 0
   FileSizes: []
   Exists: 1
@@ -1984,7 +2024,7 @@ MonoBehaviour:
   Path: FMOD Banks/Desktop/SFX.bank
   Name: Desktop/SFX
   StudioPath: bank:/SFX
-  lastModified: 637626605820000000
+  lastModified: 637625735551668216
   LoadResult: 0
   FileSizes: []
   Exists: 1
@@ -2187,7 +2227,7 @@ MonoBehaviour:
   Path: FMOD Banks/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 637626605820000000
+  lastModified: 637625735553518049
   LoadResult: 0
   FileSizes: []
   Exists: 1
@@ -2282,7 +2322,7 @@ MonoBehaviour:
   - {fileID: -8126662629290240622}
   StringsBanks:
   - {fileID: -5747003316159628318}
-  stringsBankWriteTime: 637626605820000000
+  stringsBankWriteTime: 637626607709120985
   cacheVersion: 6
 --- !u!114 &48666379561628662
 MonoBehaviour:
@@ -2492,6 +2532,26 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 118858
+--- !u!114 &642114116059795762
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Level Theme Main/Jumping
+  m_EditorClassIdentifier: 
+  Name: Jumping
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
 --- !u!114 &714323493412478469
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2533,8 +2593,8 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: 6860052305273871470}
-  - {fileID: 8366487027652815221}
+  - {fileID: 642114116059795762}
+  - {fileID: 5787026612711361028}
   MinDistance: 0
   MaxDistance: 0
   Length: 96631
@@ -2872,7 +2932,7 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: 7442275691836995889}
+  - {fileID: 8861981010427309510}
   MinDistance: 0
   MaxDistance: 0
   Length: 27261
@@ -3459,6 +3519,26 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 231772
+--- !u!114 &5163788936266965097
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Level Theme Main/Jumping
+  m_EditorClassIdentifier: 
+  Name: Jumping
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 0
 --- !u!114 &5258068110483409222
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3629,6 +3709,26 @@ MonoBehaviour:
   - Name: 
     Value: 1884
   Exists: 0
+--- !u!114 &5787026612711361028
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Level Theme Main/Dashing
+  m_EditorClassIdentifier: 
+  Name: Dashing
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
 --- !u!114 &5818954884041093082
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3929,8 +4029,8 @@ MonoBehaviour:
   Path: event:/Flute Spirit Pickup
   guid: d813a9b963763a45ad89ec62f7cdd666
   Banks:
-  - {fileID: -8126662629290240622}
   - {fileID: -3959087904480818360}
+  - {fileID: -8126662629290240622}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -3957,7 +4057,7 @@ MonoBehaviour:
   ID:
     data1: 0
     data2: 0
-  Exists: 1
+  Exists: 0
 --- !u!114 &6955762523203154499
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4137,7 +4237,7 @@ MonoBehaviour:
   ID:
     data1: 0
     data2: 0
-  Exists: 1
+  Exists: 0
 --- !u!114 &7480441109950117715
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4279,7 +4379,7 @@ MonoBehaviour:
   ID:
     data1: 0
     data2: 0
-  Exists: 1
+  Exists: 0
 --- !u!114 &8418323339795332619
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4487,6 +4587,26 @@ MonoBehaviour:
   - Name: 
     Value: 1682
   Exists: 0
+--- !u!114 &8861981010427309510
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Pavilion Movement/Pavilion Movement Fadein
+  m_EditorClassIdentifier: 
+  Name: Pavilion Movement Fadein
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
 --- !u!114 &8885391744304099783
 MonoBehaviour:
   m_ObjectHideFlags: 0
