@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.47886413, g: 0.8001933, b: 0.89938086, a: 1}
+  m_IndirectSpecularColor: {r: 0.47885478, g: 0.8001795, b: 0.8994515, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -45290,12 +45290,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stingerLength: 8.211
   delays:
-  - 0
-  - 0.529
-  - 1.185
-  - 2.694
-  - 3.762
-  - 4.311
+  - 0.5
+  - 1
+  - 2.5
+  - 3.45
+  - 4.3
+  - 5
   notes:
   - {fileID: -1205737913937953658, guid: b73d49243c5279b49b221cfecf14288b, type: 3}
   - {fileID: -5477517316928987816, guid: b73d49243c5279b49b221cfecf14288b, type: 3}
