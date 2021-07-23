@@ -12,6 +12,8 @@ public class GameManager : MonoBehaviour
     private bool collectedOrb2 = false;
     private bool collectedOrb3 = false;
 
+    private bool sceneIsLoading = false;
+
     public bool gameStarted = false;
     public GameObject violinSpirit;
 
@@ -108,5 +110,20 @@ public class GameManager : MonoBehaviour
 
         abilityVar.jumpMechanic = false;
         abilityVar.dashMechanic = false;
+    }
+
+    public bool GetLoadingStatus()
+    {
+        return sceneIsLoading;
+    }
+
+    public void StartSceneLoading()
+    {
+        sceneIsLoading = true;
+    }
+
+    public void SceneFinishedLoading()
+    {
+        sceneIsLoading = false;
     }
 }

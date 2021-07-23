@@ -43,6 +43,11 @@ public class DialogueControls : MonoBehaviour
         Cursor.lockState = CursorLockMode.Confined;
     }
 
+    private void Start()
+    {
+        GameManager.instance.SceneFinishedLoading();
+    }
+
     void Update()
     {
         SetName();
@@ -142,6 +147,10 @@ public class DialogueControls : MonoBehaviour
 
     public void OnCloseHub()
     {
-        SceneManager.LoadScene(2);
+        if (!GameManager.instance.GetLoadingStatus())
+        {
+            GameManager.instance.StartSceneLoading();
+            SceneManager.LoadScene(2);
+        }
     }
 }

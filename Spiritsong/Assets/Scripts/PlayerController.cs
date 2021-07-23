@@ -82,6 +82,8 @@ public class PlayerController : MonoBehaviour
         {
             GameManager.instance.gameStarted = true;
         }
+
+        GameManager.instance.SceneFinishedLoading();
     }
 
     // Update is called once per frame
@@ -203,10 +205,14 @@ public class PlayerController : MonoBehaviour
 
     public void OnOpenHub()
     {
-        GameManager.instance.SavePlayerData(transform.position, transform.rotation, jumpUnlocked, dashUnlocked);
-        Destroy(backgroundMusic);
-        MasterBus.stopAllEvents(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
-        SceneManager.LoadScene(1);
+        if (!GameManager.instance.GetLoadingStatus())
+        {
+            GameManager.instance.StartSceneLoading();
+            GameManager.instance.SavePlayerData(transform.position, transform.rotation, jumpUnlocked, dashUnlocked);
+            Destroy(backgroundMusic);
+            MasterBus.stopAllEvents(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+            SceneManager.LoadScene(1);
+        }
     }
 
     // unlock abilities when collecting(colliding with) instruments
