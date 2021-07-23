@@ -32,7 +32,7 @@ Well...it's not *home* but it's where I've been stayin', yeah.
 <<set $name to "Conductor">><<PCTag NameTags>>
 Where do you live?
 <<set $name to "Violin">><<NPCTag NameTags>>
-Well, I actually used to live in that rundown old thing.
+Well, I actually used to live in this rundown old pavilion.
 But I see it's taken now.
 <<set $name to "Conductor">><<PCTag NameTags>>
 <<Expression2 Player>>You can come with us!

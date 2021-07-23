@@ -4686,6 +4686,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1892344348}
     m_Modifications:
+    - target: {fileID: 3160898443388229931, guid: 1562c30dd727ce04492d64e40c103b53, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 99f95aab2c324d8449b0aa13164e5dc4, type: 2}
     - target: {fileID: 3521032138727241982, guid: 1562c30dd727ce04492d64e40c103b53, type: 3}
       propertyPath: m_Name
       value: small log  (3)
@@ -5449,6 +5453,25 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: cfa415589247cf54eaa27f07e5a738ca, type: 3}
   m_PrefabInstance: {fileID: 211686479}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &211686481 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: cfa415589247cf54eaa27f07e5a738ca, type: 3}
+  m_PrefabInstance: {fileID: 211686479}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &211686482
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 211686481}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -448245740997676312, guid: cfa415589247cf54eaa27f07e5a738ca, type: 3}
 --- !u!1001 &212636030
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8101,6 +8124,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1892344348}
     m_Modifications:
+    - target: {fileID: 3160898443388229931, guid: 1562c30dd727ce04492d64e40c103b53, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 99f95aab2c324d8449b0aa13164e5dc4, type: 2}
     - target: {fileID: 3521032138727241982, guid: 1562c30dd727ce04492d64e40c103b53, type: 3}
       propertyPath: m_Name
       value: small log  (5)
@@ -30263,6 +30290,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1892344348}
     m_Modifications:
+    - target: {fileID: 3160898443388229931, guid: 1562c30dd727ce04492d64e40c103b53, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 99f95aab2c324d8449b0aa13164e5dc4, type: 2}
     - target: {fileID: 3521032138727241982, guid: 1562c30dd727ce04492d64e40c103b53, type: 3}
       propertyPath: m_Name
       value: small log  (4)
@@ -44479,6 +44510,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1892344348}
     m_Modifications:
+    - target: {fileID: 5403254553370982951, guid: 75ec2463b43d95a4aa9de16082aa6e48, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 99f95aab2c324d8449b0aa13164e5dc4, type: 2}
     - target: {fileID: 5907820094911667186, guid: 75ec2463b43d95a4aa9de16082aa6e48, type: 3}
       propertyPath: m_Name
       value: Stump Log (2)

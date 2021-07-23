@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 1632664440}
-  m_IndirectSpecularColor: {r: 0.4973033, g: 0.7068647, b: 0.70322394, a: 1}
+  m_IndirectSpecularColor: {r: 0.49713546, g: 0.70677096, b: 0.7033746, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -941,7 +941,7 @@ PrefabInstance:
     - target: {fileID: -7635826562936255635, guid: e5d9c51b8898130458acd76d4af258e1, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 4fe1fab836bc082468786d35cc4d6aab, type: 2}
+      objectReference: {fileID: 2100000, guid: 73d8511d661399c448d80fc440fc678f, type: 2}
     - target: {fileID: 919132149155446097, guid: e5d9c51b8898130458acd76d4af258e1, type: 3}
       propertyPath: m_Name
       value: Gazebo
