@@ -221,14 +221,13 @@ public class PlayerController : MonoBehaviour
         }
         if (other.gameObject.tag == "Dash")
         {
+            FMODUnity.RuntimeManager.PlayOneShot("event:/Flute Spirit Pickup");
             dashUnlocked = true;
             abilityVar.dashMechanic = true;
             //SceneManager.LoadScene(1);
         }
         if (other.gameObject.tag == "End")
         {
-            Destroy(backgroundMusic);
-            MasterBus.stopAllEvents(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
             endPrompt.SetActive(true);
             Cursor.lockState = CursorLockMode.Confined;
         }
@@ -262,11 +261,15 @@ public class PlayerController : MonoBehaviour
 
     public void CloseEndPrompt()
     {
+        FMODUnity.RuntimeManager.PlayOneShot("event:/Menu SFX");
         endPrompt.SetActive(false);
     }
 
     public void GoToEndScene()
     {
+        Destroy(backgroundMusic);
+        MasterBus.stopAllEvents(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+        FMODUnity.RuntimeManager.PlayOneShot("event:/Menu SFX");
         SceneManager.LoadScene(3);
     }
 }
