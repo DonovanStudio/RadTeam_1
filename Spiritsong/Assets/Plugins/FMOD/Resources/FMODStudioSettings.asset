@@ -617,9 +617,7 @@ MonoBehaviour:
   MasterBanks:
   - Master
   - Desktop/Master
-  Banks:
-  - Desktop/SFX
-  - SFX
+  Banks: []
   BanksToLoad: []
   LiveUpdatePort: 9264
   EnableMemoryTracking: 0
