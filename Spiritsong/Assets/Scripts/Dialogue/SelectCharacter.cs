@@ -8,6 +8,7 @@ using UnityEngine.UI;
 
 public class SelectCharacter : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
+    // Used to allow the player to select the character free of the canvas.
     public GameObject spotlight;
     public bool canSpeak;
     DialogueRunner dialogueRunner;
@@ -20,12 +21,14 @@ public class SelectCharacter : MonoBehaviour, IPointerEnterHandler, IPointerExit
     {
         AddPhysicsRaycaster();
         spotlight.SetActive(false);
+
         dialogueRunner = FindObjectOfType<DialogueRunner>();
         dialogueControls = FindObjectOfType<DialogueControls>();
         abilityVar = FindObjectOfType<AbilityVariableStorage>();
         conversationManager = FindObjectOfType<ConversationManager>();
     }
 
+    // Allow the player to select sprites not on the UI.
     void AddPhysicsRaycaster()
     {
         PhysicsRaycaster physicsRaycaster = GameObject.FindObjectOfType<PhysicsRaycaster>();
@@ -35,7 +38,7 @@ public class SelectCharacter : MonoBehaviour, IPointerEnterHandler, IPointerExit
         }
     }
 
-    //Detect if the Cursor starts to pass over the GameObject
+    // Detect if the Cursor starts to pass over the GameObject.
     public void OnPointerEnter(PointerEventData pointerEventData)
     {
         spotlight.SetActive(true);
@@ -43,7 +46,7 @@ public class SelectCharacter : MonoBehaviour, IPointerEnterHandler, IPointerExit
         canSpeak = true;
     }
 
-    //Detect when Cursor leaves the GameObject
+    // Detect when Cursor leaves the GameObject.
     public void OnPointerExit(PointerEventData pointerEventData)
     {
         spotlight.SetActive(false);
@@ -67,7 +70,6 @@ public class SelectCharacter : MonoBehaviour, IPointerEnterHandler, IPointerExit
         // Set the nodes for the Violin.
         if (name is "Violin Actor" && abilityVar.jumpMechanic)
         {
-            //dialogueRunner.startNode = "ViolinMeet";
             conversationManager.SetViolinConversations();
             ViolinUISprite();
         }

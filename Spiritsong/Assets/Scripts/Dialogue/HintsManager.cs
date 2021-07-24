@@ -43,17 +43,15 @@ public class HintsManager : MonoBehaviour
             hint2.SetActive(false);
         }
 
-        // Check if the hint triggers are active, and set hints to false and close notifs.
-        if (hint1.activeInHierarchy == false)
+        // If you have the mechanic and the hints are disabled, hide the notification.
+        if (abilityStorage.jumpMechanic && !convoManager.pianoHint)
         {
-            convoManager.pianoHint = false;
-            StartCoroutine(HideNotifs());
+            notificationAnimator.SetBool("HintAvailable", false);
         }
 
-        if (hint2.activeInHierarchy == false)
+        if (abilityStorage.dashMechanic && !convoManager.violinHint)
         {
-            convoManager.violinHint = false;
-            StartCoroutine(HideNotifs());
+            notificationAnimator.SetBool("HintAvailable", false);
         }
     }
 

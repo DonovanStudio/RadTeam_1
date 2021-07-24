@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.47885478, g: 0.8001795, b: 0.8994515, a: 1}
+  m_IndirectSpecularColor: {r: 0.47884, g: 0.8001845, b: 0.90072787, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -16010,6 +16010,30 @@ PrefabInstance:
     - target: {fileID: 2720476700089670653, guid: c0e592e87d7a6534db5ea88d4cb7b2ab, type: 3}
       propertyPath: m_Name
       value: Hints Manager
+      objectReference: {fileID: 0}
+    - target: {fileID: 4511940082791750446, guid: c0e592e87d7a6534db5ea88d4cb7b2ab, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 25.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4511940082791750446, guid: c0e592e87d7a6534db5ea88d4cb7b2ab, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 21
+      objectReference: {fileID: 0}
+    - target: {fileID: 4511940082791750447, guid: c0e592e87d7a6534db5ea88d4cb7b2ab, type: 3}
+      propertyPath: m_Radius
+      value: 30.738956
+      objectReference: {fileID: 0}
+    - target: {fileID: 4511940082791750447, guid: c0e592e87d7a6534db5ea88d4cb7b2ab, type: 3}
+      propertyPath: m_Center.x
+      value: 5.2781715
+      objectReference: {fileID: 0}
+    - target: {fileID: 4511940082791750447, guid: c0e592e87d7a6534db5ea88d4cb7b2ab, type: 3}
+      propertyPath: m_Center.y
+      value: 13.551472
+      objectReference: {fileID: 0}
+    - target: {fileID: 4511940082791750447, guid: c0e592e87d7a6534db5ea88d4cb7b2ab, type: 3}
+      propertyPath: m_Center.z
+      value: -1.8763161
       objectReference: {fileID: 0}
     - target: {fileID: 4511940084262261230, guid: c0e592e87d7a6534db5ea88d4cb7b2ab, type: 3}
       propertyPath: m_Color.b

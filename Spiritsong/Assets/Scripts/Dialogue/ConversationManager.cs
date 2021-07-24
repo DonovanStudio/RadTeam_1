@@ -17,9 +17,9 @@ public class ConversationManager : MonoBehaviour
     [HideInInspector] public bool violinMet;
     [HideInInspector] public bool fluteMet;
     //[Header("Hints Available")]
-    [HideInInspector] public bool pianoHint;
-    [HideInInspector] public bool violinHint;
-    [HideInInspector] public bool fluteHint;
+    public bool pianoHint;
+    public bool violinHint;
+    public bool fluteHint;
 
     //Audio
     [HideInInspector] public bool talkingPiano;

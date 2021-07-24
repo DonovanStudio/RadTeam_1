@@ -9,10 +9,13 @@ using UnityEngine.SceneManagement;
 
 public class DialogueControls : MonoBehaviour
 {
+    // Scripts
     DialogueUI dialogueUI;
     DialogueRunner dialogueRunner;
     InMemoryVariableStorage varStorage;
     SelectStartNode selectStart;
+
+    // UI Elements
     GameObject dialogueCanvas;
     GraphicRaycaster graphicRaycaster;
     [SerializeField] TextMeshProUGUI[] nameLabels;
@@ -37,9 +40,10 @@ public class DialogueControls : MonoBehaviour
         graphicRaycaster = dialogueCanvas.GetComponent<GraphicRaycaster>();
         graphicRaycaster.enabled = false;
 
-        // Getting variables from Yarn Spinner. //
+        // Getting variables from Yarn Spinner.
         speakerName = varStorage.GetValue("$name").AsString;
 
+        // Lock the cursor to the game view.
         Cursor.lockState = CursorLockMode.Confined;
     }
 
@@ -53,12 +57,13 @@ public class DialogueControls : MonoBehaviour
         SetName();
     }
 
+    // Captures name values from Yarn scripts to set in the UI.
     void SetName()
     {
-        // Continue updating the variables from Yarn Spinner. //
+        // Continue updating the variables from Yarn Spinner.
         speakerName = varStorage.GetValue("$name").AsString;
 
-        // Update name label to new speaker name. //
+        // Update name label to new speaker name.
         nameLabels[0].text = speakerName;
         nameLabels[1].text = speakerName;
 
@@ -94,6 +99,7 @@ public class DialogueControls : MonoBehaviour
         }
     }
 
+    // If clicking with the mouse in the scene on the right canvas, move to the conversation.
     public void Mouse(InputAction.CallbackContext context)
     {
         if (context.started && selectStart.canSpeak)
@@ -145,6 +151,7 @@ public class DialogueControls : MonoBehaviour
         graphicRaycaster.enabled = false;
     }
 
+    // Close the hub and return to the level
     public void OnCloseHub()
     {
         if (!GameManager.instance.GetLoadingStatus())

@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class ExpressionsManager : MonoBehaviour
 {
-    /* Attached this script to an image of a character on the UI. */
+    // Attached this script to an image of a character on the UI.
     [SerializeField] string[] elementsLegend;
     public Sprite[] characterSprites; // 0 = Neutral, 1 = Happy, 2 = Angry, 3 = Additional Expressions
     Animator anim;
@@ -18,6 +18,7 @@ public class ExpressionsManager : MonoBehaviour
         anim = this.GetComponent<Animator>();
     }
 
+    // Set character expressions in inspector.
     [YarnCommand("Expression1")]
     public void SetExpression1()
     {
@@ -42,6 +43,7 @@ public class ExpressionsManager : MonoBehaviour
         currentExpression.sprite = characterSprites[3];
     }
 
+    // Turn the character to the left.
     [YarnCommand("turnL")]
     public void TurnLeft()
     {
@@ -52,6 +54,7 @@ public class ExpressionsManager : MonoBehaviour
         transform.rotation = new Quaternion(0, 0, 0, 0);
     }
 
+    // Turn the character to the right.
     [YarnCommand("turnR")]
     public void TurnRight()
     {
@@ -62,6 +65,7 @@ public class ExpressionsManager : MonoBehaviour
         transform.rotation = new Quaternion (0, 180, 0, 0);
     }
 
+    // Make the character hop.
     [YarnCommand("hop")]
     public void Hop()
     {
@@ -70,6 +74,7 @@ public class ExpressionsManager : MonoBehaviour
         anim.SetBool("Hopping", true);
     }
 
+    // Pause the clip upon calling (parameter for animation).
     public void PauseClip()
     {
         anim.SetBool("Turn Right", false);
