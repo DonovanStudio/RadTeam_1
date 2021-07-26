@@ -46,7 +46,7 @@ public class HintsManager : MonoBehaviour
         // If you have the mechanic and the hints are disabled, hide the notification.
         if (abilityStorage.jumpMechanic && !convoManager.pianoHint)
         {
-            notificationAnimator.SetBool("HintAvailable", false);
+            //notificationAnimator.SetBool("HintAvailable", false);
         }
 
         if (abilityStorage.dashMechanic && !convoManager.violinHint)
