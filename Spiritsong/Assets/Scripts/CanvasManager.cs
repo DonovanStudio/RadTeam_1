@@ -8,6 +8,7 @@ public class CanvasManager : MonoBehaviour
 {
     [SerializeField] GameObject menuPanel;
     [SerializeField] GameObject controlsPanel;
+    public hubaudiomanager hubAudioManager;
 
     // Start is called before the first frame update
     void Start()
@@ -20,6 +21,7 @@ public class CanvasManager : MonoBehaviour
         {
             Cursor.lockState = CursorLockMode.Confined;
         }
+        hubAudioManager = GameObject.Find("Audio Manager").GetComponent("Hubaudiomanager") as hubaudiomanager;
     }
 
     // Update is called once per frame
@@ -72,6 +74,7 @@ public class CanvasManager : MonoBehaviour
     {
         if (SceneManager.GetActiveScene().name == "Hub")
         {
+            hubAudioManager.StopDialogueAudio();
             SceneManager.LoadScene(2);
         }
     }
