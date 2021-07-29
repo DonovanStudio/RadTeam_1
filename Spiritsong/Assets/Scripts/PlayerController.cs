@@ -52,7 +52,6 @@ public class PlayerController : MonoBehaviour
     public delegate void DashAction();
     public static event DashAction StartDash;
     public static event DashAction EndDash;
-    //private FMOD.Studio.EventInstance jumpSFX;
 
     // UI
     [SerializeField] GameObject endPrompt;
@@ -69,14 +68,16 @@ public class PlayerController : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
         abilityVar = FindObjectOfType<AbilityVariableStorage>();
         MasterBus = FMODUnity.RuntimeManager.GetBus("Bus:/");
-        //jumpSFX = FMODUnity.RuntimeManager.CreateInstance("event:/Jump SFX");
 
         if (GameManager.instance.gameStarted)
         {
+            // You must be sure the character controller is disabled when to attempt to set the transform directly
+            controller.enabled = false;
             transform.position = GameManager.instance.GetPosition();
             transform.rotation = GameManager.instance.GetRotation();
             jumpUnlocked = GameManager.instance.GetJump();
             dashUnlocked = GameManager.instance.GetDash();
+            controller.enabled = true;
         }
         else
         {
@@ -112,22 +113,19 @@ public class PlayerController : MonoBehaviour
         playerVelocity = transform.TransformDirection(playerVelocity);
 
         // Jumping
-        bool jumpable = controller.isGrounded || !jumping; //Implement coyote time case here - this is creating an infinite jump
+        bool jumpable = controller.isGrounded || !jumping;
         if (jumpUnlocked && shouldJump && controller.isGrounded)
         {
-            //Debug.Log("Jump");
             if (StartJump != null)
                 StartJump();
             playerVelocity.y = jumpHeight;
             gravity = upwardGravity;
-            //Physics.gravity = Vector3.down * gravity; //upwardGravity should be HIGH
             jumping = true;
         }
         if (jumping && playerVelocity.y <= 0f)
         {
             jumping = false;
             gravity = downwardGravity;
-            //Physics.gravity = Vector3.down * gravity; //Make gravity LOW
         }
         shouldJump = false;
         playerVelocity.y += gravity * Time.deltaTime;
@@ -154,12 +152,7 @@ public class PlayerController : MonoBehaviour
         
         if (jumpUnlocked && angle < 45f)
         {
-            //jumpSFX.start();
-            //FMODUnity.RuntimeManager.PlayOneShot("event:/Jump SFX");
-            
-
             shouldJump = true;
-
         }
     }
 
@@ -167,7 +160,6 @@ public class PlayerController : MonoBehaviour
     {
         if (dashUnlocked)
         {
-            //Debug.Log("Play Dash Sound");
             if (StartDash != null)
                 StartDash();
             StartCoroutine(TimedDash());
@@ -180,7 +172,6 @@ public class PlayerController : MonoBehaviour
 
         while (Time.time < start + dashTime)
         {
-            //Debug.Log("Looping");
             controller.Move(transform.forward * dashSpeed * Time.deltaTime);
             yield return null;
         }
@@ -223,14 +214,12 @@ public class PlayerController : MonoBehaviour
             FMODUnity.RuntimeManager.PlayOneShot("event:/Violin Spirit Pickup");
             jumpUnlocked = true;
             abilityVar.jumpMechanic = true;
-            //SceneManager.LoadScene(1);
         }
         if (other.gameObject.tag == "Dash")
         {
             FMODUnity.RuntimeManager.PlayOneShot("event:/Flute Spirit Pickup");
             dashUnlocked = true;
             abilityVar.dashMechanic = true;
-            //SceneManager.LoadScene(1);
         }
         if (other.gameObject.tag == "End")
         {

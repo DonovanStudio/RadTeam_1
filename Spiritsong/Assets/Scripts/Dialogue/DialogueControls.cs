@@ -25,6 +25,8 @@ public class DialogueControls : MonoBehaviour
     string speakerName;
     public bool dialogueStart;
 
+    public hubaudiomanager hubAudioManager;
+
     [Header("Camera Animations")]
     public Animator cameraAnimator;
     public Animator panelOpacity;
@@ -50,6 +52,7 @@ public class DialogueControls : MonoBehaviour
     private void Start()
     {
         GameManager.instance.SceneFinishedLoading();
+        //hubAudioManager = GameObject.Find("Audio Manager").GetComponent("Hubaudiomanager") as hubaudiomanager;
     }
 
     void Update()
@@ -156,6 +159,7 @@ public class DialogueControls : MonoBehaviour
     {
         if (!GameManager.instance.GetLoadingStatus())
         {
+            hubAudioManager.StopDialogueAudio();
             GameManager.instance.StartSceneLoading();
             SceneManager.LoadScene(2);
         }
